@@ -1,0 +1,62 @@
+[
+ {
+  "system": "TBCB_EEY",
+  "domain": "TBCB",
+  "peptide": "EEY",
+  "atoms": 1558,
+  "n_restrained": 13,
+  "E_raw": 120012239.60367443,
+  "E_min": -4923.278364321343,
+  "dE_int_GB": -31.82803498529819,
+  "dE_int_vac": -296.6660080516803,
+  "dG_solv_coupling": 264.8379730663821,
+  "n_domain": 1504,
+  "n_peptide": 54,
+  "minimised": "data/models/prep/TBCB_EEY_min.pdb"
+ },
+ {
+  "system": "TBCB_EEF",
+  "domain": "TBCB",
+  "peptide": "EEF",
+  "atoms": 1557,
+  "n_restrained": 13,
+  "E_raw": 5820.622308139615,
+  "E_min": -4902.407286208365,
+  "dE_int_GB": -34.06693974536199,
+  "dE_int_vac": -324.13812246651685,
+  "dG_solv_coupling": 290.07118272115486,
+  "n_domain": 1504,
+  "n_peptide": 53,
+  "minimised": "data/models/prep/TBCB_EEF_min.pdb"
+ },
+ {
+  "system": "TBCE_EEY",
+  "domain": "TBCE",
+  "peptide": "EEY",
+  "atoms": 1712,
+  "n_restrained": 13,
+  "E_raw": 175275.36388280735,
+  "E_min": -4378.568591834649,
+  "dE_int_GB": -23.140522425505765,
+  "dE_int_vac": -284.30990403228896,
+  "dG_solv_coupling": 261.1693816067832,
+  "n_domain": 1658,
+  "n_peptide": 54,
+  "minimised": "data/models/prep/TBCE_EEY_min.pdb"
+ },
+ {
+  "system": "TBCE_EEF",
+  "domain": "TBCE",
+  "peptide": "EEF",
+  "atoms": 1711,
+  "n_restrained": 13,
+  "E_raw": 175919.021120124,
+  "E_min": -4335.509425011134,
+  "dE_int_GB": -22.46621463031903,
+  "dE_int_vac": -289.3954761767925,
+  "dG_solv_coupling": 266.92926154647347,
+  "n_domain": 1658,
+  "n_peptide": 53,
+  "minimised": "data/models/prep/TBCE_EEF_min.pdb"
+ }
+]

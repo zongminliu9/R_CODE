@@ -1,0 +1,46 @@
+{
+ "TUBA8": {
+  "loop_sasa": 1115.0,
+  "loop_hydrophobic_sasa": 526.1,
+  "loop_frac_hydrophobic": 0.472,
+  "loop_rel_sasa": 0.456,
+  "segment": "ADGTFGTQASKIND",
+  "n_gly": 2,
+  "n_pro": 0,
+  "net_charge": -1,
+  "kd": -0.7142857142857143
+ },
+ "TUBA1A": {
+  "loop_sasa": 883.7,
+  "loop_hydrophobic_sasa": 535.0,
+  "loop_frac_hydrophobic": 0.605,
+  "loop_rel_sasa": 0.379,
+  "segment": "PDGQMPSDKTIGGG",
+  "n_gly": 4,
+  "n_pro": 2,
+  "net_charge": -1,
+  "kd": -1.0214285714285714
+ },
+ "TUBA1B": {
+  "loop_sasa": 1224.1,
+  "loop_hydrophobic_sasa": 626.3,
+  "loop_frac_hydrophobic": 0.512,
+  "loop_rel_sasa": 0.526,
+  "segment": "PDGQMPSDKTIGGG",
+  "n_gly": 4,
+  "n_pro": 2,
+  "net_charge": -1,
+  "kd": -1.0214285714285714
+ },
+ "TUBA4A": {
+  "loop_sasa": 1103.4,
+  "loop_hydrophobic_sasa": 582.5,
+  "loop_frac_hydrophobic": 0.528,
+  "loop_rel_sasa": 0.474,
+  "segment": "PDGQMPSDKTIGGG",
+  "n_gly": 4,
+  "n_pro": 2,
+  "net_charge": -1,
+  "kd": -1.0214285714285714
+ }
+}

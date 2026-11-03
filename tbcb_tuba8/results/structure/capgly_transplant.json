@@ -1,0 +1,58 @@
+{
+ "mouse_tbcb_capgly_range": [
+  134,
+  231
+ ],
+ "1WHG": {
+  "label": "mouse TBCB CAP-Gly (NMR)",
+  "rmsd": 0.9976257832140846,
+  "n_aligned": 75,
+  "n_core": 56,
+  "pct_id": 52.0,
+  "clashes": 32,
+  "contacts": 492,
+  "contact_residues": [
+   41,
+   42,
+   43,
+   44,
+   45,
+   61,
+   62,
+   63,
+   66,
+   77,
+   78,
+   82,
+   96,
+   97,
+   98,
+   99
+  ],
+  "model": "data/models/1WHG_capgly_EEY.pdb"
+ },
+ "4B6M": {
+  "label": "T. brucei TBCB CAP-Gly 1.59A",
+  "rmsd": 0.8656624528242752,
+  "n_aligned": 72,
+  "n_core": 55,
+  "pct_id": 40.3,
+  "clashes": 6,
+  "contacts": 134,
+  "contact_residues": [
+   163,
+   164,
+   167,
+   180,
+   181,
+   185,
+   196,
+   197,
+   215,
+   216,
+   218,
+   221
+  ],
+  "model": "data/models/4B6M_capgly_EEY.pdb"
+ }
+}

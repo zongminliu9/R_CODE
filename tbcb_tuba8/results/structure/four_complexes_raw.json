@@ -1,0 +1,48 @@
+{
+ "TBCB": {
+  "model": "data/models/TBCB_capgly_EEY_raw.pdb",
+  "rmsd": 0.47337862312935264,
+  "pct_id": 52.0,
+  "clashes": 4,
+  "pairs": 176,
+  "contacts": [
+   169,
+   171,
+   172,
+   187,
+   188,
+   192,
+   203,
+   204,
+   208,
+   222,
+   223,
+   224,
+   225
+  ],
+  "label": "mouse TBCB CAP-Gly (AlphaFold Q9D1E6 134-231)",
+  "motif": "GKNDG",
+  "model_EEF": "data/models/TBCB_capgly_EEF_raw.pdb"
+ },
+ "TBCE": {
+  "model": "data/models/TBCE_capgly_EEY_raw.pdb",
+  "rmsd": 1.099445460101718,
+  "pct_id": 34.2,
+  "clashes": 3,
+  "pairs": 126,
+  "contacts": [
+   32,
+   36,
+   48,
+   49,
+   68,
+   69,
+   70,
+   71,
+   74
+  ],
+  "label": "mouse/human TBCE CAP-Gly (9M1M chain E 4-121, 2.21 A)",
+  "motif": "GKHDG",
+  "model_EEF": "data/models/TBCE_capgly_EEF_raw.pdb"
+ }
+}

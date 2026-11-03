@@ -1,0 +1,96 @@
+{
+ "TBCB": {
+  "e_min": -4944.566659584037,
+  "hydroxyl_neighbours": [
+   {
+    "res": "LYS188",
+    "atom": "HG2",
+    "dist": 2.7,
+    "polar": false
+   },
+   {
+    "res": "LYS188",
+    "atom": "HD3",
+    "dist": 2.75,
+    "polar": false
+   },
+   {
+    "res": "PHE187",
+    "atom": "O",
+    "dist": 2.8,
+    "polar": true
+   },
+   {
+    "res": "LYS188",
+    "atom": "HB3",
+    "dist": 3.03,
+    "polar": false
+   },
+   {
+    "res": "LYS188",
+    "atom": "HE2",
+    "dist": 3.31,
+    "polar": false
+   },
+   {
+    "res": "LYS188",
+    "atom": "CG",
+    "dist": 3.33,
+    "polar": false
+   },
+   {
+    "res": "LYS188",
+    "atom": "CD",
+    "dist": 3.4,
+    "polar": false
+   },
+   {
+    "res": "LYS188",
+    "atom": "CB",
+    "dist": 3.67,
+    "polar": false
+   }
+  ],
+  "dE_int_GB_EEY": -35.93351842228583,
+  "dE_int_GB_EEF": -33.02375030800732,
+  "dE_int_vac_EEY": -292.9856221887884,
+  "dE_int_vac_EEF": -281.8302644085504,
+  "ddE_GB": 2.9097681142785063,
+  "ddE_vac": 11.155357780237978
+ },
+ "TBCE": {
+  "e_min": -4447.209196992261,
+  "hydroxyl_neighbours": [
+   {
+    "res": "VAL32",
+    "atom": "HG21",
+    "dist": 3.45,
+    "polar": false
+   },
+   {
+    "res": "VAL32",
+    "atom": "HG23",
+    "dist": 3.93,
+    "polar": false
+   },
+   {
+    "res": "VAL32",
+    "atom": "CG2",
+    "dist": 4.09,
+    "polar": false
+   },
+   {
+    "res": "VAL32",
+    "atom": "HG22",
+    "dist": 4.23,
+    "polar": false
+   }
+  ],
+  "dE_int_GB_EEY": -35.9010114747943,
+  "dE_int_GB_EEF": -35.89965207967845,
+  "dE_int_vac_EEY": -298.45740715928366,
+  "dE_int_vac_EEF": -301.4464046001195,
+  "ddE_GB": 0.0013593951158554773,
+  "ddE_vac": -2.988997440835817
+ }
+}
