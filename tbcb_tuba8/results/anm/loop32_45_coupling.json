@@ -1,0 +1,42 @@
+[
+ {
+  "target": "TBCE contact (dSASA>5)",
+  "n_target": 43,
+  "coupling": 9.727177648918348e-05,
+  "null_mean": 5.8662970609601374e-05,
+  "percentile": 84.19811320754717,
+  "p": 0.16
+ },
+ {
+  "target": "any cofactor contact",
+  "n_target": 55,
+  "coupling": 0.00010558120253654148,
+  "null_mean": 6.969841374561131e-05,
+  "percentile": 80.66037735849056,
+  "p": 0.1952941176470588
+ },
+ {
+  "target": "nucleotide pocket <5A",
+  "n_target": 29,
+  "coupling": 3.706555084783375e-05,
+  "null_mean": 2.532993053773577e-05,
+  "percentile": 79.00943396226415,
+  "p": 0.21176470588235294
+ },
+ {
+  "target": "alpha-beta interface",
+  "n_target": 18,
+  "coupling": 9.191146704413093e-05,
+  "null_mean": 7.437631046793482e-05,
+  "percentile": 78.5377358490566,
+  "p": 0.2164705882352941
+ },
+ {
+  "target": "C-terminal 420-437",
+  "n_target": 18,
+  "coupling": 7.613617412333239e-05,
+  "null_mean": 5.0328082725752135e-05,
+  "percentile": 80.18867924528303,
+  "p": 0.2
+ }
+]

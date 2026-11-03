@@ -236,3 +236,69 @@ unaffected regions, the decisive experimental control is whether TUBA8 protein i
 measurable level in hippocampus, cortex and striatum in wild type. If it is near zero there, the
 absence of a knockout effect in those regions is an expression floor rather than a mechanism,
 and no biophysical explanation is required for it.
+
+---
+
+## 7. Elastic-network mechanics (`scripts/anm_prs.py`, `scripts/anm_coupling_test.py`)
+
+Anisotropic network model on α-tubulin chain a of 9M1M (437 Cα, 13 Å cutoff, γ = 1).
+Validation: the six rigid-body eigenvalues come out at |λ| < 8×10⁻¹⁵ and the first non-trivial
+mode is λ = 0.366.
+
+**Scope statement.** An ANM is built from Cα geometry alone and is therefore sequence-agnostic.
+It cannot show that TUBA8 is intrinsically more mobile than TUBA1A, because 90%-identical models
+have near-identical contact topology and any difference would largely be model noise. It is used
+here only for questions answerable from a single structure. A further technical caveat: with a
+symmetric covariance matrix the PRS matrix `S_ij = ‖C_ij‖²_F/3` is symmetric, so in this
+implementation effectiveness and sensitivity are identical and carry no directional information.
+
+### Are the divergent positions mechanically special? Marginally.
+
+Permutation over 10⁵ random position sets of matched size:
+
+| metric | mean over divergent | mean over rest | p(higher) |
+|---|---|---|---|
+| effectiveness (z) | +0.380 | −0.037 | 0.0154 |
+| mobility MSF (z) | +0.323 | −0.032 | 0.0242 |
+
+A modest shift toward more mobile, more strongly coupled sites — but this is largely the
+mechanical restatement of a fact already established in §2, that the substitutions are
+concentrated on the exposed surface, and exposed loops are mobile.
+
+### Does the 32–45 loop couple allosterically to surfaces it does not touch? No.
+
+The loop contacts no cofactor, so the natural rescue for a long-range mechanism would be
+mechanical coupling. Null model: every other contiguous 14-residue window in the chain, which
+controls both for window length and for the general mobility of exposed loops. Residue pairs
+closer than 5 in sequence are excluded so that trivial local coupling does not count.
+
+| target surface | residues | loop coupling | null mean | percentile | p |
+|---|---|---|---|---|---|
+| TBCE contact patch | 43 | 9.73×10⁻⁵ | 5.87×10⁻⁵ | 84.2 | 0.160 |
+| any cofactor contact | 55 | 1.06×10⁻⁴ | 6.97×10⁻⁵ | 80.7 | 0.195 |
+| nucleotide pocket (<5 Å) | 29 | 3.71×10⁻⁵ | 2.53×10⁻⁵ | 79.0 | 0.212 |
+| α–β interface | 18 | 9.19×10⁻⁵ | 7.44×10⁻⁵ | 78.5 | 0.217 |
+| C-terminal 420–437 | 18 | 7.61×10⁻⁵ | 5.03×10⁻⁵ | 80.2 | 0.200 |
+
+Consistently above average but never significant, sitting at the 78th–84th percentile of
+ordinary windows. There is no evidence of privileged allosteric coupling.
+
+Likewise, none of the fifteen strongest single-residue effectors onto the cofactor-contact patch
+(406, 338, 337, 400, 401, 419, 402, 365, 326, 333, 409, 283, 415, 407, 340) is a divergent
+position, and the divergent set's mean influence z-score onto that patch is only +0.12.
+
+One incidental observation worth recording: residue 40 ranks among the twelve highest-influence
+positions while *not* ranking among the twelve most mobile. That dissociation is the signature of
+an effector site rather than a floppy loop, and K40 is of course the acetylation site that TUBA8
+has replaced. It is a single-residue observation from one structure and should be treated as a
+lead, not a result.
+
+### Convergence of three independent analyses
+
+Direct interface mapping (§2), the divergence-density scan (§2) and elastic-network mechanics (§7)
+agree: TUBA8's substitutions are not positioned to alter how the *folded* protein interacts with
+the maturation machinery, either by contact or by allostery. Combined with the kinetic finding
+(§3) that the only parameter capable of reproducing the phenotype is the rate of TBCB-independent
+capture by TBCE, attention moves to the one determinant all of these analyses explicitly could
+not evaluate: the disordered C-terminal tail, which is exactly what the CAP-Gly domains of both
+TBCB and TBCE read, and which differs between TUBA8 (`...EENEGEEF`) and TUBA1A (`...GEEEGEEY`).

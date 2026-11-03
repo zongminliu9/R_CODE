@@ -24,8 +24,18 @@ RATIO_KEYS = ["k_fold","k_degU","kon_B","koff_B","k_degF","kon_Edir","k_tr",
               "k_degB","k_degE","k_asm","k_pol","k_degH"]
 
 N = 1500
+CKPT = "results/kinetics/Q3_draws.jsonl"
+os.makedirs("results/kinetics", exist_ok=True)
 recs = []
-for it in range(N):
+done = 0
+if os.path.exists(CKPT):
+    with open(CKPT) as fh:
+        for line in fh:
+            try: recs.append(json.loads(line)); done += 1
+            except Exception: pass
+    print(f"resuming: {done} draws already on disk", flush=True)
+ck = open(CKPT, "a")
+for it in range(done, N):
     base = {k: v*10**rng.uniform(-1, 1) for k, v in BASE.items()}
     lr   = {k: rng.uniform(-1.5, 1.5) for k in RATIO_KEYS}
     demand = 10**rng.uniform(-1.5, 1.5)
@@ -40,7 +50,7 @@ for it in range(N):
             sp = SystemParams([IsoformParams("TUBA8", s=10**ls8, **p8),
                                IsoformParams("TUBA1A", s=1.0, **p1)],
                               TBCB_tot=tb, TBCE_tot=TBCE, demand=demand)
-            X, _, drift = steady_state(sp, t_end=2e7)
+            X, _, drift = steady_state(sp, t_end=5e6)
             out[tag] = (observable(X), drift)
         e = 1e-300
         o_wt, o_ko = out["WT"][0], out["KO"][0]
@@ -53,9 +63,12 @@ for it in range(N):
         for k in RATIO_KEYS: rec["lr_"+k] = lr[k]
         for k in BASE: rec["lb_"+k] = float(np.log10(base[k]))
         recs.append(rec)
+        ck.write(json.dumps(rec)+"\n")
+        if it % 50 == 0: ck.flush(); print(f"  draw {it}/{N}", flush=True)
     except Exception:
         continue
 
+ck.flush(); ck.close()
 print(f"usable draws: {len(recs)} / {N}")
 keys = [k for k in recs[0] if k.startswith(("lr_","lb_","log_"))]
 sel  = np.array([r["sel"] for r in recs])
