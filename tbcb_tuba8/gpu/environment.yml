@@ -1,0 +1,16 @@
+name: tbcb
+channels: [conda-forge]
+dependencies:
+  - python=3.12
+  - openmm=8.2
+  - openmmtools=0.23
+  - pymbar=4.0
+  - pdbfixer
+  - mdtraj
+  - mdanalysis
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - biotite
+  - biopython

@@ -14,3 +14,9 @@ tbcb_tuba8/data/pdb/prep_*
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# GPU package: generated systems and trajectories
+tbcb_tuba8/gpu/systems/
+tbcb_tuba8/gpu/out/
+tbcb_tuba8/gpu/logs/
+*.nc
