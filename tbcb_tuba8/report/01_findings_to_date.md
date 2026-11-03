@@ -302,3 +302,99 @@ the maturation machinery, either by contact or by allostery. Combined with the k
 capture by TBCE, attention moves to the one determinant all of these analyses explicitly could
 not evaluate: the disordered C-terminal tail, which is exactly what the CAP-Gly domains of both
 TBCB and TBCE read, and which differs between TUBA8 (`...EENEGEEF`) and TUBA1A (`...GEEEGEEY`).
+
+---
+
+## 8. Global sensitivity over a broad prior (`scripts/global_sensitivity_fast.py`)
+
+The §3 results came from varying one parameter at a time around one baseline, which cannot see
+interactions between mechanisms. This section removes that limitation.
+
+**Numerics first.** Integrating to steady state was too slow for a large sweep, so the steady
+state is now solved exactly. The network is bilinear only through `kon_B·F·Bf`,
+`kon_Edir·F·Ef` and `k_tr·B·Ef`; holding the free pools fixed makes each isoform's chain linear
+with a closed-form stationary solution, and the free pools are then found by damped fixed-point
+iteration on the conservation laws (`scripts/exact_steady.py`). Validated against stiff
+integration in five regimes — baseline, TBCB knockout, 30× demand, scarce TBCE, abundant TBCE —
+agreeing to 1.5×10⁻¹³ – 3.5×10⁻¹¹ relative on the observable, at 35–2000× the speed.
+
+Prior: every baseline rate constant over ±1 decade, every TUBA8/TUBA1A ratio over ±1.5 decades,
+demand / TBCB_tot / TBCE_tot over 3 decades, TUBA8 synthesis flux over 2 decades below TUBA1A.
+**50 000 draws, 49 728 usable.**
+
+### Which parameters control selectivity (Spearman ρ against `sel`)
+
+| parameter (log-ratio TUBA8/TUBA1A unless noted) | ρ | p |
+|---|---|---|
+| **kon_Edir** — TBCB-independent TBCE capture | **+0.445** | 0 |
+| **k_degF** — clearance of unprotected F | **−0.293** | 0 |
+| **kon_B** — TBCB capture | **−0.255** | 0 |
+| koff_B | +0.105 | 5×10⁻¹²³ |
+| k_tr | −0.082 | 1×10⁻⁷⁵ |
+| kon_Edir (absolute baseline) | −0.080 | 5×10⁻⁷² |
+| TBCE_tot (context) | −0.067 | 5×10⁻⁵¹ |
+| demand (context) | −0.059 | 2×10⁻³⁹ |
+| … | | |
+| **k_fold** | **−0.007** | **0.11 (n.s.)** |
+| k_degU | +0.000 | 0.93 (n.s.) |
+
+Three parameters dominate, `kon_Edir` by a clear margin. The irrelevance of `k_fold` found in
+§3 is confirmed across the entire prior: **folding rate does not produce isoform selectivity
+under any sampled parameter combination.** Selectivity is sharply distributed — median 0.000,
+with `sel < −1` in 9.6% and `sel < −3` in 3.0% of draws.
+
+### The parameter region that reproduces the experiment
+
+Phenotype criterion: `sel < −1.5`, `FC(TUBA8) < 0.5`, `FC(TUBA1A) > 0.75`. Reached by
+**2 184 / 49 728 draws (4.39%)**. Median shift of each parameter in that region relative to the
+rest, in log₁₀ units:
+
+| parameter | median shift | fold | p (Mann–Whitney) |
+|---|---|---|---|
+| **k_degF ratio** | **+0.879** | TUBA8 cleared ~7.6× faster when unprotected | 0 |
+| **kon_Edir ratio** | **−1.014** | TUBA8 bypass ~10× slower | 0 |
+| **kon_B ratio** | **+0.689** | TUBA8 captured by TBCB ~4.9× faster | 9×10⁻¹⁷⁵ |
+| k_degF baseline | +0.303 | | 7×10⁻⁷⁶ |
+| TBCB_tot (context) | +0.379 | ~2.4× more TBCB in wild type | 1×10⁻⁵² |
+| demand (context) | **−0.280** | ~0.53×, i.e. **lower** flux | 4×10⁻²⁸ |
+| k_tr ratio | +0.236 | faster handoff | 9×10⁻²⁰ |
+| koff_B ratio | −0.227 | tighter TBCB binding | 1×10⁻¹⁵ |
+| TBCE_tot (context) | −0.002 | — | 0.059 (n.s.) |
+| k_fold ratio | −0.007 | — | 0.53 (n.s.) |
+
+### This corrects the one-at-a-time conclusion
+
+§3 found that `k_degF` saturates near 25% loss and concluded it was inadequate. The global
+analysis shows `k_degF` is in fact the *strongest single discriminator* of the phenotype region.
+Both are correct, and the resolution is an **interaction effect** that one-at-a-time analysis
+cannot see: `k_degF` alone saturates, but a `kon_Edir` deficit keeps TUBA8 sitting in the
+unprotected F state far longer, which is precisely what makes F's clearance rate decisive. The
+phenotype is produced by a *conjunction* — TUBA8 relies on TBCB avidly (↑kon_B, ↓koff_B), has
+little or no bypass route (↓↓kon_Edir), and is destroyed quickly whenever it is unprotected
+(↑↑k_degF) — not by any single parameter.
+
+That conjunction is a coherent "chaperone addiction" model, and it is falsifiable: it predicts
+that TUBA8 should bind TBCB *better* than TUBA1A does, not worse.
+
+### The phenotype does not uniquely require a bypass deficit
+
+Of the 2 184 phenotype draws, **260 (11.9%)** have `kon_Edir` within 2× of TUBA1A's, i.e. no real
+bypass deficit. In those draws the mechanism is instead avid TBCB dependence plus rapid
+destruction: median `k_degF` ratio +1.038 (11× faster), `kon_B` ratio +1.048 (11× faster),
+`koff_B` ratio −0.494 (3× tighter). So the observation implies the *conjunction* above but does
+**not** on its own prove a missing bypass route; an alternative route to the same phenotype
+exists and would have to be discriminated experimentally.
+
+### Regional specificity, re-examined
+
+Both the demand scan (§3) and the global analysis agree that the phenotype is favoured at
+**lower** synthesis flux (ρ = −0.059; phenotype-region median shift −0.280 in log₁₀), the opposite
+of a naive "cerebellum has the highest tubulin demand" expectation. Interestingly, TBCE abundance
+does not discriminate the phenotype region at all (p = 0.059) whereas TBCB abundance does
+(+0.379), so the regional variable the model points to is the **TBCB-to-substrate ratio**, not
+TBCE capacity.
+
+This is a concrete, testable prediction about the cerebellum: it should be a region where TBCB is
+relatively abundant compared with α-tubulin synthesis flux, not one where tubulin demand is
+highest. That prediction can be checked against regional expression data before any further
+simulation is run, and it should be, because the whole regional argument rests on it.
