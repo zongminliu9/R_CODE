@@ -1,0 +1,213 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q7L8A9",
+ "uniProtkbId": "VASH1_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "evidences": [
+     {
+      "evidenceCode": "ECO:0000305"
+     }
+    ],
+    "value": "Tubulinyl-Tyr carboxypeptidase 1"
+   },
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000269",
+       "source": "PubMed",
+       "id": "29146869"
+      },
+      {
+       "evidenceCode": "ECO:0000269",
+       "source": "PubMed",
+       "id": "31171830"
+      },
+      {
+       "evidenceCode": "ECO:0000269",
+       "source": "PubMed",
+       "id": "31235910"
+      }
+     ],
+     "value": "3.4.17.17"
+    }
+   ]
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000303",
+       "source": "PubMed",
+       "id": "29146869"
+      }
+     ],
+     "value": "Tubulin carboxypeptidase 1"
+    }
+   },
+   {
+    "fullName": {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000305"
+      }
+     ],
+     "value": "Tyrosine carboxypeptidase 1"
+    },
+    "shortNames": [
+     {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000305"
+       }
+      ],
+      "value": "TTCP 1"
+     }
+    ]
+   },
+   {
+    "fullName": {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000303",
+       "source": "PubMed",
+       "id": "15467828"
+      }
+     ],
+     "value": "Vasohibin-1"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "evidences": [
+     {
+      "evidenceCode": "ECO:0000312",
+      "source": "HGNC",
+      "id": "HGNC:19964"
+     }
+    ],
+    "value": "VASH1"
+   },
+   "synonyms": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000303",
+       "source": "PubMed",
+       "id": "10470851"
+      }
+     ],
+     "value": "KIAA1036"
+    },
+    {
+     "value": "VASH"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "note": {
+    "texts": [
+     {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "27879017"
+       }
+      ],
+      "value": "Mainly localizes in the cytoplasm (PubMed:27879017). Some fraction is secreted via a non-canonical secretion system; interaction with SVBP promotes secretion (PubMed:27879017)"
+     }
+    ]
+   },
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "15467828"
+       },
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "27879017"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "15467828"
+       },
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "16707096"
+       },
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "20736312"
+       },
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "27879017"
+       }
+      ],
+      "value": "Secreted",
+      "id": "SL-0243"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [],
+ "sequence": {
+  "value": "MPGGKKVAGGGSSGATPTSAAATAPSGVRRLETSEGTSAQRDEEPEEEGEEDLRDGGVPFFVNRGGLPVDEATWERMWKHVAKIHPDGEKVAQRIRGATDLPKIPIPSVPTFQPSTPVPERLEAVQRYIRELQYNHTGTQFFEIKKSRPLTGLMDLAKEMTKEALPIKCLEAVILGIYLTNSMPTLERFPISFKTYFSGNYFRHIVLGVNFAGRYGALGMSRREDLMYKPPAFRTLSELVLDFEAAYGRCWHVLKKVKLGQSVSHDPHSVEQIEWKHSVLDVERLGRDDFRKELERHARDMRLKIGKGTGPPSPTKDRKKDVSSPQRAQSSPHRRNSRSERRPSGDKKTSEPKAMPDLNGYQIRV",
+  "length": 365,
+  "molWeight": 40957,
+  "crc64": "CEE39875FA9DA70B",
+  "md5": "E8A3162E10013D9AEFB372649ED20C53"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI0000073F7C"
+ }
+}

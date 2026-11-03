@@ -1,0 +1,175 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q9BTW9",
+ "uniProtkbId": "TBCD_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin-specific chaperone D"
+   }
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "Beta-tubulin cofactor D"
+    },
+    "shortNames": [
+     {
+      "value": "tfcD"
+     }
+    ]
+   },
+   {
+    "fullName": {
+     "value": "SSD-1"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Tubulin-folding cofactor D"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "TBCD"
+   },
+   "synonyms": [
+    {
+     "value": "KIAA0988"
+    },
+    {
+     "value": "SSD1"
+    },
+    {
+     "value": "TFCD"
+    }
+   ],
+   "orfNames": [
+    {
+     "value": "PP1096"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "note": {
+    "texts": [
+     {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q28205"
+       }
+      ],
+      "value": "Localized in cell-cell contacts"
+     }
+    ]
+   },
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q28205"
+       }
+      ],
+      "value": "Cell junction, tight junction",
+      "id": "SL-0265"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q28205"
+       }
+      ],
+      "value": "Lateral cell membrane",
+      "id": "SL-0153"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q28205"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q28205"
+       }
+      ],
+      "value": "Cell junction, adherens junction",
+      "id": "SL-0009"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "27666370"
+       }
+      ],
+      "value": "Cytoplasm, cytoskeleton, microtubule organizing center, centrosome",
+      "id": "SL-0048"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [],
+ "sequence": {
+  "value": "MALSDEPAAGGPEEEAEDETLAFGAALEAFGESAETRALLGRLREVHGGGAEREVALERFRVIMDKYQEQPHLLDPHLEWMMNLLLDIVQDQTSPASLVHLAFKFLYIITKVRGYKTFLRLFPHEVADVEPVLDLVTIQNPKDHEAWETRYMLLLWLSVTCLIPFDFSRLDGNLLTQPGQARMSIMDRILQIAESYLIVSDKARDAAAVLVSRFITRPDVKQSKMAEFLDWSLCNLARSSFQTMQGVITMDGTLQALAQIFKHGKREDCLPYAATVLRCLDGCRLPESNQTLLRKLGVKLVQRLGLTFLKPKVAAWRYQRGCRSLAANLQLLTQGQSEQKPLILTEDDDEDDDVPEGVERVIEQLLVGLKDKDTVVRWSAAKGIGRMAGRLPRALADDVVGSVLDCFSFQETDKAWHGGCLALAELGRRGLLLPSRLVDVVAVILKALTYDEKRGACSVGTNVRDAACYVCWAFARAYEPQELKPFVTAISSALVIAAVFDRDINCRRAASAAFQENVGRQGTFPHGIDILTTADYFAVGNRSNCFLVISVFIAGFPEYTQPMIDHLVTMKISHWDGVIRELAARALHNLAQQAPEFSATQVFPRLLSMTLSPDLHMRHGSILACAEVAYALYKLAAQENRPVTDHLDEQAVQGLKQIHQQLYDRQLYRGLGGQLMRQAVCVLIEKLSLSKMPFRGDTVIDGWQWLINDTLRHLHLISSHSRQQMKDAAVSALAALCSEYYMKEPGEADPAIQEELITQYLAELRNPEEMTRCGFSLALGALPGFLLKGRLQQVLTGLRAVTHTSPEDVSFAESRRDGLKAIARICQTVGVKAGAPDEAVCGENVSQIYCALLGCMDDYTTDSRGDVGTWVRKAAMTSLMDLTLLLARSQPELIEAHTCERIMCCVAQQASEKIDRFRAHAASVFLTLLHFDSPPIPHVPHRGELEKLFPRSDVASVNWSAPSQAFPRITQLLGLPTYRYHVLLGLVVSLGGLTESTIRHSTQSLFEYMKGIQSDPQALGSFSGTLLQIFEDNLLNERVSVPLLKTLDHVLTHGCFDIFTTEEDHPFAVKLLALCKKEIKNSKDIQKLLSGIAVFCEMVQFPGDVRRQALLQLCLLLCHRFPLIRKTTASQVYETLLTYSDVVGADVLDEVVTVLSDTAWDAELAVVREQRNRLCDLLGVPRPQLVPQPGAC",
+  "length": 1192,
+  "molWeight": 132600,
+  "crc64": "C46BE2048A5FEBC2",
+  "md5": "34C80B7C7F82F22247010A12BBE3725F"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI000020053F"
+ }
+}

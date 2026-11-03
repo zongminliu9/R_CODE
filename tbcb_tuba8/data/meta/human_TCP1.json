@@ -1,0 +1,419 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "P17987",
+ "uniProtkbId": "TCPA_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "T-complex protein 1 subunit alpha"
+   },
+   "shortNames": [
+    {
+     "value": "TCP-1-alpha"
+    }
+   ],
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000305",
+       "source": "PubMed",
+       "id": "35449234"
+      },
+      {
+       "evidenceCode": "ECO:0000305",
+       "source": "PubMed",
+       "id": "36493755"
+      },
+      {
+       "evidenceCode": "ECO:0000305",
+       "source": "PubMed",
+       "id": "37193829"
+      }
+     ],
+     "value": "3.6.1.-"
+    }
+   ]
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "CCT-alpha"
+    }
+   },
+   {
+    "fullName": {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000312",
+       "source": "MIM",
+       "id": "186980"
+      }
+     ],
+     "value": "Chaperonin containing T-complex polypeptide 1 subunit 1"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "evidences": [
+     {
+      "evidenceCode": "ECO:0000303",
+      "source": "PubMed",
+      "id": "2377466"
+     },
+     {
+      "evidenceCode": "ECO:0000303",
+      "source": "PubMed",
+      "id": "3653076"
+     },
+     {
+      "evidenceCode": "ECO:0000312",
+      "source": "HGNC",
+      "id": "HGNC:11655"
+     }
+    ],
+    "value": "TCP1"
+   },
+   "synonyms": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000303",
+       "source": "PubMed",
+       "id": "25467444"
+      },
+      {
+       "evidenceCode": "ECO:0000312",
+       "source": "HGNC",
+       "id": "HGNC:11655"
+      }
+     ],
+     "value": "CCT1"
+    },
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000312",
+       "source": "HGNC",
+       "id": "HGNC:11655"
+      }
+     ],
+     "value": "CCTA"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "1630492"
+       }
+      ],
+      "value": "Cytoplasm, cytosol",
+      "id": "SL-0091"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "14654843"
+       },
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "20080638"
+       }
+      ],
+      "value": "Cytoplasm, cytoskeleton, microtubule organizing center, centrosome",
+      "id": "SL-0048"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 1,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 1,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylmethionine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000269",
+     "source": "PubMed",
+     "id": "12665801"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19413330"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "22223895"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "22814378"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 6,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 6,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23186163"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 181,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 181,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphotyrosine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19690332"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 199,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 199,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19608861"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 400,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 400,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19608861"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 491,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 491,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23186163"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 494,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 494,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P11983"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 544,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 544,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "18669648"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19690332"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "20068231"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "21406692"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23186163"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "24275569"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 551,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 551,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "20068231"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "21406692"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23186163"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MEGPLSVFGDRSTGETIRSQNVMAAASIANIVKSSLGPVGLDKMLVDDIGDVTITNDGATILKLLEVEHPAAKVLCELADLQDKEVGDGTTSVVIIAAELLKNADELVKQKIHPTSVISGYRLACKEAVRYINENLIVNTDELGRDCLINAAKTSMSSKIIGINGDFFANMVVDAVLAIKYTDIRGQPRYPVNSVNILKAHGRSQMESMLISGYALNCVVGSQGMPKRIVNAKIACLDFSLQKTKMKLGVQVVITDPEKLDQIRQRESDITKERIQKILATGANVILTTGGIDDMCLKYFVEAGAMAVRRVLKRDLKRIAKASGATILSTLANLEGEETFEAAMLGQAEEVVQERICDDELILIKNTKARTSASIILRGANDFMCDEMERSLHDALCVVKRVLESKSVVPGGGAVEAALSIYLENYATSMGSREQLAIAEFARSLLVIPNTLAVNAAQDSTDLVAKLRAFHNEAQVNPERKNLKWIGLDLSNGKPRDNKQAGVFEPTIVKVKSLKFATEAAITILRIDDLIKLHPESKDDKHGSYEDAVHSGALND",
+  "length": 556,
+  "molWeight": 60344,
+  "crc64": "486ECA836EA258A1",
+  "md5": "DB396B7DF1335B47AF06B221D22BC1D8"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI0000136AEA"
+ }
+}

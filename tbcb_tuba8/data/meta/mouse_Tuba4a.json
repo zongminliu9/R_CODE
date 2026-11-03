@@ -1,0 +1,207 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "P68368",
+ "uniProtkbId": "TBA4A_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin alpha-4A chain"
+   },
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000250",
+       "source": "UniProtKB",
+       "id": "P68363"
+      }
+     ],
+     "value": "3.6.5.-"
+    }
+   ]
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "Alpha-tubulin 4"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Alpha-tubulin isotype M-alpha-4"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Tubulin alpha-4 chain"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Tuba4a"
+   },
+   "synonyms": [
+    {
+     "value": "Tuba4"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "value": "Cytoplasm, cytoskeleton",
+      "id": "SL-0090"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 40,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 40,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P68366"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 48,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 48,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P68366"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 83,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 83,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "3'-nitrotyrosine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "16800626"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 432,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 432,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphotyrosine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q9BQE3"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 439,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 439,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q5XIF6"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MRECISVHVGQAGVQMGNACWELYCLEHGIQPDGQMPSDKTIGGGDDSFTTFFCETGAGKHVPRAVFVDLEPTVIDEIRNGPYRQLFHPEQLITGKEDAANNYARGHYTIGKEIIDPVLDRIRKLSDQCTGLQGFLVFHSFGGGTGSGFTSLLMERLSVDYGKKSKLEFSIYPAPQVSTAVVEPYNSILTTHTTLEHSDCAFMVDNEAIYDICRRNLDIERPTYTNLNRLISQIVSSITASLRFDGALNVDLTEFQTNLVPYPRIHFPLATYAPVISAEKAYHEQLSVAEITNACFEPANQMVKCDPRHGKYMACCLLYRGDVVPKDVNAAIAAIKTKRSIQFVDWCPTGFKVGINYQPPTVVPGGDLAKVQRAVCMLSNTTAIAEAWARLDHKFDLMYAKRAFVHWYVGEGMEEGEFSEAREDMAALEKDYEEVGIDSYEDEDEGEE",
+  "length": 448,
+  "molWeight": 49924,
+  "crc64": "C00ED90A183FE8F2",
+  "md5": "B9A8709A9F7680D393B869E20E010C07"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI0000004129"
+ }
+}

@@ -1,0 +1,310 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q99426",
+ "uniProtkbId": "TBCB_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "evidences": [
+     {
+      "evidenceCode": "ECO:0000303",
+      "source": "PubMed",
+      "id": "16303566"
+     },
+     {
+      "evidenceCode": "ECO:0000303",
+      "source": "PubMed",
+      "id": "9265649"
+     }
+    ],
+    "value": "Tubulin-folding cofactor B"
+   }
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000303",
+       "source": "PubMed",
+       "id": "8978778"
+      }
+     ],
+     "value": "Cytoskeleton-associated protein 1"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Cytoskeleton-associated protein CKAPI"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Tubulin-specific chaperone B"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "evidences": [
+     {
+      "evidenceCode": "ECO:0000303",
+      "source": "PubMed",
+      "id": "16303566"
+     },
+     {
+      "evidenceCode": "ECO:0000312",
+      "source": "HGNC",
+      "id": "HGNC:1989"
+     }
+    ],
+    "value": "TBCB"
+   },
+   "synonyms": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000312",
+       "source": "HGNC",
+       "id": "HGNC:1989"
+      }
+     ],
+     "value": "CG22"
+    },
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000303",
+       "source": "PubMed",
+       "id": "8978778"
+      }
+     ],
+     "value": "CKAP1"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "note": {
+    "texts": [
+     {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "15831477"
+       }
+      ],
+      "value": "Colocalizes with microtubules. In differentiated neurons, located in the cytoplasm. In differentiating neurons, accumulates at the growth cone"
+     }
+    ]
+   },
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "15831477"
+       },
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "22777741"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "15831477"
+       }
+      ],
+      "value": "Cytoplasm, cytoskeleton",
+      "id": "SL-0090"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 1,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 1,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylmethionine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "22223895"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 65,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 65,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine; by PAK1",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000269",
+     "source": "PubMed",
+     "id": "15831477"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 98,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 98,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphotyrosine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "15144186"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "15592455"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 110,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 110,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "17525332"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23186163"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 128,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 128,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine; by PAK1",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000269",
+     "source": "PubMed",
+     "id": "15831477"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 219,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 219,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19608861"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MEVTGVSAPTVTVFISSSLNTFRSEKRYSRSLTIAEFKCKLELLVGSPASCMELELYGVDDKFYSKLDQEDALLGSYPVDDGCRIHVIDHSGARLGEYEDVSRVEKYTISQEAYDQRQDTVRSFLKRSKLGRYNEEERAQQEAEAAQRLAEEKAQASSIPVGSRCEVRAAGQSPRRGTVMYVGLTDFKPGYWIGVRYDEPLGKNDGSVNGKRYFECQAKYGAFVKPAVVTVGDFPEEDYGLDEI",
+  "length": 244,
+  "molWeight": 27326,
+  "crc64": "E984C7C74A105384",
+  "md5": "82FB53BD2BBDBA5BED09B12692387592"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI0000136A4B"
+ }
+}

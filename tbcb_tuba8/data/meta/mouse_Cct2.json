@@ -1,0 +1,230 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "P80314",
+ "uniProtkbId": "TCPB_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "T-complex protein 1 subunit beta"
+   },
+   "shortNames": [
+    {
+     "value": "TCP-1-beta"
+    }
+   ],
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000250",
+       "source": "UniProtKB",
+       "id": "P78371"
+      }
+     ],
+     "value": "3.6.1.-"
+    }
+   ]
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "CCT-beta"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Cct2"
+   },
+   "synonyms": [
+    {
+     "value": "Cctb"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "P78371"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 2,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 2,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylalanine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P78371"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 3,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 3,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P78371"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 13,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 13,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P78371"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 181,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 181,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P78371"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 260,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 260,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P78371"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 261,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 261,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphothreonine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P78371"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MASLSLAPVNIFKAGADEERAETARLSSFIGAIAIGDLVKSTLGPKGMDKILLSSGRDAALMVTNDGATILKNIGVDNPAAKVLVDMSRVQDDEVGDGTTSVTVLAAELLREAESLIAKKIHPQTIISGWREATKAAREALLSSAVDHGSDEARFWQDLMNIAGTTLSSKLLTHHKDHFTKLAVEAVLRLKGSGNLEAIHVIKKLGGSLADSYLDEGFLLDKKIGVNQPKRIENAKILIANTGMDTDKIKIFGSRVRVDSTAKVAEIEHAEKEKMKEKVERILKHGINCFINRQLIYNYPEQLFGAAGVMAIEHADFAGVERLALVTGGEIASTFDHPELVKLGSCKLIEEVMIGEDKLIHFSGVALGEACTIVLRGATQQILDEAERSLHDALCVLAQTVKDPRTVYGGGCSEMLMAHAVTQLANRTPGKEAVAMESFAKALRMLPTIIADNAGYDSADLVAQLRAAHSEGHITAGLDMKEGTIGDMAVLGITESFQVKRQVLLSAAEAAEVILRVDNIIKAAPRKRVPDHHPC",
+  "length": 535,
+  "molWeight": 57477,
+  "crc64": "605744DF068BB192",
+  "md5": "32482493EC35786D9334B802590D892B"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI00000040E3"
+ }
+}

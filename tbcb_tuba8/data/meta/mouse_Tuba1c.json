@@ -1,0 +1,216 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "P68373",
+ "uniProtkbId": "TBA1C_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin alpha-1C chain"
+   },
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000250",
+       "source": "UniProtKB",
+       "id": "P68363"
+      }
+     ],
+     "value": "3.6.5.-"
+    }
+   ]
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "Alpha-tubulin 6"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Alpha-tubulin isotype M-alpha-6"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Tubulin alpha-6 chain"
+    }
+   }
+  ],
+  "contains": [
+   {
+    "recommendedName": {
+     "fullName": {
+      "value": "Detyrosinated tubulin alpha-1C chain"
+     }
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Tuba1c"
+   },
+   "synonyms": [
+    {
+     "value": "Tuba6"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "value": "Cytoplasm, cytoskeleton",
+      "id": "SL-0090"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 40,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 40,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q9BQE3"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 282,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 282,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "3'-nitrotyrosine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "16800626"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 432,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 432,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphotyrosine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q9BQE3"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 439,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 439,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "21183079"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 449,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 449,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "3'-nitrotyrosine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q71U36"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MRECISIHVGQAGVQIGNACWELYCLEHGIQPDGQMPSDKTIGGGDDSFNTFFSETGAGKHVPRAVFVDLEPTVIDEVRTGTYRQLFHPEQLITGKEDAANNYARGHYTIGKEIIDLVLDRIRKLADQCTGLQGFLVFHSFGGGTGSGFTSLLMERLSVDYGKKSKLEFSIYPAPQVSTAVVEPYNSILTTHTTLEHSDCAFMVDNEAIYDICRRNLDIERPTYTNLNRLISQIVSSITASLRFDGALNVDLTEFQTNLVPYPRIHFPLATYAPVISAEKAYHEQLTVAEITNACFEPANQMVKCDPRHGKYMACCLLYRGDVVPKDVNAAIATIKTKRTIQFVDWCPTGFKVGINYQPPTVVPGGDLAKVQRAVCMLSNTTAIAEAWARLDHKFDLMYAKRAFVHWYVGEGMEEGEFSEAREDMAALEKDYEEVGADSAEGDDEGEEY",
+  "length": 449,
+  "molWeight": 49909,
+  "crc64": "0DA9F082D9DC8549",
+  "md5": "819C48DBE9A8D55191589326633B84B9"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI0000001A26"
+ }
+}

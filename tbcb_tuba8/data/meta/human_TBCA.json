@@ -1,0 +1,103 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "O75347",
+ "uniProtkbId": "TBCA_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin-specific chaperone A"
+   }
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "TCP1-chaperonin cofactor A"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Tubulin-folding cofactor A"
+    },
+    "shortNames": [
+     {
+      "value": "CFA"
+     }
+    ]
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "TBCA"
+   }
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "value": "Cytoplasm, cytoskeleton",
+      "id": "SL-0090"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 2,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 2,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylalanine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P80584"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MADPRVRQIKIKTGVVKRLVKEKVMYEKEAKQQEEKIEKMRAEDGENYDIKKQAEILQESRMMIPDCQRRLEAAYLDLQRILENEKDLEEAEEYKEARLVLDSVKLEA",
+  "length": 108,
+  "molWeight": 12855,
+  "crc64": "222D8D945A5CD162",
+  "md5": "895DF31D01AF35825589954917C6B682"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI000014A589"
+ }
+}

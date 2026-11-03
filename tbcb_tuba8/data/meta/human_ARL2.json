@@ -1,0 +1,125 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "P36404",
+ "uniProtkbId": "ARL2_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "ADP-ribosylation factor-like protein 2"
+   }
+  }
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "ARL2"
+   }
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "note": {
+    "texts": [
+     {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "O08697"
+       }
+      ],
+      "value": "The complex formed with ARL2BP, ARL2 and SLC25A6 is expressed in mitochondria. The complex formed with ARL2BP, ARL2 and SLC25A4 is expressed in mitochondria (By similarity). Not detected in the Golgi, nucleus and on the mitotic spindle. Centrosome-associated throughout the cell cycle. Not detected to interphase microtubules"
+     }
+    ]
+   },
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000305",
+        "source": "PubMed",
+        "id": "30945270"
+       }
+      ],
+      "value": "Mitochondrion intermembrane space",
+      "id": "SL-0169"
+     }
+    },
+    {
+     "location": {
+      "value": "Cytoplasm, cytoskeleton, microtubule organizing center, centrosome",
+      "id": "SL-0048"
+     }
+    },
+    {
+     "location": {
+      "value": "Nucleus",
+      "id": "SL-0191"
+     }
+    },
+    {
+     "location": {
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 45,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 45,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q9D0J4"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MGLLTILKKMKQKERELRLLMLGLDNAGKTTILKKFNGEDIDTISPTLGFNIKTLEHRGFKLNIWDVGGQKSLRSYWRNYFESTDGLIWVVDSADRQRMQDCQRELQSLLVEERLAGATLLIFANKQDLPGALSSNAIREVLELDSIRSHHWCIQGCSAVTGENLLPGIDWLLDDISSRIFTAD",
+  "length": 184,
+  "molWeight": 20878,
+  "crc64": "0823F005719C17F9",
+  "md5": "0C74055AEACAF27BBA186FB96B0F30A9"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI000013CBFD"
+ }
+}

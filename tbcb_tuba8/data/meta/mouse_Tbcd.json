@@ -1,0 +1,152 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q8BYA0",
+ "uniProtkbId": "TBCD_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin-specific chaperone D"
+   }
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "Beta-tubulin cofactor D"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Tubulin-folding cofactor D"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Tbcd"
+   }
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "note": {
+    "texts": [
+     {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q28205"
+       }
+      ],
+      "value": "Localized in cell-cell contacts"
+     }
+    ]
+   },
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q28205"
+       }
+      ],
+      "value": "Cell junction, tight junction",
+      "id": "SL-0265"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q28205"
+       }
+      ],
+      "value": "Lateral cell membrane",
+      "id": "SL-0153"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q28205"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q28205"
+       }
+      ],
+      "value": "Cell junction, adherens junction",
+      "id": "SL-0009"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q9BTW9"
+       }
+      ],
+      "value": "Cytoplasm, cytoskeleton, microtubule organizing center, centrosome",
+      "id": "SL-0048"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [],
+ "sequence": {
+  "value": "MVLSNEPAASAAEEEVEDDALVRASALEAFGESAETRALLRSLPAVHRERASREVAEERFRVIMDKYQEQPHLLDPHLEWMMNSLLDLVQDETSLPDLVHLAFKFLYIITKVRGYKVFLRLFPHEVANVQPVLDMFTGQNPKDHETWETRYMLLLWLSVTCLIPFDFSRLDGNLSTQTGETRVPTMDRILQIAESYLVVSDKARDAAAVLVSKFITRPDVKQRKMASFLDWSLCTLAHSSFQTIEGVITMDGMLQALAQIFKHGKREDCLPYANTVLQCLDGCRLPESSHTSLRKLGVKLVQRLGLTFLKPKVATWRYQRGCRSLAANLKLCAPGKSDQKLLSDSLTSDGDEDYDVPEGVETVIEQLLVGLKDKDTVVRWSAAKGIGRMAGRLPRELADDVVGSVLDCFSFQETDKAWHGGCLALAELGRRGLLLPSRLSEVVTVILKALTYDEKRGACSVGANVRDAACYVCWAFARAYEPQELTPFVTAISSALVIAAVFDRNVNCRRAASAAFQENVGRQGTFPHGIDILTTADYFAVGNISNCFLIISVFIAGFQEYTKPMIDHLVSMKINHWDGAIRELSAKALHNLTPQVPEYIAMHVFPALLLMTQSPDLHTRHGAILACAEVTYALYKLATQSNRLVTDYLDEKAVQSLKQIHQQLCDRHLYRGLGGELMRQAVCILIEKLSLSRMPFKGDATVEGWQWLINDTLRSLHLVSSHSRQQIKEVAVSALTALCSEYYVKEPGEAGSSIAKELIPQYLAELQSPEEMARCGFSSALGALPGFLLRGHLQQVLSGLRRVTCISPNDVSFAEARRDGLKAISRICQTVGVNTRGPPDEVICKENISEVYAALLGCMSDYTTDSRGDVGAWVREAAMTSLMDLMLLLARTEPVLIEAHICERVMCCVAQQASEKIDRFRAHAARVFLTLLHFDSPPIPHVPHRQELESLFPRSDVATVNWNAPSQAFPLITQLLGLPTYRYHVLLGLAVSVGGLTESTVRHSTQSLFEYMKGIQKDAQVLQSFSETLLKVFEDNLLNDRVSVSLLKMLDQLLANGCFDIFTAEENHPFCVKLLTLCKEEIKKSKDIQKLRSSIAVLCGMVQFNGDVRKKILLQLFLLLGHPFPVIRKSTASQVYEMVLTYSDLVDAEVLDEVMSVLSDTAWDAELPVVREQRNRLCDLLGVPRPQLVPKPIPGS",
+  "length": 1196,
+  "molWeight": 133321,
+  "crc64": "5439133B4CD54938",
+  "md5": "90AB58265AC775674A46C0E2BDF7D98F"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI0000029C84"
+ }
+}

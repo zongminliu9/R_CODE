@@ -1,0 +1,107 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q9UHV9",
+ "uniProtkbId": "PFD2_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Prefoldin subunit 2"
+   }
+  }
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "PFDN2"
+   },
+   "synonyms": [
+    {
+     "value": "PFD2"
+    }
+   ],
+   "orfNames": [
+    {
+     "value": "HSPC231"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "17936702"
+       }
+      ],
+      "value": "Nucleus",
+      "id": "SL-0191"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "17936702"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "17936702"
+       }
+      ],
+      "value": "Mitochondrion",
+      "id": "SL-0173"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [],
+ "sequence": {
+  "value": "MAENSGRAGKSSGSGAGKGAVSAEQVIAGFNRLRQEQRGLASKAAELEMELNEHSLVIDTLKEVDETRKCYRMVGGVLVERTVKEVLPALENNKEQIQKIIETLTQQLQAKGKELNEFREKHNIRLMGEDEKPAAKENSEGAGAKASSAGVLVS",
+  "length": 154,
+  "molWeight": 16648,
+  "crc64": "2FC68A7425412198",
+  "md5": "B56739CA872FCA4471037CB13FAFF49C"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI000000DBA5"
+ }
+}

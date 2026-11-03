@@ -1,0 +1,65 @@
+[
+ {
+  "cls": "cofactor_iface",
+  "n_class": 55,
+  "observed": 0,
+  "expected": 4.906,
+  "ratio": 0.0,
+  "p_enrich": 1.0,
+  "p_deplete": 0.004099959000409996
+ },
+ {
+  "cls": "alphabeta_iface",
+  "n_class": 18,
+  "observed": 0,
+  "expected": 1.605,
+  "ratio": 0.0,
+  "p_enrich": 1.0,
+  "p_deplete": 0.17829821701782983
+ },
+ {
+  "cls": "buried_core",
+  "n_class": 178,
+  "observed": 11,
+  "expected": 15.885,
+  "ratio": 0.692,
+  "p_enrich": 0.969390306096939,
+  "p_deplete": 0.06530934690653094
+ },
+ {
+  "cls": "exposed_surface",
+  "n_class": 125,
+  "observed": 17,
+  "expected": 11.156,
+  "ratio": 1.524,
+  "p_enrich": 0.026569734302656974,
+  "p_deplete": 0.988830111698883
+ },
+ {
+  "cls": "nucleotide_pocket",
+  "n_class": 29,
+  "observed": 0,
+  "expected": 2.587,
+  "ratio": 0.0,
+  "p_enrich": 1.0,
+  "p_deplete": 0.06170938290617094
+ },
+ {
+  "cls": "near_TBCE_8A",
+  "n_class": 93,
+  "observed": 3,
+  "expected": 8.301,
+  "ratio": 0.361,
+  "p_enrich": 0.995440045599544,
+  "p_deplete": 0.01871981280187198
+ },
+ {
+  "cls": "near_TBCD_8A",
+  "n_class": 20,
+  "observed": 0,
+  "expected": 1.782,
+  "ratio": 0.0,
+  "p_enrich": 1.0,
+  "p_deplete": 0.14909850901490984
+ }
+]

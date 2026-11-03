@@ -1,0 +1,16 @@
+# Downloaded structural data: 47 MB, fully regenerable with
+#   python3 tbcb_tuba8/scripts/fetch_structures.py
+tbcb_tuba8/data/pdb/*.cif
+tbcb_tuba8/data/pdb/*.pdb
+tbcb_tuba8/data/afdb/*.pdb
+
+# Prepared / generated coordinates and trajectories
+tbcb_tuba8/data/pdb/prep_*
+*.dcd
+*.xtc
+*.trr
+*.chk
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

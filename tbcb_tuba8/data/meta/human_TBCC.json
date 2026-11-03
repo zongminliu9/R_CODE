@@ -1,0 +1,169 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q15814",
+ "uniProtkbId": "TBCC_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin-specific chaperone C"
+   }
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "Tubulin-folding cofactor C"
+    },
+    "shortNames": [
+     {
+      "value": "CFC"
+     }
+    ]
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "TBCC"
+   }
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "note": {
+    "texts": [
+     {
+      "value": "Detected predominantly in the photoreceptor connecting cilium"
+     }
+    ]
+   },
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "12417528"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 1,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 1,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylmethionine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "22223895"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "22814378"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 80,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 80,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23186163"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 168,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 168,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "18669648"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "20068231"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23186163"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MESVSCSAAAVRTGDMESQRDLSLVPERLQRREQERQLEVERRKQKRQNQEVEKENSHFFVATFVRERAAVEELLERAESVERLEEAASRLQGLQKLINDSVFFLAAYDLRQGQEALARLQAALAERRRGLQPKKRFAFKTRGKDAASSTKVDAAPGIPPAVESIQDSPLPKKAEGDLGPSWVCGFSNLESQVLEKRASELHQRDVLLTELSNCTVRLYGNPNTLRLTKAHSCKLLCGPVSTSVFLEDCSDCVLAVACQQLRIHSTKDTRIFLQVTSRAIVEDCSGIQFAPYTWSYPEIDKDFESSGLDRSKNNWNDVDDFNWLARDMASPNWSILPEEERNIQWD",
+  "length": 346,
+  "molWeight": 39248,
+  "crc64": "32732BB3411FCD20",
+  "md5": "2B6F713BF90289A79A502F00A4251874"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI000013CB83"
+ }
+}

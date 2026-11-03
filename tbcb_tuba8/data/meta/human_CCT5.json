@@ -1,0 +1,243 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "P48643",
+ "uniProtkbId": "TCPE_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "T-complex protein 1 subunit epsilon"
+   },
+   "shortNames": [
+    {
+     "value": "TCP-1-epsilon"
+    }
+   ],
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000269",
+       "source": "PubMed",
+       "id": "23612981"
+      }
+     ],
+     "value": "3.6.1.-"
+    }
+   ]
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "CCT-epsilon"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Chaperonin containing T-complex polypeptide 1 subunit 5"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "CCT5"
+   },
+   "synonyms": [
+    {
+     "value": "CCTE"
+    },
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000303",
+       "source": "PubMed",
+       "id": "7788527"
+      }
+     ],
+     "value": "KIAA0098"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "20080638"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "14654843"
+       },
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "20080638"
+       }
+      ],
+      "value": "Cytoplasm, cytoskeleton, microtubule organizing center, centrosome",
+      "id": "SL-0048"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 2,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 2,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylalanine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000269",
+     "source": "Reference",
+     "id": "Ref.6"
+    },
+    {
+     "evidenceCode": "ECO:0000269",
+     "source": "Reference",
+     "id": "Ref.7"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19413330"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "22223895"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "22814378"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "25944712"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 26,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 26,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "21406692"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 346,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 346,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23186163"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 539,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 539,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23186163"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MASMGTLAFDEYGRPFLIIKDQDRKSRLMGLEALKSHIMAAKAVANTMRTSLGPNGLDKMMVDKDGDVTVTNDGATILSMMDVDHQIAKLMVELSKSQDDEIGDGTTGVVVLAGALLEEAEQLLDRGIHPIRIADGYEQAARVAIEHLDKISDSVLVDIKDTEPLIQTAKTTLGSKVVNSCHRQMAEIAVNAVLTVADMERRDVDFELIKVEGKVGGRLEDTKLIKGVIVDKDFSHPQMPKKVEDAKIAILTCPFEPPKPKTKHKLDVTSVEDYKALQKYEKEKFEEMIQQIKETGANLAICQWGFDDEANHLLLQNNLPAVRWVGGPEIELIAIATGGRIVPRFSELTAEKLGFAGLVQEISFGTTKDKMLVIEQCKNSRAVTIFIRGGNKMIIEEAKRSLHDALCVIRNLIRDNRVVYGGGAAEISCALAVSQEADKCPTLEQYAMRAFADALEVIPMALSENSGMNPIQTMTEVRARQVKEMNPALGIDCLHKGTNDMKQQHVIETLIGKKQQISLATQMVRMILKIDDIRKPGESEE",
+  "length": 541,
+  "molWeight": 59671,
+  "crc64": "164168BB80EF022A",
+  "md5": "700BCC37239DA326AA8F783ABD82F1DC"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI0000001C34"
+ }
+}

@@ -1,0 +1,46 @@
+canon_pos,region,TUBA1A,TUBA8,TUBA1B,TUBA1C,TUBA3A,TUBA4A,tuba8_unique
+7,S1,I,V,I,I,I,V,False
+24,H1,Y,F,Y,Y,Y,Y,True
+32,H1-S2 loop (N-side),P,A,P,P,P,P,True
+35,H1-S2 loop (N-side),Q,T,Q,Q,Q,Q,True
+36,H1-S2 loop (N-side),M,F,M,M,M,M,True
+37,H1-S2 loop (N-side),P,G,P,P,P,P,True
+38,H1-S2 loop (N-side),S,T,S,S,S,S,True
+39,K40 loop / acetyl loop,D,Q,D,D,D,D,True
+40,K40 loop / acetyl loop,K,A,K,K,K,K,True
+41,K40 loop / acetyl loop,T,S,T,T,T,T,True
+42,K40 loop / acetyl loop,I,K,I,I,I,I,True
+43,K40 loop / acetyl loop,G,I,G,G,G,G,True
+44,K40 loop / acetyl loop,G,N,G,G,G,G,True
+45,K40 loop / acetyl loop,G,D,G,G,G,G,True
+50,H1-S2 loop (C-side),N,T,N,N,N,T,False
+58,H1-S2 loop (C-side),A,N,A,A,A,A,True
+67,S2,F,M,F,F,F,F,True
+75,H2 / T2,I,V,I,I,V,I,False
+80,H2 / T2,T,A,T,T,T,N,True
+110,H3,I,V,I,I,I,I,True
+114,H3-S4 / T3 loop,I,S,I,I,I,I,True
+126,H3-S4 / T3 loop,A,T,A,A,A,S,True
+128,H3-S4 / T3 loop,Q,A,Q,Q,L,Q,True
+130,H3-S4 / T3 loop,T,S,T,T,T,T,True
+137,S4,V,I,V,V,I,V,False
+159,H4,V,L,V,V,V,V,True
+170,H4,S,A,S,S,A,S,False
+232,H6-H7 loop / H6,G,S,S,S,G,S,False
+270,H7 (core helix),A,V,A,A,A,A,True
+275,H7-H8 loop / T7,V,I,V,V,V,V,True
+293,H8,N,S,N,N,N,N,True
+294,H8,A,S,A,A,A,A,True
+299,S7,A,N,A,A,A,A,True
+300,S7,N,S,N,N,N,N,True
+317,H9 / S8 region,L,M,L,L,M,L,False
+330,S8-H9 loop (M-loop side),A,V,A,A,A,A,True
+334,S8-H9 loop (M-loop side),T,A,T,T,T,A,False
+425,H11-H12 loop,M,L,M,M,L,M,False
+437,H11-H12 loop,V,T,V,A,V,I,True
+440,H12 / C-term tail,V,F,V,-,V,Y,True
+441,H12 / C-term tail,E,-,E,-,E,-,False
+442,H12 / C-term tail,G,-,G,A,A,-,False
+444,H12 / C-term tail,G,E,G,G,A,D,True
+446,H12 / C-term tail,E,N,E,D,E,D,True
+451,H12 / C-term tail,Y,F,Y,Y,Y,-,True

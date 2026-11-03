@@ -1,0 +1,265 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "P05214",
+ "uniProtkbId": "TBA3_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin alpha-3 chain"
+   },
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000250",
+       "source": "UniProtKB",
+       "id": "P68363"
+      }
+     ],
+     "value": "3.6.5.-"
+    }
+   ]
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "Alpha-tubulin 3/7"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Alpha-tubulin isotype M-alpha-3/7"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Tubulin alpha-3/alpha-7 chain"
+    }
+   }
+  ],
+  "contains": [
+   {
+    "recommendedName": {
+     "fullName": {
+      "value": "Detyrosinated tubulin alpha-3 chain"
+     }
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Tuba3a"
+   },
+   "synonyms": [
+    {
+     "value": "Tuba3"
+    }
+   ]
+  },
+  {
+   "geneName": {
+    "value": "Tuba3b"
+   },
+   "synonyms": [
+    {
+     "value": "Tuba7"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "value": "Cytoplasm, cytoskeleton",
+      "id": "SL-0090"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "37295417"
+       },
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "37989994"
+       }
+      ],
+      "value": "Cytoplasm, cytoskeleton, flagellum axoneme",
+      "id": "SL-0114"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 40,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 40,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q9BQE3"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 48,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 48,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P68366"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 83,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 83,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "3'-nitrotyrosine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P68368"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 432,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 432,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphotyrosine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q9BQE3"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 439,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 439,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q9BQE3"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 450,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 450,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "3'-nitrotyrosine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q71U36"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MRECISIHVGQAGVQIGNACWELYCLEHGIQPDGQMPSDKTIGGGDDSFNTFFSETGAGKHVPRAVFVDLEPTVVDEVRTGTYRQLFHPEQLITGKEDAANNYARGHYTIGKEIVDLVLDRIRKLADLCTGLQGFLIFHSFGGGTGSGFASLLMERLSVDYGKKSKLEFAIYPAPQVSTAVVEPYNSILTTHTTLEHSDCAFMVDNEAIYDICRRNLDIERPTYTNLNRLIGQIVSSITASLRFDGALNVDLTEFQTNLVPYPRIHFPLATYAPVISAEKAYHEQLSVAEITNACFEPANQMVKCDPRHGKYMACCMLYRGDVVPKDVNAAIATIKTKRTIQFVDWCPTGFKVGINYQPPTVVPGGDLAKVQRAVCMLSNTTAIAEAWARLDHKFDLMYAKRAFVHWYVGEGMEEGEFSEAREDLAALEKDYEEVGVDSVEAEAEEGEEY",
+  "length": 450,
+  "molWeight": 49960,
+  "crc64": "2A78714CBA782D55",
+  "md5": "8FEB68BFA405E4DE93D7D12BDD583E38"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI0000027DB1"
+ }
+}

@@ -1,0 +1,370 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "P78371",
+ "uniProtkbId": "TCPB_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "T-complex protein 1 subunit beta"
+   },
+   "shortNames": [
+    {
+     "value": "TCP-1-beta"
+    }
+   ],
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000305",
+       "source": "PubMed",
+       "id": "35449234"
+      },
+      {
+       "evidenceCode": "ECO:0000305",
+       "source": "PubMed",
+       "id": "36493755"
+      },
+      {
+       "evidenceCode": "ECO:0000305",
+       "source": "PubMed",
+       "id": "37193829"
+      }
+     ],
+     "value": "3.6.1.-"
+    }
+   ]
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000312",
+       "source": "MIM",
+       "id": "605139"
+      }
+     ],
+     "value": "CCT-beta"
+    }
+   },
+   {
+    "fullName": {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000312",
+       "source": "MIM",
+       "id": "605139"
+      }
+     ],
+     "value": "Chaperonin containing T-complex polypeptide 1 subunit 2"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "evidences": [
+     {
+      "evidenceCode": "ECO:0000303",
+      "source": "PubMed",
+      "id": "25467444"
+     },
+     {
+      "evidenceCode": "ECO:0000312",
+      "source": "HGNC",
+      "id": "HGNC:1615"
+     }
+    ],
+    "value": "CCT2"
+   },
+   "synonyms": [
+    {
+     "value": "99D8.1"
+    },
+    {
+     "value": "CCTB"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "20080638"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 2,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 2,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylalanine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000269",
+     "source": "Reference",
+     "id": "Ref.12"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19413330"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "20068231"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "21406692"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "22223895"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "22814378"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 3,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 3,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "20068231"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "21406692"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23186163"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 13,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 13,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19608861"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 60,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 60,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23186163"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 154,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 154,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19608861"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 181,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 181,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19608861"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 260,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 260,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "21406692"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 261,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 261,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphothreonine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "21406692"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 1,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 1,
+     "modifier": "EXACT"
+    },
+    "sequence": "P78371-2"
+   },
+   "description": "N-acetylmethionine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "22814378"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MASLSLAPVNIFKAGADEERAETARLTSFIGAIAIGDLVKSTLGPKGMDKILLSSGRDASLMVTNDGATILKNIGVDNPAAKVLVDMSRVQDDEVGDGTTSVTVLAAELLREAESLIAKKIHPQTIIAGWREATKAAREALLSSAVDHGSDEVKFRQDLMNIAGTTLSSKLLTHHKDHFTKLAVEAVLRLKGSGNLEAIHIIKKLGGSLADSYLDEGFLLDKKIGVNQPKRIENAKILIANTGMDTDKIKIFGSRVRVDSTAKVAEIEHAEKEKMKEKVERILKHGINCFINRQLIYNYPEQLFGAAGVMAIEHADFAGVERLALVTGGEIASTFDHPELVKLGSCKLIEEVMIGEDKLIHFSGVALGEACTIVLRGATQQILDEAERSLHDALCVLAQTVKDSRTVYGGGCSEMLMAHAVTQLANRTPGKEAVAMESYAKALRMLPTIIADNAGYDSADLVAQLRAAHSEGNTTAGLDMREGTIGDMAILGITESFQVKRQVLLSAAEAAEVILRVDNIIKAAPRKRVPDHHPC",
+  "length": 535,
+  "molWeight": 57488,
+  "crc64": "57F9E1720D84A31F",
+  "md5": "F57CFD71A95785B1FE3D7F102153F961"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI0000136AF3"
+ }
+}

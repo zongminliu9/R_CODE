@@ -1,0 +1,264 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q9CWF2",
+ "uniProtkbId": "TBB2B_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin beta-2B chain"
+   }
+  }
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Tubb2b"
+   }
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q9BVA1"
+       }
+      ],
+      "value": "Cytoplasm, cytoskeleton",
+      "id": "SL-0090"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 40,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 40,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P99024"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 55,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 55,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphothreonine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q3KRE8"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 58,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 58,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine; alternate",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P07437"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 58,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 58,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-succinyllysine; alternate",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P99024"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 172,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 172,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine; by CDK1",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q9BVA1"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 285,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 285,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphothreonine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P07437"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 290,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 290,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphothreonine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P07437"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 318,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 318,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Omega-N-methylarginine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P07437"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 438,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 438,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "5-glutamyl polyglutamate",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q2T9S0"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MREIVHIQAGQCGNQIGAKFWEVISDEHGIDPTGSYHGDSDLQLERINVYYNEATGNKYVPRAILVDLEPGTMDSVRSGPFGQIFRPDNFVFGQSGAGNNWAKGHYTEGAELVDSVLDVVRKESESCDCLQGFQLTHSLGGGTGSGMGTLLISKIREEYPDRIMNTFSVMPSPKVSDTVVEPYNATLSVHQLVENTDETYCIDNEALYDICFRTLKLTTPTYGDLNHLVSATMSGVTTCLRFPGQLNADLRKLAVNMVPFPRLHFFMPGFAPLTSRGSQQYRALTVPELTQQMFDSKNMMAACDPRHGRYLTVAAIFRGRMSMKEVDEQMLNVQNKNSSYFVEWIPNNVKTAVCDIPPRGLKMSATFIGNSTAIQELFKRISEQFTAMFRRKAFLHWYTGEGMDEMEFTEAESNMNDLVSEYQQYQDATADEQGEFEEEEGEDEA",
+  "length": 445,
+  "molWeight": 49953,
+  "crc64": "4DC3956EFF880746",
+  "md5": "D16EDD3DB309E72990720766309891C3"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI0000024E6E"
+ }
+}

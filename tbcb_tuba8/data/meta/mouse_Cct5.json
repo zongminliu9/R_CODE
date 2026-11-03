@@ -1,0 +1,204 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "P80316",
+ "uniProtkbId": "TCPE_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "T-complex protein 1 subunit epsilon"
+   },
+   "shortNames": [
+    {
+     "value": "TCP-1-epsilon"
+    }
+   ],
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000250",
+       "source": "UniProtKB",
+       "id": "P48643"
+      }
+     ],
+     "value": "3.6.1.-"
+    }
+   ]
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "CCT-epsilon"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Cct5"
+   },
+   "synonyms": [
+    {
+     "value": "Ccte"
+    },
+    {
+     "value": "Kiaa0098"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "P48643"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "P48643"
+       }
+      ],
+      "value": "Cytoplasm, cytoskeleton, microtubule organizing center, centrosome",
+      "id": "SL-0048"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 2,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 2,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylalanine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P48643"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 26,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 26,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P48643"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 346,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 346,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P48643"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 539,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 539,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P48643"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MASVGTLAFDEYGRPFLIIKDQDRKSRLMGLEALKSHIMAAKAVANTMRTSLGPNGLDKMMVDKDGDVTITNDGATILSMMDVDHQIAKLMVELSKSQDDEIGDGTTGVVVLAGALLEEAEQLLDRGIHPIRIADGYEQAARIAIQHLDKISDKVLVDINNPEPLIQTAKTTLGSKVINSCHRQMAEIAVNAVLTVADMERRDVDFELIKVEGKVGGRLEDTKLIKGVIVDKDFSHPQMPKKVVDAKIAILTCPFEPPKPKTKHKLDVMSVEDYKALQKYEKEKFEEMIKQIKETGANLAICQWGFDDEANHLLLQNGLPAVRWVGGPEIELIAIATGGRIVPRFSELTSEKLGFAGVVQEISFGTTKDKMLVIEKCKNSRAVTIFIRGGNKMIIEEAKRSLHDALCVIRNLIRDNRVVYGGGAAEISCALAVSQEADKCPTLEQYAMRAFADALEVIPMALSENSGMNPIQTMTEVRARQVKESNPALGIDCLHKGSNDMQYQHVIETLIGKKQQISLATQMVRMILKIDDIRKPGESEE",
+  "length": 541,
+  "molWeight": 59624,
+  "crc64": "E05316785ADB7612",
+  "md5": "727088019C2FD77EA61D19676B2FB252"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI000000419B"
+ }
+}

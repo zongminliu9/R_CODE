@@ -1,0 +1,107 @@
+{
+ "Tuba8|Tuba1a": {
+  "identities": 406,
+  "aligned_cols": 449,
+  "pct_id": 90.42,
+  "n_substitutions": 43,
+  "n_gap_cols": 2
+ },
+ "Tuba8|Tuba1b": {
+  "identities": 406,
+  "aligned_cols": 449,
+  "pct_id": 90.42,
+  "n_substitutions": 43,
+  "n_gap_cols": 2
+ },
+ "Tuba8|Tuba1c": {
+  "identities": 405,
+  "aligned_cols": 449,
+  "pct_id": 90.2,
+  "n_substitutions": 44,
+  "n_gap_cols": 0
+ },
+ "Tuba8|Tuba3a": {
+  "identities": 409,
+  "aligned_cols": 449,
+  "pct_id": 91.09,
+  "n_substitutions": 40,
+  "n_gap_cols": 1
+ },
+ "Tuba8|Tuba4a": {
+  "identities": 404,
+  "aligned_cols": 448,
+  "pct_id": 90.18,
+  "n_substitutions": 44,
+  "n_gap_cols": 1
+ },
+ "Tuba1a|Tuba1b": {
+  "identities": 449,
+  "aligned_cols": 451,
+  "pct_id": 99.56,
+  "n_substitutions": 2,
+  "n_gap_cols": 0
+ },
+ "Tuba1a|Tuba1c": {
+  "identities": 443,
+  "aligned_cols": 449,
+  "pct_id": 98.66,
+  "n_substitutions": 6,
+  "n_gap_cols": 2
+ },
+ "Tuba1a|Tuba3a": {
+  "identities": 440,
+  "aligned_cols": 450,
+  "pct_id": 97.78,
+  "n_substitutions": 10,
+  "n_gap_cols": 1
+ },
+ "Tuba1a|Tuba4a": {
+  "identities": 432,
+  "aligned_cols": 448,
+  "pct_id": 96.43,
+  "n_substitutions": 16,
+  "n_gap_cols": 3
+ },
+ "Tuba1b|Tuba1c": {
+  "identities": 443,
+  "aligned_cols": 449,
+  "pct_id": 98.66,
+  "n_substitutions": 6,
+  "n_gap_cols": 2
+ },
+ "Tuba1b|Tuba3a": {
+  "identities": 438,
+  "aligned_cols": 450,
+  "pct_id": 97.33,
+  "n_substitutions": 12,
+  "n_gap_cols": 1
+ },
+ "Tuba1b|Tuba4a": {
+  "identities": 434,
+  "aligned_cols": 448,
+  "pct_id": 96.88,
+  "n_substitutions": 14,
+  "n_gap_cols": 3
+ },
+ "Tuba1c|Tuba3a": {
+  "identities": 434,
+  "aligned_cols": 449,
+  "pct_id": 96.66,
+  "n_substitutions": 15,
+  "n_gap_cols": 1
+ },
+ "Tuba1c|Tuba4a": {
+  "identities": 432,
+  "aligned_cols": 448,
+  "pct_id": 96.43,
+  "n_substitutions": 16,
+  "n_gap_cols": 1
+ },
+ "Tuba3a|Tuba4a": {
+  "identities": 424,
+  "aligned_cols": 448,
+  "pct_id": 94.64,
+  "n_substitutions": 24,
+  "n_gap_cols": 2
+ }
+}

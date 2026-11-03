@@ -1,0 +1,122 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q9D6F9",
+ "uniProtkbId": "TBB4A_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin beta-4A chain"
+   }
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "Tubulin beta-4 chain"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Tubb4a"
+   },
+   "synonyms": [
+    {
+     "value": "Tubb4"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "value": "Cytoplasm, cytoskeleton",
+      "id": "SL-0090"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 172,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 172,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine; by CDK1",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P04350"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 436,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 436,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "5-glutamyl polyglutamate",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q2T9S0"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MREIVHLQAGQCGNQIGAKFWEVISDEHGIDPTGTYHGDSDLQLERINVYYNEATGGNYVPRAVLVDLEPGTMDSVRSGPFGQIFRPDNFVFGQSGAGNNWAKGHYTEGAELVDAVLDVVRKEAESCDCLQGFQLTHSLGGGTGSGMGTLLISKIREEFPDRIMNTFSVVPSPKVSDTVVEPYNATLSVHQLVENTDETYCIDNEALYDICFRTLKLTTPTYGDLNHLVSATMSGVTTCLRFPGQLNADLRKLAVNMVPFPRLHFFMPGFAPLTSRGSQQYRALTVPELTQQMFDAKNMMAACDPRHGRYLTVAAVFRGRMSMKEVDEQMLSVQSKNSSYFVEWIPNNVKTAVCDIPPRGLKMAATFIGNSTAIQELFKRISEQFTAMFRRKAFLHWYTGEGMDEMEFTEAESNMNDLVSEYQQYQDATAEEGEFEEEAEEEVA",
+  "length": 444,
+  "molWeight": 49586,
+  "crc64": "F7429D057C11A3F5",
+  "md5": "D839E0FCA54053CE9A2D5754C4942548"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI000005FC27"
+ }
+}

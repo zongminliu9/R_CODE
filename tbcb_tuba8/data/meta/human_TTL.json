@@ -1,0 +1,69 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q8NG68",
+ "uniProtkbId": "TTL_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin--tyrosine ligase"
+   },
+   "shortNames": [
+    {
+     "value": "TTL"
+    }
+   ],
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000250",
+       "source": "UniProtKB",
+       "id": "Q9QXJ0"
+      }
+     ],
+     "value": "6.3.2.25"
+    }
+   ]
+  }
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "TTL"
+   }
+  }
+ ],
+ "comments": [],
+ "features": [],
+ "sequence": {
+  "value": "MYTFVVRDENSSVYAEVSRLLLATGHWKRLRRDNPRFNLMLGERNRLPFGRLGHEPGLVQLVNYYRGADKLCRKASLVKLIKTSPELAESCTWFPESYVIYPTNLKTPVAPAQNGIQPPISNSRTDEREFFLASYNRKKEDGEGNVWIAKSSAGAKGEGILISSEASELLDFIDNQGQVHVIQKYLEHPLLLEPGHRKFDIRSWVLVDHQYNIYLYREGVLRTASEPYHVDNFQDKTCHLTNHCIQKEYSKNYGKYEEGNEMFFKEFNQYLTSALNITLESSILLQIKHIIRNCLLSVEPAISTKHLPYQSFQLFGFDFMVDEELKVWLIEVNGAPACAQKLYAELCQGIVDIAISSVFPPPDVEQPQTQPAAFIKL",
+  "length": 377,
+  "molWeight": 43212,
+  "crc64": "7A13E2C28E1AD6EA",
+  "md5": "DF70AAC64EE928A6C75CCD2977513406"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI000004FDE7"
+ }
+}

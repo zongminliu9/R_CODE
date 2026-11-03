@@ -1,0 +1,86 @@
+isoform,canon_pos,iso_pos,ref_aa,iso_aa,region
+Tuba8,7,7,I,V,S1
+Tuba8,24,24,Y,F,H1
+Tuba8,32,32,P,A,H1-S2 loop (N-side)
+Tuba8,35,35,Q,T,H1-S2 loop (N-side)
+Tuba8,36,36,M,F,H1-S2 loop (N-side)
+Tuba8,37,37,P,G,H1-S2 loop (N-side)
+Tuba8,38,38,S,T,H1-S2 loop (N-side)
+Tuba8,39,39,D,Q,K40 loop / acetyl loop
+Tuba8,40,40,K,A,K40 loop / acetyl loop
+Tuba8,41,41,T,S,K40 loop / acetyl loop
+Tuba8,42,42,I,K,K40 loop / acetyl loop
+Tuba8,43,43,G,I,K40 loop / acetyl loop
+Tuba8,44,44,G,N,K40 loop / acetyl loop
+Tuba8,45,45,G,D,K40 loop / acetyl loop
+Tuba8,50,50,N,T,H1-S2 loop (C-side)
+Tuba8,58,58,A,N,H1-S2 loop (C-side)
+Tuba8,67,67,F,M,S2
+Tuba8,75,75,I,V,H2 / T2
+Tuba8,80,80,T,A,H2 / T2
+Tuba8,110,110,I,V,H3
+Tuba8,114,114,I,S,H3-S4 / T3 loop
+Tuba8,126,126,A,T,H3-S4 / T3 loop
+Tuba8,128,128,Q,A,H3-S4 / T3 loop
+Tuba8,130,130,T,S,H3-S4 / T3 loop
+Tuba8,137,137,V,I,S4
+Tuba8,159,159,V,L,H4
+Tuba8,170,170,S,A,H4
+Tuba8,232,232,G,S,H6-H7 loop / H6
+Tuba8,270,270,A,V,H7 (core helix)
+Tuba8,275,275,V,I,H7-H8 loop / T7
+Tuba8,293,293,N,S,H8
+Tuba8,294,294,A,S,H8
+Tuba8,299,299,A,N,S7
+Tuba8,300,300,N,S,S7
+Tuba8,317,317,L,M,H9 / S8 region
+Tuba8,330,330,A,V,S8-H9 loop (M-loop side)
+Tuba8,334,334,T,A,S8-H9 loop (M-loop side)
+Tuba8,425,425,M,L,H11-H12 loop
+Tuba8,437,437,V,T,H11-H12 loop
+Tuba8,440,440,V,F,H12 / C-term tail
+Tuba8,441,,E,-,H12 / C-term tail
+Tuba8,442,,G,-,H12 / C-term tail
+Tuba8,444,442,G,E,H12 / C-term tail
+Tuba8,446,444,E,N,H12 / C-term tail
+Tuba8,451,449,Y,F,H12 / C-term tail
+Tuba1b,232,232,G,S,H6-H7 loop / H6
+Tuba1b,340,340,T,S,S8-H9 loop (M-loop side)
+Tuba1c,232,232,G,S,H6-H7 loop / H6
+Tuba1c,287,287,S,T,H8
+Tuba1c,437,437,V,A,H11-H12 loop
+Tuba1c,440,,V,-,H12 / C-term tail
+Tuba1c,441,,E,-,H12 / C-term tail
+Tuba1c,442,440,G,A,H12 / C-term tail
+Tuba1c,445,443,E,D,H12 / C-term tail
+Tuba1c,446,444,E,D,H12 / C-term tail
+Tuba3a,75,75,I,V,H2 / T2
+Tuba3a,115,115,I,V,H3-S4 / T3 loop
+Tuba3a,128,128,Q,L,H3-S4 / T3 loop
+Tuba3a,137,137,V,I,S4
+Tuba3a,150,150,T,A,T4 / loop
+Tuba3a,170,170,S,A,H4
+Tuba3a,317,317,L,M,H9 / S8 region
+Tuba3a,425,425,M,L,H11-H12 loop
+Tuba3a,442,442,G,A,H12 / C-term tail
+Tuba3a,444,444,G,A,H12 / C-term tail
+Tuba3a,445,,E,-,H12 / C-term tail
+Tuba4a,7,7,I,V,S1
+Tuba4a,16,16,I,M,H1
+Tuba4a,50,50,N,T,H1-S2 loop (C-side)
+Tuba4a,54,54,S,C,H1-S2 loop (C-side)
+Tuba4a,78,78,V,I,H2 / T2
+Tuba4a,80,80,T,N,H2 / T2
+Tuba4a,82,82,T,P,H2 / T2
+Tuba4a,117,117,L,P,H3-S4 / T3 loop
+Tuba4a,126,126,A,S,H3-S4 / T3 loop
+Tuba4a,232,232,G,S,H6-H7 loop / H6
+Tuba4a,334,334,T,A,S8-H9 loop (M-loop side)
+Tuba4a,340,340,T,S,S8-H9 loop (M-loop side)
+Tuba4a,437,437,V,I,H11-H12 loop
+Tuba4a,440,440,V,Y,H12 / C-term tail
+Tuba4a,441,,E,-,H12 / C-term tail
+Tuba4a,442,,G,-,H12 / C-term tail
+Tuba4a,444,442,G,D,H12 / C-term tail
+Tuba4a,446,444,E,D,H12 / C-term tail
+Tuba4a,451,,Y,-,H12 / C-term tail

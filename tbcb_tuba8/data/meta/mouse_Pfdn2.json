@@ -1,0 +1,105 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "O70591",
+ "uniProtkbId": "PFD2_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Prefoldin subunit 2"
+   }
+  }
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Pfdn2"
+   },
+   "synonyms": [
+    {
+     "value": "Pfd2"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q9UHV9"
+       }
+      ],
+      "value": "Nucleus",
+      "id": "SL-0191"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q9UHV9"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q9UHV9"
+       }
+      ],
+      "value": "Mitochondrion",
+      "id": "SL-0173"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [],
+ "sequence": {
+  "value": "MADSSGRVGKSGGSGAGKGAVSAEQVIAGFNRLRQEQRGLASKAAELEMELNEHSLVIDTLKEVDETRKCYRMVGGVLVERTVKEVLPALEGNKEQIQKIIETLSQQLQAKGKELNEFREKHNIRLMGEDEKPAAKENSEGAGAKASSAGVLVS",
+  "length": 154,
+  "molWeight": 16534,
+  "crc64": "A34F229309AC6715",
+  "md5": "D4B01BE214628750EDB1835A7967E826"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI00000282CC"
+ }
+}

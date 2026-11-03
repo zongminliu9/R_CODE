@@ -1,0 +1,308 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "P11983",
+ "uniProtkbId": "TCPA_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "T-complex protein 1 subunit alpha"
+   },
+   "shortNames": [
+    {
+     "value": "TCP-1-alpha"
+    }
+   ],
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000250",
+       "source": "UniProtKB",
+       "id": "P17987"
+      }
+     ],
+     "value": "3.6.1.-"
+    }
+   ]
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "CCT-alpha"
+    }
+   },
+   {
+    "fullName": {
+     "value": "Tailless complex polypeptide 1A"
+    },
+    "shortNames": [
+     {
+      "value": "TCP-1-A"
+     }
+    ]
+   },
+   {
+    "fullName": {
+     "value": "Tailless complex polypeptide 1B"
+    },
+    "shortNames": [
+     {
+      "value": "TCP-1-B"
+     }
+    ]
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Tcp1"
+   },
+   "synonyms": [
+    {
+     "value": "Cct1"
+    },
+    {
+     "value": "Ccta"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "P17987"
+       }
+      ],
+      "value": "Cytoplasm, cytosol",
+      "id": "SL-0091"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "P17987"
+       }
+      ],
+      "value": "Cytoplasm, cytoskeleton, microtubule organizing center, centrosome",
+      "id": "SL-0048"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 1,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 1,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylmethionine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000269",
+     "source": "Reference",
+     "id": "Ref.7"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 6,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 6,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P17987"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 181,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 181,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphotyrosine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P17987"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 199,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 199,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "P17987"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 400,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 400,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23806337"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 494,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 494,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23806337"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 544,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 544,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "21183079"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 551,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 551,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "21183079"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MEGPLSVFGDRSTGEAVRSQNVMAAASIANIVKSSFGPVGLDKMLVDDIGDVTITNDGATILKLLEVEHPAAKVLCELADLQDKEVGDGTTSVVIIAAELLKNADELVKQKIHPTSVISGYRLACKEAVRYINENLIINTDELGRDCLINAAKTSMSSKIIGINGDYFANMVVDAVLAVKYTDARGQPRYPVNSVNILKAHGRSQIESMLINGYALNCVVGSQGMPKRIVNAKIACLDFSLQKTKMKLGVQVVITDPEKLDQIRQRESDITKERIQKILATGANVILTTGGIDDMYLKYFVEAGAMAVRRVLKRDLKHVAKASGASILSTLANLEGEETFEVTMLGQAEEVVQERICDDELILIKNTKARTSASIILRGANDFMCDEMERSLHDALCVVKRVLELKSVVPGGGAVEAALSIYLENYATSMGSREQLAIAEFARSLLVIPNTLAVNAAQDSTDLVAKLRAFHNEAQVNPERKNLKWIGLDLVHGKPRDNKQAGVFEPTIVKVKSLKFATEAAITILRIDDLIKLHPESKDDKHGSYENAVHSGALDD",
+  "length": 556,
+  "molWeight": 60449,
+  "crc64": "48F2387BE0F909A4",
+  "md5": "E66FA11A6168C8E74127B143F3F8EF06"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI000000185C"
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q9JJZ2",
+ "uniProtkbId": "TBA8_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin alpha-8 chain"
+   },
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000250",
+       "source": "UniProtKB",
+       "id": "P68363"
+      }
+     ],
+     "value": "3.6.5.-"
+    }
+   ]
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "Alpha-tubulin 8"
+    }
+   }
+  ],
+  "contains": [
+   {
+    "recommendedName": {
+     "fullName": {
+      "value": "Dephenylalaninated tubulin alpha-8 chain"
+     }
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Tuba8"
+   }
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "value": "Cytoplasm, cytoskeleton",
+      "id": "SL-0090"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [],
+ "sequence": {
+  "value": "MRECISVHVGQAGVQIGNACWELFCLEHGIQADGTFGTQASKINDDDSFTTFFSETGNGKHVPRAVMVDLEPTVVDEVRAGTYRQLFHPEQLITGKEDAANNYARGHYTVGKESIDLVLDRIRKLTDACSGLQGFLIFHSFGGGTGSGFTSLLMERLSLDYGKKSKLEFAIYPAPQVSTAVVEPYNSILTTHTTLEHSDCAFMVDNEAIYDICRRNLDIERPTYTNLNRLISQIVSSITASLRFDGALNVDLTEFQTNLVPYPRIHFPLVTYAPIISAEKAYHEQLSVAEITSSCFEPNSQMVKCDPRHGKYMACCMLYRGDVVPKDVNVAIAAIKTKRTIQFVDWCPTGFKVGINYQPPTVVPGGDLAKVQRAVCMLSNTTAIAEAWARLDHKFDLMYAKRAFVHWYVGEGMEEGEFSEAREDLAALEKDYEEVGTDSFEEENEGEEF",
+  "length": 449,
+  "molWeight": 50052,
+  "crc64": "AA979E2DB21FC5DD",
+  "md5": "845C94869A9511B38A19F10CAE6A0F16"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI00000289B3"
+ }
+}

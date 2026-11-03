@@ -1,0 +1,119 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q9D0J4",
+ "uniProtkbId": "ARL2_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "ADP-ribosylation factor-like protein 2"
+   }
+  }
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Arl2"
+   }
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "note": {
+    "texts": [
+     {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250"
+       }
+      ],
+      "value": "The complex formed with ARL2BP, ARL2 and SLC25A6 is expressed in mitochondria. Not detected in the Golgi, nucleus and on the mitotic spindle. Centrosome-associated throughout the cell cycle. Not detected to interphase microtubules (By similarity). The complex formed with ARL2BP, ARL2 and SLC25A4 is expressed in mitochondria"
+     }
+    ]
+   },
+   "subcellularLocations": [
+    {
+     "location": {
+      "value": "Mitochondrion intermembrane space",
+      "id": "SL-0169"
+     }
+    },
+    {
+     "location": {
+      "value": "Cytoplasm, cytoskeleton, microtubule organizing center, centrosome",
+      "id": "SL-0048"
+     }
+    },
+    {
+     "location": {
+      "value": "Nucleus",
+      "id": "SL-0191"
+     }
+    },
+    {
+     "location": {
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 45,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 45,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "21183079"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MGLLTILKKMKQKERELRLLMLGLDNAGKTTILKKFNGEDVDTISPTLGFNIKTLEHRGFKLNIWDVGGQKSLRSYWRNYFESTDGLIWVVDSADRQRMQDCQRELQSLLVEERLAGATLLIFANKQDLPGALSCNAIQEALELDSIRSHHWRIQGCSAVTGEDLLPGIDWLLDDISSRVFTAD",
+  "length": 184,
+  "molWeight": 20864,
+  "crc64": "8B3741700BFED3F8",
+  "md5": "744F0784E1CCE856183880CB2B583BF1"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI00000224B6"
+ }
+}

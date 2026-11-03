@@ -1,0 +1,79 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "O60925",
+ "uniProtkbId": "PFD1_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Prefoldin subunit 1"
+   }
+  }
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "PFDN1"
+   },
+   "synonyms": [
+    {
+     "value": "PFD1"
+    }
+   ]
+  }
+ ],
+ "comments": [],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 2,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 2,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylalanine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19413330"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MAAPVDLELKKAFTELQAKVIDTQQKVKLADIQIEQLNRTKKHAHLTDTEIMTLVDETNMYEGVGRMFILQSKEAIHSQLLEKQKIAEEKIKELEQKKSYLERSVKEAEDNIREMLMARRAQ",
+  "length": 122,
+  "molWeight": 14210,
+  "crc64": "4C88216612864F87",
+  "md5": "DB15A4C32BA858362BF90BE539F1D917"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI000013171E"
+ }
+}

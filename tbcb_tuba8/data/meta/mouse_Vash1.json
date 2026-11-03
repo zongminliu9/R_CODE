@@ -1,0 +1,164 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q8C1W1",
+ "uniProtkbId": "VASH1_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "evidences": [
+     {
+      "evidenceCode": "ECO:0000305"
+     }
+    ],
+    "value": "Tubulinyl-Tyr carboxypeptidase 1"
+   },
+   "ecNumbers": [
+    {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000269",
+       "source": "PubMed",
+       "id": "29146868"
+      }
+     ],
+     "value": "3.4.17.17"
+    }
+   ]
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000305"
+      }
+     ],
+     "value": "Tyrosine carboxypeptidase 1"
+    },
+    "shortNames": [
+     {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000305"
+       }
+      ],
+      "value": "TTCP 1"
+     }
+    ]
+   },
+   {
+    "fullName": {
+     "evidences": [
+      {
+       "evidenceCode": "ECO:0000303",
+       "source": "PubMed",
+       "id": "19204325"
+      }
+     ],
+     "value": "Vasohibin-1"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "evidences": [
+     {
+      "evidenceCode": "ECO:0000312",
+      "source": "MGI",
+      "id": "MGI:2442543"
+     }
+    ],
+    "value": "Vash1"
+   },
+   "synonyms": [
+    {
+     "value": "Vash"
+    }
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "note": {
+    "texts": [
+     {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q7L8A9"
+       }
+      ],
+      "value": "Mainly localizes in the cytoplasm. Some fraction is secreted via a non-canonical secretion system; interaction with SVBP promotes secretion"
+     }
+    ]
+   },
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q7L8A9"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250",
+        "source": "UniProtKB",
+        "id": "Q7L8A9"
+       }
+      ],
+      "value": "Secreted",
+      "id": "SL-0243"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [],
+ "sequence": {
+  "value": "MPGGKKVVPSGSSSASPNAAATTTAAAAAAAAAPHSGTKRLETTEGASAQRDEEPEEEGEEDLRDGGVPFFINRGGLPVDEATWERMWKHVAKIHPDGEKVALRIRGATDLPKIPIPSVPTFQPTTPVPERLEAVQRYIRELQYNHTGTQFFEIKKSRPLTGLMDLAKEMTKEALPIKCLEAVILGIYLTNSMPTLERFPISFKTYFSGNYFRHIVLGVNFGGRYGALGMSRREDLMYKPPAFRTLSELVLDYEAAYGRCWHVLKKVKLGQCVSHDPHSVEQIEWKHSVLDVERLGREDFRKELERHARDMRLKIGKGTGPPSPTKDRKKDVSSPQRAQSSPHRRNSRSERRPSGEKKPAEPKAMPDLSGYQIRV",
+  "length": 375,
+  "molWeight": 41875,
+  "crc64": "82F7348A17B32B6D",
+  "md5": "3DBFC8814231F15A3CD7B6CA0983EFB5"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI00001E7532"
+ }
+}

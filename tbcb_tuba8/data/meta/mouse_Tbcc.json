@@ -1,0 +1,139 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q8VCN9",
+ "uniProtkbId": "TBCC_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin-specific chaperone C"
+   }
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "Tubulin-folding cofactor C"
+    },
+    "shortNames": [
+     {
+      "value": "CFC"
+     }
+    ]
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Tbcc"
+   }
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "note": {
+    "texts": [
+     {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250"
+       }
+      ],
+      "value": "Detected predominantly in the photoreceptor connecting cilium"
+     }
+    ]
+   },
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 1,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 1,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylmethionine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q15814"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 79,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 79,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q15814"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MEGVDCSMALADAAAGSPRDLSLVPERLQRREQERQIEVERRKQKRQDQEVEEEKSGFFAAAFARERAAVEELLRGEASAERLEEAANRLQGLRKLLNDSVLFLAAYDLRQGQAALAQLQAVLTERRQELQPKKRFAFKARKKDAAGTAQVDAAPVTSAAPSPPVTKEEEGAPGASWACGFSNLESQDLEKRAEELHQRDVLLSDLTNCTVKLCGNPNTLRLAKARGCKVLCGPVTTSVFLEDCRDCVLAVACQQLRVHTTKDTRVFLQVTSRAIVEDCSGIQFAPYTWSYPGIDKDFQDSGLDRSKNNWDQVDDFNWLARNVASPNWSILPEEERDIQWD",
+  "length": 341,
+  "molWeight": 38125,
+  "crc64": "D8730206F0C9F96E",
+  "md5": "8F13415A543F37C81CC5D1A6B9644B7A"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI000002897B"
+ }
+}

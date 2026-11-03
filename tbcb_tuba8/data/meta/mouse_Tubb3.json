@@ -1,0 +1,177 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q9ERD7",
+ "uniProtkbId": "TBB3_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin beta-3 chain"
+   }
+  }
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Tubb3"
+   }
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "20074521"
+       }
+      ],
+      "value": "Cytoplasm, cytoskeleton",
+      "id": "SL-0090"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "28483977"
+       }
+      ],
+      "value": "Cell projection, growth cone",
+      "id": "SL-0288"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "28483977"
+       }
+      ],
+      "value": "Cell projection, lamellipodium",
+      "id": "SL-0291"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000269",
+        "source": "PubMed",
+        "id": "28483977"
+       }
+      ],
+      "value": "Cell projection, filopodium",
+      "id": "SL-0286"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 172,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 172,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine; by CDK1",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000269",
+     "source": "PubMed",
+     "id": "16371510"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 438,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 438,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "5-glutamyl polyglutamate",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q2T9S0"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 444,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 444,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q2T9S0"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MREIVHIQAGQCGNQIGAKFWEVISDEHGIDPSGNYVGDSDLQLERISVYYNEASSHKYVPRAILVDLEPGTMDSVRSGAFGHLFRPDNFIFGQSGAGNNWAKGHYTEGAELVDSVLDVVRKECENCDCLQGFQLTHSLGGGTGSGMGTLLISKVREEYPDRIMNTFSVVPSPKVSDTVVEPYNATLSIHQLVENTDETYCIDNEALYDICFRTLKLATPTYGDLNHLVSATMSGVTTSLRFPGQLNADLRKLAVNMVPFPRLHFFMPGFAPLTARGSQQYRALTVPELTQQMFDAKNMMAACDPRHGRYLTVATVFRGRMSMKEVDEQMLAIQSKNSSYFVEWIPNNVKVAVCDIPPRGLKMSSTFIGNSTAIQELFKRISEQFTAMFRRKAFLHWYTGEGMDEMEFTEAESNMNDLVSEYQQYQDATAEEEGEMYEDDDEESEAQGPK",
+  "length": 450,
+  "molWeight": 50419,
+  "crc64": "4B9D9B7DBA102949",
+  "md5": "58B9473E82F3A6640E264CBDF6843918"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI0000001519"
+ }
+}

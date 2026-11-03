@@ -1,0 +1,154 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q8CIV8",
+ "uniProtkbId": "TBCE_MOUSE",
+ "organism": {
+  "scientificName": "Mus musculus",
+  "commonName": "Mouse",
+  "taxonId": 10090,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Glires",
+   "Rodentia",
+   "Myomorpha",
+   "Muroidea",
+   "Muridae",
+   "Murinae",
+   "Mus",
+   "Mus"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin-specific chaperone E"
+   }
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "Tubulin-folding cofactor E"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "Tbce"
+   }
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250"
+       }
+      ],
+      "value": "Cytoplasm, cytoskeleton",
+      "id": "SL-0090"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 2,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 2,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q15813"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 460,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 460,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q15813"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 492,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 492,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0000250",
+     "source": "UniProtKB",
+     "id": "Q15813"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MSDILPLDVIGRRVEVNGEYATVRFCGAVPPVAGLWLGVEWDNPERGKHDGSHEGTMYFKCRHPTGGSFVRPSKVNFGDDFLTALKKRYVLEDGPDDDENSCSLKVGSKQVQTIGFEHITKKQSQLRALQDISLWNCAVSHAGEQGRIAEACPNIRVVNLSKNLLSTWDEVVLIAEQLKDLEALDLSENKLQFPSDSPTLTRTFSTLKTLVLNKTGITWTEVLHCAPSWPVLEELYLKSNNISISERPVNVLQKMRLLDLSSNPSIDESQLSLIADLPRLEHLVLSDIGLSSIHFPDAEIGCKTSMFPALKYLIVNDNQISEWSFINELDKLQSLQALSCTRNPLSKADKAEEIIIAKIAQLRTLNRCQILPEERRGAELDYRKAFGNEWRKAGGHPDPDKNRPNAAFLSAHPRYQLLCCKYGAPEDEELKTQQPFMLKKQLLTLKIKCSNQPERQILEKQLPDSMTVQKVKGLLSRLLKVPVSELLLSYESSKMPGREIELENDLQPLQFYSVENGDCLLVRW",
+  "length": 524,
+  "molWeight": 59086,
+  "crc64": "E95280086D80FEF8",
+  "md5": "D44250DCCD8E886BC01D55E78D5966AD"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI0000024C4F"
+ }
+}

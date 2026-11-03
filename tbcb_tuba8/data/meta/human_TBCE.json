@@ -1,0 +1,166 @@
+{
+ "entryType": "UniProtKB reviewed (Swiss-Prot)",
+ "primaryAccession": "Q15813",
+ "uniProtkbId": "TBCE_HUMAN",
+ "organism": {
+  "scientificName": "Homo sapiens",
+  "commonName": "Human",
+  "taxonId": 9606,
+  "lineage": [
+   "Eukaryota",
+   "Metazoa",
+   "Chordata",
+   "Craniata",
+   "Vertebrata",
+   "Euteleostomi",
+   "Mammalia",
+   "Eutheria",
+   "Euarchontoglires",
+   "Primates",
+   "Haplorrhini",
+   "Catarrhini",
+   "Hominidae",
+   "Homo"
+  ]
+ },
+ "proteinDescription": {
+  "recommendedName": {
+   "fullName": {
+    "value": "Tubulin-specific chaperone E"
+   }
+  },
+  "alternativeNames": [
+   {
+    "fullName": {
+     "value": "Tubulin-folding cofactor E"
+    }
+   }
+  ]
+ },
+ "genes": [
+  {
+   "geneName": {
+    "value": "TBCE"
+   }
+  }
+ ],
+ "comments": [
+  {
+   "commentType": "SUBCELLULAR LOCATION",
+   "subcellularLocations": [
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250"
+       }
+      ],
+      "value": "Cytoplasm",
+      "id": "SL-0086"
+     }
+    },
+    {
+     "location": {
+      "evidences": [
+       {
+        "evidenceCode": "ECO:0000250"
+       }
+      ],
+      "value": "Cytoplasm, cytoskeleton",
+      "id": "SL-0090"
+     }
+    }
+   ]
+  }
+ ],
+ "features": [
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 2,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 2,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N-acetylserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19413330"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "22223895"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "22814378"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 463,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 463,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "N6-acetyllysine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "19608861"
+    }
+   ]
+  },
+  {
+   "type": "Modified residue",
+   "location": {
+    "start": {
+     "value": 495,
+     "modifier": "EXACT"
+    },
+    "end": {
+     "value": 495,
+     "modifier": "EXACT"
+    }
+   },
+   "description": "Phosphoserine",
+   "evidences": [
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "18669648"
+    },
+    {
+     "evidenceCode": "ECO:0007744",
+     "source": "PubMed",
+     "id": "23186163"
+    }
+   ]
+  }
+ ],
+ "sequence": {
+  "value": "MSDTLTADVIGRRVEVNGEHATVRFAGVVPPVAGPWLGVEWDNPERGKHDGSHEGTVYFKCRHPTGGSFIRPNKVNFGTDFLTAIKNRYVLEDGPEEDRKEQIVTIGNKPVETIGFDSIMKQQSQLSKLQEVSLRNCAVSCAGEKGGVAEACPNIRKVDLSKNLLSSWDEVIHIADQLRHLEVLNVSENKLKFPSGSVLTGTLSVLKVLVLNQTGITWAEVLRCVAGCPGLEELYLESNNIFISERPTDVLQTVKLLDLSSNQLIDENQLYLIAHLPRLEQLILSDTGISSLHFPDAGIGCKTSMFPSLKYLVVNDNQISQWSFFNELEKLPSLRALSCLRNPLTKEDKEAETARLLIIASIGQLKTLNKCEILPEERRRAELDYRKAFGNEWKQAGGHKDPEKNRLSEEFLTAHPRYQFLCLKYGAPEDWELKTQQPLMLKNQLLTLKIKYPHQLDQKVLEKQLPGSMTIQKVKGLLSRLLKVPVSDLLLSYESPKKPGREIELENDLKSLQFYSVENGDCLLVRW",
+  "length": 527,
+  "molWeight": 59346,
+  "crc64": "C919052D2D463BA1",
+  "md5": "BAC31B2D2B4D7D713BD6BCC8EB3F6C4D"
+ },
+ "extraAttributes": {
+  "uniParcId": "UPI000006F791"
+ }
+}
