@@ -30,3 +30,8 @@ tbcb_tuba8/package/models/
 tbcb_tuba8/package/sequences/
 tbcb_tuba8/package/reports/
 TBCB_TUBA8_complete_package.tar.gz
+
+# MD trajectories and checkpoints: large binaries, regenerable from scripts/run_md.py
+tbcb_tuba8/md/*.dcd
+tbcb_tuba8/md/*.chk
+tbcb_tuba8/data/models/prep/*_decomp.pdb
