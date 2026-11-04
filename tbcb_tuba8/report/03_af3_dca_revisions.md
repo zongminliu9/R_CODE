@@ -63,8 +63,7 @@ And the decisive split:
 
 Not one of TUBA8's 38 core substitutions touches TBCB. **The predicted interface provides
 essentially no structural basis for a kon_B or koff_B difference between TUBA8 and TUBA1A**,
-which is a genuine tension with the phenotype region's requirement of kon_B +0.69 dex and
-koff_B −0.23 dex (first report, §8). That tension is reported, not resolved.
+which is a genuine tension with the phenotype region's requirement of kon_B +0.73 dex and koff_B −0.25 dex (first report, §8). That tension is reported, not resolved.
 
 ### The tail is a tethered anchor, and PAE shows it
 
@@ -247,3 +246,11 @@ the same quantity: the folding free energy and the clearance propensity of the c
 α-tubulin monomer. Both require free-energy sampling of a 450-residue protein, which this
 container cannot do at 3.9 ns/day. The GPU package in `gpu/` is set up for exactly these two
 calculations.
+
+> **Correction (applied after a numerical cross-check).** An earlier version of this
+> file quoted the phenotype-region *medians* (k_degF 0.879, kon_Edir −1.014, kon_B 0.689,
+> TBCB_tot 0.379, k_tr 0.236, koff_B −0.227) while labelling them *shifts*. The shift is
+> the phenotype-region median minus the median over the remaining draws, and the correct
+> values are +0.925, −1.079, +0.731, +0.387, +0.241 and −0.247 log10 units. The machine-
+> readable tables in `package/` always carried the correct shifts; only the prose was
+> mislabelled. Conclusions are unchanged — the ranking and signs are identical.

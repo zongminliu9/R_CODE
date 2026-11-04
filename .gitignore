@@ -20,3 +20,13 @@ tbcb_tuba8/gpu/systems/
 tbcb_tuba8/gpu/out/
 tbcb_tuba8/gpu/logs/
 *.nc
+
+# Package: the tables and docs are committed; these subdirectories duplicate
+# repository content and are only assembled for the shipped archive
+tbcb_tuba8/package/raw_results/
+tbcb_tuba8/package/scripts/
+tbcb_tuba8/package/gpu/
+tbcb_tuba8/package/models/
+tbcb_tuba8/package/sequences/
+tbcb_tuba8/package/reports/
+TBCB_TUBA8_complete_package.tar.gz

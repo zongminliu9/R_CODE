@@ -351,14 +351,14 @@ rest, in log₁₀ units:
 
 | parameter | median shift | fold | p (Mann–Whitney) |
 |---|---|---|---|
-| **k_degF ratio** | **+0.879** | TUBA8 cleared ~7.6× faster when unprotected | 0 |
-| **kon_Edir ratio** | **−1.014** | TUBA8 bypass ~10× slower | 0 |
-| **kon_B ratio** | **+0.689** | TUBA8 captured by TBCB ~4.9× faster | 9×10⁻¹⁷⁵ |
+| **k_degF ratio** | **+0.925** | TUBA8 cleared ~7.6× faster when unprotected | 0 |
+| **kon_Edir ratio** | **−1.079** | TUBA8 bypass ~10× slower | 0 |
+| **kon_B ratio** | **+0.731** | TUBA8 captured by TBCB ~4.9× faster | 9×10⁻¹⁷⁵ |
 | k_degF baseline | +0.303 | | 7×10⁻⁷⁶ |
-| TBCB_tot (context) | +0.379 | ~2.4× more TBCB in wild type | 1×10⁻⁵² |
+| TBCB_tot (context) | +0.387 | ~2.4× more TBCB in wild type | 1×10⁻⁵² |
 | demand (context) | **−0.280** | ~0.53×, i.e. **lower** flux | 4×10⁻²⁸ |
-| k_tr ratio | +0.236 | faster handoff | 9×10⁻²⁰ |
-| koff_B ratio | −0.227 | tighter TBCB binding | 1×10⁻¹⁵ |
+| k_tr ratio | +0.241 | faster handoff | 9×10⁻²⁰ |
+| koff_B ratio | −0.247 | tighter TBCB binding | 1×10⁻¹⁵ |
 | TBCE_tot (context) | −0.002 | — | 0.059 (n.s.) |
 | k_fold ratio | −0.007 | — | 0.53 (n.s.) |
 
@@ -390,11 +390,18 @@ exists and would have to be discriminated experimentally.
 Both the demand scan (§3) and the global analysis agree that the phenotype is favoured at
 **lower** synthesis flux (ρ = −0.059; phenotype-region median shift −0.280 in log₁₀), the opposite
 of a naive "cerebellum has the highest tubulin demand" expectation. Interestingly, TBCE abundance
-does not discriminate the phenotype region at all (p = 0.059) whereas TBCB abundance does
-(+0.379), so the regional variable the model points to is the **TBCB-to-substrate ratio**, not
+does not discriminate the phenotype region at all (p = 0.059) whereas TBCB abundance does (+0.387), so the regional variable the model points to is the **TBCB-to-substrate ratio**, not
 TBCE capacity.
 
 This is a concrete, testable prediction about the cerebellum: it should be a region where TBCB is
 relatively abundant compared with α-tubulin synthesis flux, not one where tubulin demand is
 highest. That prediction can be checked against regional expression data before any further
 simulation is run, and it should be, because the whole regional argument rests on it.
+
+> **Correction (applied after a numerical cross-check).** An earlier version of this
+> file quoted the phenotype-region *medians* (k_degF 0.879, kon_Edir −1.014, kon_B 0.689,
+> TBCB_tot 0.379, k_tr 0.236, koff_B −0.227) while labelling them *shifts*. The shift is
+> the phenotype-region median minus the median over the remaining draws, and the correct
+> values are +0.925, −1.079, +0.731, +0.387, +0.241 and −0.247 log10 units. The machine-
+> readable tables in `package/` always carried the correct shifts; only the prose was
+> mislabelled. Conclusions are unchanged — the ranking and signs are identical.

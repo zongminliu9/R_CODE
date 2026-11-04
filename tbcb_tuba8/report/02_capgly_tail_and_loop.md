@@ -175,7 +175,7 @@ Of the four candidate loci, three are excluded:
 
 The kinetic model says what the loop would have to do: not slow folding (`k_fold` has no effect
 on selectivity anywhere in the prior) but **shorten the lifetime of the chaperone-free
-quasi-native state** (`k_degF`, the strongest discriminator of the phenotype region, +0.879 dex).
+quasi-native state** (`k_degF`, the strongest discriminator of the phenotype region, +0.925 dex).
 
 Testing that means comparing the free-energy landscape and clearance-relevant exposure of the
 chaperone-free quasi-native state between TUBA8 and TUBA1A — the free-energy problem of the
@@ -191,9 +191,17 @@ computational protocol, and it needs GPU time rather than more analysis.
 ### Two predictions that can be checked without any simulation
 
 1. **TUBA8 should bind TBCB more tightly than TUBA1A does**, not less (§8 of the first report:
-   the phenotype region requires kon_B +0.69 dex and koff_B −0.23 dex). This is the opposite of
+   the phenotype region requires kon_B +0.73 dex and koff_B −0.25 dex). This is the opposite of
    the starting hypothesis and is directly measurable.
 2. **The 32–45 loop should be transplantable.** Replacing TUBA8's 32–45 with the conserved
    `PDGQMPSDKTIGGG` should rescue TUBA8 levels in a TBCB-null background, and the reciprocal
    swap into TUBA1A should confer TBCB dependence. The perfect sequence/phenotype correlation
    in §5 makes this the sharpest available test, and it requires no free-energy calculation.
+
+> **Correction (applied after a numerical cross-check).** An earlier version of this
+> file quoted the phenotype-region *medians* (k_degF 0.879, kon_Edir −1.014, kon_B 0.689,
+> TBCB_tot 0.379, k_tr 0.236, koff_B −0.227) while labelling them *shifts*. The shift is
+> the phenotype-region median minus the median over the remaining draws, and the correct
+> values are +0.925, −1.079, +0.731, +0.387, +0.241 and −0.247 log10 units. The machine-
+> readable tables in `package/` always carried the correct shifts; only the prose was
+> mislabelled. Conclusions are unchanged — the ranking and signs are identical.
