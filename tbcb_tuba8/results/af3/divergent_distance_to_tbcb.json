@@ -1,0 +1,362 @@
+{
+ "distances": [
+  {
+   "canon": 7,
+   "sub": "I7V",
+   "domain": "N-GTPase",
+   "dist": 18.265761947631837,
+   "sd": 0.5510993625484113,
+   "relSASA": 0.009
+  },
+  {
+   "canon": 24,
+   "sub": "Y24F",
+   "domain": "N-GTPase",
+   "dist": 21.237018585205078,
+   "sd": 0.4975670664108493,
+   "relSASA": 0.037
+  },
+  {
+   "canon": 32,
+   "sub": "P32A",
+   "domain": "N-GTPase",
+   "dist": 19.002945327758788,
+   "sd": 0.3645245137976963,
+   "relSASA": 0.353
+  },
+  {
+   "canon": 35,
+   "sub": "Q35T",
+   "domain": "N-GTPase",
+   "dist": 25.897162628173827,
+   "sd": 0.3534198924418529,
+   "relSASA": 0.415
+  },
+  {
+   "canon": 36,
+   "sub": "M36F",
+   "domain": "N-GTPase",
+   "dist": 28.698837280273438,
+   "sd": 0.3717537947692133,
+   "relSASA": 0.133
+  },
+  {
+   "canon": 37,
+   "sub": "P37G",
+   "domain": "N-GTPase",
+   "dist": 28.66567497253418,
+   "sd": 0.42633543998455764,
+   "relSASA": 0.681
+  },
+  {
+   "canon": 38,
+   "sub": "S38T",
+   "domain": "N-GTPase",
+   "dist": 30.953040313720702,
+   "sd": 0.4677494952267384,
+   "relSASA": 0.528
+  },
+  {
+   "canon": 39,
+   "sub": "D39Q",
+   "domain": "N-GTPase",
+   "dist": 31.004145431518555,
+   "sd": 0.8674004392455454,
+   "relSASA": 0.174
+  },
+  {
+   "canon": 40,
+   "sub": "K40A",
+   "domain": "N-GTPase",
+   "dist": 31.134790420532227,
+   "sd": 0.512799616630257,
+   "relSASA": 0.74
+  },
+  {
+   "canon": 41,
+   "sub": "T41S",
+   "domain": "N-GTPase",
+   "dist": 34.285333251953126,
+   "sd": 0.535518890552214,
+   "relSASA": 0.489
+  },
+  {
+   "canon": 42,
+   "sub": "I42K",
+   "domain": "N-GTPase",
+   "dist": 35.726376342773435,
+   "sd": 0.6312727015984705,
+   "relSASA": 0.677
+  },
+  {
+   "canon": 43,
+   "sub": "G43I",
+   "domain": "N-GTPase",
+   "dist": 30.698301696777342,
+   "sd": 0.6786809350805585,
+   "relSASA": 0.46
+  },
+  {
+   "canon": 44,
+   "sub": "G44N",
+   "domain": "N-GTPase",
+   "dist": 31.52515068054199,
+   "sd": 0.5153749261790246,
+   "relSASA": 0.329
+  },
+  {
+   "canon": 45,
+   "sub": "G45D",
+   "domain": "N-GTPase",
+   "dist": 36.84947204589844,
+   "sd": 0.5318061381657395,
+   "relSASA": 0.576
+  },
+  {
+   "canon": 50,
+   "sub": "N50T",
+   "domain": "N-GTPase",
+   "dist": 30.68349952697754,
+   "sd": 0.3783024750587468,
+   "relSASA": 0.058
+  },
+  {
+   "canon": 58,
+   "sub": "A58N",
+   "domain": "N-GTPase",
+   "dist": 29.206615447998047,
+   "sd": 0.44055319008881094,
+   "relSASA": 0.641
+  },
+  {
+   "canon": 67,
+   "sub": "F67M",
+   "domain": "N-GTPase",
+   "dist": 13.417897415161132,
+   "sd": 0.2825059318861785,
+   "relSASA": 0.013
+  },
+  {
+   "canon": 75,
+   "sub": "I75V",
+   "domain": "N-GTPase",
+   "dist": 7.713607215881348,
+   "sd": 0.1090788897649229,
+   "relSASA": 0.003
+  },
+  {
+   "canon": 80,
+   "sub": "T80A",
+   "domain": "N-GTPase",
+   "dist": 8.386068725585938,
+   "sd": 0.3976987966430146,
+   "relSASA": 0.622
+  },
+  {
+   "canon": 110,
+   "sub": "I110V",
+   "domain": "N-GTPase",
+   "dist": 9.034444427490234,
+   "sd": 0.4027136861042419,
+   "relSASA": 0.11
+  },
+  {
+   "canon": 114,
+   "sub": "I114S",
+   "domain": "N-GTPase",
+   "dist": 13.14603271484375,
+   "sd": 0.1818562247464068,
+   "relSASA": 0.089
+  },
+  {
+   "canon": 126,
+   "sub": "A126T",
+   "domain": "N-GTPase",
+   "dist": 26.625996017456053,
+   "sd": 0.7375050871189197,
+   "relSASA": 0.174
+  },
+  {
+   "canon": 128,
+   "sub": "Q128A",
+   "domain": "N-GTPase",
+   "dist": 30.95681381225586,
+   "sd": 0.1820140686915073,
+   "relSASA": 0.529
+  },
+  {
+   "canon": 130,
+   "sub": "T130S",
+   "domain": "N-GTPase",
+   "dist": 29.701321411132813,
+   "sd": 0.20907663311461389,
+   "relSASA": 0.753
+  },
+  {
+   "canon": 137,
+   "sub": "V137I",
+   "domain": "N-GTPase",
+   "dist": 18.368729400634766,
+   "sd": 0.5377466593686154,
+   "relSASA": 0.045
+  },
+  {
+   "canon": 159,
+   "sub": "V159L",
+   "domain": "N-GTPase",
+   "dist": 16.6556396484375,
+   "sd": 0.7558484683525661,
+   "relSASA": 0.599
+  },
+  {
+   "canon": 170,
+   "sub": "S170A",
+   "domain": "N-GTPase",
+   "dist": 15.315316772460937,
+   "sd": 0.5470751360058274,
+   "relSASA": 0.024
+  },
+  {
+   "canon": 232,
+   "sub": "G232S",
+   "domain": "intermediate",
+   "dist": 16.151047706604004,
+   "sd": 0.2592327129795189,
+   "relSASA": 0.015
+  },
+  {
+   "canon": 270,
+   "sub": "A270V",
+   "domain": "intermediate",
+   "dist": 18.592853927612303,
+   "sd": 0.030802405065820142,
+   "relSASA": 0.164
+  },
+  {
+   "canon": 275,
+   "sub": "V275I",
+   "domain": "intermediate",
+   "dist": 18.78627128601074,
+   "sd": 0.29478909387786945,
+   "relSASA": 0.206
+  },
+  {
+   "canon": 293,
+   "sub": "N293S",
+   "domain": "intermediate",
+   "dist": 20.66070137023926,
+   "sd": 1.6808886092349646,
+   "relSASA": 0.262
+  },
+  {
+   "canon": 294,
+   "sub": "A294S",
+   "domain": "intermediate",
+   "dist": 24.3363956451416,
+   "sd": 1.5707482145874008,
+   "relSASA": 0.145
+  },
+  {
+   "canon": 299,
+   "sub": "A299N",
+   "domain": "intermediate",
+   "dist": 20.876122283935548,
+   "sd": 0.2577892851514874,
+   "relSASA": 0.591
+  },
+  {
+   "canon": 300,
+   "sub": "N300S",
+   "domain": "intermediate",
+   "dist": 21.90460968017578,
+   "sd": 0.3117115654091641,
+   "relSASA": 0.242
+  },
+  {
+   "canon": 317,
+   "sub": "L317M",
+   "domain": "intermediate",
+   "dist": 21.79092330932617,
+   "sd": 0.25714725292381485,
+   "relSASA": 0.03
+  },
+  {
+   "canon": 330,
+   "sub": "A330V",
+   "domain": "intermediate",
+   "dist": 18.530613136291503,
+   "sd": 2.396871298549369,
+   "relSASA": 0.395
+  },
+  {
+   "canon": 334,
+   "sub": "T334A",
+   "domain": "intermediate",
+   "dist": 14.794016075134277,
+   "sd": 1.7482070459531802,
+   "relSASA": 0.23
+  },
+  {
+   "canon": 425,
+   "sub": "M425L",
+   "domain": "C-term dom",
+   "dist": 6.008786296844482,
+   "sd": 0.06254750028119828,
+   "relSASA": 0.013
+  },
+  {
+   "canon": 437,
+   "sub": "V437T",
+   "domain": "C-term dom",
+   "dist": 5.4917089462280275,
+   "sd": 0.1289915526713095,
+   "relSASA": 0.837
+  },
+  {
+   "canon": 440,
+   "sub": "V440F",
+   "domain": "C-term dom",
+   "dist": 2.122162675857544,
+   "sd": 0.1695432983841403,
+   "relSASA": null
+  },
+  {
+   "canon": 444,
+   "sub": "G444E",
+   "domain": "tail",
+   "dist": 4.12643027305603,
+   "sd": 0.5746833407433906,
+   "relSASA": null
+  },
+  {
+   "canon": 446,
+   "sub": "E446N",
+   "domain": "tail",
+   "dist": 3.277231788635254,
+   "sd": 0.5827345466737718,
+   "relSASA": null
+  },
+  {
+   "canon": 451,
+   "sub": "Y451F",
+   "domain": "tail",
+   "dist": 2.6061401844024656,
+   "sd": 0.0653957517285733,
+   "relSASA": null
+  }
+ ],
+ "beta_overlap": [
+  98,
+  100,
+  101,
+  102,
+  179,
+  180,
+  181,
+  182,
+  401,
+  403,
+  404,
+  407
+ ]
+}
