@@ -6,8 +6,9 @@
 # Marlowe CPU array: sbatch -p preempt -A marlowe-m000251 -c 8 --mem=16G -t 1:30:00 --exclude=n18,n28 \
 #                      --array=0-10 -o logs/rebuildL_%A_%a.out scripts/rebuild_L_20261105.sh
 # then (after the array): scripts/rebuild_L_20261105.sh finalize   (a8_dom from the new a8, strict chirality check)
-cd /scratch/m000251/zongminl/tbcb_mech/atomistic
-PY="/scratch/m000251/zongminl/mm/envs/amb/bin/python -W ignore"
+M=/scratch/m000251/$USER
+cd $M/tbcb_mech/atomistic
+PY="$M/mm/envs/amb/bin/python -W ignore"
 export OPENMM_CPU_THREADS=${SLURM_CPUS_PER_TASK:-8} OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-8}
 B=build_L; mkdir -p $B
 AF=inputs/af3
