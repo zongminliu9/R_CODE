@@ -73,6 +73,8 @@ if a.mode == 'run':
                 if k not in starts:
                     starts[k] = X.copy(); log(f'window {k}: target {math.degrees(tgt):.0f}, phi {math.degrees(phi(X)):.1f}')
         np.savez(STARTS, pos=np.array([starts[k] for k in range(a.nwin)]))
+        del ctx, integ            # release the GPU before the HREX context (see a15)
+        import gc; gc.collect()
     z = np.load(STARTS)
     n_iter = int(round(a.ns * 1000 / (a.steps * 0.004)))
     h = HREX(system, z['pos'], box, states, temperature_K=310.0, timestep_ps=0.004, steps_per_iter=a.steps,

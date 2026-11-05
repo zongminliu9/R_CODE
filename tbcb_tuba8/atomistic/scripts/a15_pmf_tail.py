@@ -85,6 +85,9 @@ if a.mode == 'run':
             log(f'pull: window {c:.2f} nm, r = {cv(X):.3f}')
         np.savez(PULL, centres=centres, pos=np.array([starts[float(c)][0] for c in centres]),
                  r=np.array([starts[float(c)][1] for c in centres]))
+        # release the GPU: on Sherlock a second CUDA context in this process fails ("No compatible CUDA device")
+        del ctx, integ
+        import gc; gc.collect()
     z = np.load(PULL)
     states = [{'r0': float(c), 'kus': a.k} for c in z['centres']]
     n_iter = int(round(a.ns * 1000 / (a.steps * 0.004)))

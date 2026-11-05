@@ -50,6 +50,8 @@ class HREX:
                 plat = None
         assert plat is not None
         self.platform = plat.getName()
+        if self.platform in ('CPU', 'Reference') and (os.environ.get('CUDA_VISIBLE_DEVICES') or os.environ.get('SLURM_JOB_GPUS')):
+            raise RuntimeError('GPU job fell back to the CPU platform; refusing to run (a GPU context is probably still held)')
         def _vec(v):
             v = v.value_in_unit(unit.nanometer) if hasattr(v, 'value_in_unit') else v
             return mm.Vec3(*[float(x) for x in v])

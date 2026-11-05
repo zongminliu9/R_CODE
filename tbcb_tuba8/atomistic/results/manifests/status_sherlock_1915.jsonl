@@ -1,0 +1,96 @@
+{"id": "51129263", "name": "md450_a1a_r0_x6", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51129256", "name": "md310_a4a_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51137076", "name": "ana_mmgbsa", "state": "PENDING", "reason": "Dependency", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51136552", "name": "fep_t_a8_cplx_449TYR_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132836", "name": "usphi43_a1a_loop8_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132819", "name": "usphi43_a1a_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51131996", "name": "md310_h_9M1M_Tuba1b_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51131394", "name": "md310_c_tbcb_a1a_m0_r2", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130626", "name": "ramd_t_a8FY_cplx_s0_x3", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130618", "name": "ramd_t_a1aYF_cplx_s0_x3", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130437", "name": "fep_e_a1a_cplx_451PHE_r2", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51129997", "name": "fep_t_a1a_K188A_cplx_451PHE_r2", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51136569", "name": "fep_e_a8_cplx_449TYR_r2", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132967", "name": "pmfdom_a8_dom_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132877", "name": "fep_a8_114ILE_folded_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51131993", "name": "md310_h_9M1M_Tuba8_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51131986", "name": "md310_x_9M1L_tbce_a8_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130636", "name": "ramd_t_a8_K188A_cplx_s0_x3", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130439", "name": "fep_e_a8_cplx_449TYR_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130004", "name": "md310_c_tbcb_a1a_m0_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130003", "name": "md310_c_tbcb_a1a_m0_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51129996", "name": "fep_t_a1a_K188A_cplx_451PHE_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51129994", "name": "fep_t_a8_cplx_449TYR_r2", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51129991", "name": "fep_t_a1a_cplx_451PHE_r2", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132831", "name": "usphi43_a1a_G43I_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51131989", "name": "md310_h_9M1M_Tuba1a_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51131981", "name": "md310_x_9M1L_tbce_a1a_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130634", "name": "ramd_t_a1aYF_K188A_cplx_s0_x3", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130009", "name": "md310_c_tbce_a1a_m0_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51129999", "name": "fep_t_a8_K188A_cplx_449TYR_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132805", "name": "pmf_e_a1a_cplx_big_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132654", "name": "fep_a8_114ILE_folded_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51131999", "name": "md310_h_9M1M_Tuba4a_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51131979", "name": "md310_x_9M1L_tbce_a1a_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130430", "name": "fep_e_a1a_cplx_451PHE_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132000", "name": "md310_h_9M1M_Tuba4a_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51131995", "name": "md310_h_9M1M_Tuba8_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130643", "name": "ramd_e_a8_cplx_s0_x3", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130641", "name": "ramd_e_a1a_cplx_s0_x3", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51129992", "name": "fep_t_a8_cplx_449TYR_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132834", "name": "usphi43_a8_loop1A_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132821", "name": "usphi43_a8_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132816", "name": "pmf_e_a8_cplx_big_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51131998", "name": "md310_h_9M1M_Tuba1b_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51131984", "name": "md310_x_9M1L_tbce_a8_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130621", "name": "ramd_t_a8_cplx_s0_x3", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130008", "name": "md310_c_tbcb_a8_m0_r2", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130638", "name": "ramd_t_a8FY_K188A_cplx_s0_x3", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130630", "name": "ramd_t_a1a_K188A_cplx_s0_x3", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130435", "name": "fep_e_a1a_cplx_451PHE_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130001", "name": "fep_t_a1a_free_451PHE_r0_x3", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51136562", "name": "fep_t_a1a_K188A_cplx_451PHE_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132965", "name": "pmfdom_a1a_dom_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132829", "name": "usphi43_a8_I43G_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130446", "name": "fep_e_a8_cplx_449TYR_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130012", "name": "md310_c_tbce_a8_m0_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130010", "name": "md310_c_tbce_a1a_m0_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130007", "name": "md310_c_tbcb_a8_m0_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130002", "name": "fep_t_a8_free_449TYR_r0_x3", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130000", "name": "fep_t_a8_K188A_cplx_449TYR_r2", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51129998", "name": "fep_t_a8_K188A_cplx_449TYR_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51129989", "name": "fep_t_a1a_cplx_451PHE_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51132801", "name": "pmf_t_a8_cplx_big_r0", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51130451", "name": "ramd_t_a1a_cplx_s0_x3", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51129990", "name": "fep_t_a1a_cplx_451PHE_r1", "state": "PENDING", "reason": "QOSMaxGRESPerUser", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51129208", "name": "fep_a1a_114SER_folded_r0", "state": "RUNNING", "reason": "None", "elapsed": "3:11:43", "progress": "it 2500/5000  176.5 min  acc min 0.24 median 0.49  platform CUDA", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51129225", "name": "fep_a1a_114SER_folded_r2", "state": "RUNNING", "reason": "None", "elapsed": "2:57:45", "progress": "it 2200/5000  158.3 min  acc min 0.30 median 0.48  platform CUDA", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51129228", "name": "fep_a8_114ILE_folded_r2", "state": "RUNNING", "reason": "None", "elapsed": "2:57:45", "progress": "it 2200/5000  162.6 min  acc min 0.11 median 0.54  platform CUDA", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51129216", "name": "fep_a1a_114SER_folded_r1", "state": "RUNNING", "reason": "None", "elapsed": "3:06:48", "progress": "it 2400/5000  173.8 min  acc min 0.23 median 0.45  platform CUDA", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51131991", "name": "md310_h_9M1M_Tuba1a_r1", "state": "RUNNING", "reason": "None", "elapsed": "2:57:45", "progress": "25.50 ns  240 ns/day", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51130006", "name": "md310_c_tbcb_a8_m0_r0", "state": "RUNNING", "reason": "None", "elapsed": "3:06:48", "progress": "19.50 ns  183 ns/day", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51130011", "name": "md310_c_tbce_a8_m0_r0", "state": "RUNNING", "reason": "None", "elapsed": "3:06:48", "progress": "11.50 ns  114 ns/day", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51129233", "name": "fep_a1a_114SER_unfolded_r0_x6", "state": "RUNNING", "reason": "None", "elapsed": "3:11:43", "progress": "it 4800/5000  183.2 min  acc min 0.25 median 0.44  platform CUDA", "gpu": "NVIDIA TITAN Xp"}
+{"id": "51129241", "name": "rest2_a8_r0", "state": "RUNNING", "reason": "None", "elapsed": "3:06:48", "progress": "it 1500/15000  169.7 min  acc min 0.42 median 0.46  platform CUDA", "gpu": "NVIDIA TITAN Xp"}
+{"id": "51129243", "name": "rest2_a8_loop1A_r0", "state": "RUNNING", "reason": "None", "elapsed": "2:47:30", "progress": "it 2000/15000  152.7 min  acc min 0.45 median 0.49  platform CUDA", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51129237", "name": "rest2_a1a_r0", "state": "RUNNING", "reason": "None", "elapsed": "2:52:24", "progress": "it 2300/15000  162.2 min  acc min 0.46 median 0.49  platform CUDA", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51129245", "name": "rest2_a1a_loop8_r0", "state": "RUNNING", "reason": "None", "elapsed": "2:47:30", "progress": "it 1300/15000  151.1 min  acc min 0.38 median 0.48  platform CUDA", "gpu": "NVIDIA TITAN Xp"}
+{"id": "51129248", "name": "md310_a1a_r0", "state": "RUNNING", "reason": "None", "elapsed": "2:10:12", "progress": "22.50 ns  288 ns/day", "gpu": "NVIDIA TITAN Xp"}
+{"id": "51129253", "name": "md310_a1b_r0", "state": "RUNNING", "reason": "None", "elapsed": "2:10:12", "progress": "22.90 ns  288 ns/day", "gpu": "NVIDIA TITAN Xp"}
+{"id": "51129251", "name": "md310_a8_r0", "state": "RUNNING", "reason": "None", "elapsed": "2:38:27", "progress": "42.00 ns  421 ns/day", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51132797", "name": "pmf_t_a1a_cplx_big_r0", "state": "RUNNING", "reason": "None", "elapsed": "2:05:23", "progress": "pull: window 2.66 nm, r = 2.589 | ERR: platform OpenCL unavailable: Error initializing context: clCreateContext (-9999)", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51137073", "name": "ana_usphi", "state": "PENDING", "reason": "Dependency", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51137071", "name": "ana_md450", "state": "PENDING", "reason": "Dependency", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51137069", "name": "ana_md310", "state": "PENDING", "reason": "Dependency", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51137066", "name": "ana_rest2", "state": "PENDING", "reason": "Dependency", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51137075", "name": "ana_tail", "state": "PENDING", "reason": "Dependency", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51137072", "name": "ana_pmf", "state": "PENDING", "reason": "Dependency", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51137141", "name": "report_tbcb", "state": "PENDING", "reason": "Dependency", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51137063", "name": "ana_fep", "state": "PENDING", "reason": "Dependency", "elapsed": "0:00", "progress": "", "gpu": ""}
+{"id": "51129210", "name": "fep_a8_114ILE_folded_r0", "state": "COMPLETED", "reason": "", "elapsed": "00:09:31", "progress": "{\"stage\": \"npt_free\", \"ps\": 1000.0, \"T\": 310.0, \"k_heavy\": 0.0, \"k_bb\": 0.0, \"k_mg\": 0.0, \"E_kcal\": -135645.01061589987,", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51129218", "name": "fep_a8_114ILE_folded_r1", "state": "CANCELLED", "reason": "", "elapsed": "00:11:00", "progress": "{\"stage\": \"npt_free\", \"ps\": 1000.0, \"T\": 310.0, \"k_heavy\": 0.0, \"k_bb\": 0.0, \"k_mg\": 0.0, \"E_kcal\": -135513.85338549703,", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51129993", "name": "fep_t_a8_cplx_449TYR_r1", "state": "CANCELLED", "reason": "", "elapsed": "00:39:24", "progress": "it 400/5000  24.7 min  acc min 0.01 median 0.38  platform CUDA", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51129995", "name": "fep_t_a1a_K188A_cplx_451PHE_r0", "state": "CANCELLED", "reason": "", "elapsed": "00:39:34", "progress": "it 500/5000  25.5 min  acc min 0.00 median 0.35  platform CUDA", "gpu": "NVIDIA GeForce RTX 2080 Ti"}
+{"id": "51130005", "name": "md310_c_tbcb_a1a_m0_r2", "state": "COMPLETED", "reason": "", "elapsed": "00:00:11", "progress": "", "gpu": "NVIDIA TITAN Xp"}
+{"id": "51130448", "name": "fep_e_a8_cplx_449TYR_r2", "state": "CANCELLED", "reason": "", "elapsed": "00:48:47", "progress": "it 500/5000  34.4 min  acc min 0.01 median 0.39  platform CUDA", "gpu": "NVIDIA TITAN Xp"}
+{"id": "51137148", "name": "tbcb_mailtest", "state": "COMPLETED", "reason": "", "elapsed": "00:00:10", "progress": "", "gpu": ""}
