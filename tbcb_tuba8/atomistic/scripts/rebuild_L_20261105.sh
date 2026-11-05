@@ -26,11 +26,11 @@ case ${SLURM_ARRAY_TASK_ID} in
   3) $PY scripts/a01_build.py a8_A40K 'Tuba8:A40K' --out $B && $PY scripts/a02_minimize.py $B/a8_A40K ;;
   4) $PY scripts/a01_build.py a8_I43G 'Tuba8:I43G' --out $B && $PY scripts/a02_minimize.py $B/a8_I43G ;;
   5) $PY scripts/a01_build.py a1a_loop8_I114S 'Tuba1a:loop=Tuba8,I114S' --out $B && $PY scripts/a02_minimize.py $B/a1a_loop8_I114S ;;
-  6) $PY scripts/a07_build_complex.py h_9M1M_Tuba8 exp inputs/9M1M.cif.gz --alpha a --partners b --keep-beta b --thread Tuba8 --out $B \
+  6) $PY scripts/a07_build_complex.py h_9M1M_Tuba8 exp inputs/9M1M.cif --alpha a --partners b --keep-beta b --thread Tuba8 --out $B \
        && $PY scripts/a02_minimize.py $B/h_9M1M_Tuba8 --chains-a a --chains-b b ;;
-  7) $PY scripts/a07_build_complex.py x_9M1L_tbce_a1a exp inputs/9M1L.cif.gz --alpha a --partners E --thread Tuba1a --out $B \
+  7) $PY scripts/a07_build_complex.py x_9M1L_tbce_a1a exp inputs/9M1L.cif --alpha a --partners E --thread Tuba1a --out $B \
        && $PY scripts/a02_minimize.py $B/x_9M1L_tbce_a1a --chains-a E --chains-b a ;;
-  8) $PY scripts/a07_build_complex.py x_9M1L_tbce_a8 exp inputs/9M1L.cif.gz --alpha a --partners E --thread Tuba8 --out $B \
+  8) $PY scripts/a07_build_complex.py x_9M1L_tbce_a8 exp inputs/9M1L.cif --alpha a --partners E --thread Tuba8 --out $B \
        && $PY scripts/a02_minimize.py $B/x_9M1L_tbce_a8 --chains-a E --chains-b a ;;
   9) $PY scripts/a07_build_complex.py c_tbce_a8_m0 af3 $AF/fold_tbce_tuba8/fold_tbce_tuba8_model_0.cif --alpha A --partners B --out $B \
        && $PY scripts/a02_minimize.py $B/c_tbce_a8_m0 --chains-a B --chains-b A ;;

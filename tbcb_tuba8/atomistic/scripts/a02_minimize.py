@@ -11,7 +11,9 @@ Handedness (added 2026-11-05 after minimisation inverted strained residues in se
 minimising if any protein residue is D; in both stages a flat-bottom restraint on every N-CA-C-CB dihedral
 (zero within 35 deg of the L value -124 deg, 1000 kJ/mol/rad^2 outside) prevents inversion without acting on
 normal geometry; CB is also restrained in stage 1; and minimized.cif.gz is not written if any residue's
-dihedral still changes sign.  Reported energies exclude every restraint.
+dihedral still changes sign.  Alpha hydrogens that addHydrogens placed on the CB side (CB-CA-HA < 95 deg, or
+N-CA-C-HA outside 84-154 deg) are first put back at the ideal tetrahedral position, and N-CA-C-HA is held the same
+way (within 35 deg of +119 deg).  Reported energies exclude every restraint.
 
 Usage: a02_minimize.py <build_dir> [--platform CPU|CUDA|OpenCL] [--chains-a A --chains-b B]
 Writes <build_dir>/minimized.cif.gz and <build_dir>/minimize.json
@@ -81,6 +83,12 @@ def snapshot(ctx, system, top, solute, label):
     return out
 
 
+def _dih(p0, p1, p2, p3):
+    b0, b1, b2 = p0 - p1, p2 - p1, p3 - p2
+    b1 = b1 / np.linalg.norm(b1); v = b0 - b0 @ b1 * b1; w = b2 - b2 @ b1 * b1
+    return float(np.degrees(np.arctan2(np.cross(b1, v) @ w, v @ w)))
+
+
 def handedness(top, X):
     """per protein residue (non-Gly, with N, CA, C, CB): True if L (N-CA-C-CB dihedral < 0)"""
     out = {}
@@ -129,6 +137,20 @@ def main():
     dres = [f'{k[0]}:{k[2]}{k[1]}' for k, v in hand0.items() if not v]
     if dres:
         raise SystemExit(f'D residues in the input ({len(dres)}): {dres[:20]} - not minimised')
+    Pfix = np.array(pos.value_in_unit(NM)); ha_fixed = []
+    for r in top.residues():
+        A = {x.name: x.index for x in r.atoms()}
+        if r.name in {'GLY'} | SOLVENT or not all(k in A for k in ('N', 'CA', 'C', 'CB', 'HA')):
+            continue
+        ca = Pfix[A['CA']]; u = [(Pfix[A[k]] - ca) / np.linalg.norm(Pfix[A[k]] - ca) for k in ('N', 'C', 'CB')]
+        h = Pfix[A['HA']] - ca
+        ang = np.degrees(np.arccos(u[2] @ h / np.linalg.norm(h)))
+        dh = _dih(Pfix[A['N']], ca, Pfix[A['C']], Pfix[A['HA']])
+        if ang < 95.0 or not (84.0 <= dh <= 154.0):
+            d = -(u[0] + u[1] + u[2]); Pfix[A['HA']] = ca + 0.109 * d / np.linalg.norm(d)
+            ha_fixed.append(f'{r.chain.id}:{r.name}{r.id} (CB-CA-HA {ang:.0f}, N-CA-C-HA {dh:.0f})')
+    if ha_fixed:
+        pos = [mm.Vec3(*x) for x in Pfix] * NM
     # stage-1 restraints
     rest = mm.CustomExternalForce('kbb*periodicdistance(x, y, z, x0, y0, z0)^2')
     rest.addGlobalParameter('kbb', 1000.0)
@@ -152,12 +174,14 @@ def main():
     fb.setForceGroup(30)
     system.addForce(fb)
     chi = mm.CustomTorsionForce('0.5*kchi*step(abs(dt)-wchi)*(abs(dt)-wchi)^2; dt = atan2(sin(theta-tchi), cos(theta-tchi))')
-    chi.addGlobalParameter('kchi', 1000.0); chi.addGlobalParameter('tchi', math.radians(-124.0))
-    chi.addGlobalParameter('wchi', math.radians(35.0))
+    chi.addGlobalParameter('kchi', 1000.0); chi.addGlobalParameter('wchi', math.radians(35.0))
+    chi.addPerTorsionParameter('tchi')
     for r in top.residues():
         A = {x.name: x.index for x in r.atoms()}
         if r.name not in {'GLY'} | SOLVENT and all(k in A for k in ('N', 'CA', 'C', 'CB')):
-            chi.addTorsion(A['N'], A['CA'], A['C'], A['CB'], [])
+            chi.addTorsion(A['N'], A['CA'], A['C'], A['CB'], [math.radians(-124.0)])
+            if 'HA' in A:
+                chi.addTorsion(A['N'], A['CA'], A['C'], A['HA'], [math.radians(119.0)])
     chi.setForceGroup(29)
     system.addForce(chi)
     plat = mm.Platform.getPlatformByName(a.platform)
@@ -165,12 +189,14 @@ def main():
     ctx = mm.Context(system, integ, plat)
     ctx.setPositions(pos)
     ctx.setPeriodicBoxVectors(*top.getPeriodicBoxVectors())
-    rec = {'build_dir': os.path.abspath(a.wd), 'platform': a.platform, 'openmm': mm.__version__,
+    rec = {'HA_replaced_before_minimisation': ha_fixed, 'build_dir': os.path.abspath(a.wd), 'platform': a.platform, 'openmm': mm.__version__,
            'n_atoms': system.getNumParticles(), 'mg_shell_start': mg_shell(top, pos)}
     chi_E = lambda: ctx.getState(getEnergy=True, groups={29}).getPotentialEnergy().value_in_unit(KJ)
     ctx.setParameter('kbb', 0.0); ctx.setParameter('kmg', 0.0)
     rec['chirality_restraint_kJmol_start'] = chi_E()
-    assert rec['chirality_restraint_kJmol_start'] < 1.0 * max(1, chi.getNumTorsions()) * 0.01 + 5.0, rec['chirality_restraint_kJmol_start']
+    # a sign-convention error would put every L residue about 112 deg outside the window (~900 kJ/mol each);
+    # a few distorted but L residues from PDBFixer give tens of kJ/mol
+    assert rec['chirality_restraint_kJmol_start'] < 225.0 * max(1, chi.getNumTorsions()), rec['chirality_restraint_kJmol_start']
     ctx.setParameter('kchi', 0.0)
     rec['initial'] = snapshot(ctx, system, top, solute, 'as built (unminimised)')
     ctx.setParameter('kbb', 1000.0); ctx.setParameter('kmg', 50000.0); ctx.setParameter('kchi', 1000.0)
@@ -208,6 +234,12 @@ def main():
                             'interface_CA_rmsd_A': float(d_if)}
     hand1 = handedness(top, np.array(P1.value_in_unit(NM)))
     flipped = [f'{k[0]}:{k[2]}{k[1]}' for k in hand0 if hand0[k] != hand1.get(k, hand0[k])]
+    Xf = np.array(P1.value_in_unit(NM))
+    for r in top.residues():
+        A = {x.name: x.index for x in r.atoms()}
+        if r.name not in {'GLY'} | SOLVENT and all(k in A for k in ('N', 'CA', 'C', 'CB', 'HA')):
+            if not (84.0 <= _dih(Xf[A['N']], Xf[A['CA']], Xf[A['C']], Xf[A['HA']]) <= 154.0):
+                flipped.append(f'{r.chain.id}:{r.name}{r.id} HA')
     rec['handedness_changed'] = flipped
     if flipped:
         json.dump(rec, open(os.path.join(a.wd, 'minimize_failed.json'), 'w'), indent=1)

@@ -49,6 +49,7 @@ par = np.array([[nb.getParticleParameters(i)[0].value_in_unit(unit.elementary_ch
 reps = sorted(glob.glob(os.path.join(a.mdsys, 'r*')))
 per_rep = []
 windows = []
+image_checks = []
 for rdir in reps:
     segs = sorted(glob.glob(os.path.join(rdir, 'seg_*.dcd')))
     pdb = os.path.join(rdir, 'solute.pdb')
@@ -68,6 +69,19 @@ for rdir in reps:
     assert len(save_idx) == top.n_atoms, (len(save_idx), top.n_atoms)
     P = par[save_idx]
     res = {r.resSeq: r for r in top.residues if r.is_protein}
+    # periodic-image check: GTP, Mg and the Mg-shell waters are separate molecules, and every distance below is plain
+    np_idx = [x.index for x in top.atoms if not x.residue.is_protein]
+    pr_heavy = [x.index for x in top.atoms if x.residue.is_protein and x.element.symbol != 'H']
+    image_check = 'no unit cell in the trajectory: not checked' if t.unitcell_vectors is None else 'no non-protein solute'
+    if np_idx and t.unitcell_vectors is not None:
+        sub = t[::max(1, t.n_frames // 50)]
+        pairs = np.array([[i, j] for i in np_idx for j in pr_heavy])
+        d0 = md.compute_distances(sub, pairs, periodic=False).reshape(sub.n_frames, len(np_idx), len(pr_heavy)).min(axis=2)
+        d1 = md.compute_distances(sub, pairs, periodic=True).reshape(sub.n_frames, len(np_idx), len(pr_heavy)).min(axis=2)
+        image_check = float(np.max(d0 - d1))
+        if image_check > 0.01:
+            print(f'WARNING {os.path.basename(rdir)}: a non-protein solute molecule is up to {image_check:.2f} nm closer '
+                  f'to the protein under the minimum image; its contacts and energies below are incomplete', flush=True)
     sasa = md.shrake_rupley(t, mode='residue')
     hb = md.baker_hubbard(t, freq=0.10, periodic=False)
     hb_frames = None
@@ -131,6 +145,7 @@ for rdir in reps:
         out[p] = rec
     per_rep.append(out)
     windows.append([a.skip_ns, min(a.max_ns, t_end_ns) if a.max_ns else t_end_ns, int(t.n_frames)])
+    image_checks.append(image_check)
     print(os.path.basename(rdir), t.n_frames, 'frames', flush=True)
 summ = {}
 for p in POS:
@@ -147,5 +162,6 @@ for p in POS:
     s['hbonds'] = [x['hbonds'] for x in vals]
     summ[p] = s
 json.dump({'system': os.path.basename(a.mdsys.rstrip('/')), 'replicas': len(per_rep), 'window_ns_frames_per_rep': windows,
+           'image_check_max_nm_per_rep': image_checks,
            'per_residue': summ}, open(a.out, 'w'), indent=1)
 print('wrote', a.out)
