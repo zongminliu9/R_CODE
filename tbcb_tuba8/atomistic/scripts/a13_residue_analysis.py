@@ -20,7 +20,17 @@ ap = argparse.ArgumentParser()
 ap.add_argument('mdsys'); ap.add_argument('build'); ap.add_argument('out')
 ap.add_argument('--skip_ns', type=float, default=10.0); ap.add_argument('--stride', type=int, default=5)
 ap.add_argument('--dt_ps', type=float, default=20.0)
+ap.add_argument('--max_ns', type=float, default=None, help='use frames up to this time only (common window for interim comparisons)')
 a = ap.parse_args()
+def bse(x, nb=4):
+    """standard error of the mean from nb contiguous blocks (within one replica)"""
+    x = np.asarray(x, float)
+    if len(x) < 2 * nb:
+        return None
+    m = [b.mean() for b in np.array_split(x, nb)]
+    return float(np.std(m, ddof=1) / np.sqrt(nb))
+
+
 MAXASA = {'ALA': 129, 'ARG': 274, 'ASN': 195, 'ASP': 193, 'CYS': 167, 'GLN': 225, 'GLU': 223, 'GLY': 104, 'HIS': 224,
           'HID': 224, 'HIE': 224, 'HIP': 224, 'ILE': 197, 'LEU': 201, 'LYS': 236, 'MET': 224, 'PHE': 240, 'PRO': 159,
           'SER': 155, 'THR': 172, 'TRP': 285, 'TYR': 263, 'VAL': 174}
@@ -38,13 +48,15 @@ par = np.array([[nb.getParticleParameters(i)[0].value_in_unit(unit.elementary_ch
                  nb.getParticleParameters(i)[2].value_in_unit(unit.kilojoule_per_mole)] for i in range(sysf.getNumParticles())])
 reps = sorted(glob.glob(os.path.join(a.mdsys, 'r*')))
 per_rep = []
+windows = []
 for rdir in reps:
     segs = sorted(glob.glob(os.path.join(rdir, 'seg_*.dcd')))
     pdb = os.path.join(rdir, 'solute.pdb')
     if not segs:
         continue
     t = md.join([md.load_dcd(s, top=pdb) for s in segs], check_topology=False)
-    t = t[int(a.skip_ns * 1000 / a.dt_ps)::a.stride]
+    t_end_ns = t.n_frames * a.dt_ps / 1000.0
+    t = t[int(a.skip_ns * 1000 / a.dt_ps):(int(a.max_ns * 1000 / a.dt_ps) if a.max_ns else None):a.stride]
     if t.n_frames < 10:
         continue
     top = t.topology
@@ -67,7 +79,8 @@ for rdir in reps:
         if p not in res:
             continue
         r = res[p]; ri = [x.index for x in r.atoms]
-        rec = {'resname': r.name, 'rel_sasa_mean': float(np.mean(sasa[:, r.index]) * 100 / MAXASA.get(r.name, 200))}
+        rec = {'resname': r.name, 'rel_sasa_mean': float(np.mean(sasa[:, r.index]) * 100 / MAXASA.get(r.name, 200)),
+               'rel_sasa_block_se': bse(sasa[:, r.index] * 100 / MAXASA.get(r.name, 200))}
         rec['hbonds'] = [f'{top.atom(d)}-{top.atom(acc)}' for d, h, acc in hb if top.atom(d).residue.index == r.index or top.atom(acc).residue.index == r.index]
         # salt bridges
         sb = []
@@ -110,8 +123,12 @@ for rdir in reps:
             sr = (sig / d) ** 6
             El.append(np.sum(np.where(m, 4 * eps * (sr * sr - sr), 0.0)))
         rec['E_coul_kcal'] = float(np.mean(Ec)) / 4.184; rec['E_lj_kcal'] = float(np.mean(El)) / 4.184
+        se_c, se_l = bse(Ec), bse(El)
+        rec['E_coul_block_se_kcal'] = se_c / 4.184 if se_c is not None else None
+        rec['E_lj_block_se_kcal'] = se_l / 4.184 if se_l is not None else None
         out[p] = rec
     per_rep.append(out)
+    windows.append([a.skip_ns, min(a.max_ns, t_end_ns) if a.max_ns else t_end_ns, int(t.n_frames)])
     print(os.path.basename(rdir), t.n_frames, 'frames', flush=True)
 summ = {}
 for p in POS:
@@ -123,8 +140,10 @@ for p in POS:
         v = [x[k] for x in vals if k in x]
         if v:
             s[k] = [float(np.mean(v)), float(np.std(v, ddof=1)) if len(v) > 1 else None]
+    s['block_se_per_rep'] = [{k: x.get(k) for k in ('rel_sasa_block_se', 'E_coul_block_se_kcal', 'E_lj_block_se_kcal')} for x in vals]
     s['salt_bridges'] = [x['salt_bridges'] for x in vals]
     s['hbonds'] = [x['hbonds'] for x in vals]
     summ[p] = s
-json.dump({'system': os.path.basename(a.mdsys.rstrip('/')), 'replicas': len(per_rep), 'per_residue': summ}, open(a.out, 'w'), indent=1)
+json.dump({'system': os.path.basename(a.mdsys.rstrip('/')), 'replicas': len(per_rep), 'window_ns_frames_per_rep': windows,
+           'per_residue': summ}, open(a.out, 'w'), indent=1)
 print('wrote', a.out)
