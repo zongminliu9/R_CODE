@@ -7,15 +7,21 @@ time-split estimates (first half vs second half of the production data), and rep
 Gates: adjacent overlap >= 0.03; |dG(first half) - dG(second half)| <= max(2 * MBAR SE, replicate spread) is
 checked at the leg level.  A leg's final value is the mean over replicates that pass, with the SD across them.
 
-Usage: a09_fep_analysis.py <runs_root>/fep  [--T 310]   -> writes fep_results.json next to it
+Usage: a09_fep_analysis.py <runs_root>/fep  [--T 310] [--out x.json]
+  default output: <campaign>/results/fep_results.json when <runs_root>/../results exists (the analysis jobs that were
+  submitted before --out was added rely on this), else <runs_root>/fep_results.json
 """
 import os, sys, json, glob, argparse
 import numpy as np
 
 ap = argparse.ArgumentParser(); ap.add_argument('root'); ap.add_argument('--T', type=float, default=310.0)
 ap.add_argument('--discard', type=float, default=0.10)
-ap.add_argument('--out', default=None, help='output JSON (default: <root>/../fep_results.json)')
+ap.add_argument('--out', default=None, help='output JSON (default: see Usage)')
 a = ap.parse_args()
+if a.out is None:
+    _runs = os.path.dirname(os.path.abspath(a.root.rstrip('/')))
+    _res = os.path.join(os.path.dirname(_runs), 'results')
+    a.out = os.path.join(_res, 'fep_results.json') if os.path.isdir(_res) else os.path.join(_runs, 'fep_results.json')
 import pymbar
 from pymbar import timeseries
 kT = 0.0019872043 * a.T  # kcal/mol
@@ -107,7 +113,8 @@ for k, v in res.items():
                 dd[f'{base}  [ref {u}]'] = dict(ddG_fold_kcal=f['mean_dG_kcal'] - g['mean_dG_kcal'], sd_kcal=float(sd),
                                                folded=f, unfolded=g)
 out = dict(legs=res, ddG_fold=dd, T=a.T, note='ddG_fold > 0 = mutation destabilises the folded state')
-json.dump(out, open(a.out or os.path.join(os.path.dirname(a.root.rstrip('/')), 'fep_results.json'), 'w'), indent=1, default=float)
+json.dump(out, open(a.out, 'w'), indent=1, default=float)
+print('wrote', a.out)
 for k, v in dd.items():
     print(f"{k}: ddG_fold = {v['ddG_fold_kcal']:+.2f} +/- {v['sd_kcal']:.2f} kcal/mol")
 for k, v in res.items():

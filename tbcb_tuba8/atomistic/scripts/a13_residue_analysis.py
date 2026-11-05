@@ -79,8 +79,10 @@ for rdir in reps:
         if p not in res:
             continue
         r = res[p]; ri = [x.index for x in r.atoms]
-        rec = {'resname': r.name, 'rel_sasa_mean': float(np.mean(sasa[:, r.index]) * 100 / MAXASA.get(r.name, 200)),
-               'rel_sasa_block_se': bse(sasa[:, r.index] * 100 / MAXASA.get(r.name, 200))}
+        # md.shrake_rupley returns nm^2; MAXASA is in A^2 (x100), and the result is a percentage (x100)
+        rel = sasa[:, r.index] * 1.0e4 / MAXASA.get(r.name, 200)
+        rec = {'resname': r.name, 'rel_sasa_mean': float(np.mean(rel)), 'rel_sasa_block_se': bse(rel),
+               'sasa_A2_mean': float(np.mean(sasa[:, r.index]) * 100.0)}
         rec['hbonds'] = [f'{top.atom(d)}-{top.atom(acc)}' for d, h, acc in hb if top.atom(d).residue.index == r.index or top.atom(acc).residue.index == r.index]
         # salt bridges
         sb = []

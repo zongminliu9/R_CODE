@@ -16,6 +16,7 @@ import numpy as np
 
 ap = argparse.ArgumentParser(); ap.add_argument('run'); ap.add_argument('--T', type=float, default=310.0)
 ap.add_argument('--discard', type=float, default=0.1)
+ap.add_argument('--thresholds', default=None, help='JSON from the reference ensemble (STATUS 2026-11-04 21:35 rule)')
 a = ap.parse_args()
 import pymbar
 from pymbar import timeseries
@@ -41,10 +42,26 @@ def mbar_w(its):
     return w / w.sum(), cv, mb
 
 
+# State rule.  The original a-priori thresholds (N: Q>=0.75 & RMSD<2.5 A; U: Q<0.45) were never reached even by the
+# loop in its native environment, because the in-run Q uses lambda = 1.2.  The rule fixed on 2026-11-04 21:35 (before
+# the calibration was analysed) takes N = Q >= 5th percentile and RMSD <= 95th percentile of the alpha loop in the
+# alpha-beta heterodimer at 310 K, U = Q < 0.5 x that reference median, I = the rest.
+_default_th = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'results_summary', 'rest2_state_thresholds.json')
+if not a.thresholds and os.path.exists(_default_th):     # jobs whose batch script was spooled before the fix
+    a.thresholds = os.path.abspath(_default_th)
+if a.thresholds:
+    TH = json.load(open(a.thresholds))
+    Q_N, R_N, Q_U = TH['Q12_p05'], TH['rmsd_p95_A'], TH['U_threshold_Q12']
+    RULE = dict(source=a.thresholds, reference=TH.get('reference'), Q_N=Q_N, rmsd_N=R_N, Q_U=Q_U)
+else:
+    Q_N, R_N, Q_U = 0.75, 2.5, 0.45
+    RULE = dict(source='a-priori defaults (superseded; see STATUS 2026-11-04 21:35)', Q_N=Q_N, rmsd_N=R_N, Q_U=Q_U)
+
+
 def states(cv):
     q, r, phi = cv[:, ix['Q_loop']], cv[:, ix['rmsd_loop_A']], cv[:, ix['phi43']]
     lab = np.full(len(q), 'I', dtype=object)
-    lab[(q >= 0.75) & (r < 2.5)] = 'N'; lab[q < 0.45] = 'U'
+    lab[(q >= Q_N) & (r <= R_N)] = 'N'; lab[q < Q_U] = 'U'
     return lab, phi > 0
 
 
@@ -106,7 +123,7 @@ for r in range(K):
             last = 'bottom'
         elif s_ == K - 1 and last == 'bottom':
             last = 'top'
-res.update(n_iter=int(n), burn_in=int(t0), g=g, n_samples=int(len(iters) * K), acceptance=acc, round_trips=trips,
+res.update(state_rule=RULE, n_iter=int(n), burn_in=int(t0), g=g, n_samples=int(len(iters) * K), acceptance=acc, round_trips=trips,
            ns_per_replica=float(n * meta['steps_per_iter'] * meta['dt_ps'] / 1000), Teff=meta['Teff'], hot=meta['hot'])
 json.dump(res, open(os.path.join(a.run, 'rest2_results.json'), 'w'), indent=1, default=float)
 print(json.dumps({k: res[k] for k in ('p', 'dG_kcal', 'p_phi43_left', 'dG_phi43_left_vs_right_kcal', 'block_sd', 'round_trips', 'ns_per_replica')}, default=float))

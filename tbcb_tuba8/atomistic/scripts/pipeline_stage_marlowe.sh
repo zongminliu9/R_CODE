@@ -23,7 +23,7 @@ case $STAGE in
   rest2)
     for d in $RUNS/rest2/*/r0; do sid=$(basename $(dirname $d)); [ -f $d/rest2_ck.npz ] || continue
       mkdir -p $RES/rest2/$sid
-      step a10_$sid $PY scripts/a10_rest2_analysis.py $d && cp $d/rest2_results.json $RES/rest2/$sid/
+      step a10_$sid $PY scripts/a10_rest2_analysis.py $d --thresholds $SUM/rest2_state_thresholds.json && cp $d/rest2_results.json $RES/rest2/$sid/
       step a23_$sid $PY scripts/a23_representatives.py $d $RES/representatives/$sid
     done ;;
   md310)
