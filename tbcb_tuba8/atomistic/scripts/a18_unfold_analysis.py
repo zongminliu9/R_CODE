@@ -48,8 +48,11 @@ for rdir in sorted(glob.glob(os.path.join(a.mdsys, 'r*'))):
         below = np.where(rm < 0.5)[0]
         thalf = float((below[0] + w / 2) * a.dt_ps / 1000) if len(below) else None
         rec[g] = {'n_native_contacts': int(len(pairs)), 'Q_final_1ns': float(Q[-w:].mean()), 't_half_ns': thalf}
-    ss = md.compute_dssp(t, simplified=True)
-    resseq = np.array([r.resSeq for r in top.residues if r.is_protein])
+    # DSSP on the protein atoms only: on the whole solute it also returns columns for GTP, Mg and the shell waters
+    tp = t.atom_slice(top.select('protein'))
+    ss = md.compute_dssp(tp, simplified=True)
+    resseq = np.array([r.resSeq for r in tp.topology.residues])
+    assert ss.shape[1] == len(resseq), (ss.shape, len(resseq))
     for g, res in groups.items():
         m = np.isin(resseq, res)
         if m.any() and g in rec:
