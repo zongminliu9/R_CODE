@@ -2767,6 +2767,168 @@
     }
    }
   },
+  "residue_a4a_10-200ns.json": {
+   "system": "a4a",
+   "window": [
+    10.0,
+    200.0,
+    1900
+   ],
+   "image_check": [
+    0.0
+   ],
+   "positions": {
+    "32": {
+     "resname": "PRO",
+     "E_local": -11.688033951937156,
+     "E_se": 1.5295226025251956,
+     "E_coul": -2.7989537343500017,
+     "E_lj": -8.889080217587153,
+     "E_lj_se": 0.4128673923274786,
+     "rel_sasa": 42.8990364074707,
+     "hydrophobic_partners": 0.9178947368421053,
+     "salt_bridges": [],
+     "hbonds": []
+    },
+    "39": {
+     "resname": "ASP",
+     "E_local": 25.580544377268083,
+     "E_se": 7.561423371207904,
+     "E_coul": 27.692313885090233,
+     "E_lj": -2.1117695078221486,
+     "E_lj_se": 0.3268793860671815,
+     "rel_sasa": 63.787574768066406,
+     "hydrophobic_partners": null,
+     "salt_bridges": [],
+     "hbonds": [
+      "THR41-N-ASP39-OD1",
+      "THR41-N-ASP39-OD2",
+      "THR41-OG1-ASP39-OD1",
+      "THR41-OG1-ASP39-OD2"
+     ]
+    },
+    "40": {
+     "resname": "LYS",
+     "E_local": -77.89689045592958,
+     "E_se": 9.97896724997604,
+     "E_coul": -73.01856535939703,
+     "E_lj": -4.878325096532548,
+     "E_lj_se": 0.48206632678661054,
+     "rel_sasa": 64.96973419189453,
+     "hydrophobic_partners": null,
+     "salt_bridges": [],
+     "hbonds": [
+      "LYS40-N-SER38-OG"
+     ]
+    },
+    "41": {
+     "resname": "THR",
+     "E_local": -17.065347857633036,
+     "E_se": 5.635380122282919,
+     "E_coul": -14.166269203289696,
+     "E_lj": -2.899078654343338,
+     "E_lj_se": 0.8527042430955943,
+     "rel_sasa": 56.122398376464844,
+     "hydrophobic_partners": null,
+     "salt_bridges": [],
+     "hbonds": [
+      "THR41-N-ASP39-OD1",
+      "THR41-N-ASP39-OD2",
+      "GLY44-N-THR41-O",
+      "THR41-OG1-ASP39-OD1",
+      "THR41-OG1-ASP39-OD2"
+     ]
+    },
+    "42": {
+     "resname": "ILE",
+     "E_local": -4.19168290190926,
+     "E_se": 2.43218484937727,
+     "E_coul": 0.08415586772881248,
+     "E_lj": -4.275838769638073,
+     "E_lj_se": 0.9921693109332254,
+     "rel_sasa": 75.0928955078125,
+     "hydrophobic_partners": 0.07789473684210527,
+     "salt_bridges": [],
+     "hbonds": []
+    },
+    "43": {
+     "resname": "GLY",
+     "E_local": -4.640792442826199,
+     "E_se": 1.8524106531193718,
+     "E_coul": -1.5126767478327832,
+     "E_lj": -3.128115694993416,
+     "E_lj_se": 0.4364004639008174,
+     "rel_sasa": 51.485389709472656,
+     "hydrophobic_partners": null,
+     "salt_bridges": [],
+     "hbonds": [
+      "ASP46-N-GLY43-O",
+      "ASP47-N-GLY43-O"
+     ]
+    },
+    "45": {
+     "resname": "GLY",
+     "E_local": -11.853223814482828,
+     "E_se": 2.873371625795057,
+     "E_coul": -7.968958101932576,
+     "E_lj": -3.884265712550251,
+     "E_lj_se": 0.7673655578651678,
+     "rel_sasa": 40.778419494628906,
+     "hydrophobic_partners": null,
+     "salt_bridges": [],
+     "hbonds": []
+    },
+    "46": {
+     "resname": "ASP",
+     "E_local": -17.611717398847958,
+     "E_se": 10.637645035492485,
+     "E_coul": -11.893028856974741,
+     "E_lj": -5.7186885418732185,
+     "E_lj_se": 0.772401226830706,
+     "rel_sasa": 49.06348419189453,
+     "hydrophobic_partners": null,
+     "salt_bridges": [],
+     "hbonds": [
+      "ASP46-N-GLY43-O",
+      "SER48-N-ASP46-OD2",
+      "SER48-OG-ASP46-OD1",
+      "SER48-OG-ASP46-OD2"
+     ]
+    },
+    "110": {
+     "resname": "ILE",
+     "E_local": -43.01938752297659,
+     "E_se": 2.9770999794327873,
+     "E_coul": -27.268651534083315,
+     "E_lj": -15.750735988893275,
+     "E_lj_se": 1.2230683958377913,
+     "rel_sasa": 10.167390823364258,
+     "hydrophobic_partners": 2.183157894736842,
+     "salt_bridges": [],
+     "hbonds": [
+      "ILE110-N-ARG105-O",
+      "GLU113-N-ILE110-O",
+      "ILE114-N-ILE110-O"
+     ]
+    },
+    "114": {
+     "resname": "ILE",
+     "E_local": -32.89174217483953,
+     "E_se": 3.486776755595353,
+     "E_coul": -17.789662811290032,
+     "E_lj": -15.102079363549496,
+     "E_lj_se": 0.09555036337178749,
+     "rel_sasa": 7.589480400085449,
+     "hydrophobic_partners": 4.395789473684211,
+     "salt_bridges": [],
+     "hbonds": [
+      "ILE114-N-ILE110-O",
+      "ILE114-N-GLY111-O",
+      "VAL118-N-ILE114-O"
+     ]
+    }
+   }
+  },
   "residue_a1a_10-110ns.json": {
    "system": "a1a",
    "window": [
