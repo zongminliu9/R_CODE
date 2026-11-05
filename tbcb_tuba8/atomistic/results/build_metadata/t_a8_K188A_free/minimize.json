@@ -1,0 +1,70 @@
+{
+ "build_dir": "/scratch/m000251/zongminl/tbcb_mech/atomistic/build/t_a8_K188A_free",
+ "platform": "CPU",
+ "openmm": "8.6.1",
+ "n_atoms": 9118,
+ "mg_shell_start": [],
+ "initial": {
+  "label": "as built (unminimised)",
+  "potential_kJmol": -32004.19116393286,
+  "potential_kcalmol": -7649.1852686264,
+  "max_force_kJmol_nm": 174653.21608318947,
+  "max_force_kcalmol_A": 4174.312047877377,
+  "max_force_atom": "2:HOH2144:O",
+  "rms_force_all_kcalmol_A": 209.65864396130294,
+  "rms_force_solute_kcalmol_A": 15.390913716176646,
+  "n_atoms_force_gt_1000kJmolnm": 3377,
+  "components_kcalmol": {
+   "HarmonicBondForce": 5.205354838553654,
+   "PeriodicTorsionForce": 102.67068886828312,
+   "NonbondedForce": -7767.977418850834,
+   "CMMotionRemover": 0.0,
+   "HarmonicAngleForce": 10.916106517596763,
+   "CustomExternalForce": 0.0,
+   "CustomBondForce": 0.0
+  }
+ },
+ "after_stage1": {
+  "label": "after restrained minimisation",
+  "potential_kJmol": -151506.3019598699,
+  "potential_kcalmol": -36210.87522941441,
+  "max_force_kJmol_nm": 1235.7421746397897,
+  "max_force_kcalmol_A": 29.534946812614475,
+  "max_force_atom": "B:ASN444:CG",
+  "rms_force_all_kcalmol_A": 2.1293989171081398,
+  "rms_force_solute_kcalmol_A": 7.263491547927448,
+  "n_atoms_force_gt_1000kJmolnm": 2,
+  "components_kcalmol": {
+   "HarmonicBondForce": 1063.1712178478879,
+   "PeriodicTorsionForce": 105.80099100995747,
+   "NonbondedForce": -37861.97800123648,
+   "CMMotionRemover": 0.0,
+   "HarmonicAngleForce": 482.13053378871666,
+   "CustomExternalForce": 0.0,
+   "CustomBondForce": 0.0
+  }
+ },
+ "final": {
+  "label": "after free minimisation (tol 10 kJ/mol/nm)",
+  "potential_kJmol": -165896.6820894942,
+  "potential_kcalmol": -39650.25862559612,
+  "max_force_kJmol_nm": 101.07370504083384,
+  "max_force_kcalmol_A": 2.4157195277445944,
+  "max_force_atom": "B:GLU445:N",
+  "rms_force_all_kcalmol_A": 0.2364632061115167,
+  "rms_force_solute_kcalmol_A": 1.004739546642576,
+  "n_atoms_force_gt_1000kJmolnm": 0,
+  "components_kcalmol": {
+   "HarmonicBondForce": 1290.1808371186635,
+   "PeriodicTorsionForce": 102.73164143928145,
+   "NonbondedForce": -41556.87228261846,
+   "CMMotionRemover": 0.0,
+   "HarmonicAngleForce": 513.7011784643876,
+   "CustomExternalForce": 0.0,
+   "CustomBondForce": 0.0
+  }
+ },
+ "backbone_rmsd_A": 0.7341736561726493,
+ "mg_shell_final": [],
+ "wall_s": 8.0
+}

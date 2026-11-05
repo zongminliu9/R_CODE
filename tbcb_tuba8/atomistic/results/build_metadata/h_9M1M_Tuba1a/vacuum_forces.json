@@ -1,0 +1,21 @@
+{
+ "potential_kcalmol": -5501.27518619492,
+ "rms_force_kcalmol_A": 219.16221273333582,
+ "max_force_kcalmol_A": 17861.24945934869,
+ "max_force_atom": "Z:HOH903:O",
+ "n_atoms_force_gt_100": 19,
+ "grafts": {
+  "a": {
+   "site_ca_rmsd_A": 0.749,
+   "n_site": 42,
+   "min_dist_graft_to_partner_A": 6.37,
+   "min_dist_graft_to_own_chain_A": 1.56,
+   "n_partner_heavy_within_3A_of_graft": 0
+  },
+  "b": {
+   "nucleotide": "GTP",
+   "mg": true,
+   "shell_waters_added": 4
+  }
+ }
+}

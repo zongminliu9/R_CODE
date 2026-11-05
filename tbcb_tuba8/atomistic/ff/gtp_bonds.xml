@@ -1,0 +1,50 @@
+<Residues>
+  <Residue name="GTP">
+    <Bond from="O1G" to="PG" />
+    <Bond from="PG" to="O2G" />
+    <Bond from="PG" to="O3G" />
+    <Bond from="PG" to="O3B" />
+    <Bond from="O3B" to="PB" />
+    <Bond from="PB" to="O1B" />
+    <Bond from="PB" to="O2B" />
+    <Bond from="PB" to="O3A" />
+    <Bond from="O3A" to="PA" />
+    <Bond from="PA" to="O1A" />
+    <Bond from="PA" to="O2A" />
+    <Bond from="PA" to="O5'" />
+    <Bond from="O5'" to="C5'" />
+    <Bond from="C5'" to="H5'1" />
+    <Bond from="C5'" to="H5'2" />
+    <Bond from="C5'" to="C4'" />
+    <Bond from="C4'" to="H4'" />
+    <Bond from="C4'" to="O4'" />
+    <Bond from="C4'" to="C3'" />
+    <Bond from="O4'" to="C1'" />
+    <Bond from="C1'" to="H1'" />
+    <Bond from="C1'" to="N9" />
+    <Bond from="C1'" to="C2'" />
+    <Bond from="N9" to="C8" />
+    <Bond from="N9" to="C4" />
+    <Bond from="C8" to="H8" />
+    <Bond from="C8" to="N7" />
+    <Bond from="N7" to="C5" />
+    <Bond from="C5" to="C6" />
+    <Bond from="C5" to="C4" />
+    <Bond from="C6" to="O6" />
+    <Bond from="C6" to="N1" />
+    <Bond from="N1" to="H1" />
+    <Bond from="N1" to="C2" />
+    <Bond from="C2" to="N2" />
+    <Bond from="C2" to="N3" />
+    <Bond from="N2" to="H21" />
+    <Bond from="N2" to="H22" />
+    <Bond from="N3" to="C4" />
+    <Bond from="C3'" to="O3'" />
+    <Bond from="C3'" to="H3'" />
+    <Bond from="C3'" to="C2'" />
+    <Bond from="O3'" to="H3T" />
+    <Bond from="C2'" to="H2'1" />
+    <Bond from="C2'" to="O2'" />
+    <Bond from="O2'" to="HO'2" />
+  </Residue>
+</Residues>

@@ -1,0 +1,16 @@
+fep_e_a1a_cplx_451PHE_r0.sbatch 51130430
+fep_e_a1a_cplx_451PHE_r1.sbatch 51130435
+fep_e_a1a_cplx_451PHE_r2.sbatch 51130437
+fep_e_a8_cplx_449TYR_r0.sbatch 51130439
+fep_e_a8_cplx_449TYR_r1.sbatch 51130446
+fep_e_a8_cplx_449TYR_r2.sbatch 51130448
+ramd_t_a1a_cplx_s0_x3.sbatch 51130451
+ramd_t_a1aYF_cplx_s0_x3.sbatch 51130618
+ramd_t_a8_cplx_s0_x3.sbatch 51130621
+ramd_t_a8FY_cplx_s0_x3.sbatch 51130626
+ramd_t_a1a_K188A_cplx_s0_x3.sbatch 51130630
+ramd_t_a1aYF_K188A_cplx_s0_x3.sbatch 51130634
+ramd_t_a8_K188A_cplx_s0_x3.sbatch 51130636
+ramd_t_a8FY_K188A_cplx_s0_x3.sbatch 51130638
+ramd_e_a1a_cplx_s0_x3.sbatch 51130641
+ramd_e_a8_cplx_s0_x3.sbatch 51130643

@@ -1,0 +1,14 @@
+a1a	Tuba1a
+a1b	Tuba1b
+a4a	Tuba4a
+a8	Tuba8
+a1a_I114S	Tuba1a:I114S
+a8_S114I	Tuba8:S114I
+a8_loop1A	Tuba8:loop=Tuba1a
+a1a_loop8	Tuba1a:loop=Tuba8
+a8_A40K	Tuba8:A40K
+a1a_K40A	Tuba1a:K40A
+a8_I43G	Tuba8:I43G
+a1a_G43I	Tuba1a:G43I
+a8_loop1A_S114I	Tuba8:loop=Tuba1a,S114I
+a1a_loop8_I114S	Tuba1a:loop=Tuba8,I114S

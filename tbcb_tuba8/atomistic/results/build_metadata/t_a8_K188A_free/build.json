@@ -1,0 +1,14 @@
+{
+ "sid": "t_a8_K188A_free",
+ "src": "fold_tbcb_tuba8_model_0.cif",
+ "k188a": true,
+ "tbcb_segment": null,
+ "tail": [
+  442,
+  449
+ ],
+ "sequences": {
+  "B": "xEENEGEEF"
+ },
+ "n_atoms": 9118
+}

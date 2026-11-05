@@ -1,0 +1,16 @@
+{
+ "sid": "t_a8FY_cplx",
+ "src": "fold_tbcb_tuba8_model_0.cif",
+ "k188a": false,
+ "tail_mut": "PHE-449-TYR",
+ "tbcb_segment": "134-233",
+ "tail": [
+  442,
+  449
+ ],
+ "sequences": {
+  "A": "xNEELRAQQEAEAAQRLSEEKAQASAISVGSRCEVRAPDHSLRRGTVMYVGLTDFKPGYWVGVRYDEPLGKNDGSVNGKRYFECQAKYGAFVKPSAVTVGDx",
+  "B": "xEENEGEEY"
+ },
+ "n_atoms": 25068
+}

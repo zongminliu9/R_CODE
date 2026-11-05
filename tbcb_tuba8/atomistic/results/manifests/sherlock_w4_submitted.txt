@@ -1,0 +1,10 @@
+pmf_t_a1a_cplx_big_r0.sbatch 51132797
+pmf_t_a8_cplx_big_r0.sbatch 51132801
+pmf_e_a1a_cplx_big_r0.sbatch 51132805
+pmf_e_a8_cplx_big_r0.sbatch 51132816
+usphi43_a1a_r0.sbatch 51132819
+usphi43_a8_r0.sbatch 51132821
+usphi43_a8_I43G_r0.sbatch 51132829
+usphi43_a1a_G43I_r0.sbatch 51132831
+usphi43_a8_loop1A_r0.sbatch 51132834
+usphi43_a1a_loop8_r0.sbatch 51132836

@@ -1,0 +1,16 @@
+<Residues>
+  <Residue name="GTP">
+    <H name="H5'1" parent="C5'" />
+    <H name="H5'2" parent="C5'" />
+    <H name="H4'" parent="C4'" />
+    <H name="H1'" parent="C1'" />
+    <H name="H8" parent="C8" />
+    <H name="H1" parent="N1" />
+    <H name="H21" parent="N2" />
+    <H name="H22" parent="N2" />
+    <H name="H3'" parent="C3'" />
+    <H name="H3T" parent="O3'" />
+    <H name="H2'1" parent="C2'" />
+    <H name="HO'2" parent="O2'" />
+  </Residue>
+</Residues>

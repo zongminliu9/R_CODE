@@ -1,0 +1,16 @@
+{
+ "potential_kcalmol": -12735.42295908907,
+ "rms_force_kcalmol_A": 174.1204328320699,
+ "max_force_kcalmol_A": 15210.151066675893,
+ "max_force_atom": "A:ASP98:OD1",
+ "n_atoms_force_gt_100": 41,
+ "grafts": {
+  "A": {
+   "site_ca_rmsd_A": 0.264,
+   "n_site": 42,
+   "min_dist_graft_to_partner_A": 7.07,
+   "min_dist_graft_to_own_chain_A": 1.55,
+   "n_partner_heavy_within_3A_of_graft": 0
+  }
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "sid": "h_9M1M_Tuba1a",
+ "kind": "exp",
+ "src": "9M1M.cif",
+ "alpha": "a",
+ "partners": "b",
+ "beta": "b",
+ "label_to_auth": {
+  "E": "a",
+  "F": "b"
+ },
+ "internal_gaps_built": {},
+ "threaded_mutations": [
+  "SER-232-GLY",
+  "SER-340-THR"
+ ],
+ "n_atoms": 87790,
+ "net_charge": -0.0,
+ "box_nm": [
+  8.331,
+  8.714,
+  13.046
+ ],
+ "chain_residues": {
+  "a": 437,
+  "b": 431
+ },
+ "grafts": {
+  "a": {
+   "site_ca_rmsd_A": 0.749,
+   "n_site": 42,
+   "min_dist_graft_to_partner_A": 6.37,
+   "min_dist_graft_to_own_chain_A": 1.56,
+   "n_partner_heavy_within_3A_of_graft": 0
+  },
+  "b": {
+   "nucleotide": "GTP",
+   "mg": true,
+   "shell_waters_added": 4
+  }
+ },
+ "vacuum_as_built": {
+  "potential_kcalmol": -5501.27518619492,
+  "rms_force_kcalmol_A": 219.16221273333582,
+  "max_force_kcalmol_A": 17861.24945934869,
+  "max_force_atom": "Z:HOH903:O",
+  "n_atoms_force_gt_100": 19,
+  "grafts": {
+   "a": {
+    "site_ca_rmsd_A": 0.749,
+    "n_site": 42,
+    "min_dist_graft_to_partner_A": 6.37,
+    "min_dist_graft_to_own_chain_A": 1.56,
+    "n_partner_heavy_within_3A_of_graft": 0
+   },
+   "b": {
+    "nucleotide": "GTP",
+    "mg": true,
+    "shell_waters_added": 4
+   }
+  }
+ },
+ "thread": "Tuba1a",
+ "openmm": "8.6.1"
+}

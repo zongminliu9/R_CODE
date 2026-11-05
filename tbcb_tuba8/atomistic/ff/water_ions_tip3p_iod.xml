@@ -1,0 +1,44 @@
+<ForceField>
+  <Info>
+    <Source>TIP3P and Joung-Cheatham Na+/Cl- from OpenMM amber14/tip3p.xml; Mg2+ Li-Merz 2013 12-6 IOD (TIP3P), charge +2</Source>
+  </Info>
+  <AtomTypes>
+    <Type class="tip3p_standard-Na+" element="Na" mass="22.99" name="tip3p_standard-Na+" />
+    <Type class="tip3p_standard-Cl-" element="Cl" mass="35.45" name="tip3p_standard-Cl-" />
+    <Type name="tip3p-O" class="tip3p-O" element="O" mass="15.99943" />
+    <Type name="tip3p-H" class="tip3p-H" element="H" mass="1.007947" />
+    <Type name="mg_iod-Mg2+" class="mg_iod-Mg2+" element="Mg" mass="24.305" />
+  </AtomTypes>
+  <Residues>
+    <Residue name="CL">
+      <Atom charge="-1.0" name="CL" type="tip3p_standard-Cl-" />
+    </Residue>
+    <Residue name="NA">
+      <Atom charge="1.0" name="NA" type="tip3p_standard-Na+" />
+    </Residue>
+    <Residue name="HOH">
+      <Atom name="O" type="tip3p-O" charge="-0.834" />
+      <Atom name="H1" type="tip3p-H" charge="0.417" />
+      <Atom name="H2" type="tip3p-H" charge="0.417" />
+      <Bond atomName1="O" atomName2="H1" />
+      <Bond atomName1="O" atomName2="H2" />
+    </Residue>
+    <Residue name="MG">
+      <Atom name="MG" type="mg_iod-Mg2+" charge="2.0" />
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond type1="tip3p-O" type2="tip3p-H" length="0.09572" k="462750.4" />
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle type1="tip3p-H" type2="tip3p-O" type3="tip3p-H" angle="1.82421813418" k="836.8" />
+  </HarmonicAngleForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge" />
+    <Atom epsilon="0.3658460312" sigma="0.2439280690268249" type="tip3p_standard-Na+" />
+    <Atom epsilon="0.14891274399999999" sigma="0.4477656957373345" type="tip3p_standard-Cl-" />
+    <Atom type="tip3p-O" sigma="0.31507524065751241" epsilon="0.635968" />
+    <Atom type="tip3p-H" sigma="1" epsilon="0" />
+    <Atom type="mg_iod-Mg2+" sigma="0.24856074236115466" epsilon="0.06238344" />
+  </NonbondedForce>
+</ForceField>

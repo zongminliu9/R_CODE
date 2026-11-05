@@ -1,0 +1,46 @@
+{
+ "sid": "c_tbcb_a1a_m0",
+ "kind": "af3",
+ "src": "fold_tbcb_tuba1a_model_0.cif",
+ "alpha": "B",
+ "partners": "A",
+ "beta": null,
+ "n_atoms": 121286,
+ "net_charge": -0.0,
+ "box_nm": [
+  9.36,
+  10.022,
+  13.596
+ ],
+ "chain_residues": {
+  "B": 451,
+  "A": 244
+ },
+ "grafts": {
+  "B": {
+   "site_ca_rmsd_A": 0.643,
+   "n_site": 42,
+   "min_dist_graft_to_partner_A": 4.62,
+   "min_dist_graft_to_own_chain_A": 2.16,
+   "n_partner_heavy_within_3A_of_graft": 0
+  }
+ },
+ "vacuum_as_built": {
+  "potential_kcalmol": -10201.511167071878,
+  "rms_force_kcalmol_A": 14.357196274671658,
+  "max_force_kcalmol_A": 456.73068948610444,
+  "max_force_atom": "B:SER178:CB",
+  "n_atoms_force_gt_100": 25,
+  "grafts": {
+   "B": {
+    "site_ca_rmsd_A": 0.643,
+    "n_site": 42,
+    "min_dist_graft_to_partner_A": 4.62,
+    "min_dist_graft_to_own_chain_A": 2.16,
+    "n_partner_heavy_within_3A_of_graft": 0
+   }
+  }
+ },
+ "thread": null,
+ "openmm": "8.6.1"
+}

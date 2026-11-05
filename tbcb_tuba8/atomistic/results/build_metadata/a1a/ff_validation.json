@@ -1,0 +1,18 @@
+{
+ "isolde": {
+  "HarmonicBondForce": 243.66398374510104,
+  "PeriodicTorsionForce": 4970.239378900989,
+  "NonbondedForce": -14350.559998352832,
+  "HarmonicAngleForce": 977.1434296870696,
+  "total": -8159.513206019672,
+  "net_charge": -15.999999999999977
+ },
+ "openmm": {
+  "HarmonicBondForce": 243.66398374510106,
+  "PeriodicTorsionForce": 4970.327606574614,
+  "NonbondedForce": -14350.559998351955,
+  "HarmonicAngleForce": 977.1434297405331,
+  "total": -8159.424978291708,
+  "net_charge": -15.999999999999977
+ }
+}

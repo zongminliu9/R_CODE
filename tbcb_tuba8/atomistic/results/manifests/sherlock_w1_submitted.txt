@@ -1,0 +1,16 @@
+fep_a1a_114SER_folded_r0.sbatch 51129208
+fep_a8_114ILE_folded_r0.sbatch 51129210
+fep_a1a_114SER_folded_r1.sbatch 51129216
+fep_a8_114ILE_folded_r1.sbatch 51129218
+fep_a1a_114SER_folded_r2.sbatch 51129225
+fep_a8_114ILE_folded_r2.sbatch 51129228
+fep_a1a_114SER_unfolded_r0_x6.sbatch 51129233
+rest2_a1a_r0.sbatch 51129237
+rest2_a8_r0.sbatch 51129241
+rest2_a8_loop1A_r0.sbatch 51129243
+rest2_a1a_loop8_r0.sbatch 51129245
+md310_a1a_r0.sbatch 51129248
+md310_a8_r0.sbatch 51129251
+md310_a1b_r0.sbatch 51129253
+md310_a4a_r0.sbatch 51129256
+md450_a1a_r0_x6.sbatch 51129263

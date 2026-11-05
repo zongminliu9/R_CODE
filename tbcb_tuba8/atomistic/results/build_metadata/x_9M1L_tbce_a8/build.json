@@ -1,0 +1,99 @@
+{
+ "sid": "x_9M1L_tbce_a8",
+ "kind": "exp",
+ "src": "9M1L.cif",
+ "alpha": "a",
+ "partners": "E",
+ "beta": null,
+ "label_to_auth": {
+  "D": "a",
+  "C": "E"
+ },
+ "internal_gaps_built": {
+  "E:85": 11
+ },
+ "threaded_mutations": [
+  "ILE-7-VAL",
+  "TYR-24-PHE",
+  "PRO-32-ALA",
+  "GLN-35-THR",
+  "MET-36-PHE",
+  "PRO-37-GLY",
+  "SER-38-THR",
+  "ASP-39-GLN",
+  "LYS-40-ALA",
+  "THR-41-SER",
+  "ILE-42-LYS",
+  "GLY-43-ILE",
+  "GLY-44-ASN",
+  "GLY-45-ASP",
+  "ASN-50-THR",
+  "ALA-58-ASN",
+  "PHE-67-MET",
+  "ILE-75-VAL",
+  "THR-80-ALA",
+  "ILE-110-VAL",
+  "ILE-114-SER",
+  "ALA-126-THR",
+  "GLN-128-ALA",
+  "THR-130-SER",
+  "VAL-137-ILE",
+  "VAL-159-LEU",
+  "SER-170-ALA",
+  "ALA-270-VAL",
+  "VAL-275-ILE",
+  "ASN-293-SER",
+  "ALA-294-SER",
+  "ALA-299-ASN",
+  "ASN-300-SER",
+  "LEU-317-MET",
+  "ALA-330-VAL",
+  "THR-334-ALA",
+  "SER-340-THR",
+  "MET-425-LEU",
+  "VAL-437-THR"
+ ],
+ "built_loop_relaxation": {
+  "n_residues": 15,
+  "E_before_kcal": 146927.79346575442,
+  "E_after_kcal": 146927.79346575442
+ },
+ "n_atoms": 146308,
+ "net_charge": 0.0,
+ "box_nm": [
+  9.208,
+  10.699,
+  15.753
+ ],
+ "chain_residues": {
+  "E": 521,
+  "a": 438
+ },
+ "grafts": {
+  "a": {
+   "site_ca_rmsd_A": 0.664,
+   "n_site": 42,
+   "min_dist_graft_to_partner_A": 10.72,
+   "min_dist_graft_to_own_chain_A": 1.86,
+   "n_partner_heavy_within_3A_of_graft": 0
+  }
+ },
+ "vacuum_as_built": {
+  "potential_kcalmol": 146927.79346575442,
+  "rms_force_kcalmol_A": 9059.466512707693,
+  "max_force_kcalmol_A": 767303.2280621153,
+  "max_force_atom": "a:PHE36:CD1",
+  "n_atoms_force_gt_100": 253,
+  "grafts": {
+   "a": {
+    "site_ca_rmsd_A": 0.664,
+    "n_site": 42,
+    "min_dist_graft_to_partner_A": 10.72,
+    "min_dist_graft_to_own_chain_A": 1.86,
+    "n_partner_heavy_within_3A_of_graft": 0
+   }
+  }
+ },
+ "thread": "Tuba8",
+ "openmm": "8.6.1"
+}

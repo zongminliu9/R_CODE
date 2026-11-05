@@ -1,0 +1,78 @@
+{
+ "sid": "a8_loop1A_S114I",
+ "spec": "Tuba8:loop=Tuba1a,S114I",
+ "isoform": "Tuba8",
+ "changes": [
+  "A32P",
+  "T35Q",
+  "F36M",
+  "G37P",
+  "T38S",
+  "Q39D",
+  "A40K",
+  "S41T",
+  "K42I",
+  "I43G",
+  "N44G",
+  "D45G",
+  "S114I"
+ ],
+ "n_rethreaded": 26,
+ "length": 437,
+ "sequence": "MRECISVHVGQAGVQIGNACWELFCLEHGIQPDGQMPSDKTIGGGDDSFTTFFSETGNGKHVPRAVMVDLEPTVVDEVRAGTYRQLFHPEQLITGKEDAANNYARGHYTVGKEIIDLVLDRIRKLTDACSGLQGFLIFHSFGGGTGSGFTSLLMERLSLDYGKKSKLEFAIYPAPQVSTAVVEPYNSILTTHTTLEHSDCAFMVDNEAIYDICRRNLDIERPTYTNLNRLISQIVSSITASLRFDGALNVDLTEFQTNLVPYPRIHFPLVTYAPIISAEKAYHEQLSVAEITSSCFEPNSQMVKCDPRHGKYMACCMLYRGDVVPKDVNVAIAAIKTKRTIQFVDWCPTGFKVGINYQPPTVVPGGDLAKVQRAVCMLSNTTAIAEAWARLDHKFDLMYAKRAFVHWYVGEGMEEGEFSEAREDLAALEKDYEEVGT",
+ "tail_built": 0,
+ "n_atoms": 43612,
+ "net_charge": 0.0,
+ "box_nm": [
+  [
+   8.7447,
+   0,
+   0
+  ],
+  [
+   0,
+   8.7447,
+   0
+  ],
+  [
+   4.3724,
+   4.3724,
+   6.1834
+  ]
+ ],
+ "mg_shell_waters_added": 4,
+ "graft": "4I4T chain A",
+ "graft_site_ca_rmsd_A": 0.749,
+ "graft_vs_9M1M_gtp_rmsd_A": 1.124,
+ "graft_min_dist_to_protein_heavy_A": 1.56,
+ "tail_mode": "none",
+ "residue_counts": {
+  "GTP": 1,
+  "MG": 1,
+  "HOH": 12246,
+  "NA": 51,
+  "CL": 33
+ },
+ "histidines": [
+  "HIS",
+  "HIS",
+  "HIS",
+  "HIS",
+  "HIS",
+  "HIS",
+  "HIS",
+  "HIS",
+  "HIS",
+  "HIS",
+  "HIS",
+  "HIS",
+  "HIS"
+ ],
+ "forcefield": [
+  "amberff14SB.xml (ISOLDE)",
+  "gtp_meagher.xml",
+  "water_ions_tip3p_iod.xml"
+ ],
+ "template": "9M1M chain a",
+ "openmm": "8.6.1"
+}

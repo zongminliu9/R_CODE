@@ -1,0 +1,15 @@
+{
+ "sid": "t_a1a_cplx",
+ "src": "fold_tbcb_tuba1a_model_0.cif",
+ "k188a": false,
+ "tbcb_segment": "134-233",
+ "tail": [
+  444,
+  451
+ ],
+ "sequences": {
+  "A": "xNEELRAQQEAEAAQRLSEEKAQASAISVGSRCEVRAPDHSLRRGTVMYVGLTDFKPGYWVGVRYDEPLGKNDGSVNGKRYFECQAKYGAFVKPSAVTVGDx",
+  "B": "xGEEEGEEY"
+ },
+ "n_atoms": 23041
+}

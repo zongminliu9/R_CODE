@@ -1,0 +1,75 @@
+{
+ "sid": "e_a1a_cplx",
+ "src": "fold_tbcb_tuba1a_model_0.cif",
+ "tbce": "9M1L chain E",
+ "tbce_range": "7-91",
+ "superposition_ca_rmsd_A": 0.866,
+ "n_pairs_kept": 59,
+ "n_aligned": 71,
+ "n_identical": 29,
+ "alignment": "target            0 NEELRAQQEAEAAQRLSEEKAQASAISVGSRCEVRAPDHSLRRGTVMYVGLTDFKPGYWV\n                  0 ------------------------|...|.|.||..-.|.----||...|......|.|.\nquery             0 ------------------------ADVIGRRVEVNG-EHA----TVRFAGVVPPVAGPWL\n\ntarget           60 GVRYDEP-LGKNDGSVNGKRYFECQ-AKYGAFVKPSAVTVGD------------ 100\n                 60 ||..|.|-.||.|||..|..||.|.-...|.|..|..|..|.------------ 114\nquery            31 GVEWDNPERGKHDGSHEGTVYFKCRHPTGGSFIRPNKVNFGTDFLTAIKNRYVL  85\n",
+ "tbcb_to_tbce_equivalents_by_alignment": {
+  "187": [
+   31,
+   "PRO"
+  ],
+  "188": [
+   32,
+   "VAL"
+  ],
+  "203": [
+   48,
+   "LYS"
+  ],
+  "204": [
+   49,
+   "HIS"
+  ],
+  "222": [
+   68,
+   "SER"
+  ],
+  "223": [
+   69,
+   "PHE"
+  ]
+ },
+ "tbcb_to_tbce_equivalents_by_structure": {
+  "187": [
+   31,
+   "PRO",
+   2.17
+  ],
+  "188": [
+   32,
+   "VAL",
+   0.97
+  ],
+  "203": [
+   48,
+   "LYS",
+   1.1
+  ],
+  "204": [
+   49,
+   "HIS",
+   0.98
+  ],
+  "222": [
+   68,
+   "SER",
+   0.48
+  ],
+  "223": [
+   69,
+   "PHE",
+   0.74
+  ]
+ },
+ "min_tail_receptor_heavy_dist_A": 1.23,
+ "tail": [
+  444,
+  451
+ ],
+ "n_atoms": 18811
+}

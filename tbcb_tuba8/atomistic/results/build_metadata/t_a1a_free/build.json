@@ -1,0 +1,14 @@
+{
+ "sid": "t_a1a_free",
+ "src": "fold_tbcb_tuba1a_model_0.cif",
+ "k188a": false,
+ "tbcb_segment": null,
+ "tail": [
+  444,
+  451
+ ],
+ "sequences": {
+  "B": "xGEEEGEEY"
+ },
+ "n_atoms": 6933
+}

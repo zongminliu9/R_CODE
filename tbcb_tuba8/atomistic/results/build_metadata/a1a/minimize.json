@@ -1,0 +1,128 @@
+{
+ "build_dir": "/scratch/m000251/zongminl/tbcb_mech/atomistic/build/a1a",
+ "platform": "CPU",
+ "openmm": "8.6.1",
+ "n_atoms": 42253,
+ "mg_shell_start": [
+  [
+   [
+    "GTP501:O1G",
+    2.06
+   ],
+   [
+    "GTP501:O1B",
+    2.09
+   ],
+   [
+    "HOH603:O",
+    2.1
+   ],
+   [
+    "HOH601:O",
+    2.19
+   ],
+   [
+    "HOH602:O",
+    2.2
+   ],
+   [
+    "HOH604:O",
+    2.21
+   ]
+  ]
+ ],
+ "initial": {
+  "label": "as built (unminimised)",
+  "potential_kJmol": -265755.70422287524,
+  "potential_kcalmol": -63517.13772057247,
+  "max_force_kJmol_nm": 747319.8696160829,
+  "max_force_kcalmol_A": 17861.373556789742,
+  "max_force_atom": "D:HOH603:O",
+  "rms_force_all_kcalmol_A": 204.32695181370178,
+  "rms_force_solute_kcalmol_A": 223.14213946018188,
+  "n_atoms_force_gt_1000kJmolnm": 13990,
+  "components_kcalmol": {
+   "HarmonicBondForce": 404.848471324179,
+   "PeriodicTorsionForce": 5247.217296473411,
+   "NonbondedForce": -70132.73046589136,
+   "CMMotionRemover": 0.0,
+   "HarmonicAngleForce": 963.5269775211881,
+   "CustomExternalForce": 0.0,
+   "CustomBondForce": 0.0
+  }
+ },
+ "after_stage1": {
+  "label": "after restrained minimisation",
+  "potential_kJmol": -639932.7349663364,
+  "potential_kcalmol": -152947.59439921996,
+  "max_force_kJmol_nm": 4234.303341626474,
+  "max_force_kcalmol_A": 101.202278719562,
+  "max_force_atom": "B:GTP501:PG",
+  "rms_force_all_kcalmol_A": 2.3091383306345445,
+  "rms_force_solute_kcalmol_A": 3.2204681364818097,
+  "n_atoms_force_gt_1000kJmolnm": 20,
+  "components_kcalmol": {
+   "HarmonicBondForce": 4352.050784623383,
+   "PeriodicTorsionForce": 5029.873845591691,
+   "NonbondedForce": -165030.0619003355,
+   "CMMotionRemover": 0.0,
+   "HarmonicAngleForce": 2700.5428709004564,
+   "CustomExternalForce": 0.0,
+   "CustomBondForce": 0.0
+  }
+ },
+ "final": {
+  "label": "after free minimisation (tol 10 kJ/mol/nm)",
+  "potential_kJmol": -707080.2689489205,
+  "potential_kcalmol": -168996.24018855652,
+  "max_force_kJmol_nm": 339.36461108153657,
+  "max_force_kcalmol_A": 8.11100886906158,
+  "max_force_atom": "A:GLU71:CD",
+  "rms_force_all_kcalmol_A": 0.2182328299979498,
+  "rms_force_solute_kcalmol_A": 0.36000261590321464,
+  "n_atoms_force_gt_1000kJmolnm": 0,
+  "components_kcalmol": {
+   "HarmonicBondForce": 5402.002042458763,
+   "PeriodicTorsionForce": 4977.974531064135,
+   "NonbondedForce": -182328.91588313846,
+   "CMMotionRemover": 0.0,
+   "HarmonicAngleForce": 2952.699121059019,
+   "CustomExternalForce": 0.0,
+   "CustomBondForce": 0.0
+  }
+ },
+ "backbone_rmsd_A": 0.8570358791444952,
+ "mg_shell_final": [
+  [
+   [
+    "GTP501:O1G",
+    1.93
+   ],
+   [
+    "GTP501:O1B",
+    1.95
+   ],
+   [
+    "HOH602:O",
+    2.08
+   ],
+   [
+    "HOH604:O",
+    2.11
+   ],
+   [
+    "HOH601:O",
+    2.12
+   ],
+   [
+    "HOH603:O",
+    2.15
+   ],
+   [
+    "HOH602:H2",
+    2.52
+   ]
+  ]
+ ],
+ "wall_s": 50.1
+}

@@ -1,0 +1,16 @@
+{
+ "potential_kcalmol": -9953.644474929883,
+ "rms_force_kcalmol_A": 14.177121166738031,
+ "max_force_kcalmol_A": 685.5182522314387,
+ "max_force_atom": "B:LYS60:NZ",
+ "n_atoms_force_gt_100": 12,
+ "grafts": {
+  "B": {
+   "site_ca_rmsd_A": 0.635,
+   "n_site": 42,
+   "min_dist_graft_to_partner_A": 4.68,
+   "min_dist_graft_to_own_chain_A": 2.13,
+   "n_partner_heavy_within_3A_of_graft": 0
+  }
+ }
+}

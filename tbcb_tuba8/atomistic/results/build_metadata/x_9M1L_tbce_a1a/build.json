@@ -1,0 +1,62 @@
+{
+ "sid": "x_9M1L_tbce_a1a",
+ "kind": "exp",
+ "src": "9M1L.cif",
+ "alpha": "a",
+ "partners": "E",
+ "beta": null,
+ "label_to_auth": {
+  "D": "a",
+  "C": "E"
+ },
+ "internal_gaps_built": {
+  "E:85": 11
+ },
+ "threaded_mutations": [
+  "SER-232-GLY",
+  "SER-340-THR"
+ ],
+ "built_loop_relaxation": {
+  "n_residues": 15,
+  "E_before_kcal": 68544.29417951904,
+  "E_after_kcal": 68544.29417951904
+ },
+ "n_atoms": 143300,
+ "net_charge": 0.0,
+ "box_nm": [
+  9.079,
+  10.711,
+  15.751
+ ],
+ "chain_residues": {
+  "E": 521,
+  "a": 438
+ },
+ "grafts": {
+  "a": {
+   "site_ca_rmsd_A": 0.664,
+   "n_site": 42,
+   "min_dist_graft_to_partner_A": 10.72,
+   "min_dist_graft_to_own_chain_A": 1.86,
+   "n_partner_heavy_within_3A_of_graft": 0
+  }
+ },
+ "vacuum_as_built": {
+  "potential_kcalmol": 68544.29417951904,
+  "rms_force_kcalmol_A": 5256.335597384865,
+  "max_force_kcalmol_A": 458702.47863114363,
+  "max_force_atom": "E:GLU96:OE2",
+  "n_atoms_force_gt_100": 83,
+  "grafts": {
+   "a": {
+    "site_ca_rmsd_A": 0.664,
+    "n_site": 42,
+    "min_dist_graft_to_partner_A": 10.72,
+    "min_dist_graft_to_own_chain_A": 1.86,
+    "n_partner_heavy_within_3A_of_graft": 0
+   }
+  }
+ },
+ "thread": "Tuba1a",
+ "openmm": "8.6.1"
+}

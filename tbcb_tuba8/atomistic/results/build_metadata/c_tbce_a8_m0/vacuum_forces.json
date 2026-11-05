@@ -1,0 +1,16 @@
+{
+ "potential_kcalmol": 41736.63149701857,
+ "rms_force_kcalmol_A": 1892.6209057975655,
+ "max_force_kcalmol_A": 165647.5474747804,
+ "max_force_atom": "A:ARG402:CB",
+ "n_atoms_force_gt_100": 90,
+ "grafts": {
+  "A": {
+   "site_ca_rmsd_A": 0.309,
+   "n_site": 42,
+   "min_dist_graft_to_partner_A": 8.53,
+   "min_dist_graft_to_own_chain_A": 1.69,
+   "n_partner_heavy_within_3A_of_graft": 0
+  }
+ }
+}
