@@ -7,6 +7,9 @@ Sources:
   exp   : an experimental cofactor complex (9M1L / 9M1M), chains given explicitly; alpha can be re-threaded to another
           isoform exactly as in a01_build.py; GTP/Mg of every tubulin chain kept, Mg shells completed from 4I4T.
 The solute is rotated to its principal axes and solvated in a rectangular box (1.2 nm padding, 0.15 M NaCl).
+(2026-11-05: the eigenvector matrix is made a proper rotation, det +1.  Before this fix it could be a reflection,
+and c_tbcb_a1a_m0, c_tbcb_a8_m0, x_9M1L_tbce_a1a, x_9M1L_tbce_a8 were built as mirror images; a30_fix_chirality.py
+reflected them back.  The build now stops if any protein chain is not L after the transform.)
 
 Usage:
   a07_build_complex.py <sid> af3 <model.cif> --alpha B --partners A
@@ -209,7 +212,22 @@ def main():
     # principal axes, then a rectangular box
     X = np.array(m.positions.value_in_unit(unit.nanometer))
     c = X.mean(0); w, v = np.linalg.eigh((X - c).T @ (X - c))
+    if np.linalg.det(v) < 0:          # eigh returns an orthogonal matrix of either handedness; keep it a rotation
+        v[:, -1] *= -1.0
+    assert np.linalg.det(v) > 0.999
     Y = (X - c) @ v
+    for cid in sorted(keep):
+        hs = []
+        for r in [ch for ch in m.topology.chains() if ch.id == cid][0].residues():
+            A = {x.name: x.index for x in r.atoms()}
+            if r.name == 'GLY' or not all(k in A for k in ('N', 'CA', 'C', 'CB')):
+                continue
+            p0, p1, p2, p3 = Y[A['N']], Y[A['CA']], Y[A['C']], Y[A['CB']]
+            b0, b1, b2 = p0 - p1, p2 - p1, p3 - p2
+            b1 = b1 / np.linalg.norm(b1); vv = b0 - b0 @ b1 * b1; ww = b2 - b2 @ b1 * b1
+            hs.append(np.arctan2(np.cross(b1, vv) @ ww, vv @ ww) < 0)
+        if hs and np.mean(hs) < 0.9:
+            raise SystemExit(f'chain {cid}: only {np.mean(hs):.3f} of residues L after the principal-axes transform')
     ext = Y.max(0) - Y.min(0)
     Y = Y - Y.min(0) + a.pad
     box = ext + 2 * a.pad

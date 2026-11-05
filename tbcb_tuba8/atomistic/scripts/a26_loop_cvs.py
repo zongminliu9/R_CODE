@@ -8,6 +8,10 @@ lambda = 1.5 and 1.8 (Best, Hummer & Eaton 2013 recommend 1.8 for all-atom model
 Input: a directory holding solute.pdb and trajectories matching --glob (MD: seg_*.dcd; REST2 state 0:
 rest2_s0_from*.dcd).  Only the alpha chain (--chain, the letter in solute.pdb) is used.
 Output: per-block means (4 contiguous blocks) and the full time series at the chosen stride.
+Mirror-image systems (c_tbcb_a8_m0 r0 was simulated as the mirror image of the intended L complex, see
+a30_fix_chirality.py): the handedness of the alpha chain is read from solute.pdb, and for a D chain phi/psi of
+residue 43 are reported with their signs reversed, i.e. as they are in the L complex (the force field is invariant
+under reflection); Q and RMSD do not depend on handedness.
 Usage: a26_loop_cvs.py <dir> <out.json> [--glob 'seg_*.dcd'] [--chain A] [--stride 2] [--dt_ps 20]
 """
 import os, sys, json, glob, argparse
@@ -52,9 +56,18 @@ core_rmsd = md.rmsd(t, ref, 0, atom_indices=core) * 10
 by = {(x.residue.resSeq, x.name): x.index for x in alpha}
 phi = np.degrees(md.compute_dihedrals(t, np.array([[by[(42, 'C')], by[(43, 'N')], by[(43, 'CA')], by[(43, 'C')]]]))[:, 0])
 psi = np.degrees(md.compute_dihedrals(t, np.array([[by[(43, 'N')], by[(43, 'CA')], by[(43, 'C')], by[(44, 'N')]]]))[:, 0])
+# handedness of the alpha chain in the reference structure (N-CA-C-CB dihedral < 0 for L)
+res_cb = [r for r in {x.residue for x in alpha} if r.name != 'GLY' and all((r.resSeq, n) in by for n in ('N', 'CA', 'C', 'CB'))]
+quad = np.array([[by[(r.resSeq, n)] for n in ('N', 'CA', 'C', 'CB')] for r in res_cb])
+fracL = float(np.mean(md.compute_dihedrals(ref, quad)[0] < 0))
+mirror = fracL < 0.05
+assert mirror or fracL > 0.95, f'alpha chain handedness mixed: fraction L {fracL:.3f}'
+if mirror:
+    phi, psi = -phi, -psi
 bl = lambda x: [float(np.mean(b)) for b in np.array_split(np.asarray(x, float), 4)]
 r43 = [x for x in alpha if x.residue.resSeq == 43][0].residue.name
 out = dict(dir=a.dir, glob=a.glob, files=[os.path.basename(f) for f in fs], n_frames=int(t.n_frames),
+           alpha_fraction_L=fracL, mirror_image=bool(mirror),
            ns_per_frame=a.stride * a.dt_ps / 1000.0, n_native_pairs=int(len(pairs)), res43=r43,
            Q_at_reference=Q0, blocks={'Q_lam1.2': bl(Q[1.2]), 'Q_lam1.5': bl(Q[1.5]), 'Q_lam1.8': bl(Q[1.8]),
                                       'rmsd_loop_A': bl(rmsd), 'rmsd_core_ca_A': bl(core_rmsd),
@@ -66,4 +79,4 @@ out = dict(dir=a.dir, glob=a.glob, files=[os.path.basename(f) for f in fs], n_fr
            series={'Q_lam1.2': np.round(Q[1.2], 3).tolist(), 'Q_lam1.8': np.round(Q[1.8], 3).tolist(),
                    'rmsd_loop_A': np.round(rmsd, 2).tolist(), 'phi43': np.round(phi, 1).tolist(), 'psi43': np.round(psi, 1).tolist()})
 json.dump(out, open(a.out, 'w'))
-print(json.dumps({k: out[k] for k in ('n_frames', 'res43', 'n_native_pairs', 'Q_at_reference', 'means', 'first_ns')}))
+print(json.dumps({k: out[k] for k in ('n_frames', 'res43', 'n_native_pairs', 'alpha_fraction_L', 'mirror_image', 'Q_at_reference', 'means', 'first_ns')}))

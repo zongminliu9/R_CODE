@@ -4,9 +4,12 @@ Records, before and after minimisation: total potential energy and its per-force
 force (with the atom it acts on), the RMS force over all atoms and over solute atoms, and geometry changes
 (backbone RMSD to the start, the Mg2+ inner shell, and for complexes the interface contact count and the RMSD of
 interface residues).  Minimised as a fully flexible system (no bond constraints, flexible TIP3P), so the residual force is the
-true gradient norm.  Two stages: (1) backbone heavy atoms restrained (k = 1000 kJ/mol/nm^2) and Mg2+ ligand
+true gradient norm.  Two stages: (1) backbone heavy atoms and CB restrained (k = 1000 kJ/mol/nm^2) and Mg2+ ligand
 distances held by flat-bottom restraints, so clashes are relieved by side chains and solvent rather than by moving
 the fold; (2) everything free, minimised to a 10 kJ/mol/nm force tolerance.
+Handedness gate: stops before minimising if a protein chain is not L (a mirror-image input), and stops without
+writing minimized.cif.gz if any residue's N-CA-C-CB dihedral changes sign during minimisation (CB was added
+to the stage-1 restraints on 2026-11-05 after Phe451 of t_a1aYF_K188A_cplx inverted in an unrestrained CB).
 
 Usage: a02_minimize.py <build_dir> [--platform CPU|CUDA|OpenCL] [--chains-a A --chains-b B]
 Writes <build_dir>/minimized.cif.gz and <build_dir>/minimize.json
@@ -76,6 +79,20 @@ def snapshot(ctx, system, top, solute, label):
     return out
 
 
+def handedness(top, X):
+    """per protein residue (non-Gly, with N, CA, C, CB): True if L (N-CA-C-CB dihedral < 0)"""
+    out = {}
+    for r in top.residues():
+        A = {a.name: a.index for a in r.atoms()}
+        if r.name in {'GLY'} | SOLVENT or not all(k in A for k in ('N', 'CA', 'C', 'CB')):
+            continue
+        p0, p1, p2, p3 = X[A['N']], X[A['CA']], X[A['C']], X[A['CB']]
+        b0, b1, b2 = p0 - p1, p2 - p1, p3 - p2
+        b1 = b1 / np.linalg.norm(b1); v = b0 - b0 @ b1 * b1; w = b2 - b2 @ b1 * b1
+        out[(r.chain.id, r.id, r.name)] = bool(np.degrees(np.arctan2(np.cross(b1, v) @ w, v @ w)) < 0)
+    return out
+
+
 def mg_shell(top, pos, cutoff=0.26):
     P = np.array(pos.value_in_unit(NM))
     atoms = list(top.atoms())
@@ -105,13 +122,19 @@ def main():
     atoms = list(top.atoms())
     solute = np.array([at.index for at in atoms if at.residue.name not in SOLVENT])
     bb = [at.index for at in atoms if at.name in ('N', 'CA', 'C', 'O') and at.residue.name not in SOLVENT | {'GTP', 'MG'}]
+    cb = [at.index for at in atoms if at.name == 'CB' and at.residue.name not in SOLVENT | {'GTP', 'MG'}]
+    hand0 = handedness(top, np.array(pos.value_in_unit(NM)))
+    for cid in sorted({k[0] for k in hand0}):
+        v = [x for k, x in hand0.items() if k[0] == cid]
+        if np.mean(v) < 0.9:
+            raise SystemExit(f'chain {cid}: only {np.mean(v):.3f} of residues are L - mirror-image or corrupted input, not minimised')
     # stage-1 restraints
     rest = mm.CustomExternalForce('kbb*periodicdistance(x, y, z, x0, y0, z0)^2')
     rest.addGlobalParameter('kbb', 1000.0)
     for p in ('x0', 'y0', 'z0'):
         rest.addPerParticleParameter(p)
     P0 = pos.value_in_unit(NM)
-    for i in bb:
+    for i in bb + cb:
         rest.addParticle(i, P0[i])
     rest.setForceGroup(31)
     system.addForce(rest)
@@ -166,6 +189,12 @@ def main():
         rec['interface'] = {'heavy_atom_contacts_4.5A_start': n0, 'heavy_atom_contacts_4.5A_final': n1,
                             'interface_residues_start': len(rA0) + len(rB0), 'interface_residues_final': len(rA1) + len(rB1),
                             'interface_CA_rmsd_A': float(d_if)}
+    hand1 = handedness(top, np.array(P1.value_in_unit(NM)))
+    flipped = [f'{k[0]}:{k[2]}{k[1]}' for k in hand0 if hand0[k] != hand1.get(k, hand0[k])]
+    rec['handedness_changed'] = flipped
+    if flipped:
+        json.dump(rec, open(os.path.join(a.wd, 'minimize_failed.json'), 'w'), indent=1)
+        raise SystemExit(f'handedness changed during minimisation at {flipped}; minimized.cif.gz not written')
     with gzip.open(os.path.join(a.wd, 'minimized.cif.gz'), 'wt') as fh:
         app.PDBxFile.writeFile(top, P1, fh, keepIds=True)
     rec['wall_s'] = round(time.time() - t0, 1)
