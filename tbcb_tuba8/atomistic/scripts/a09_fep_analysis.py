@@ -14,6 +14,7 @@ import numpy as np
 
 ap = argparse.ArgumentParser(); ap.add_argument('root'); ap.add_argument('--T', type=float, default=310.0)
 ap.add_argument('--discard', type=float, default=0.10)
+ap.add_argument('--out', default=None, help='output JSON (default: <root>/../fep_results.json)')
 a = ap.parse_args()
 import pymbar
 from pymbar import timeseries
@@ -106,7 +107,7 @@ for k, v in res.items():
                 dd[f'{base}  [ref {u}]'] = dict(ddG_fold_kcal=f['mean_dG_kcal'] - g['mean_dG_kcal'], sd_kcal=float(sd),
                                                folded=f, unfolded=g)
 out = dict(legs=res, ddG_fold=dd, T=a.T, note='ddG_fold > 0 = mutation destabilises the folded state')
-json.dump(out, open(os.path.join(os.path.dirname(a.root.rstrip('/')), 'fep_results.json'), 'w'), indent=1, default=float)
+json.dump(out, open(a.out or os.path.join(os.path.dirname(a.root.rstrip('/')), 'fep_results.json'), 'w'), indent=1, default=float)
 for k, v in dd.items():
     print(f"{k}: ddG_fold = {v['ddG_fold_kcal']:+.2f} +/- {v['sd_kcal']:.2f} kcal/mol")
 for k, v in res.items():

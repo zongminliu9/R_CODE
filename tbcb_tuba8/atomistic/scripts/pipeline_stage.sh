@@ -19,7 +19,7 @@ ok=(); bad=()
 step() { local name=$1; shift; echo "== $name: $*"; if "$@"; then ok+=("$name"); else bad+=("$name"); fi; }
 case $STAGE in
   fep)
-    step a09 $PY scripts/a09_fep_analysis.py $RUNS/fep ;;
+    step a09 $PY scripts/a09_fep_analysis.py $RUNS/fep --out $RES/fep_results.json ;;
   rest2)
     for d in $RUNS/rest2/*/r0; do sid=$(basename $(dirname $d)); [ -f $d/rest2_ck.npz ] || continue
       mkdir -p $RES/rest2/$sid
@@ -47,7 +47,7 @@ case $STAGE in
       step a17_$sid $PY scripts/a17_us_phi.py analyse $d && cp $d/usphi_results.json $RES/usphi43/$sid/
     done ;;
   tail)
-    step a09 $PY scripts/a09_fep_analysis.py $RUNS/fep
+    step a09 $PY scripts/a09_fep_analysis.py $RUNS/fep --out $RES/fep_results.json
     [ -e $RES/ramd ] || ln -s $RUNS/ramd $RES/ramd
     step a22 $PY scripts/a22_binding_analysis.py $RES ;;
   mmgbsa)
@@ -56,7 +56,7 @@ case $STAGE in
       step a12b_$sid $PY scripts/a12b_mmgbsa_openmm.py $p $RUNS/md310/$sid $RES/mmpbsa/$sid.json --platform ${MMPLAT:-CUDA}
     done ;;
   report)
-    step a09 $PY scripts/a09_fep_analysis.py $RUNS/fep
+    step a09 $PY scripts/a09_fep_analysis.py $RUNS/fep --out $RES/fep_results.json
     [ -e $RES/ramd ] || ln -s $RUNS/ramd $RES/ramd
     step a22 $PY scripts/a22_binding_analysis.py $RES
     [ -f $SUM/minimization_forces.json ] && cp $SUM/minimization_forces.json $RES/
