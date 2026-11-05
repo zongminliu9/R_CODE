@@ -16,6 +16,7 @@ ap.add_argument('--dock_dir', default=None)
 ap.add_argument('--thresholds', required=True)
 ap.add_argument('--out', required=True)
 ap.add_argument('--conv_extra', action='append', default=[], help='LABEL=fep_convergence.json of an earlier pass (repeatable)')
+ap.add_argument('--residue_extra', action='append', default=[], help='LABEL=residue_*.json of an earlier pass (repeatable)')
 ap.add_argument('--fep_extra', action='append', default=[], help='LABEL=fep_interim.json of an earlier pass (repeatable)')
 a = ap.parse_args()
 I = a.interim
@@ -257,10 +258,11 @@ if ifs:
                           '，'.join(f'{x[0]}–{x[1]} {f(x[2], 2)}' for x in sb if x[2] >= 0.3) + '\n')
 
 # ---------------------------------------------------------------- residue level
-res = sorted(glob.glob(os.path.join(I, 'residue_*ns.json')))
+res = sorted(glob.glob(os.path.join(I, 'residue_*ns.json'))) + [x.split('=', 1)[1] for x in a.residue_extra]
 POS = ['32', '39', '40', '41', '42', '43', '45', '46', '110', '114']
 if res:
-    md.append('## 残基层（a13；局部相互作用能 = 该残基与 1.2 nm 内蛋白 + GTP·Mg 的库仑（介电 1）+ LJ，是势能项不是自由能）\n')
+    md.append('## 残基层（a13；局部相互作用能 = 该残基与 1.2 nm 内蛋白 + GTP·Mg 的库仑（介电 1）+ LJ，是势能项不是自由能；'
+              'SASA 为相对 SASA 百分数）\n')
     md.append('| 文件 | 窗口 ns | 周期镜像检查（nm） | ' + ' | '.join(f'{p}' for p in POS) + ' |')
     md.append('|---|---|---|' + '---|' * len(POS))
     OUT['residue'] = {}
@@ -274,16 +276,43 @@ if res:
         for k in POS:
             if k in pr:
                 x = pr[k]
-                e = (x['E_coul_kcal'][0] or 0) + (x['E_lj_kcal'][0] or 0)
                 se = x['block_se_per_rep'][0]
+                ec, el = x['E_coul_kcal'][0], x['E_lj_kcal'][0]
+                e = (ec or 0) + (el or 0)
                 ese = math.hypot(se.get('E_coul_block_se_kcal', 0) or 0, se.get('E_lj_block_se_kcal', 0) or 0)
-                rec[k] = dict(resname=x['resname'], E_local=e, E_se=ese, rel_sasa=x['rel_sasa_mean'][0])
-                cells.append(f"{x['resname'][:3].title()} {f(e, 1)}±{f(ese, 1)}；SASA {f(x['rel_sasa_mean'][0], 0)}%")
+                rec[k] = dict(resname=x['resname'], E_local=e, E_se=ese, E_coul=ec, E_lj=el,
+                              E_lj_se=se.get('E_lj_block_se_kcal'), rel_sasa=x['rel_sasa_mean'][0],
+                              hydrophobic_partners=(x.get('hydrophobic_partners_mean') or [None])[0],
+                              salt_bridges=x.get('salt_bridges', [[]])[0], hbonds=x.get('hbonds', [[]])[0])
+                cells.append(f"{x['resname'][:3].title()} {f(e, 1)}±{f(ese, 1)}（LJ {f(el, 1)}）；SASA {f(x['rel_sasa_mean'][0], 0)}%")
             else:
                 cells.append('—')
-        OUT['residue'][os.path.basename(p)] = dict(window=w, image_check=img, positions=rec)
+        sysname = d.get('system')
+        OUT['residue'][os.path.basename(p)] = dict(system=sysname, window=w, image_check=img, positions=rec)
         md.append(f"| {os.path.basename(p)} | {w[0]}–{w[1]}（{w[2]} 帧） | {img} | " + ' | '.join(cells) + ' |')
     md.append('')
+    # spread across systems within each window (same residue at these positions in TUBA1A / 1B / 4A)
+    by_w = {}
+    for fn, r in OUT['residue'].items():
+        if r['system'] in ('a1a', 'a1b', 'a4a'):
+            by_w.setdefault(f"{r['window'][0]:.0f}-{r['window'][1]:.0f}", []).append(r)
+    for wl, rs in sorted(by_w.items()):
+        if len(rs) < 2:
+            continue
+        md.append(f"跨同种型范围（窗口 {wl} ns，{'/'.join(r['system'] for r in rs)}，单条轨迹）：\n")
+        md.append('| 位点 | 残基 | 局部能量范围 kcal/mol | LJ 范围 | 相对 SASA 范围 % | 盐桥（占有率 ≥ 0.1） |')
+        md.append('|---|---|---|---|---|---|')
+        OUT.setdefault('residue_spread', {})[wl] = {}
+        for k in POS:
+            v = [r['positions'][k] for r in rs if k in r['positions']]
+            if not v:
+                continue
+            E = [x['E_local'] for x in v]; LJ = [x['E_lj'] for x in v]; SA = [x['rel_sasa'] for x in v]
+            sb = sorted({f'{b[0]}' for x in v for b in (x['salt_bridges'] or [])})
+            OUT['residue_spread'][wl][k] = dict(E=[min(E), max(E)], LJ=[min(LJ), max(LJ)], SASA=[min(SA), max(SA)])
+            md.append(f"| {k} | {v[0]['resname']} | {f(min(E), 1)} … {f(max(E), 1)} | {f(min(LJ), 1)} … {f(max(LJ), 1)} | "
+                      f"{f(min(SA), 0)} … {f(max(SA), 0)} | {', '.join(sb) if sb else '—'} |")
+        md.append('')
 
 # ---------------------------------------------------------------- 450 K unfolding
 for p in sorted(glob.glob(os.path.join(I, 'unfold_md450_*.json'))):
