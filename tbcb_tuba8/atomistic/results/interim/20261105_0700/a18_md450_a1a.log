@@ -1,0 +1,4 @@
+r0 ['unit1', 'unit3', 'unit0', 'unit2', 'unit4', 'unit5'] {'unit1': 6.28, 'unit3': 15.97, 'unit0': None, 'unit2': None, 'unit4': None, 'unit5': None}
+r1 ['unit2', 'unit1', 'unit3', 'unit0', 'unit4', 'unit5'] {'unit2': 9.89, 'unit1': 13.98, 'unit3': 17.41, 'unit0': None, 'unit4': None, 'unit5': None}
+r2 ['unit1', 'unit0', 'unit3', 'unit2', 'unit4', 'unit5'] {'unit1': 7.95, 'unit0': 15.92, 'unit3': 19.39, 'unit2': None, 'unit4': None, 'unit5': None}
+a18 exit 0

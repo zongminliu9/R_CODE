@@ -288,12 +288,31 @@ if res:
 # ---------------------------------------------------------------- 450 K unfolding
 for p in sorted(glob.glob(os.path.join(I, 'unfold_md450_*.json'))):
     d = load(p)
-    OUT.setdefault('unfold', {})[os.path.basename(p)] = d
-    md.append(f'## 450 K 去折叠（a18，{os.path.basename(p)}）\n')
-    md.append('```')
-    md.append(json.dumps({k: v for k, v in d.items() if not isinstance(v, list) or len(v) < 40}, ensure_ascii=False,
-                         indent=1)[:6000])
-    md.append('```\n')
+    sid = os.path.basename(p)[len('unfold_md450_'):-5]
+    OUT.setdefault('unfold', {})[sid] = d
+    reps = sorted(d.get('replicas', {}))
+    md.append(f'## 450 K 去折叠（a18，{sid}；Q_u = 该区段起始天然重原子接触的分数，t_half = 1 ns 滑动平均首次 < 0.5 的时间）\n')
+    md.append('| 区段 | 残基 | 天然接触数 | ' + ' | '.join(f'{r}：t_half ns / 末 1 ns Q / 螺旋 起→末' for r in reps) + ' |')
+    md.append('|---|---|---|' + '---|' * len(reps))
+    for g, (lo, hi, n) in d['groups'].items():
+        cells = []
+        nn = None
+        for r in reps:
+            x = d['replicas'][r].get(g)
+            if not x:
+                cells.append('—'); continue
+            nn = x['n_native_contacts']
+            th = x['t_half_ns']
+            T = d['replicas'][r]['ns']
+            cells.append(f"{f(th, 1) if th is not None else f'> {T:.0f}（未达）'} / {f(x['Q_final_1ns'])} / "
+                         f"{f(x.get('helix_start'))}→{f(x.get('helix_end'))}")
+        md.append(f'| {g} | {lo}–{hi}（{n}） | {nn} | ' + ' | '.join(cells) + ' |')
+    md.append('')
+    for r in reps:
+        R = d['replicas'][r]
+        md.append(f"- {r}（{f(R['ns'], 1)} ns，{R['n_frames']} 帧）：去折叠顺序 {' → '.join(R.get('unfolding_order_units', []))}；"
+                  f"GTP–蛋白接触原子数 起/末 {R.get('gtp_protein_contacts_first_last')}")
+    md.append('')
 
 # ---------------------------------------------------------------- REST2 progress
 r2 = sorted(glob.glob(os.path.join(I, 'rest2_*.json')))
