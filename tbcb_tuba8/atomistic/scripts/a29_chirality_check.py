@@ -3,7 +3,8 @@
 For each non-Gly residue with N, CA, C, CB: the dihedral N-CA-C-CB is about -124 deg for an L-amino acid and
 +124 deg for its mirror image (D).  A chain is reported L when >= 95 % of its residues are L, D when >= 95 % are D,
 and MIXED otherwise.  Reads .pdb, .cif or .cif.gz (mmCIF atom_site with Cartn_x/y/z, auth or label ids).
-Usage: a29_chirality_check.py <file> [<file> ...]      (prints one line per chain; exit status 1 if any chain is D/MIXED)
+Usage: a29_chirality_check.py [--strict] <file> [<file> ...]   (one line per chain; exit status 1 if any chain is
+       D/MIXED, or with --strict if any single residue is D; --strict also lists the D residues)
 """
 import gzip, math, sys
 
@@ -44,7 +45,8 @@ def dihedral(p0, p1, p2, p3):
 
 
 bad = False
-for path in sys.argv[1:]:
+strict = '--strict' in sys.argv
+for path in [x for x in sys.argv[1:] if x != '--strict']:
     res = {}
     for ch, rs, rn, an, xyz in read(path):
         res.setdefault((ch, rs, rn), {})[an] = xyz
@@ -52,10 +54,12 @@ for path in sys.argv[1:]:
     for (ch, rs, rn), A in res.items():
         if rn in ('GLY', 'HOH', 'WAT') or not all(k in A for k in ('N', 'CA', 'C', 'CB')):
             continue
-        per.setdefault(ch, []).append(dihedral(A['N'], A['CA'], A['C'], A['CB']))
+        per.setdefault(ch, []).append((dihedral(A['N'], A['CA'], A['C'], A['CB']), f'{rn}{rs}'))
     for ch, v in sorted(per.items()):
-        fL = sum(x < 0 for x in v) / len(v)
+        fL = sum(x < 0 for x, _ in v) / len(v)
         call = 'L' if fL >= 0.95 else ('D (mirror image)' if fL <= 0.05 else 'MIXED')
-        bad |= call != 'L'
-        print(f'{path}\tchain {ch}\t{len(v)} residues\tfraction L {fL:.3f}\t{call}')
+        dl = [n for x, n in v if x > 0]
+        bad |= call != 'L' or (strict and bool(dl))
+        extra = f'\tD residues: {" ".join(dl)}' if strict and dl and call == 'L' else ''
+        print(f'{path}\tchain {ch}\t{len(v)} residues\tfraction L {fL:.3f}\t{call}{extra}')
 sys.exit(1 if bad else 0)

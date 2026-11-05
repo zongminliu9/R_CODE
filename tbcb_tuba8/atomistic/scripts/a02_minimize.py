@@ -7,14 +7,16 @@ interface residues).  Minimised as a fully flexible system (no bond constraints,
 true gradient norm.  Two stages: (1) backbone heavy atoms and CB restrained (k = 1000 kJ/mol/nm^2) and Mg2+ ligand
 distances held by flat-bottom restraints, so clashes are relieved by side chains and solvent rather than by moving
 the fold; (2) everything free, minimised to a 10 kJ/mol/nm force tolerance.
-Handedness gate: stops before minimising if a protein chain is not L (a mirror-image input), and stops without
-writing minimized.cif.gz if any residue's N-CA-C-CB dihedral changes sign during minimisation (CB was added
-to the stage-1 restraints on 2026-11-05 after Phe451 of t_a1aYF_K188A_cplx inverted in an unrestrained CB).
+Handedness (added 2026-11-05 after minimisation inverted strained residues in several builds): stops before
+minimising if any protein residue is D; in both stages a flat-bottom restraint on every N-CA-C-CB dihedral
+(zero within 35 deg of the L value -124 deg, 1000 kJ/mol/rad^2 outside) prevents inversion without acting on
+normal geometry; CB is also restrained in stage 1; and minimized.cif.gz is not written if any residue's
+dihedral still changes sign.  Reported energies exclude every restraint.
 
 Usage: a02_minimize.py <build_dir> [--platform CPU|CUDA|OpenCL] [--chains-a A --chains-b B]
 Writes <build_dir>/minimized.cif.gz and <build_dir>/minimize.json
 """
-import os, sys, json, gzip, argparse, time
+import os, sys, json, gzip, argparse, time, math
 import numpy as np
 import openmm as mm
 from openmm import app, unit
@@ -124,10 +126,9 @@ def main():
     bb = [at.index for at in atoms if at.name in ('N', 'CA', 'C', 'O') and at.residue.name not in SOLVENT | {'GTP', 'MG'}]
     cb = [at.index for at in atoms if at.name == 'CB' and at.residue.name not in SOLVENT | {'GTP', 'MG'}]
     hand0 = handedness(top, np.array(pos.value_in_unit(NM)))
-    for cid in sorted({k[0] for k in hand0}):
-        v = [x for k, x in hand0.items() if k[0] == cid]
-        if np.mean(v) < 0.9:
-            raise SystemExit(f'chain {cid}: only {np.mean(v):.3f} of residues are L - mirror-image or corrupted input, not minimised')
+    dres = [f'{k[0]}:{k[2]}{k[1]}' for k, v in hand0.items() if not v]
+    if dres:
+        raise SystemExit(f'D residues in the input ({len(dres)}): {dres[:20]} - not minimised')
     # stage-1 restraints
     rest = mm.CustomExternalForce('kbb*periodicdistance(x, y, z, x0, y0, z0)^2')
     rest.addGlobalParameter('kbb', 1000.0)
@@ -150,6 +151,15 @@ def main():
                 fb.addBond(int(m), int(i), [0.215]); shell0.append(int(i))
     fb.setForceGroup(30)
     system.addForce(fb)
+    chi = mm.CustomTorsionForce('0.5*kchi*step(abs(dt)-wchi)*(abs(dt)-wchi)^2; dt = atan2(sin(theta-tchi), cos(theta-tchi))')
+    chi.addGlobalParameter('kchi', 1000.0); chi.addGlobalParameter('tchi', math.radians(-124.0))
+    chi.addGlobalParameter('wchi', math.radians(35.0))
+    for r in top.residues():
+        A = {x.name: x.index for x in r.atoms()}
+        if r.name not in {'GLY'} | SOLVENT and all(k in A for k in ('N', 'CA', 'C', 'CB')):
+            chi.addTorsion(A['N'], A['CA'], A['C'], A['CB'], [])
+    chi.setForceGroup(29)
+    system.addForce(chi)
     plat = mm.Platform.getPlatformByName(a.platform)
     integ = mm.VerletIntegrator(0.001)
     ctx = mm.Context(system, integ, plat)
@@ -157,14 +167,21 @@ def main():
     ctx.setPeriodicBoxVectors(*top.getPeriodicBoxVectors())
     rec = {'build_dir': os.path.abspath(a.wd), 'platform': a.platform, 'openmm': mm.__version__,
            'n_atoms': system.getNumParticles(), 'mg_shell_start': mg_shell(top, pos)}
+    chi_E = lambda: ctx.getState(getEnergy=True, groups={29}).getPotentialEnergy().value_in_unit(KJ)
     ctx.setParameter('kbb', 0.0); ctx.setParameter('kmg', 0.0)
+    rec['chirality_restraint_kJmol_start'] = chi_E()
+    assert rec['chirality_restraint_kJmol_start'] < 1.0 * max(1, chi.getNumTorsions()) * 0.01 + 5.0, rec['chirality_restraint_kJmol_start']
+    ctx.setParameter('kchi', 0.0)
     rec['initial'] = snapshot(ctx, system, top, solute, 'as built (unminimised)')
-    ctx.setParameter('kbb', 1000.0); ctx.setParameter('kmg', 50000.0)
+    ctx.setParameter('kbb', 1000.0); ctx.setParameter('kmg', 50000.0); ctx.setParameter('kchi', 1000.0)
     mm.LocalEnergyMinimizer.minimize(ctx, 100.0, 5000)
-    ctx.setParameter('kbb', 0.0); ctx.setParameter('kmg', 0.0)
+    ctx.setParameter('kbb', 0.0); ctx.setParameter('kmg', 0.0); ctx.setParameter('kchi', 0.0)
     rec['after_stage1'] = snapshot(ctx, system, top, solute, 'after restrained minimisation')
+    ctx.setParameter('kchi', 1000.0)
     mm.LocalEnergyMinimizer.minimize(ctx, 10.0, 20000)
-    rec['final'] = snapshot(ctx, system, top, solute, 'after free minimisation (tol 10 kJ/mol/nm)')
+    rec['chirality_restraint_kJmol_end'] = chi_E()
+    ctx.setParameter('kchi', 0.0)
+    rec['final'] = snapshot(ctx, system, top, solute, 'after minimisation with only the chirality restraint (tol 10 kJ/mol/nm)')
     st = ctx.getState(getPositions=True)
     P1 = st.getPositions(asNumpy=True)
     X0 = np.array(P0)[bb]; X1 = np.array(P1.value_in_unit(NM))[bb]

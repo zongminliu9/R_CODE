@@ -92,6 +92,69 @@ def water_atoms(o, mg):
     return o, h1, h2
 
 
+def _dihedral(p0, p1, p2, p3):
+    b0, b1, b2 = p0 - p1, p2 - p1, p3 - p2
+    b1 = b1 / np.linalg.norm(b1); v = b0 - b0 @ b1 * b1; w = b2 - b2 @ b1 * b1
+    return float(np.degrees(np.arctan2(np.cross(b1, v) @ w, v @ w)))
+
+
+def d_residues(top, X):
+    """protein residues whose N-CA-C-CB dihedral is positive, i.e. D (about -124 deg for L)"""
+    out = []
+    for r in top.residues():
+        A = {at.name: at.index for at in r.atoms()}
+        if r.name != 'GLY' and all(k in A for k in ('N', 'CA', 'C', 'CB')) and _dihedral(X[A['N']], X[A['CA']], X[A['C']], X[A['CB']]) > 0:
+            out.append(r)
+    return out
+
+
+def ideal_cb(n, ca, c):
+    """ideal L CB from backbone N, CA, C (Angstrom)"""
+    b = ca - n; cc = c - ca; aa = np.cross(b, cc)
+    return -0.58273431 * aa + 0.56802827 * b - 0.54067466 * cc + ca
+
+
+def enforce_L(fixer, rounds=3):
+    """PDBFixer builds a side chain by superposing a template residue on the atoms that exist and then relaxing the
+    new atoms; where only N, CA, C, O exist (a template Gly mutated to another residue, e.g. TUBA8 G43I / G45D on the
+    TUBA1B backbone) CB can end up on the D side (2026-11-05: D-Ile43 / D-Asp45 in seven TUBA8-loop builds).  For each
+    D residue: keep N, CA, C, O (and OXT), put CB at its ideal L position, and let PDBFixer rebuild the rest of the
+    side chain on N/CA/C/O/CB.  Protein-only topologies (no hydrogens) as at this stage of a01 / a07.
+    Returns (fixer, list of residues rebuilt)."""
+    fixed = []
+    for _ in range(rounds):
+        X = np.array(fixer.positions.value_in_unit(unit.angstrom))
+        bad = d_residues(fixer.topology, X)
+        if not bad:
+            return fixer, fixed
+        badidx = {r.index for r in bad}
+        fixed += [f'{r.chain.id}:{r.name}{r.id}' for r in bad]
+        buf = io.StringIO()
+        app.PDBFile.writeFile(fixer.topology, fixer.positions, buf, keepIds=True)
+        atoms = list(fixer.topology.atoms()); k = 0; out = []
+        for l in buf.getvalue().splitlines():
+            if l.startswith(('ATOM', 'HETATM')):
+                at = atoms[k]; k += 1; r = at.residue
+                if r.index in badidx and at.name not in ('N', 'CA', 'C', 'O', 'OXT'):
+                    continue
+                out.append(l)
+                if r.index in badidx and at.name == 'CA':
+                    A = {x.name: x.index for x in r.atoms()}
+                    cb = ideal_cb(X[A['N']], X[A['CA']], X[A['C']])
+                    out.append(l[:12] + ' CB ' + l[16:30] + f'{cb[0]:8.3f}{cb[1]:8.3f}{cb[2]:8.3f}' + l[54:])
+            else:
+                out.append(l)
+        assert k == len(atoms), (k, len(atoms))
+        new = PDBFixer(pdbfile=io.StringIO('\n'.join(out) + '\n'))
+        new.missingResidues = {}
+        new.findMissingAtoms(); new.addMissingAtoms()
+        fixer = new
+    bad = d_residues(fixer.topology, np.array(fixer.positions.value_in_unit(unit.angstrom)))
+    if bad:
+        raise SystemExit(f'D residues remain after {rounds} rebuilds: {[f"{r.chain.id}:{r.name}{r.id}" for r in bad]}')
+    return fixer, fixed
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('sid'); ap.add_argument('spec')
@@ -139,6 +202,7 @@ def main():
         fixer.missingResidues = {}
         seq = {p: x for p, x in seq.items() if p <= last}
     fixer.findMissingAtoms(); fixer.addMissingAtoms()
+    fixer, rebuilt_L = enforce_L(fixer)
     # --- GTP + Mg2+ + its four inner-shell waters, grafted from the 1.8 A crystal 4I4T chain A (canonical N-site:
     #     Mg bound to O1B, O1G and four waters).  Superposed on the CA atoms of the N-site residues.
     app.Topology.loadBondDefinitions(os.path.join(FF, 'gtp_bonds.xml'))
@@ -191,6 +255,9 @@ def main():
     ff = forcefield()
     app.Modeller.loadHydrogenDefinitions(os.path.join(FF, 'gtp_hydrogens.xml'))
     modeller.addHydrogens(ff, pH=7.0)
+    dres = d_residues(modeller.topology, np.array(modeller.positions.value_in_unit(unit.angstrom)))
+    if dres:
+        raise SystemExit(f'D residues after protonation: {[f"{r.chain.id}:{r.name}{r.id}" for r in dres]}')
     his = [r.name for r in modeller.topology.residues() if r.name in ('HIS', 'HID', 'HIE', 'HIP')]
     # --- solvate
     modeller.addSolvent(ff, model='tip3p', padding=a.pad * unit.nanometer, boxShape='dodecahedron',
@@ -210,7 +277,7 @@ def main():
                 net_charge=round(qtot, 6), box_nm=[[round(x, 4) for x in v.value_in_unit(unit.nanometer)]
                                                    for v in modeller.topology.getPeriodicBoxVectors()],
                 mg_shell_waters_added=len(wsites), graft='4I4T chain A', graft_site_ca_rmsd_A=round(site_rmsd, 3), graft_vs_9M1M_gtp_rmsd_A=round(gtp_rmsd, 3), graft_min_dist_to_protein_heavy_A=round(clash, 2), tail_mode=a.tail, residue_counts={k: v for k, v in resn.items() if k in ('HOH', 'NA', 'CL', 'MG', 'GTP')},
-                histidines=his, forcefield=['amberff14SB.xml (ISOLDE)', 'gtp_meagher.xml', 'water_ions_tip3p_iod.xml'],
+                side_chains_rebuilt_L=rebuilt_L, histidines=his, forcefield=['amberff14SB.xml (ISOLDE)', 'gtp_meagher.xml', 'water_ions_tip3p_iod.xml'],
                 template='9M1M chain a', openmm=mm.__version__)
     json.dump(meta, open(os.path.join(W, 'build.json'), 'w'), indent=1)
     print(json.dumps({k: meta[k] for k in ('sid', 'changes', 'length', 'n_atoms', 'net_charge', 'mg_shell_waters_added', 'graft_site_ca_rmsd_A', 'graft_vs_9M1M_gtp_rmsd_A', 'graft_min_dist_to_protein_heavy_A', 'residue_counts')}))

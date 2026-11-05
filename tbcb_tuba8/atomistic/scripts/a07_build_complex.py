@@ -128,6 +128,7 @@ def main():
             if muts:
                 fixer.applyMutations(muts, a.alpha)
     fixer.findMissingAtoms(); fixer.addMissingAtoms()
+    fixer, info['side_chains_rebuilt_L'] = A1.enforce_L(fixer)
     app.Topology.loadBondDefinitions(os.path.join(FF, 'gtp_bonds.xml'))
     het = []; k = 1; grafts = {}
     tub = [a.alpha]
@@ -226,8 +227,8 @@ def main():
             b0, b1, b2 = p0 - p1, p2 - p1, p3 - p2
             b1 = b1 / np.linalg.norm(b1); vv = b0 - b0 @ b1 * b1; ww = b2 - b2 @ b1 * b1
             hs.append(np.arctan2(np.cross(b1, vv) @ ww, vv @ ww) < 0)
-        if hs and np.mean(hs) < 0.9:
-            raise SystemExit(f'chain {cid}: only {np.mean(hs):.3f} of residues L after the principal-axes transform')
+        if hs and not all(hs):
+            raise SystemExit(f'chain {cid}: {len(hs) - sum(hs)} D residues after the principal-axes transform')
     ext = Y.max(0) - Y.min(0)
     Y = Y - Y.min(0) + a.pad
     box = ext + 2 * a.pad
