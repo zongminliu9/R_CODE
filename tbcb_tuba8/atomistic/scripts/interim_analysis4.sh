@@ -25,6 +25,13 @@ PY="python3 -W ignore"
   $PY scripts/a30_fix_chirality.py $BUILD > $O/a30.log 2>&1
   $PY scripts/a29_chirality_check.py $BUILD/*/minimized.cif.gz > $O/a29_builds_after_fix.txt 2>&1
   echo "a29 exit $?" >> $O/a29_builds_after_fix.txt
+  # release the ten jobs held for the repair only if the repair finished and every build is L
+  HELD=51130003,51130004,51131394,51130007,51130008,51131979,51131981,51131984,51131986,51130634
+  if grep -q CHIRALITY_FIX_DONE $O/a30.log && grep -qx "a29 exit 0" $O/a29_builds_after_fix.txt; then
+    scontrol release $HELD && echo "released $HELD" > $O/release.txt
+  else
+    echo "repair or check failed; jobs stay held" > $O/release.txt
+  fi
 ) &
 $PY scripts/a13_residue_analysis_next.py $RUNS/md310/a8 $BUILD/a8 $O/residue_a8_10-140ns.json --skip_ns 10 --max_ns 140 --stride 5 > $O/a13_a8_10-140.log 2>&1 &
 $PY scripts/a13_residue_analysis_next.py $RUNS/md310/a8 $BUILD/a8 $O/residue_a8_140-200ns.json --skip_ns 140 --max_ns 200 --stride 5 > $O/a13_a8_140-200.log 2>&1 &
