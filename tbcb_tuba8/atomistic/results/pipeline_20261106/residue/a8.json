@@ -1,0 +1,1872 @@
+{
+ "system": "a8",
+ "replicas": 1,
+ "window_ns_frames_per_rep": [
+  [
+   10.0,
+   200.0,
+   1900
+  ]
+ ],
+ "image_check_max_nm_per_rep": [
+  0.0
+ ],
+ "per_residue": {
+  "7": {
+   "resname": "VAL",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    0.0572524219751358,
+    null
+   ],
+   "E_coul_kcal": [
+    46.25647982997091,
+    null
+   ],
+   "E_lj_kcal": [
+    -14.707071687877162,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    5.583157894736842,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.00457860502587105,
+     "E_coul_block_se_kcal": 2.2477821046268627,
+     "E_lj_block_se_kcal": 0.04504533279094624
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "VAL7-N-LEU136-O",
+     "PHE138-N-VAL7-O"
+    ]
+   ]
+  },
+  "16": {
+   "resname": "ILE",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    0.31978723406791687,
+    null
+   ],
+   "E_coul_kcal": [
+    -47.49129473612944,
+    null
+   ],
+   "E_lj_kcal": [
+    -19.258340970380804,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    3.014736842105263,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.10223266218785503,
+     "E_coul_block_se_kcal": 4.822835983701719,
+     "E_lj_block_se_kcal": 0.148234666151054
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ILE16-N-ALA12-O",
+     "ALA19-N-ILE16-O",
+     "CYS20-N-ILE16-O"
+    ]
+   ]
+  },
+  "24": {
+   "resname": "PHE",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    1.669678807258606,
+    null
+   ],
+   "E_coul_kcal": [
+    -6.201058259319838,
+    null
+   ],
+   "E_lj_kcal": [
+    -25.80650496738931,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    4.098947368421053,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.05876150984210204,
+     "E_coul_block_se_kcal": 2.0197896169839193,
+     "E_lj_block_se_kcal": 0.139985355050406
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "PHE24-N-CYS20-O",
+     "HIS28-N-PHE24-O"
+    ]
+   ]
+  },
+  "30": {
+   "resname": "ILE",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    2.4647130966186523,
+    null
+   ],
+   "E_coul_kcal": [
+    6.667834033228089,
+    null
+   ],
+   "E_lj_kcal": [
+    -17.784954951910386,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    3.711578947368421,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.21827854589527623,
+     "E_coul_block_se_kcal": 8.082955538665606,
+     "E_lj_block_se_kcal": 0.22593338376900274
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ILE30-N-CYS25-O",
+     "TYR83-OH-ILE30-O"
+    ]
+   ]
+  },
+  "31": {
+   "resname": "GLN",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    45.373931884765625,
+    null
+   ],
+   "E_coul_kcal": [
+    -3.8760223689258235,
+    null
+   ],
+   "E_lj_kcal": [
+    -9.159796578909846,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.523677534533586,
+     "E_coul_block_se_kcal": 3.8000753085265626,
+     "E_lj_block_se_kcal": 0.1533216147921942
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "GLN31-N-THR35-O",
+     "GLN31-NE2-GLY29-O",
+     "GLN31-NE2-PHE36-O",
+     "GLY34-N-GLN31-O"
+    ]
+   ]
+  },
+  "32": {
+   "resname": "ALA",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    36.33566665649414,
+    null
+   ],
+   "E_coul_kcal": [
+    -2.8708954987583755,
+    null
+   ],
+   "E_lj_kcal": [
+    -7.573791374390434,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    0.35157894736842105,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 2.272363929692758,
+     "E_coul_block_se_kcal": 2.2713855464328145,
+     "E_lj_block_se_kcal": 0.3602352787530901
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    []
+   ]
+  },
+  "33": {
+   "resname": "ASP",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    27.65720558166504,
+    null
+   ],
+   "E_coul_kcal": [
+    -96.65685211309416,
+    null
+   ],
+   "E_lj_kcal": [
+    -7.4974720493918845,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.6130290067400632,
+     "E_coul_block_se_kcal": 11.27776378116504,
+     "E_lj_block_se_kcal": 0.44866253908367976
+    }
+   ],
+   "salt_bridges": [
+    [
+     [
+      "LYS60",
+      0.717
+     ]
+    ]
+   ],
+   "hbonds": [
+    [
+     "ASP33-N-ASP33-OD1",
+     "THR35-N-ASP33-OD1",
+     "THR35-N-ASP33-OD2",
+     "LYS60-NZ-ASP33-OD2",
+     "LYS60-NZ-ASP33-OD1",
+     "LYS60-NZ-ASP33-OD2",
+     "LYS60-NZ-ASP33-OD2",
+     "THR35-OG1-ASP33-OD1",
+     "THR35-OG1-ASP33-OD2"
+    ]
+   ]
+  },
+  "34": {
+   "resname": "GLY",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    0.3344747722148895,
+    null
+   ],
+   "E_coul_kcal": [
+    -15.043144402028874,
+    null
+   ],
+   "E_lj_kcal": [
+    -8.003995367732143,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.1378812650497147,
+     "E_coul_block_se_kcal": 1.1959282372466997,
+     "E_lj_block_se_kcal": 0.14352854170544227
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "GLY34-N-GLN31-O",
+     "HIS61-N-GLY34-O"
+    ]
+   ]
+  },
+  "35": {
+   "resname": "THR",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    24.186845779418945,
+    null
+   ],
+   "E_coul_kcal": [
+    -26.402062663102992,
+    null
+   ],
+   "E_lj_kcal": [
+    -9.002519737690761,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.2036566776869968,
+     "E_coul_block_se_kcal": 6.263111173581451,
+     "E_lj_block_se_kcal": 0.2094241178009786
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "GLN31-N-THR35-O",
+     "THR35-N-ASP33-OD1",
+     "THR35-N-ASP33-OD2",
+     "THR35-OG1-ASP33-OD1",
+     "THR35-OG1-ASP33-OD2"
+    ]
+   ]
+  },
+  "36": {
+   "resname": "PHE",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    22.140275955200195,
+    null
+   ],
+   "E_coul_kcal": [
+    -13.883454555156627,
+    null
+   ],
+   "E_lj_kcal": [
+    -13.796699907335297,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    1.3957894736842105,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 4.556647583021896,
+     "E_coul_block_se_kcal": 2.8998229310203323,
+     "E_lj_block_se_kcal": 1.0571956139302148
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "GLN31-NE2-PHE36-O",
+     "PHE36-N-GLY59-O"
+    ]
+   ]
+  },
+  "37": {
+   "resname": "GLY",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    22.33834457397461,
+    null
+   ],
+   "E_coul_kcal": [
+    -8.314219601893939,
+    null
+   ],
+   "E_lj_kcal": [
+    -3.8714853974867354,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 3.8095146437279555,
+     "E_coul_block_se_kcal": 3.9113917165718743,
+     "E_lj_block_se_kcal": 0.2798691075226244
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "GLY37-N-GLY29-O",
+     "GLN39-N-GLY37-O"
+    ]
+   ]
+  },
+  "38": {
+   "resname": "THR",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    75.74314880371094,
+    null
+   ],
+   "E_coul_kcal": [
+    -7.014640237813284,
+    null
+   ],
+   "E_lj_kcal": [
+    -3.3274142088245298,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 3.0100068699347875,
+     "E_coul_block_se_kcal": 2.0362381394242033,
+     "E_lj_block_se_kcal": 0.22831996932984874
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    []
+   ]
+  },
+  "39": {
+   "resname": "GLN",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    25.38980484008789,
+    null
+   ],
+   "E_coul_kcal": [
+    -19.944788110957987,
+    null
+   ],
+   "E_lj_kcal": [
+    -9.651853800520616,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 2.80911420853136,
+     "E_coul_block_se_kcal": 2.330645037815627,
+     "E_lj_block_se_kcal": 0.4829865791746552
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "GLN39-N-GLY37-O",
+     "GLN39-NE2-GLU27-O",
+     "LYS42-N-GLN39-O"
+    ]
+   ]
+  },
+  "40": {
+   "resname": "ALA",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    78.96819305419922,
+    null
+   ],
+   "E_coul_kcal": [
+    -4.5335129928880065,
+    null
+   ],
+   "E_lj_kcal": [
+    -2.6708383282088635,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    0.0,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.3739300506057655,
+     "E_coul_block_se_kcal": 1.3269309404551082,
+     "E_lj_block_se_kcal": 0.12835879940145692
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ASN44-ND2-ALA40-O",
+     "ASN44-ND2-ALA40-O"
+    ]
+   ]
+  },
+  "41": {
+   "resname": "SER",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    16.567399978637695,
+    null
+   ],
+   "E_coul_kcal": [
+    -14.933849577279513,
+    null
+   ],
+   "E_lj_kcal": [
+    -7.2959853812412065,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.8759763783429126,
+     "E_coul_block_se_kcal": 3.4820356067983362,
+     "E_lj_block_se_kcal": 0.4206116612538565
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ASN44-N-SER41-O",
+     "ASP45-N-SER41-O",
+     "ASP46-N-SER41-O",
+     "SER41-OG-ASP47-OD1"
+    ]
+   ]
+  },
+  "42": {
+   "resname": "LYS",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    45.97605895996094,
+    null
+   ],
+   "E_coul_kcal": [
+    -102.28898247493694,
+    null
+   ],
+   "E_lj_kcal": [
+    -7.710346433522316,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 2.1305674530087306,
+     "E_coul_block_se_kcal": 11.444100828235612,
+     "E_lj_block_se_kcal": 0.166806535124352
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "LYS42-N-GLN39-O",
+     "ASN44-N-LYS42-O",
+     "ASN44-ND2-LYS42-O"
+    ]
+   ]
+  },
+  "43": {
+   "resname": "ILE",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    84.19136810302734,
+    null
+   ],
+   "E_coul_kcal": [
+    -7.072384802482895,
+    null
+   ],
+   "E_lj_kcal": [
+    -3.0100987830353256,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    0.0,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 2.971558938077374,
+     "E_coul_block_se_kcal": 1.1248744111134825,
+     "E_lj_block_se_kcal": 0.2370520621215494
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ILE43-N-ASP46-OD1",
+     "ILE43-N-ASP46-OD2"
+    ]
+   ]
+  },
+  "44": {
+   "resname": "ASN",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    66.39351654052734,
+    null
+   ],
+   "E_coul_kcal": [
+    -13.825582677751909,
+    null
+   ],
+   "E_lj_kcal": [
+    -3.1084701026928445,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.8962603404551598,
+     "E_coul_block_se_kcal": 1.0680974884047463,
+     "E_lj_block_se_kcal": 0.11191186862596875
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ASN44-N-SER41-O",
+     "ASN44-N-LYS42-O",
+     "ASN44-ND2-ALA40-O",
+     "ASN44-ND2-ALA40-O",
+     "ASN44-ND2-LYS42-O"
+    ]
+   ]
+  },
+  "45": {
+   "resname": "ASP",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    50.20402145385742,
+    null
+   ],
+   "E_coul_kcal": [
+    97.49058700519731,
+    null
+   ],
+   "E_lj_kcal": [
+    -5.1898490972656575,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.3184397776113745,
+     "E_coul_block_se_kcal": 3.738265277403685,
+     "E_lj_block_se_kcal": 0.1109739041748152
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ASP45-N-SER41-O"
+    ]
+   ]
+  },
+  "46": {
+   "resname": "ASP",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    40.741783142089844,
+    null
+   ],
+   "E_coul_kcal": [
+    -4.6344025444388794,
+    null
+   ],
+   "E_lj_kcal": [
+    -5.854765817204662,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 2.6783208023380682,
+     "E_coul_block_se_kcal": 3.36098486596291,
+     "E_lj_block_se_kcal": 0.3601059150534282
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ILE43-N-ASP46-OD1",
+     "ILE43-N-ASP46-OD2",
+     "ASP46-N-SER41-O"
+    ]
+   ]
+  },
+  "47": {
+   "resname": "ASP",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    15.795632362365723,
+    null
+   ],
+   "E_coul_kcal": [
+    34.734240582291676,
+    null
+   ],
+   "E_lj_kcal": [
+    -8.304212055313496,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 3.211704078151496,
+     "E_coul_block_se_kcal": 6.803214923302315,
+     "E_lj_block_se_kcal": 0.30967033996261295
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "PHE49-N-ASP47-O",
+     "THR50-N-ASP47-O",
+     "SER41-OG-ASP47-OD1",
+     "TYR357-OH-ASP47-OD2"
+    ]
+   ]
+  },
+  "48": {
+   "resname": "SER",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    20.347808837890625,
+    null
+   ],
+   "E_coul_kcal": [
+    -44.319338311505746,
+    null
+   ],
+   "E_lj_kcal": [
+    -6.564014238803669,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.3396241334023915,
+     "E_coul_block_se_kcal": 3.8921636809992752,
+     "E_lj_block_se_kcal": 0.5479038412567201
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "SER48-N-ASP245-OD2",
+     "THR51-N-SER48-O",
+     "SER48-OG-ASP245-OD1",
+     "SER48-OG-ASP245-OD2",
+     "THR51-OG1-SER48-O"
+    ]
+   ]
+  },
+  "49": {
+   "resname": "PHE",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    7.743330955505371,
+    null
+   ],
+   "E_coul_kcal": [
+    -30.277647618365997,
+    null
+   ],
+   "E_lj_kcal": [
+    -18.155891318668086,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    2.442105263157895,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.8639389295766184,
+     "E_coul_block_se_kcal": 2.227257421758858,
+     "E_lj_block_se_kcal": 0.3129775699154774
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "PHE49-N-ASP47-O",
+     "PHE52-N-PHE49-O",
+     "PHE53-N-PHE49-O"
+    ]
+   ]
+  },
+  "50": {
+   "resname": "THR",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    33.063575744628906,
+    null
+   ],
+   "E_coul_kcal": [
+    -56.04710411603208,
+    null
+   ],
+   "E_lj_kcal": [
+    -8.577198508906367,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 3.3971593840082814,
+     "E_coul_block_se_kcal": 5.0434660420143365,
+     "E_lj_block_se_kcal": 0.2906004249931933
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "THR50-N-ASP47-O",
+     "PHE53-N-THR50-O",
+     "ARG64-NE-THR50-O",
+     "ARG64-NH2-THR50-O"
+    ]
+   ]
+  },
+  "54": {
+   "resname": "SER",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    10.086529731750488,
+    null
+   ],
+   "E_coul_kcal": [
+    4.135653570735413,
+    null
+   ],
+   "E_lj_kcal": [
+    -8.761780825473732,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.632243504025784,
+     "E_coul_block_se_kcal": 3.273830302388497,
+     "E_lj_block_se_kcal": 0.08693366745015899
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "SER54-N-VAL62-O",
+     "GLU55-N-SER54-OG",
+     "THR56-N-SER54-O",
+     "HIS61-ND1-SER54-O",
+     "VAL62-N-SER54-O",
+     "SER54-OG-THR56-OG1",
+     "THR56-OG1-SER54-OG"
+    ]
+   ]
+  },
+  "58": {
+   "resname": "ASN",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    78.78539276123047,
+    null
+   ],
+   "E_coul_kcal": [
+    -3.5801448122396686,
+    null
+   ],
+   "E_lj_kcal": [
+    -3.5866838028972348,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 5.066754010923103,
+     "E_coul_block_se_kcal": 2.329317620131208,
+     "E_lj_block_se_kcal": 0.4925350537139482
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ASN58-N-THR56-O",
+     "THR56-OG1-ASN58-OD1"
+    ]
+   ]
+  },
+  "67": {
+   "resname": "MET",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    1.017220139503479,
+    null
+   ],
+   "E_coul_kcal": [
+    19.170268265776492,
+    null
+   ],
+   "E_lj_kcal": [
+    -18.983605818308103,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    4.04,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.5924380430448621,
+     "E_coul_block_se_kcal": 6.255229517396181,
+     "E_lj_block_se_kcal": 0.4517867513249265
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "MET67-N-GLN91-O",
+     "ILE93-N-MET67-O"
+    ]
+   ]
+  },
+  "75": {
+   "resname": "VAL",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    22.07560157775879,
+    null
+   ],
+   "E_coul_kcal": [
+    -25.130553765677664,
+    null
+   ],
+   "E_lj_kcal": [
+    -11.87762899517371,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    1.0926315789473684,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 7.355060108463382,
+     "E_coul_block_se_kcal": 4.592128959225182,
+     "E_lj_block_se_kcal": 1.4557460366157648
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "VAL75-N-PRO72-O",
+     "VAL78-N-VAL75-O",
+     "ARG79-N-VAL75-O"
+    ]
+   ]
+  },
+  "78": {
+   "resname": "VAL",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    6.479104518890381,
+    null
+   ],
+   "E_coul_kcal": [
+    -15.167562105280304,
+    null
+   ],
+   "E_lj_kcal": [
+    -13.689666048305087,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    2.867368421052632,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 3.084923673731009,
+     "E_coul_block_se_kcal": 1.7257185594203324,
+     "E_lj_block_se_kcal": 0.7543638305185829
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "VAL78-N-VAL74-O",
+     "VAL78-N-VAL75-O",
+     "GLY81-N-VAL78-O"
+    ]
+   ]
+  },
+  "80": {
+   "resname": "ALA",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    53.26004409790039,
+    null
+   ],
+   "E_coul_kcal": [
+    -7.5115910365218435,
+    null
+   ],
+   "E_lj_kcal": [
+    -5.830828762730491,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    0.0,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 2.726761459944225,
+     "E_coul_block_se_kcal": 3.6291390303790614,
+     "E_lj_block_se_kcal": 0.22690600534223015
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ASN18-ND2-ALA80-O",
+     "ALA80-N-ASP76-O",
+     "ALA80-N-GLU77-O"
+    ]
+   ]
+  },
+  "82": {
+   "resname": "THR",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    49.05351638793945,
+    null
+   ],
+   "E_coul_kcal": [
+    -15.146441826172302,
+    null
+   ],
+   "E_lj_kcal": [
+    -4.846105104325683,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 2.9585353569010144,
+     "E_coul_block_se_kcal": 5.699617310534117,
+     "E_lj_block_se_kcal": 0.1424198898221436
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "THR82-N-GLU22-OE2",
+     "ARG84-N-THR82-O",
+     "THR82-OG1-GLU22-OE1",
+     "THR82-OG1-GLU22-OE2"
+    ]
+   ]
+  },
+  "110": {
+   "resname": "VAL",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    4.1039323806762695,
+    null
+   ],
+   "E_coul_kcal": [
+    -28.712108671902367,
+    null
+   ],
+   "E_lj_kcal": [
+    -14.285453071312576,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    1.6989473684210528,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.4479462619775183,
+     "E_coul_block_se_kcal": 1.7437128948895153,
+     "E_lj_block_se_kcal": 0.6375886257342032
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "VAL110-N-ARG105-O",
+     "GLU113-N-VAL110-O",
+     "SER114-OG-VAL110-O"
+    ]
+   ]
+  },
+  "114": {
+   "resname": "SER",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    5.620726585388184,
+    null
+   ],
+   "E_coul_kcal": [
+    -10.585226792327449,
+    null
+   ],
+   "E_lj_kcal": [
+    -10.352590155665759,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.269097201624029,
+     "E_coul_block_se_kcal": 2.40658227473434,
+     "E_lj_block_se_kcal": 0.11404377579444344
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "SER114-N-GLY111-O",
+     "LEU117-N-SER114-O",
+     "VAL118-N-SER114-O",
+     "SER114-OG-VAL110-O"
+    ]
+   ]
+  },
+  "117": {
+   "resname": "LEU",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    44.19902038574219,
+    null
+   ],
+   "E_coul_kcal": [
+    -2.6048891307260496,
+    null
+   ],
+   "E_lj_kcal": [
+    -11.957670400081975,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    0.9073684210526316,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 2.8653426354534184,
+     "E_coul_block_se_kcal": 1.3650450639808245,
+     "E_lj_block_se_kcal": 0.2608821047852414
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "LEU117-N-SER114-O",
+     "ARG121-N-LEU117-O"
+    ]
+   ]
+  },
+  "126": {
+   "resname": "THR",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    13.175308227539062,
+    null
+   ],
+   "E_coul_kcal": [
+    -29.35138099879551,
+    null
+   ],
+   "E_lj_kcal": [
+    -11.947862906121193,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.4677888023504966,
+     "E_coul_block_se_kcal": 3.0723685947099773,
+     "E_lj_block_se_kcal": 0.26961077365020586
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "THR126-N-ILE122-O",
+     "THR126-N-ARG123-O",
+     "CYS129-N-THR126-O",
+     "THR126-OG1-ILE122-O"
+    ]
+   ]
+  },
+  "128": {
+   "resname": "ALA",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    42.99736022949219,
+    null
+   ],
+   "E_coul_kcal": [
+    -25.80679822783679,
+    null
+   ],
+   "E_lj_kcal": [
+    -5.784058430410067,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    0.010526315789473684,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.8097250312763973,
+     "E_coul_block_se_kcal": 3.206447192796233,
+     "E_lj_block_se_kcal": 0.08806759947554936
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ARG64-NH1-ALA128-O",
+     "ALA128-N-LYS124-O",
+     "ALA128-N-LEU125-O"
+    ]
+   ]
+  },
+  "130": {
+   "resname": "SER",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    63.432029724121094,
+    null
+   ],
+   "E_coul_kcal": [
+    -36.7613832082269,
+    null
+   ],
+   "E_lj_kcal": [
+    -1.8798268133762135,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.5531038162956688,
+     "E_coul_block_se_kcal": 1.9200793129413565,
+     "E_lj_block_se_kcal": 0.07706915840864213
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "SER130-N-GLU3-OE1",
+     "SER130-N-GLU3-OE2",
+     "SER130-OG-GLU3-OE1",
+     "SER130-OG-GLU3-OE2"
+    ]
+   ]
+  },
+  "137": {
+   "resname": "ILE",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    0.18756002187728882,
+    null
+   ],
+   "E_coul_kcal": [
+    -6.9407793198935845,
+    null
+   ],
+   "E_lj_kcal": [
+    -18.517544284002497,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    3.1726315789473682,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.04260179380677332,
+     "E_coul_block_se_kcal": 3.712862579893643,
+     "E_lj_block_se_kcal": 0.09694224247401408
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ILE137-N-LEU167-O",
+     "HIS139-ND1-ILE137-O",
+     "PHE169-N-ILE137-O"
+    ]
+   ]
+  },
+  "159": {
+   "resname": "LEU",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    65.66797637939453,
+    null
+   ],
+   "E_coul_kcal": [
+    -14.173265113171063,
+    null
+   ],
+   "E_lj_kcal": [
+    -7.700060346409782,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    0.002105263157894737,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.84179608308405,
+     "E_coul_block_se_kcal": 0.6184805530826952,
+     "E_lj_block_se_kcal": 0.2190958566560465
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "LEU159-N-GLU155-O",
+     "LEU159-N-ARG156-O",
+     "GLY162-N-LEU159-O"
+    ]
+   ]
+  },
+  "170": {
+   "resname": "ALA",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    0.3118458390235901,
+    null
+   ],
+   "E_coul_kcal": [
+    -11.682037923199202,
+    null
+   ],
+   "E_lj_kcal": [
+    -10.810964094859049,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    1.6526315789473685,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.05138393505947402,
+     "E_coul_block_se_kcal": 2.2064555413710836,
+     "E_lj_block_se_kcal": 0.24724419129743241
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ALA170-N-PHE202-O",
+     "VAL204-N-ALA170-O"
+    ]
+   ]
+  },
+  "232": {
+   "resname": "SER",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    0.3590599298477173,
+    null
+   ],
+   "E_coul_kcal": [
+    -19.842116990044566,
+    null
+   ],
+   "E_lj_kcal": [
+    -13.360303728170157,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.05856260290463544,
+     "E_coul_block_se_kcal": 3.3509650454233464,
+     "E_lj_block_se_kcal": 0.19038129076222415
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "SER232-N-ASN228-O",
+     "SER236-N-SER232-O"
+    ]
+   ]
+  },
+  "270": {
+   "resname": "VAL",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    1.0412777662277222,
+    null
+   ],
+   "E_coul_kcal": [
+    -8.757724775969928,
+    null
+   ],
+   "E_lj_kcal": [
+    -13.765474556747195,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    4.505263157894737,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.14175647485408688,
+     "E_coul_block_se_kcal": 3.0358079735627332,
+     "E_lj_block_se_kcal": 0.19252012047236355
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "MET302-N-VAL270-O"
+    ]
+   ]
+  },
+  "275": {
+   "resname": "ILE",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    7.552484512329102,
+    null
+   ],
+   "E_coul_kcal": [
+    14.163326357517848,
+    null
+   ],
+   "E_lj_kcal": [
+    -14.07558733749497,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    4.435789473684212,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.6380006113129073,
+     "E_coul_block_se_kcal": 2.969034279162774,
+     "E_lj_block_se_kcal": 0.18920559368225479
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ASN216-ND2-ILE275-O"
+    ]
+   ]
+  },
+  "293": {
+   "resname": "SER",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    6.543864727020264,
+    null
+   ],
+   "E_coul_kcal": [
+    -24.083547511334935,
+    null
+   ],
+   "E_lj_kcal": [
+    -11.646906793431025,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.7584984148581896,
+     "E_coul_block_se_kcal": 1.788149084173503,
+     "E_lj_block_se_kcal": 0.2552901753263561
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "SER293-N-ALA289-O",
+     "PHE296-N-SER293-O",
+     "ARG339-NE-SER293-O",
+     "ARG339-NE-SER293-OG",
+     "ARG339-NH2-SER293-O",
+     "ARG339-NH2-SER293-OG"
+    ]
+   ]
+  },
+  "294": {
+   "resname": "SER",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    20.890552520751953,
+    null
+   ],
+   "E_coul_kcal": [
+    -22.4026209310068,
+    null
+   ],
+   "E_lj_kcal": [
+    -9.073007966571055,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 2.5025929042979986,
+     "E_coul_block_se_kcal": 5.602967268429649,
+     "E_lj_block_se_kcal": 0.13937828928215198
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "SER294-N-GLU290-O",
+     "SER294-N-ILE291-O",
+     "GLU297-N-SER294-O",
+     "SER294-OG-GLU290-O",
+     "SER300-OG-SER294-O"
+    ]
+   ]
+  },
+  "299": {
+   "resname": "ASN",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    33.621185302734375,
+    null
+   ],
+   "E_coul_kcal": [
+    -22.566566695246543,
+    null
+   ],
+   "E_lj_kcal": [
+    -7.97255925000269,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 3.381008183091469,
+     "E_coul_block_se_kcal": 7.874975446107023,
+     "E_lj_block_se_kcal": 0.651931346366741
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ARG215-NH2-ASN299-O",
+     "ASN299-N-GLU297-OE1",
+     "ASN299-N-GLU297-OE2",
+     "ASN299-ND2-GLU297-OE1",
+     "ASN299-ND2-GLU297-OE2",
+     "ASN299-ND2-ASN216-OD1"
+    ]
+   ]
+  },
+  "300": {
+   "resname": "SER",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    4.910789966583252,
+    null
+   ],
+   "E_coul_kcal": [
+    -31.930121498565523,
+    null
+   ],
+   "E_lj_kcal": [
+    -8.57588808796706,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.301633922580192,
+     "E_coul_block_se_kcal": 5.602448177800245,
+     "E_lj_block_se_kcal": 0.2262828930718894
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "SER300-N-GLU297-O",
+     "THR271-OG1-SER300-O",
+     "SER300-OG-SER294-O",
+     "SER300-OG-GLU297-O"
+    ]
+   ]
+  },
+  "317": {
+   "resname": "MET",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    0.30550020933151245,
+    null
+   ],
+   "E_coul_kcal": [
+    11.253730782313848,
+    null
+   ],
+   "E_lj_kcal": [
+    -18.8412995777734,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    5.682105263157895,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.17640211031341962,
+     "E_coul_block_se_kcal": 2.575910008756212,
+     "E_lj_block_se_kcal": 0.12847709511221425
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "MET317-N-LYS352-O",
+     "GLY354-N-MET317-O"
+    ]
+   ]
+  },
+  "330": {
+   "resname": "VAL",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    54.257869720458984,
+    null
+   ],
+   "E_coul_kcal": [
+    -2.87035010532238,
+    null
+   ],
+   "E_lj_kcal": [
+    -8.783790347361505,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    0.10736842105263157,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.26922696240023253,
+     "E_coul_block_se_kcal": 1.2803485306622473,
+     "E_lj_block_se_kcal": 0.06880530914336744
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "VAL330-N-LYS326-O",
+     "VAL330-N-ASP327-O",
+     "ALA334-N-VAL330-O"
+    ]
+   ]
+  },
+  "334": {
+   "resname": "ALA",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    21.13056182861328,
+    null
+   ],
+   "E_coul_kcal": [
+    -16.94126322492811,
+    null
+   ],
+   "E_lj_kcal": [
+    -7.898783685472177,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    0.7452631578947368,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 1.0744229387413633,
+     "E_coul_block_se_kcal": 2.316847107608097,
+     "E_lj_block_se_kcal": 0.0982130588400325
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "ALA334-N-VAL330-O",
+     "ALA334-N-ALA331-O",
+     "THR337-N-ALA334-O",
+     "LYS338-N-ALA334-O"
+    ]
+   ]
+  },
+  "340": {
+   "resname": "THR",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    57.688472747802734,
+    null
+   ],
+   "E_coul_kcal": [
+    -5.5547029773071435,
+    null
+   ],
+   "E_lj_kcal": [
+    -4.754283400507182,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 4.3537369358153795,
+     "E_coul_block_se_kcal": 1.1800742801785906,
+     "E_lj_block_se_kcal": 0.4031970778259345
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    []
+   ]
+  },
+  "425": {
+   "resname": "LEU",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    0.6632186770439148,
+    null
+   ],
+   "E_coul_kcal": [
+    2.340754277887772,
+    null
+   ],
+   "E_lj_kcal": [
+    -19.285606283549757,
+    null
+   ],
+   "hydrophobic_partners_mean": [
+    3.168421052631579,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 0.07539207902336093,
+     "E_coul_block_se_kcal": 3.496583726755519,
+     "E_lj_block_se_kcal": 0.04338572540100914
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "LEU425-N-ALA421-O",
+     "GLU429-N-LEU425-O"
+    ]
+   ]
+  },
+  "437": {
+   "resname": "THR",
+   "n_rep": 1,
+   "rel_sasa_mean": [
+    84.48761749267578,
+    null
+   ],
+   "E_coul_kcal": [
+    80.00693868606609,
+    null
+   ],
+   "E_lj_kcal": [
+    -5.427808537020102,
+    null
+   ],
+   "block_se_per_rep": [
+    {
+     "rel_sasa_block_se": 3.9805138137303886,
+     "E_coul_block_se_kcal": 8.680092169479579,
+     "E_lj_block_se_kcal": 0.42656183075299736
+    }
+   ],
+   "salt_bridges": [
+    []
+   ],
+   "hbonds": [
+    [
+     "THR437-N-GLU434-O",
+     "THR437-OG1-GLU433-O",
+     "THR437-OG1-GLU434-O",
+     "THR437-OG1-GLY436-O"
+    ]
+   ]
+  }
+ }
+}

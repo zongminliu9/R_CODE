@@ -38,6 +38,10 @@ for st, pat in GROUPS.items():
         stage_ids[st] = old
         print(f'{st}: updated job {old} -> {len(deps)} compute deps')
     else:
+        # a stage that already ran (results/stage_<st>.json) and has no compute job left to wait for is not run again
+        if not deps and os.path.exists(f'{SCR}/tbcb_atomistic/results/stage_{st}.json'):
+            print(f'{st}: ran earlier and nothing new to wait for; not resubmitted')
+            continue
         cmd = hdr + ([f'--dependency={dep}'] if dep else []) + [f'{HOME}/tbcb_atomistic/scripts/pipeline_stage.sh', st]
         r = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
         jid = r.stdout.strip().split(';')[0]

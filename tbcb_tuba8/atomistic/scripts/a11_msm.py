@@ -103,12 +103,13 @@ for sid in D:
     # Chapman-Kolmogorov test on the macrostate memberships restricted to the active set
     ck_pass = None; ck_err = None
     try:
-        from deeptime.util.validation import ck_test
         ests = []
         for mult in (1, 2, 3, 4):
             cc = TransitionCountEstimator(lagtime=lag * mult, count_mode='sliding').fit(D[sid]).fetch_model().submodel_largest()
             ests.append(MaximumLikelihoodMSM(reversible=True).fit(cc).fetch_model())
-        ck = ck_test(ests, n_metastable_sets=a.nmeta)
+        # deeptime 0.4.5: the PCCA-membership CK test with n_metastable_sets is a method of MarkovStateModel
+        # (deeptime.util.validation.ck_test takes an observable instead, which made the 2026-11-05 run fail)
+        ck = ests[0].ck_test(ests, n_metastable_sets=a.nmeta)
         pred, est = ck.predictions, ck.estimates
         ck_err = float(np.max(np.abs(pred - est)))
         ck_pass = bool(ck_err < 0.1)

@@ -1,0 +1,120 @@
+{
+ "TBCB_Y451F_Tuba1a_tail": {
+  "quantity": "ddG_bind TBCB (Y451F, Tuba1a tail)",
+  "value": 0.634153453122984,
+  "sd": 0.1949370770059375,
+  "method": "(t_a1a_cplx_451PHE_folded) - (t_a1a_free_451PHE_folded)",
+  "gate": "check"
+ },
+ "TBCB_Y451F_Tuba1a_tail_Kd_ratio": {
+  "quantity": "Kd ratio_bind TBCB (Y451F, Tuba1a tail) = exp(ddG/kT)",
+  "value": 2.799425416582137,
+  "sd": null,
+  "method": "derived from ddG",
+  "prov": "derived",
+  "gate": "check"
+ },
+ "TBCB_F449Y_Tuba8_tail": {
+  "quantity": "ddG_bind TBCB (F449Y, Tuba8 tail)",
+  "value": -0.5970529574275361,
+  "sd": 0.18520255879915304,
+  "method": "(t_a8_cplx_449TYR_folded) - (t_a8_free_449TYR_folded)",
+  "gate": "check"
+ },
+ "TBCB_F449Y_Tuba8_tail_Kd_ratio": {
+  "quantity": "Kd ratio_bind TBCB (F449Y, Tuba8 tail) = exp(ddG/kT)",
+  "value": 0.37939045906863134,
+  "sd": null,
+  "method": "derived from ddG",
+  "prov": "derived",
+  "gate": "check"
+ },
+ "TBCB-K188A_Y451F_Tuba1a_tail": {
+  "quantity": "ddG_bind TBCB-K188A (Y451F, Tuba1a tail)",
+  "value": 0.31811913133490677,
+  "sd": 0.21400273294510008,
+  "method": "(t_a1a_K188A_cplx_451PHE_folded) - (t_a1a_free_451PHE_folded)",
+  "gate": "check"
+ },
+ "TBCB-K188A_Y451F_Tuba1a_tail_Kd_ratio": {
+  "quantity": "Kd ratio_bind TBCB-K188A (Y451F, Tuba1a tail) = exp(ddG/kT)",
+  "value": 1.6759819257730477,
+  "sd": null,
+  "method": "derived from ddG",
+  "prov": "derived",
+  "gate": "check"
+ },
+ "TBCB-K188A_F449Y_Tuba8_tail": {
+  "quantity": "ddG_bind TBCB-K188A (F449Y, Tuba8 tail)",
+  "value": -0.2787113487360422,
+  "sd": 0.19304254729950202,
+  "method": "(t_a8_K188A_cplx_449TYR_folded) - (t_a8_free_449TYR_folded)",
+  "gate": "check"
+ },
+ "TBCB-K188A_F449Y_Tuba8_tail_Kd_ratio": {
+  "quantity": "Kd ratio_bind TBCB-K188A (F449Y, Tuba8 tail) = exp(ddG/kT)",
+  "value": 0.6360812282877691,
+  "sd": null,
+  "method": "derived from ddG",
+  "prov": "derived",
+  "gate": "check"
+ },
+ "TBCE_Y451F_Tuba1a_tail": {
+  "quantity": "ddG_bind TBCE (Y451F, Tuba1a tail)",
+  "value": 0.5667203217749694,
+  "sd": 0.5913926391619496,
+  "method": "(e_a1a_cplx_451PHE_folded) - (t_a1a_free_451PHE_folded)",
+  "gate": "check"
+ },
+ "TBCE_Y451F_Tuba1a_tail_Kd_ratio": {
+  "quantity": "Kd ratio_bind TBCE (Y451F, Tuba1a tail) = exp(ddG/kT)",
+  "value": 2.50916679029287,
+  "sd": null,
+  "method": "derived from ddG",
+  "prov": "derived",
+  "gate": "check"
+ },
+ "TBCE_F449Y_Tuba8_tail": {
+  "quantity": "ddG_bind TBCE (F449Y, Tuba8 tail)",
+  "value": -0.02752682018596886,
+  "sd": 0.2070458861005071,
+  "method": "(e_a8_cplx_449TYR_folded) - (t_a8_free_449TYR_folded)",
+  "gate": "check"
+ },
+ "TBCE_F449Y_Tuba8_tail_Kd_ratio": {
+  "quantity": "Kd ratio_bind TBCE (F449Y, Tuba8 tail) = exp(ddG/kT)",
+  "value": 0.9562996453666053,
+  "sd": null,
+  "method": "derived from ddG",
+  "prov": "derived",
+  "gate": "check"
+ },
+ "coupling_K188_hydroxyl_Tuba1a_tail": {
+  "quantity": "ddG_int = ddG(Y->F | K188A) - ddG(Y->F | WT), Tuba1a tail",
+  "value": -0.3160343217880772,
+  "sd": 0.2894782093691866,
+  "method": "difference of ddG",
+  "gate": ""
+ },
+ "coupling_K188_hydroxyl_Tuba8_tail": {
+  "quantity": "ddG_int = ddG(Y->F | K188A) - ddG(Y->F | WT), Tuba8 tail (from F->Y legs)",
+  "value": -0.31834160869149386,
+  "sd": 0.2675171262809808,
+  "method": "difference of ddG",
+  "gate": ""
+ },
+ "transfer_selectivity_Y451F_Tuba1a": {
+  "quantity": "ddG_transfer(Y->F) = ddG_bind,TBCE - ddG_bind,TBCB, Tuba1a tail",
+  "value": -0.06743313134801454,
+  "sd": 0.6226923137847092,
+  "method": "difference of ddG",
+  "gate": ""
+ },
+ "transfer_selectivity_F449Y_Tuba8": {
+  "quantity": "ddG_transfer(F->Y) = ddG_bind,TBCE - ddG_bind,TBCB, Tuba8 tail",
+  "value": 0.5695261372415672,
+  "sd": 0.27779126468789095,
+  "method": "difference of ddG",
+  "gate": ""
+ }
+}

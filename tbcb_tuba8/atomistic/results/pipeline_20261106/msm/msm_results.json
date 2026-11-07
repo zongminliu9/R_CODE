@@ -1,0 +1,220 @@
+{
+ "lag_ns": 0.2,
+ "implied_timescales_ns": {
+  "0.02": [
+   87.21397694811218,
+   23.17131435405788,
+   18.899884709500117,
+   9.825552379841962,
+   4.347471887770292
+  ],
+  "0.04": [
+   113.61130153952725,
+   44.377790083820386,
+   19.095184764991618,
+   14.764011274285394,
+   6.973500609444654
+  ],
+  "0.1": [
+   173.38595575281977,
+   65.47695488597654,
+   23.32608605236744,
+   19.3531574127406,
+   10.850145641099774
+  ],
+  "0.2": [
+   412.4472909693302,
+   82.03844064576853,
+   31.06715944765104,
+   20.065991704123224,
+   14.993164345935414
+  ],
+  "0.5": [
+   1615.5187079515144,
+   90.30332390365999,
+   40.48951334502814,
+   40.28436582030513,
+   18.27555953319816
+  ],
+  "1.0": [
+   140.06474686965527,
+   82.28601087733148,
+   57.67873720490349,
+   43.758616641350045,
+   18.679501260105617
+  ],
+  "2.0": [
+   240.00704175260253,
+   131.66193857614056,
+   76.98908556170659,
+   70.4147835239386,
+   18.475402868847567
+  ],
+  "5.0": [
+   95.296397640833,
+   23.147815061918404,
+   12.824893224779284,
+   10.229777174573847,
+   7.972724365244308
+  ]
+ },
+ "tica_dim": 24,
+ "n_meta": 3,
+ "systems": {
+  "a1a": {
+   "failed_ck": {
+    "n_traj": 1,
+    "ns": 200.0,
+    "active_fraction": 0.9705,
+    "macro_populations": [
+     0.0,
+     0.0,
+     0.9999999999999999
+    ],
+    "macro_cv": {
+     "0": {
+      "n_frames": 44,
+      "mean_rmsd_loop_A": 2.7536628246307373,
+      "frac_phi43_left": 1.0
+     },
+     "1": {
+      "n_frames": 0,
+      "mean_rmsd_loop_A": null,
+      "frac_phi43_left": null
+     },
+     "2": {
+      "n_frames": 9956,
+      "mean_rmsd_loop_A": 2.8437814712524414,
+      "frac_phi43_left": 0.9052832462836481
+     }
+    },
+    "mfpt_ns": {},
+    "ck_max_abs_dev": "ck failed: ck_test() got an unexpected keyword argument 'n_metastable_sets'",
+    "ck_pass": null,
+    "slowest_timescales_ns": [
+     20.123696944688017,
+     6.274755845404326,
+     1.8748610565044788
+    ]
+   }
+  },
+  "a1b": {
+   "failed_ck": {
+    "n_traj": 1,
+    "ns": 200.0,
+    "active_fraction": 0.8622,
+    "macro_populations": [
+     0.7910375857075667,
+     0.11216781367766399,
+     0.09679460061476931
+    ],
+    "macro_cv": {
+     "0": {
+      "n_frames": 9743,
+      "mean_rmsd_loop_A": 4.932135105133057,
+      "frac_phi43_left": 0.7423791440008211
+     },
+     "1": {
+      "n_frames": 128,
+      "mean_rmsd_loop_A": 4.948667526245117,
+      "frac_phi43_left": 1.0
+     },
+     "2": {
+      "n_frames": 129,
+      "mean_rmsd_loop_A": 3.9131510257720947,
+      "frac_phi43_left": 1.0
+     }
+    },
+    "mfpt_ns": {
+     "0->1": 131.5832751104673,
+     "0->2": 125.37278003819338,
+     "1->0": 27.14954964793862,
+     "1->2": 2.7137003177806367,
+     "2->0": 26.518423072101502,
+     "2->1": 5.6033093225533825
+    },
+    "ck_max_abs_dev": "ck failed: ck_test() got an unexpected keyword argument 'n_metastable_sets'",
+    "ck_pass": null,
+    "slowest_timescales_ns": [
+     41.0598471722436,
+     30.673569049641674,
+     15.034018551522918
+    ]
+   }
+  },
+  "a4a": {
+   "failed_ck": {
+    "n_traj": 1,
+    "ns": 200.0,
+    "active_fraction": 0.6942,
+    "macro_populations": [
+     1.0000000000000002,
+     0.0,
+     0.0
+    ],
+    "macro_cv": {
+     "0": {
+      "n_frames": 9999,
+      "mean_rmsd_loop_A": 6.038084506988525,
+      "frac_phi43_left": 0.47434743474347435
+     },
+     "1": {
+      "n_frames": 0,
+      "mean_rmsd_loop_A": null,
+      "frac_phi43_left": null
+     },
+     "2": {
+      "n_frames": 1,
+      "mean_rmsd_loop_A": 4.000750541687012,
+      "frac_phi43_left": 1.0
+     }
+    },
+    "mfpt_ns": {},
+    "ck_max_abs_dev": "ck failed: ck_test() got an unexpected keyword argument 'n_metastable_sets'",
+    "ck_pass": null,
+    "slowest_timescales_ns": [
+     49.323365547309685,
+     15.373969810190205,
+     8.363895592421505
+    ]
+   }
+  },
+  "a8": {
+   "failed_ck": {
+    "n_traj": 1,
+    "ns": 200.0,
+    "active_fraction": 0.8432,
+    "macro_populations": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "macro_cv": {
+     "0": {
+      "n_frames": 8888,
+      "mean_rmsd_loop_A": 7.852506637573242,
+      "frac_phi43_left": 1.0
+     },
+     "1": {
+      "n_frames": 1112,
+      "mean_rmsd_loop_A": 4.473367691040039,
+      "frac_phi43_left": 1.0
+     },
+     "2": {
+      "n_frames": 0,
+      "mean_rmsd_loop_A": null,
+      "frac_phi43_left": null
+     }
+    },
+    "mfpt_ns": {},
+    "ck_max_abs_dev": "ck failed: ck_test() got an unexpected keyword argument 'n_metastable_sets'",
+    "ck_pass": null,
+    "slowest_timescales_ns": [
+     7.310242306816471,
+     4.750405555038486,
+     2.784457570170366
+    ]
+   }
+  }
+ }
+}

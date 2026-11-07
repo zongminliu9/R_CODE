@@ -1,0 +1,33 @@
+Warning on use of the timeseries module: If the inherent timescales of the system are long compared to those being analyzed, this statistical inefficiency may be an underestimate.  The estimate presumes the use of many statistically independent samples.  Tests should be performed to assess whether this condition is satisfied.   Be cautious in the interpretation of the data.
+
+****** PyMBAR will use 64-bit JAX! *******
+* JAX is currently set to 32-bit bitsize *
+* which is its default.                  *
+*                                        *
+* PyMBAR requires 64-bit mode and WILL   *
+* enable JAX's 64-bit mode when called.  *
+*                                        *
+* This MAY cause problems with other     *
+* Uses of JAX in the same code.          *
+******************************************
+
+
+******* JAX 64-bit mode is now on! *******
+*     JAX is now set to 64-bit mode!     *
+*   This MAY cause problems with other   *
+*      uses of JAX in the same code.     *
+******************************************
+
+An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
+wrote interim/20261106_1200m/fep_interim.json
+a1a_270VAL  [ref a1a_270VAL_unfolded]: ddG_fold = -1.49 +/- 1.07 kcal/mol
+a1a_294SER  [ref a1a_294SER_unfolded]: ddG_fold = +0.19 +/- 0.17 kcal/mol
+a1a_110VAL_folded {'n_replicates': 2, 'n_passing': 0, 'mean_dG_kcal': None, 'sd_dG_kcal': None, 'sem_dG_kcal': None}
+a1a_110VAL_unfolded {'n_replicates': 2, 'n_passing': 2, 'mean_dG_kcal': -17.329951735362982, 'sd_dG_kcal': 0.06719796495722404, 'sem_dG_kcal': 0.0475161367031891, 'max_half_split_kcal': 0.25084073969113874, 'gate_half_split': False}
+a1a_270VAL_folded {'n_replicates': 2, 'n_passing': 2, 'mean_dG_kcal': -9.94773664695767, 'sd_dG_kcal': 1.0689112990963336, 'sem_dG_kcal': 0.7558344280779394, 'max_half_split_kcal': 1.104221266203794, 'gate_half_split': False}
+a1a_270VAL_unfolded {'n_replicates': 2, 'n_passing': 2, 'mean_dG_kcal': -8.458135567199397, 'sd_dG_kcal': 0.11186352451360441, 'sem_dG_kcal': 0.07909945675099726, 'max_half_split_kcal': 0.2764675985047784, 'gate_half_split': False}
+a1a_294SER_folded {'n_replicates': 2, 'n_passing': 2, 'mean_dG_kcal': -4.125827871395984, 'sd_dG_kcal': 0.1513548716385226, 'sem_dG_kcal': 0.10702405610121878, 'max_half_split_kcal': 0.022630100920864926, 'gate_half_split': True}
+a1a_294SER_unfolded {'n_replicates': 2, 'n_passing': 2, 'mean_dG_kcal': -4.316571024099316, 'sd_dG_kcal': 0.07828726007174067, 'sem_dG_kcal': 0.055357452477242663, 'max_half_split_kcal': 0.27235764348057234, 'gate_half_split': False}
+a1a_loop8_114SER_folded {'n_replicates': 2, 'n_passing': 0, 'mean_dG_kcal': None, 'sd_dG_kcal': None, 'sem_dG_kcal': None}
+a8_loop1A_114ILE_folded {'n_replicates': 3, 'n_passing': 1, 'mean_dG_kcal': 7.266735316413848, 'sd_dG_kcal': None, 'sem_dG_kcal': None, 'max_half_split_kcal': 0.39714637119982843, 'gate_half_split': False}
+a09 exit 0

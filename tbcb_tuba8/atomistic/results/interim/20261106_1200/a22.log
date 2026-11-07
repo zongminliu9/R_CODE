@@ -1,0 +1,177 @@
+{
+ "TBCB_Y451F_Tuba1a_tail": {
+  "quantity": "ddG_bind TBCB (Y451F, Tuba1a tail)",
+  "value": 0.634153453122984,
+  "sd": 0.1949370770059375,
+  "method": "(t_a1a_cplx_451PHE_folded) - (t_a1a_free_451PHE_folded)",
+  "gate": "check"
+ },
+ "TBCB_Y451F_Tuba1a_tail_Kd_ratio": {
+  "quantity": "Kd ratio_bind TBCB (Y451F, Tuba1a tail) = exp(ddG/kT)",
+  "value": 2.799425416582137,
+  "sd": null,
+  "method": "derived from ddG",
+  "prov": "derived",
+  "gate": "check"
+ },
+ "TBCB_F449Y_Tuba8_tail": {
+  "quantity": "ddG_bind TBCB (F449Y, Tuba8 tail)",
+  "value": -0.5970529574275361,
+  "sd": 0.18520255879915304,
+  "method": "(t_a8_cplx_449TYR_folded) - (t_a8_free_449TYR_folded)",
+  "gate": "check"
+ },
+ "TBCB_F449Y_Tuba8_tail_Kd_ratio": {
+  "quantity": "Kd ratio_bind TBCB (F449Y, Tuba8 tail) = exp(ddG/kT)",
+  "value": 0.37939045906863134,
+  "sd": null,
+  "method": "derived from ddG",
+  "prov": "derived",
+  "gate": "check"
+ },
+ "TBCB-K188A_Y451F_Tuba1a_tail": {
+  "quantity": "ddG_bind TBCB-K188A (Y451F, Tuba1a tail)",
+  "value": 0.31811913133490677,
+  "sd": 0.21400273294510008,
+  "method": "(t_a1a_K188A_cplx_451PHE_folded) - (t_a1a_free_451PHE_folded)",
+  "gate": "check"
+ },
+ "TBCB-K188A_Y451F_Tuba1a_tail_Kd_ratio": {
+  "quantity": "Kd ratio_bind TBCB-K188A (Y451F, Tuba1a tail) = exp(ddG/kT)",
+  "value": 1.6759819257730477,
+  "sd": null,
+  "method": "derived from ddG",
+  "prov": "derived",
+  "gate": "check"
+ },
+ "TBCB-K188A_F449Y_Tuba8_tail": {
+  "quantity": "ddG_bind TBCB-K188A (F449Y, Tuba8 tail)",
+  "value": -0.2787113487360422,
+  "sd": 0.19304254729950202,
+  "method": "(t_a8_K188A_cplx_449TYR_folded) - (t_a8_free_449TYR_folded)",
+  "gate": "check"
+ },
+ "TBCB-K188A_F449Y_Tuba8_tail_Kd_ratio": {
+  "quantity": "Kd ratio_bind TBCB-K188A (F449Y, Tuba8 tail) = exp(ddG/kT)",
+  "value": 0.6360812282877691,
+  "sd": null,
+  "method": "derived from ddG",
+  "prov": "derived",
+  "gate": "check"
+ },
+ "TBCE_Y451F_Tuba1a_tail": {
+  "quantity": "ddG_bind TBCE (Y451F, Tuba1a tail)",
+  "value": 0.566
+{
+ "e_a1a_cplx": {
+  "tau_ns": 1.7146500000000002,
+  "ci95": [
+   1.15795,
+   2.23055
+  ],
+  "n": 30,
+  "censored": 0,
+  "gate": "ok",
+  "koff_relative_to_Tuba1a_EEY": 1.263785612224069
+ },
+ "e_a8_cplx": {
+  "tau_ns": 1.2022,
+  "ci95": [
+   0.85095,
+   1.4511
+  ],
+  "n": 30,
+  "censored": 0,
+  "gate": "ok",
+  "koff_relative_to_Tuba1a_EEY": 1.802487106970554
+ },
+ "t_a1aYF_K188A_cplx": {
+  "tau_ns": 1.7924000000000002,
+  "ci95": [
+   1.4851,
+   2.01765
+  ],
+  "n": 30,
+  "censored": 0,
+  "gate": "ok",
+  "koff_relative_to_Tuba1a_EEY": 1.2089656326712785
+ },
+ "t_a1aYF_cplx": {
+  "tau_ns": 2.3518,
+  "ci95": [
+   1.8643999999999998,
+   2.712155
+  ],
+  "n": 30,
+  "censored": 0,
+  "gate": "ok",
+  "koff_relative_to_Tuba1a_EEY": 0.921400629305213
+ },
+ "t_a1a_K188A_cplx": {
+  "tau_ns": 1.927,
+  "ci95": [
+   1.6878412500000002,
+   2.7349
+  ],
+  "n": 30,
+  "censored": 0,
+  "gate": "ok",
+  "koff_relative_to_Tuba1a_EEY": 1.1245199792423455
+ },
+ "t_a1a_cplx": {
+  "tau_ns": 2.16695,
+  "ci95": [
+   1.8219162500000001,
+   2.68275
+  ],
+  "n": 30,
+  "censored": 0,
+  "gate": "ok",
+  "koff_relative_to_Tuba1a_EEY": 1.0
+ },
+ "t_a8FY_K188A_cplx": {
+  "tau_ns": 2.3657500000000002,
+  "ci95": [
+   1.93375,
+   3.34685
+  ],
+  "n": 30,
+  "censored": 0,
+  "gate": "ok",
+  "koff_relative_to_Tuba1a_EEY": 0.9159674521821831
+ },
+ "t_a8FY_cplx": {
+  "tau_ns": 3.09175,
+  "ci95": [
+   2.5583,
+   4.12455
+  ],
+  "n": 30,
+  "censored": 1,
+  "gate": "1 censored (lower bound)",
+  "koff_relative_to_Tuba1a_EEY": 0.7008813778604349
+ },
+ "t_a8_K188A_cplx": {
+  "tau_ns": 2.30645,
+  "ci95": [
+   1.8608,
+   2.873361249999998
+  ],
+  "n": 30,
+  "censored": 0,
+  "gate": "ok",
+  "koff_relative_to_Tuba1a_EEY": 0.9395174402219861
+ },
+ "t_a8_cplx": {
+  "tau_ns": 2.1407,
+  "ci95": [
+   1.94985,
+   2.72585
+  ],
+  "n": 30,
+  "censored": 0,
+  "gate": "ok",
+  "koff_relative_to_Tuba1a_EEY": 1.0122623440930538
+ }
+}
+a22 exit 0

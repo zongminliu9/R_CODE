@@ -2,7 +2,7 @@
 """Number tables for the interim results report, read only from complete analysis JSON files (never from logs).
 One generator for every number in the report: FEP legs and ddG (a09 + a27), loop 32-45 states (a26 series with the
 calibrated thresholds), complex interfaces (a25), residue level (a13), 450 K unfolding (a18), REST2 progress (a10),
-docking controls (HADDOCK caprieval JSON).
+docking controls (HADDOCK caprieval JSON), tail binding ddG and tauRAMD (a22), US-phi43 (a17), MSM (a11).
 Usage: compile_interim_tables.py --interim <dir> [--iface_dir <dir>] [--dock_dir <dir>] --thresholds <json>
                                  [--fep_extra LABEL=<fep_interim.json>] --out <prefix>   (writes <prefix>.md and .json)
 """
@@ -18,6 +18,10 @@ ap.add_argument('--out', required=True)
 ap.add_argument('--conv_extra', action='append', default=[], help='LABEL=fep_convergence.json of an earlier pass (repeatable)')
 ap.add_argument('--residue_extra', action='append', default=[], help='LABEL=residue_*.json of an earlier pass (repeatable)')
 ap.add_argument('--fep_extra', action='append', default=[], help='LABEL=fep_interim.json of an earlier pass (repeatable)')
+ap.add_argument('--unfold_extra', action='append', default=[], help='SID=a18 json (e.g. results/unfold/a8.json) (repeatable)')
+ap.add_argument('--rest2_extra', action='append', default=[], help='SID=rest2_results.json (repeatable)')
+ap.add_argument('--msm', action='append', default=[], help='LABEL=msm_results.json (repeatable)')
+ap.add_argument('--binding_dir', default=None, help='directory with tail_rbfe.json / ramd_results.json (default: <interim>/binding)')
 a = ap.parse_args()
 I = a.interim
 OUT = {}
@@ -281,7 +285,7 @@ if res:
                 e = (ec or 0) + (el or 0)
                 ese = math.hypot(se.get('E_coul_block_se_kcal', 0) or 0, se.get('E_lj_block_se_kcal', 0) or 0)
                 rec[k] = dict(resname=x['resname'], E_local=e, E_se=ese, E_coul=ec, E_lj=el,
-                              E_lj_se=se.get('E_lj_block_se_kcal'), rel_sasa=x['rel_sasa_mean'][0],
+                              E_lj_se=se.get('E_lj_block_se_kcal'), rel_sasa=x['rel_sasa_mean'][0], SASA_se=se.get('rel_sasa_block_se'),
                               hydrophobic_partners=(x.get('hydrophobic_partners_mean') or [None])[0],
                               salt_bridges=x.get('salt_bridges', [[]])[0], hbonds=x.get('hbonds', [[]])[0])
                 cells.append(f"{x['resname'][:3].title()} {f(e, 1)}±{f(ese, 1)}（LJ {f(el, 1)}）；SASA {f(x['rel_sasa_mean'][0], 0)}%")
@@ -313,11 +317,51 @@ if res:
             md.append(f"| {k} | {v[0]['resname']} | {f(min(E), 1)} … {f(max(E), 1)} | {f(min(LJ), 1)} … {f(max(LJ), 1)} | "
                       f"{f(min(SA), 0)} … {f(max(SA), 0)} | {', '.join(sb) if sb else '—'} |")
         md.append('')
+    # TUBA8 against TUBA1A / 1B / 4A on the same window: a difference counts only if TUBA8 lies outside the range of all
+    # three by more than 3 combined block SEs of the nearest one (the criterion used since 2026-11-05 01:25)
+    by_w8 = {}
+    for fn, r in OUT['residue'].items():
+        if r['system'] in ('a1a', 'a1b', 'a4a', 'a8'):
+            by_w8.setdefault(f"{r['window'][0]:.0f}-{r['window'][1]:.0f}", {})[r['system']] = r
+    for wl, rs in sorted(by_w8.items()):
+        if 'a8' not in rs or len(rs) < 3:
+            continue
+        others = [rs[k] for k in ('a1a', 'a1b', 'a4a') if k in rs]
+        md.append(f"TUBA8 与 {'/'.join(r['system'] for r in others)} 对比（窗口 {wl} ns；差值 = TUBA8 减去最接近的那个同种型；"
+                  f"超出其余三者范围且大于 3 倍合并块误差才记为差异）：\n")
+        md.append('| 位点 | TUBA8 | 其余 | 局部能量 TUBA8 / 其余范围 | 差值（倍合并 SE） | 其中 LJ TUBA8 / 其余范围 | 差值（倍合并 SE） | 相对 SASA TUBA8 / 其余范围 % | 差值（倍合并 SE） |')
+        md.append('|---|---|---|---|---|---|---|---|---|')
+        OUT.setdefault('residue_tuba8_vs_others', {})[wl] = {}
+        for k in POS:
+            x8 = rs['a8']['positions'].get(k)
+            ov = [r['positions'][k] for r in others if k in r['positions']]
+            if not x8 or not ov:
+                continue
+            def cmp(key, sekey):
+                v8 = x8[key]; vals = [o[key] for o in ov]
+                near = min(ov, key=lambda o: abs(o[key] - v8))
+                se = math.hypot(x8.get(sekey) or 0, near.get(sekey) or 0) or 1e-9
+                d = v8 - near[key]
+                outside = v8 < min(vals) or v8 > max(vals)
+                return v8, min(vals), max(vals), d, abs(d) / se, (outside and abs(d) > 3 * se)
+            for o in [x8] + ov:
+                o.setdefault('SASA_se', None)
+            e = cmp('E_local', 'E_se')
+            lj = cmp('E_lj', 'E_lj_se')
+            sa = cmp('rel_sasa', 'SASA_se') if all(o.get('SASA_se') is not None for o in [x8] + ov) else None
+            OUT['residue_tuba8_vs_others'][wl][k] = dict(E=e, LJ=lj, SASA=sa, res8=x8['resname'], res_other=ov[0]['resname'])
+            md.append(f"| {k} | {x8['resname'].title()} | {ov[0]['resname'].title()} | {f(e[0], 1)} / {f(e[1], 1)} … {f(e[2], 1)} | "
+                      f"{f(e[3], 1)}（{f(e[4], 1)}）{' **差异**' if e[5] else ''} | "
+                      f"{f(lj[0], 1)} / {f(lj[1], 1)} … {f(lj[2], 1)} | {f(lj[3], 1)}（{f(lj[4], 1)}）{' **差异**' if lj[5] else ''} | "
+                      f"{f(x8['rel_sasa'], 0)} / {f(min(o['rel_sasa'] for o in ov), 0)} … {f(max(o['rel_sasa'] for o in ov), 0)} | "
+                      f"{(f(sa[3], 0) + '（' + f(sa[4], 1) + '）' + (' **差异**' if sa[5] else '')) if sa else '—'} |")
+        md.append('')
 
 # ---------------------------------------------------------------- 450 K unfolding
-for p in sorted(glob.glob(os.path.join(I, 'unfold_md450_*.json'))):
+UNF = [(os.path.basename(p)[len('unfold_md450_'):-5], p) for p in sorted(glob.glob(os.path.join(I, 'unfold_md450_*.json')))]
+UNF += [tuple(x.split('=', 1)) for x in a.unfold_extra]
+for sid, p in UNF:
     d = load(p)
-    sid = os.path.basename(p)[len('unfold_md450_'):-5]
     OUT.setdefault('unfold', {})[sid] = d
     reps = sorted(d.get('replicas', {}))
     md.append(f'## 450 K 去折叠（a18，{sid}；Q_u = 该区段起始天然重原子接触的分数，t_half = 1 ns 滑动平均首次 < 0.5 的时间）\n')
@@ -343,21 +387,96 @@ for p in sorted(glob.glob(os.path.join(I, 'unfold_md450_*.json'))):
                   f"GTP–蛋白接触原子数 起/末 {R.get('gtp_protein_contacts_first_last')}")
     md.append('')
 
+if len(OUT.get('unfold', {})) >= 2:
+    U = OUT['unfold']
+    sids = list(U)
+    groups = list(U[sids[0]]['groups'])
+    md.append('450 K 各区段 t_half（ns；每个体系按副本列出，"—" 表示 20 ns 内未跌破 0.5）：\n')
+    md.append('| 区段 | ' + ' | '.join(sids) + ' |')
+    md.append('|---|' + '---|' * len(sids))
+    for g in groups:
+        cells = []
+        for sid in sids:
+            reps = sorted(U[sid]['replicas'])
+            cells.append(' / '.join(f(U[sid]['replicas'][r].get(g, {}).get('t_half_ns'), 1) for r in reps))
+        md.append(f'| {g} | ' + ' | '.join(cells) + ' |')
+    md.append('')
+
 # ---------------------------------------------------------------- REST2 progress
-r2 = sorted(glob.glob(os.path.join(I, 'rest2_*.json')))
-if r2:
-    md.append('## REST2 进度（310 K 态；N/I/U 用同一校准阈值）\n')
-    md.append('| 体系 | 每副本 ns | 往返 | g | 独立样本 | p(N) / p(I) / p(U) | 块 SD(p_N) | 直接计数 p(N) |')
-    md.append('|---|---|---|---|---|---|---|---|')
+R2 = [(os.path.basename(p)[len('rest2_'):-5], p) for p in sorted(glob.glob(os.path.join(I, 'rest2_*.json')))]
+R2 += [tuple(x.split('=', 1)) for x in a.rest2_extra]
+if R2:
+    md.append('## REST2（310 K 态；N/I/U 用同一校准阈值）\n')
+    md.append('| 体系 | 每副本 ns | 往返 | g | 独立样本 | p(N) / p(I) / p(U) | 块 SD p(N) / p(U) | p(φ43 > 0) | 平均 Q(λ=1.2) / 环 RMSD Å |')
+    md.append('|---|---|---|---|---|---|---|---|---|')
     OUT['rest2'] = {}
-    for p in r2:
+    for sid, p in R2:
         d = load(p)
-        sid = os.path.basename(p)[len('rest2_'):-5]
-        OUT['rest2'][sid] = {k: d[k] for k in ('p', 'block_sd', 'ns_per_replica', 'round_trips', 'g', 'n_samples',
-                                               'state0_direct') if k in d}
-        md.append(f"| {sid} | {f(d['ns_per_replica'], 1)} | {d['round_trips']} | {f(d['g'], 0)} | {d['n_samples']} | "
-                  f"{f(d['p']['N'], 3)} / {f(d['p']['I'], 3)} / {f(d['p']['U'], 3)} | {f(d['block_sd']['p_N'], 3)} | "
-                  f"{f(d['state0_direct']['p']['N'], 3)} |")
+        b = d.get('block_sd') or {}
+        OUT['rest2'][sid] = {k: d.get(k) for k in ('p', 'block_sd', 'ns_per_replica', 'round_trips', 'g', 'n_samples',
+                                                   'state0_direct', 'p_phi43_left', 'mean_Q_loop', 'mean_rmsd_loop_A')}
+        md.append(f"| {sid} | {f(d.get('ns_per_replica'), 1)} | {d.get('round_trips')} | {f(d.get('g'), 0)} | {d.get('n_samples')} | "
+                  f"{f(d['p']['N'], 3)} / {f(d['p']['I'], 3)} / {f(d['p']['U'], 3)} | {f(b.get('p_N'), 3)} / {f(b.get('p_U'), 3)} | "
+                  f"{f(d.get('p_phi43_left'), 2)} | {f(d.get('mean_Q_loop'), 3)} / {f(d.get('mean_rmsd_loop_A'), 2)} |")
+    md.append('')
+
+# ---------------------------------------------------------------- tail binding (a22): ddG_bind and tauRAMD
+BD = a.binding_dir or os.path.join(I, 'binding')
+tb = os.path.join(BD, 'tail_rbfe.json')
+if os.path.exists(tb):
+    T = load(tb)
+    OUT['tail_rbfe'] = T
+    md.append('## 尾肽结合（a22；ΔΔG(Y→F) > 0 表示 Phe 尾结合更弱；kcal/mol）\n')
+    md.append('| 量 | 值 | SD | 收敛门 | 计算方法 |')
+    md.append('|---|---|---|---|---|')
+    for k, v in T.items():
+        md.append(f"| {v.get('quantity', k)} | {f(v.get('value'), 2 if 'Kd' not in k else 3)} | {f(v.get('sd'), 2)} | {v.get('gate', '')} | {v.get('method', '')} |")
+    md.append('')
+rr = os.path.join(BD, 'ramd_results.json')
+if os.path.exists(rr):
+    RM = load(rr)
+    OUT['ramd'] = RM
+    if RM:
+        md.append('## τRAMD 停留时间（每条轨迹的解离时间取中位数，bootstrap 95 % 区间；未解离的按 20 ns 截断计，为下界）\n')
+        md.append('| 体系 | τ ns | 95 % 区间 | 轨迹数 | 截断数 | koff 相对 TUBA1A 尾（EEY） |')
+        md.append('|---|---|---|---|---|---|')
+        for k, v in RM.items():
+            md.append(f"| {k} | {f(v['tau_ns'], 2)} | {f(v['ci95'][0], 2)} – {f(v['ci95'][1], 2)} | {v['n']} | {v['censored']} | "
+                      f"{f(v.get('koff_relative_to_Tuba1a_EEY'), 2)} |")
+        md.append('')
+
+# ---------------------------------------------------------------- US along phi43 (a17)
+us = sorted(glob.glob(os.path.join(I, 'usphi_*.json')))
+if us:
+    md.append('## φ43 伞形采样（a17；W(φ) 由 MBAR 得到；ΔG = 左手（φ > 0）盆地减右手盆地，kcal/mol）\n')
+    md.append('| 体系 | ΔG(左 − 右) | p(左手) | 经 φ = 0 的势垒 | 经 φ = 180° 的势垒 |')
+    md.append('|---|---|---|---|---|')
+    OUT['usphi'] = {}
+    for p in us:
+        d = load(p); sid = os.path.basename(p)[len('usphi_'):-5]
+        OUT['usphi'][sid] = {k: d.get(k) for k in ('dG_left_minus_right_kcal', 'p_left', 'barrier_via_0_kcal', 'barrier_via_180_kcal')}
+        md.append(f"| {sid} | {f(d.get('dG_left_minus_right_kcal'), 2)} | {f(d.get('p_left'), 3)} | {f(d.get('barrier_via_0_kcal'), 2)} | "
+                  f"{f(d.get('barrier_via_180_kcal'), 2)} |")
+    md.append('')
+
+# ---------------------------------------------------------------- MSM (a11)
+for spec in a.msm:
+    lab, p = spec.split('=', 1)
+    if not os.path.exists(p):
+        continue
+    d = load(p)
+    OUT.setdefault('msm', {})[lab] = d
+    md.append(f"## MSM（a11，{lab}；滞后 {d.get('lag_ns')} ns，TICA {d.get('tica_dim')} 维，{d.get('n_meta')} 个宏态）\n")
+    its = d.get('implied_timescales_ns') or {}
+    md.append('隐含时间尺度（最慢 3 个，ns）随滞后时间：' + '；'.join(f"{k} ns: {', '.join(f(x, 0) for x in v[:3])}" for k, v in its.items()) + '\n')
+    md.append('| 体系 | CK 检验 | CK 最大偏差 | 宏态布居 | 最慢时间尺度 ns |')
+    md.append('|---|---|---|---|---|')
+    for sid, v in (d.get('systems') or {}).items():
+        rec = v.get('failed_ck', v)
+        md.append(f"| {sid} | {'通过' if rec.get('ck_pass') else ('未通过' if rec.get('ck_pass') is False else '没有跑成')} | "
+                  f"{rec.get('ck_max_abs_dev') if isinstance(rec.get('ck_max_abs_dev'), str) else f(rec.get('ck_max_abs_dev'), 3)} | "
+                  f"{', '.join(f(x, 3) for x in (rec.get('macro_populations') or []))} | "
+                  f"{', '.join(f(x, 1) for x in (rec.get('slowest_timescales_ns') or []))} |")
     md.append('')
 
 # ---------------------------------------------------------------- docking controls

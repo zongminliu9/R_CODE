@@ -1,0 +1,47 @@
+{
+ "run": "$SCRATCH/tbcb_atomistic/runs/rest2/a1a/r0",
+ "n_frames": 15000,
+ "class_fraction": {
+  "N": 0.0,
+  "I": 0.256,
+  "U": 0.744
+ },
+ "representatives": [
+  {
+   "file": "rep_I0.pdb",
+   "cls": "I",
+   "frame": 14083,
+   "share_of_310K_frames": 0.1682962962962963,
+   "Q_loop": 0.5075954327654549,
+   "rmsd_loop_A": 6.301298681620084,
+   "phi43": 68.09969952756246
+  },
+  {
+   "file": "rep_I1.pdb",
+   "cls": "I",
+   "frame": 5206,
+   "share_of_310K_frames": 0.0877037037037037,
+   "Q_loop": 0.5227236574778426,
+   "rmsd_loop_A": 4.126952446667868,
+   "phi43": -73.39730535116077
+  },
+  {
+   "file": "rep_U0.pdb",
+   "cls": "U",
+   "frame": 12721,
+   "share_of_310K_frames": 0.3997611940298508,
+   "Q_loop": 0.3021837466121654,
+   "rmsd_loop_A": 4.9959569215102375,
+   "phi43": 172.44971037927922
+  },
+  {
+   "file": "rep_U1.pdb",
+   "cls": "U",
+   "frame": 9551,
+   "share_of_310K_frames": 0.3442388059701492,
+   "Q_loop": 0.09443027809780156,
+   "rmsd_loop_A": 4.970778082019509,
+   "phi43": 80.29122220557865
+  }
+ ]
+}
