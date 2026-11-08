@@ -1,0 +1,58 @@
+Warning on use of the timeseries module: If the inherent timescales of the system are long compared to those being analyzed, this statistical inefficiency may be an underestimate.  The estimate presumes the use of many statistically independent samples.  Tests should be performed to assess whether this condition is satisfied.   Be cautious in the interpretation of the data.
+
+********* JAX NOT FOUND *********
+ PyMBAR can run faster with JAX  
+ But will work fine without it   
+Either install with pip or conda:
+      pip install pybar[jax]     
+               OR                
+      conda install pymbar       
+*********************************
+wrote $SCRATCH/tbcb_atomistic/interim/20261107_1730/fep_convergence.json
+a1a_114SER_folded              r0 it 10000 g 75 teq 0 dG -8.438+/-0.230 blocks ['-9.00', '-8.50', '-7.94', '-8.05'] rev ['-8.22', '-8.52', '-7.85', '-8.62', '-8.44']
+    new torsions on: +7.82->+7.86  old charges off: +2.45->+2.46  sterics swap: -2.45->-2.97  new charges on: -6.34->-5.29  old torsions off: -10.17->-10.11
+a1a_114SER_folded              r1 it 5000 g 3 teq 1 dG -8.789+/-0.074 blocks ['-8.77', '-8.75', '-8.87', '-8.94'] rev ['-8.70', '-8.88', '-8.80', '-8.74', '-8.79']
+    new torsions on: +7.78->+7.74  old charges off: +2.29->+2.29  sterics swap: -2.09->-2.18  new charges on: -6.73->-6.74  old torsions off: -10.07->-9.97
+a1a_114SER_folded              r2 it 10000 g 156 teq 4378 dG -8.517+/-0.315 blocks ['-8.52', '-8.37', '-7.20', '-9.24'] rev ['-9.30', '-8.40', '-8.49', '-8.53', '-8.52']
+    new torsions on: +7.70->+7.91  old charges off: +2.13->+2.32  sterics swap: -1.74->-2.56  new charges on: -6.54->-6.44  old torsions off: -9.90->-10.10
+a1a_114SER_unfolded            r0 it 5000 g 3 teq 46 dG -12.694+/-0.065 blocks ['-12.77', '-12.62', '-12.50', '-12.90'] rev ['-12.83', '-12.81', '-12.72', '-12.67', '-12.69']
+    new torsions on: +8.01->+8.04  old charges off: +2.15->+2.13  sterics swap: -4.76->-4.73  new charges on: -7.70->-7.66  old torsions off: -10.39->-10.48
+a1a_114SER_unfolded            r1 it 5000 g 2 teq 49 dG -12.590+/-0.065 blocks ['-13.05', '-12.09', '-12.42', '-12.81'] rev ['-12.83', '-12.71', '-12.55', '-12.51', '-12.59']
+    new torsions on: +8.08->+8.02  old charges off: +2.17->+2.16  sterics swap: -4.63->-4.62  new charges on: -7.62->-7.77  old torsions off: -10.58->-10.40
+a1a_114SER_unfolded            r2 it 10000 g 3 teq 2 dG -12.590+/-0.046 blocks ['-12.40', '-12.43', '-12.88', '-12.66'] rev ['-12.57', '-12.80', '-12.74', '-12.66', '-12.59']
+    new torsions on: +8.06->+8.02  old charges off: +2.19->+2.23  sterics swap: -4.60->-4.72  new charges on: -7.58->-7.92  old torsions off: -10.49->-10.38
+a8_114ILE_folded               r0 it 10000 g 254 teq 4911 dG +8.084+/-0.424 blocks ['+7.69', '+7.45', '+7.86', '+9.97'] rev ['+7.84', '+8.65', '+8.35', '+8.06', '+8.08']
+    new torsions on: +9.94->+10.25  old charges off: +4.12->+4.68  sterics swap: +2.59->+2.53  new charges on: -1.24->-1.44  old torsions off: -7.79->-8.08
+a8_114ILE_folded               r1 it 5000 g 11 teq 1659 dG +8.069+/-0.126 blocks ['+8.42', '+7.38', '+7.96', '+8.42'] rev ['+8.43', '+8.19', '+8.02', '+7.88', '+8.07']
+    new torsions on: +10.38->+10.16  old charges off: +4.65->+4.63  sterics swap: +1.92->+2.00  new charges on: -1.06->-0.96  old torsions off: -7.90->-7.72
+a8_114ILE_folded               r2 it 5000 g 6 teq 839 dG +8.253+/-0.103 blocks ['+8.70', '+8.06', '+8.49', '+8.09'] rev ['+8.25', '+8.40', '+8.05', '+8.18', '+8.25']
+    new torsions on: +10.24->+10.05  old charges off: +2.45->+2.34  sterics swap: +4.72->+5.04  new charges on: -1.38->-1.39  old torsions off: -7.75->-7.70
+a8_114ILE_unfolded             r0 it 10000 g 3 teq 0 dG +12.245+/-0.046 blocks ['+11.74', '+12.16', '+12.50', '+12.60'] rev ['+12.51', '+12.52', '+12.46', '+12.41', '+12.25']
+    new torsions on: +10.40->+10.26  old charges off: +5.76->+6.11  sterics swap: +4.99->+5.26  new charges on: -1.13->-1.14  old torsions off: -8.07->-7.94
+a8_114ILE_unfolded             r1 it 10000 g 3 teq 0 dG +12.416+/-0.046 blocks ['+12.29', '+12.77', '+12.05', '+12.57'] rev ['+12.57', '+12.35', '+12.39', '+12.45', '+12.42']
+    new torsions on: +10.15->+10.21  old charges off: +6.41->+6.27  sterics swap: +5.24->+5.19  new charges on: -1.21->-1.28  old torsions off: -8.07->-8.08
+a8_114ILE_unfolded             r2 it 10000 g 3 teq 22 dG +12.059+/-0.046 blocks ['+11.98', '+11.98', '+12.16', '+12.13'] rev ['+12.12', '+12.15', '+12.06', '+12.10', '+12.06']
+    new torsions on: +10.34->+10.33  old charges off: +6.12->+6.22  sterics swap: +4.63->+4.76  new charges on: -1.08->-1.13  old torsions off: -8.03->-8.04
+e_a1a_cplx_451PHE_folded       r0 it 5000 g 6 teq 1662 dG +24.440+/-0.089 blocks ['+24.57', '+24.69', '+24.39', '+24.19'] rev ['+23.74', '+24.15', '+24.43', '+24.40', '+24.44']
+e_a1a_cplx_451PHE_folded       r1 it 5000 g 4 teq 1021 dG +25.272+/-0.074 blocks ['+25.34', '+25.35', '+25.21', '+25.05'] rev ['+25.11', '+24.93', '+25.25', '+25.24', '+25.27']
+e_a8_cplx_449TYR_folded        r0 it 10000 g 151 teq 4108 dG -25.073+/-0.320 blocks ['-24.22', '-24.22', '-24.28', '-24.43'] rev ['-23.93', '-24.34', '-24.42', '-24.41', '-25.07']
+e_a8_cplx_449TYR_folded        r1 it 5000 g 4 teq 876 dG -24.381+/-0.082 blocks ['-24.72', '-24.20', '-24.42', '-24.17'] rev ['-23.96', '-24.15', '-24.24', '-24.28', '-24.38']
+e_a8_cplx_449TYR_folded        r2 it 10000 g 4 teq 1903 dG -24.608+/-0.051 blocks ['-24.47', '-24.64', '-24.35', '-25.07'] rev ['-25.15', '-24.69', '-24.70', '-24.69', '-24.61']
+t_a1a_K188A_cplx_451PHE_folded r0 it 5000 g 3 teq 0 dG +24.640+/-0.060 blocks ['+24.54', '+24.82', '+24.42', '+24.76'] rev ['+24.83', '+24.66', '+24.63', '+24.66', '+24.64']
+t_a1a_K188A_cplx_451PHE_folded r1 it 5000 g 3 teq 9 dG +24.753+/-0.059 blocks ['+24.80', '+24.83', '+24.68', '+24.71'] rev ['+24.86', '+24.65', '+24.68', '+24.73', '+24.75']
+t_a1a_K188A_cplx_451PHE_folded r2 it 5000 g 4 teq 1 dG +24.462+/-0.069 blocks ['+24.55', '+24.35', '+24.61', '+24.41'] rev ['+24.17', '+24.53', '+24.57', '+24.43', '+24.46']
+t_a1a_cplx_451PHE_folded       r0 it 5000 g 4 teq 170 dG +25.082+/-0.078 blocks ['+25.33', '+24.96', '+25.50', '+24.59'] rev ['+24.52', '+24.83', '+25.00', '+24.97', '+25.08']
+t_a1a_cplx_451PHE_folded       r1 it 5000 g 3 teq 0 dG +24.719+/-0.062 blocks ['+24.72', '+24.56', '+24.84', '+24.73'] rev ['+24.67', '+24.81', '+24.75', '+24.70', '+24.72']
+t_a1a_cplx_451PHE_folded       r2 it 5000 g 3 teq 28 dG +24.969+/-0.062 blocks ['+24.98', '+25.08', '+24.90', '+24.95'] rev ['+24.95', '+24.98', '+24.81', '+25.01', '+24.97']
+t_a1a_free_451PHE_folded       r0 it 10000 g 2 teq 11 dG +24.364+/-0.040 blocks ['+24.61', '+24.26', '+24.09', '+24.49'] rev ['+24.44', '+24.34', '+24.28', '+24.26', '+24.36']
+t_a1a_free_451PHE_folded       r1 it 10000 g 2 teq 0 dG +24.222+/-0.040 blocks ['+24.16', '+24.32', '+24.28', '+24.12'] rev ['+24.00', '+24.14', '+24.21', '+24.23', '+24.22']
+t_a1a_free_451PHE_folded       r2 it 10000 g 3 teq 36 dG +24.034+/-0.040 blocks ['+24.01', '+24.38', '+23.76', '+23.98'] rev ['+24.02', '+23.84', '+23.99', '+24.06', '+24.03']
+t_a8_K188A_cplx_449TYR_folded  r0 it 10000 g 3 teq 10 dG -24.479+/-0.042 blocks ['-24.65', '-24.22', '-24.48', '-24.59'] rev ['-24.57', '-24.50', '-24.39', '-24.42', '-24.48']
+t_a8_K188A_cplx_449TYR_folded  r1 it 5000 g 2 teq 161 dG -24.451+/-0.059 blocks ['-24.13', '-24.76', '-24.29', '-24.61'] rev ['-24.58', '-24.47', '-24.51', '-24.50', '-24.45']
+t_a8_K188A_cplx_449TYR_folded  r2 it 5000 g 3 teq 42 dG -24.725+/-0.060 blocks ['-24.68', '-24.75', '-24.91', '-24.58'] rev ['-24.71', '-24.63', '-24.72', '-24.72', '-24.72']
+t_a8_cplx_449TYR_folded        r0 it 10000 g 3 teq 64 dG -24.904+/-0.044 blocks ['-24.74', '-24.96', '-25.01', '-24.88'] rev ['-24.90', '-25.03', '-25.04', '-24.99', '-24.90']
+t_a8_cplx_449TYR_folded        r1 it 10000 g 4 teq 822 dG -25.089+/-0.056 blocks ['-24.96', '-25.46', '-25.02', '-24.90'] rev ['-25.04', '-24.96', '-24.98', '-25.10', '-25.09']
+t_a8_cplx_449TYR_folded        r2 it 10000 g 2 teq 4 dG -25.188+/-0.043 blocks ['-24.86', '-25.30', '-25.41', '-25.21'] rev ['-25.47', '-25.16', '-25.35', '-25.30', '-25.19']
+t_a8_free_449TYR_folded        r0 it 5000 g 2 teq 0 dG -24.338+/-0.058 blocks ['-24.38', '-24.38', '-24.18', '-24.42'] rev ['-24.43', '-24.27', '-24.27', '-24.34', '-24.34']
+t_a8_free_449TYR_folded        r1 it 5000 g 3 teq 0 dG -24.446+/-0.067 blocks ['-24.54', '-24.26', '-24.09', '-24.34'] rev ['-24.71', '-24.60', '-24.47', '-24.42', '-24.45']
+t_a8_free_449TYR_folded        r2 it 5000 g 2 teq 0 dG -24.178+/-0.057 blocks ['-24.04', '-24.19', '-23.86', '-24.60'] rev ['-24.59', '-24.26', '-24.25', '-24.20', '-24.18']

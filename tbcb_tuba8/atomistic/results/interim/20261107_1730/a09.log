@@ -1,0 +1,25 @@
+Warning on use of the timeseries module: If the inherent timescales of the system are long compared to those being analyzed, this statistical inefficiency may be an underestimate.  The estimate presumes the use of many statistically independent samples.  Tests should be performed to assess whether this condition is satisfied.   Be cautious in the interpretation of the data.
+
+********* JAX NOT FOUND *********
+ PyMBAR can run faster with JAX  
+ But will work fine without it   
+Either install with pip or conda:
+      pip install pybar[jax]     
+               OR                
+      conda install pymbar       
+*********************************
+wrote $SCRATCH/tbcb_atomistic/interim/20261107_1730/fep_interim.json
+a1a_114SER  [ref a1a_114SER_unfolded]: ddG_fold = +4.04 +/- 0.19 kcal/mol
+a8_114ILE  [ref a8_114ILE_unfolded]: ddG_fold = -4.10 +/- 0.21 kcal/mol
+a1a_114SER_folded {'n_replicates': 3, 'n_passing': 3, 'mean_dG_kcal': -8.581108421126709, 'sd_dG_kcal': 0.18397696726460536, 'sem_dG_kcal': 0.10621915157491088, 'max_half_split_kcal': 0.5003921703013532, 'gate_half_split': True}
+a1a_114SER_unfolded {'n_replicates': 3, 'n_passing': 3, 'mean_dG_kcal': -12.624573939470999, 'sd_dG_kcal': 0.05972216205011817, 'sem_dG_kcal': 0.03448060633622218, 'max_half_split_kcal': 0.3511185646021957, 'gate_half_split': False}
+a8_114ILE_folded {'n_replicates': 3, 'n_passing': 3, 'mean_dG_kcal': 8.135503373303562, 'sd_dG_kcal': 0.10197175260058015, 'sem_dG_kcal': 0.058873418813682875, 'max_half_split_kcal': 1.038880997170442, 'gate_half_split': False}
+a8_114ILE_unfolded {'n_replicates': 3, 'n_passing': 3, 'mean_dG_kcal': 12.240209630448888, 'sd_dG_kcal': 0.17851721789396321, 'sem_dG_kcal': 0.10306696380606274, 'max_half_split_kcal': 0.6017258807034267, 'gate_half_split': False}
+e_a1a_cplx_451PHE_folded {'n_replicates': 2, 'n_passing': 2, 'mean_dG_kcal': 24.856000314174658, 'sd_dG_kcal': 0.5885413706291114, 'sem_dG_kcal': 0.4161615941806698, 'max_half_split_kcal': 0.38949496675652284, 'gate_half_split': True}
+e_a8_cplx_449TYR_folded {'n_replicates': 3, 'n_passing': 3, 'mean_dG_kcal': -24.68731741048049, 'sd_dG_kcal': 0.3524706692649898, 'sem_dG_kcal': 0.20349903578158943, 'max_half_split_kcal': 0.17859019936514287, 'gate_half_split': True}
+t_a1a_K188A_cplx_451PHE_folded {'n_replicates': 3, 'n_passing': 3, 'mean_dG_kcal': 24.618427810027622, 'sd_dG_kcal': 0.14690584148210173, 'sem_dG_kcal': 0.08481612712521992, 'max_half_split_kcal': 0.1338714465893851, 'gate_half_split': True}
+t_a1a_cplx_451PHE_folded {'n_replicates': 3, 'n_passing': 3, 'mean_dG_kcal': 24.923433445522672, 'sd_dG_kcal': 0.18610791299317703, 'sem_dG_kcal': 0.10744945366493021, 'max_half_split_kcal': 0.13644593560810137, 'gate_half_split': True}
+t_a1a_free_451PHE_folded {'n_replicates': 3, 'n_passing': 3, 'mean_dG_kcal': 24.206634698511184, 'sd_dG_kcal': 0.16554347480652057, 'sem_dG_kcal': 0.09557656974213069, 'max_half_split_kcal': 0.3243982570972932, 'gate_half_split': False}
+t_a8_K188A_cplx_449TYR_folded {'n_replicates': 3, 'n_passing': 3, 'mean_dG_kcal': -24.551650420500778, 'sd_dG_kcal': 0.15067687953814593, 'sem_dG_kcal': 0.08699333696200137, 'max_half_split_kcal': 0.0995538500761235, 'gate_half_split': True}
+t_a8_cplx_449TYR_folded {'n_replicates': 3, 'n_passing': 3, 'mean_dG_kcal': -25.06035935764234, 'sd_dG_kcal': 0.1443442184367327, 'sem_dG_kcal': 0.08333717337041377, 'max_half_split_kcal': 0.24920775717402321, 'gate_half_split': False}
+t_a8_free_449TYR_folded {'n_replicates': 3, 'n_passing': 3, 'mean_dG_kcal': -24.320599072822272, 'sd_dG_kcal': 0.13445208244317527, 'sem_dG_kcal': 0.07762594599167301, 'max_half_split_kcal': 0.1332229768315365, 'gate_half_split': True}

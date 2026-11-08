@@ -1,0 +1,3 @@
+r0 500 frames Q_if blocks [0.795, 0.75, 0.758, 0.729]
+r1 500 frames Q_if blocks [0.798, 0.749, 0.764, 0.784]
+wrote $SCRATCH/tbcb_atomistic/interim/20261107_1730/iface_c_tbce_a8_m0.json
