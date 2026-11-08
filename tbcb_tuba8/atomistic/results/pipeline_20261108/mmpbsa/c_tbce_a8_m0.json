@@ -1,0 +1,25 @@
+{
+ "system": "c_tbce_a8_m0",
+ "GB": {
+  "mean": -81.53261563661817,
+  "sd_replicas": 5.832321480123904,
+  "n_replicas": 2
+ },
+ "replicas": {
+  "r0": {
+   "n_frames": 400,
+   "mean": -85.65668970527375,
+   "sd_frames": 15.267411533716702,
+   "sem_naive": 0.7633705766858351,
+   "frames_ligand_reimaged": 0
+  },
+  "r1": {
+   "n_frames": 400,
+   "mean": -77.4085415679626,
+   "sd_frames": 21.249843732076933,
+   "sem_naive": 1.0624921866038466,
+   "frames_ligand_reimaged": 0
+  }
+ },
+ "method": "single-trajectory MM/GBSA, OBC2 mbondi2, 0.15 M, no entropy; ranking score, not an affinity"
+}

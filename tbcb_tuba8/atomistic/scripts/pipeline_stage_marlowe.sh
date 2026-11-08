@@ -7,9 +7,9 @@ STAGE=$1
 
 
 
-PYAMB=/scratch/m000251/zongminl/mm/envs/amb/bin/python
+PYAMB=/scratch/m000251/$USER/mm/envs/amb/bin/python
 export OPENMM_CPU_THREADS=${SLURM_CPUS_PER_TASK:-4}
-ROOT=/scratch/m000251/zongminl/tbcb_mech/atomistic; cd $ROOT
+ROOT=/scratch/m000251/$USER/tbcb_mech/atomistic; cd $ROOT
 RUNS=$ROOT/runs
 RES=$ROOT/results
 SUM=$ROOT/results_summary

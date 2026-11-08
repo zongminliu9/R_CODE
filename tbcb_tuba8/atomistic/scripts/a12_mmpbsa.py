@@ -19,7 +19,7 @@ ap.add_argument('--start_ns', type=float, default=10.0); ap.add_argument('--n_gb
 ap.add_argument('--n_pb', type=int, default=50); ap.add_argument('--decomp', action='store_true')
 ap.add_argument('--dt_ps', type=float, default=20.0)
 a = ap.parse_args()
-AMB = '/scratch/m000251/zongminl/mm/envs/amb'
+AMB = f"/scratch/m000251/{os.environ['USER']}/mm/envs/amb"
 if a.mode == 'prep':
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import common as C

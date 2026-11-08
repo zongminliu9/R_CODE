@@ -54,6 +54,10 @@ case $STAGE in
     for p in $SCRATCH/tbcb_atomistic/mmprep/*; do sid=$(basename $p); [ -d $RUNS/md310/$sid ] || continue
       mkdir -p $RES/mmpbsa
       step a12b_$sid $PY scripts/a12b_mmgbsa_openmm.py $p $RUNS/md310/$sid $RES/mmpbsa/$sid.json --platform ${MMPLAT:-CUDA}
+    done
+    # a complex with trajectories but no topology is a failure, not a silent skip (2026-11-07: four were missing)
+    for d in $RUNS/md310/c_* $RUNS/md310/x_* $RUNS/md310/h_*; do sid=$(basename $d)
+      [ -d $SCRATCH/tbcb_atomistic/mmprep/$sid ] || bad+=("a12b_${sid}_no_mmprep")
     done ;;
   report)
     step a09 $PY scripts/a09_fep_analysis.py $RUNS/fep --out $RES/fep_results.json

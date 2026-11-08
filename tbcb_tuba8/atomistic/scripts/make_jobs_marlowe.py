@@ -3,9 +3,9 @@ by afterany dependencies; every job resumes from the simulation's own checkpoint
 OpenCL platform (the conda-forge CUDA build fails on these nodes with CUDA_ERROR_UNSUPPORTED_PTX_VERSION).
 Writes jobs/<wave>/<name>.sbatch and chains_<wave>.txt (name, n_links)."""
 import os, sys
-ROOT = '/scratch/m000251/zongminl/tbcb_mech/atomistic'
+ROOT = f"/scratch/m000251/{os.environ['USER']}/tbcb_mech/atomistic"
 B = f'{ROOT}/build'; R = f'{ROOT}/runs'
-PY = '/scratch/m000251/zongminl/mm/envs/amb/bin/python'
+PY = f"/scratch/m000251/{os.environ['USER']}/mm/envs/amb/bin/python"
 HDR = """#!/bin/bash
 #SBATCH -p preempt
 #SBATCH -A marlowe-m000251

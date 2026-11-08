@@ -17,7 +17,7 @@ import numpy as np
 import gemmi
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
-HD = '/scratch/m000251/zongminl/mm/envs/hd3/bin'
+HD = f"/scratch/m000251/{os.environ['USER']}/mm/envs/hd3/bin"
 ap = argparse.ArgumentParser()
 ap.add_argument('mode'); ap.add_argument('a1'); ap.add_argument('a2', nargs='?')
 ap.add_argument('--dock', default='restrained'); ap.add_argument('--sampling', type=int, default=1000)

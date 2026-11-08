@@ -1,6 +1,6 @@
 #!/bin/bash
-cd /scratch/m000251/zongminl/tbcb_mech/atomistic
-PY=/scratch/m000251/zongminl/mm/envs/amb/bin/python
+cd /scratch/m000251/$USER/tbcb_mech/atomistic
+PY=/scratch/m000251/$USER/mm/envs/amb/bin/python
 export OPENMM_CPU_THREADS=4 OMP_NUM_THREADS=4
 A=inputs/af3
 b() { sid=$1; shift; [ -s build/$sid/build.json ] || [ -s build/$sid/vacuum_forces.json -a "$VAC" = 1 ] || $PY scripts/a07_build_complex.py $sid "$@" > logs/cbuild_$sid.log 2>&1; echo "$(date) $sid" >> logs/run_complex_builds.progress; }

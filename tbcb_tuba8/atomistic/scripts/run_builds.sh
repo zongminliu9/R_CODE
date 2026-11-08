@@ -1,7 +1,7 @@
 #!/bin/bash
 # build + minimise every monomer construct on the Marlowe login node, 4 threads, sequential
-cd /scratch/m000251/zongminl/tbcb_mech/atomistic
-PY=/scratch/m000251/zongminl/mm/envs/amb/bin/python
+cd /scratch/m000251/$USER/tbcb_mech/atomistic
+PY=/scratch/m000251/$USER/mm/envs/amb/bin/python
 export OPENMM_CPU_THREADS=4 OMP_NUM_THREADS=4
 while IFS=$'\t' read -r sid spec; do
   [ -z "$sid" ] && continue

@@ -1,0 +1,25 @@
+{
+ "system": "h_9M1M_Tuba1a",
+ "GB": {
+  "mean": -182.17267477940328,
+  "sd_replicas": 12.237681786553907,
+  "n_replicas": 2
+ },
+ "replicas": {
+  "r0": {
+   "n_frames": 400,
+   "mean": -190.82602255667865,
+   "sd_frames": 17.113172716048034,
+   "sem_naive": 0.8556586358024016,
+   "frames_ligand_reimaged": 0
+  },
+  "r1": {
+   "n_frames": 400,
+   "mean": -173.5193270021279,
+   "sd_frames": 19.22903414664837,
+   "sem_naive": 0.9614517073324185,
+   "frames_ligand_reimaged": 0
+  }
+ },
+ "method": "single-trajectory MM/GBSA, OBC2 mbondi2, 0.15 M, no entropy; ranking score, not an affinity"
+}

@@ -2,7 +2,7 @@
 : "${MAIL_USER:?export MAIL_USER=<address for Slurm mail> before running}"
 # Marlowe: analysis stages chained (afterany) to the wave-2 compute chains; CPU-only preempt jobs.
 export PATH=/cm/shared/apps/slurm/current/bin:$PATH SLURM_CONF=/cm/shared/apps/slurm/var/etc/slurm/slurm.conf
-ROOT=/scratch/m000251/zongminl/tbcb_mech/atomistic; cd $ROOT; mkdir -p jobs/pipeline logs
+ROOT=/scratch/m000251/$USER/tbcb_mech/atomistic; cd $ROOT; mkdir -p jobs/pipeline logs
 ids() { grep -E "$1" jobs/w2/submitted.txt | cut -d' ' -f2- | tr ' ' '\n' | grep -E '^[0-9]+$' | paste -sd: -; }
 sub() { local st=$1 pat=$2; local d=$(ids "$pat"); local dep=""; [ -n "$d" ] && dep="--dependency=afterany:$d"
   sbatch --parsable -p preempt -A marlowe-m000251 -c 4 --mem=16G -t 4:00:00 --exclude=n18,n28 --mail-type=FAIL --mail-user="$MAIL_USER" \
