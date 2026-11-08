@@ -119,8 +119,13 @@ else:
     edges = np.linspace(centres.min() - 0.1, centres.max() + 0.1, 2 * K + 3)
     fes.generate_fes(u0, r, fes_type='histogram', histogram_parameters={'bin_edges': edges})
     mid = 0.5 * (edges[1:] + edges[:-1])
-    res = fes.get_fes(mid, reference_point='from-lowest', uncertainty_method='analytical')
-    Wr = np.array(res['f_i']) * kT_kj / 4.184; dW = np.array(res['df_i']) * kT_kj / 4.184   # kcal/mol
+    # pymbar's histogram FES has no entry for an empty bin (KeyError (0,) on 2026-11-07), so it is evaluated only in
+    # bins that hold samples; empty bins stay NaN and are counted (an empty bin inside the range means poor overlap)
+    has = np.histogram(r, bins=edges)[0] > 0
+    res = fes.get_fes(mid[has], reference_point='from-lowest', uncertainty_method='analytical')
+    Wr = np.full(len(mid), np.nan); dW = np.full(len(mid), np.nan)
+    Wr[has] = np.array(res['f_i']) * kT_kj / 4.184; dW[has] = np.array(res['df_i']) * kT_kj / 4.184   # kcal/mol
+    n_empty = int((~has).sum()); n_out = int(np.sum((r < edges[0]) | (r > edges[-1])))
     kT = kT_kj / 4.184
     ok = np.isfinite(Wr)
     bulk = ok & (mid > mid[ok].max() - 0.6)
@@ -141,6 +146,7 @@ else:
                bulk_fit_C_kcal=float(Cfit), bulk_fit_residual_kcal=resid, r_min_nm=float(mid[imin]), r_site_boundary_nm=float(mid[ib]),
                barrier_kcal=float(Wr[ib] - Wr[imin]), K_A3=K_A3, dG0_kcal=float(dG0), Kd_M=float(Kd_M),
                gate_bulk_reached=bool(resid < 0.3), acceptance=(z['n_acc'] / np.maximum(z['n_try'], 1)).tolist(), n_iter=int(n),
+               n_empty_bins=n_empty, n_samples_outside_edges=n_out,
                note='dG0 and Kd are only valid if gate_bulk_reached and the window overlap is adequate')
     ov = mb.compute_overlap()['matrix']; out['min_adjacent_overlap'] = float(min(ov[k, k + 1] for k in range(K - 1)))
     # ---- derived kinetics: position-dependent diffusion from window residence segments (Hummer 2005,

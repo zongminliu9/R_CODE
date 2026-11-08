@@ -21,6 +21,8 @@ ap.add_argument('--fep_extra', action='append', default=[], help='LABEL=fep_inte
 ap.add_argument('--unfold_extra', action='append', default=[], help='SID=a18 json (e.g. results/unfold/a8.json) (repeatable)')
 ap.add_argument('--rest2_extra', action='append', default=[], help='SID=rest2_results.json (repeatable)')
 ap.add_argument('--msm', action='append', default=[], help='LABEL=msm_results.json (repeatable)')
+ap.add_argument('--pmf_dir', default=None, help='results dir with pmf/*/ and pmfdom/*/pmf_results.json')
+ap.add_argument('--mmgbsa_dir', default=None, help='directory with a12b <system>.json')
 ap.add_argument('--binding_dir', default=None, help='directory with tail_rbfe.json / ramd_results.json (default: <interim>/binding)')
 a = ap.parse_args()
 I = a.interim
@@ -443,6 +445,41 @@ if os.path.exists(rr):
         for k, v in RM.items():
             md.append(f"| {k} | {f(v['tau_ns'], 2)} | {f(v['ci95'][0], 2)} – {f(v['ci95'][1], 2)} | {v['n']} | {v['censored']} | "
                       f"{f(v.get('koff_relative_to_Tuba1a_EEY'), 2)} |")
+        md.append('')
+
+# ---------------------------------------------------------------- PMF (a15) and MM/GBSA (a12b)
+if a.pmf_dir:
+    pf = sorted(glob.glob(os.path.join(a.pmf_dir, 'pmf', '*', 'pmf_results.json'))) + \
+         sorted(glob.glob(os.path.join(a.pmf_dir, 'pmfdom', '*', 'pmf_results.json')))
+    if pf:
+        md.append('## 伞形采样 PMF（a15；dG0 用标准态 1 M；体相拟合残差 < 0.3 kcal/mol 才算达到体相；推出的 koff 来自一维 Smoluchowski，标为推导值）\n')
+        md.append('| 体系 | dG0 | Kd M | 势垒 | r_min nm | 位点边界 nm | 体相达标（残差） | 最小相邻重叠 | 最小交换接受率 | 空箱 / 箱外样本 | koff s⁻¹（推导） |')
+        md.append('|---|---|---|---|---|---|---|---|---|---|---|')
+        OUT['pmf'] = {}
+        for p_ in pf:
+            d = load(p_); sid = '/'.join(p_.split(os.sep)[-3:-1])
+            acc = d.get('acceptance') or [None]
+            OUT['pmf'][sid] = {k: d.get(k) for k in ('dG0_kcal', 'Kd_M', 'barrier_kcal', 'r_min_nm', 'r_site_boundary_nm',
+                               'gate_bulk_reached', 'bulk_fit_residual_kcal', 'min_adjacent_overlap', 'n_empty_bins',
+                               'n_samples_outside_edges', 'koff_s')}
+            ko = d.get('koff_s')
+            md.append(f"| {sid} | {f(d.get('dG0_kcal'), 2)} | {d.get('Kd_M'):.2e} | {f(d.get('barrier_kcal'), 2)} | {f(d.get('r_min_nm'), 2)} | "
+                      f"{f(d.get('r_site_boundary_nm'), 2)} | {'是' if d.get('gate_bulk_reached') else '否'}（{f(d.get('bulk_fit_residual_kcal'), 2)}） | "
+                      f"{f(d.get('min_adjacent_overlap'), 3)} | {f(min(acc) if acc[0] is not None else None, 3)} | "
+                      f"{d.get('n_empty_bins')} / {d.get('n_samples_outside_edges')} | {('%.2e' % ko) if isinstance(ko, (int, float)) and math.isfinite(ko) else '—'} |")
+        md.append('')
+if a.mmgbsa_dir:
+    mf = sorted(glob.glob(os.path.join(a.mmgbsa_dir, '*.json')))
+    if mf:
+        md.append('## MM/GBSA（a12b；单轨迹、OBC2 mbondi2、0.15 M、不含熵；只作排序分数，不是亲和力；kcal/mol）\n')
+        md.append('| 体系 | 副本均值 | 副本 SD | 副本数 | 各副本均值（帧数，重新成像帧数） |')
+        md.append('|---|---|---|---|---|')
+        OUT['mmgbsa'] = {}
+        for p_ in mf:
+            d = load(p_); sid = d.get('system', os.path.basename(p_)[:-5]); G = d.get('GB') or {}
+            OUT['mmgbsa'][sid] = d
+            reps = '；'.join(f"{k} {f(v['mean'], 1)}（{v['n_frames']}，{v.get('frames_ligand_reimaged', '—')}）" for k, v in sorted((d.get('replicas') or {}).items()))
+            md.append(f"| {sid} | {f(G.get('mean'), 1)} | {f(G.get('sd_replicas'), 1)} | {G.get('n_replicas')} | {reps} |")
         md.append('')
 
 # ---------------------------------------------------------------- US along phi43 (a17)

@@ -21,7 +21,9 @@ GROUPS = {
 }
 q = subprocess.run(['squeue', '--me', '-h', '-o', '%i %j %T'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True).stdout.split('\n')
 jobs = [l.split() for l in q if l.strip()]
-mine = {jid: name for jid, name, st in jobs if not name.startswith('ana_') and name != 'report_tbcb'}
+# only this campaign's compute jobs (2026-11-07: the report job had been made to wait for another project's jobs)
+CAMPAIGN = re.compile('|'.join(GROUPS.values()))
+mine = {jid: name for jid, name, st in jobs if CAMPAIGN.search(name)}
 state = json.load(open(STATE)) if os.path.exists(STATE) else {}
 stage_ids = {}
 for st, pat in GROUPS.items():
@@ -39,8 +41,9 @@ for st, pat in GROUPS.items():
         print(f'{st}: updated job {old} -> {len(deps)} compute deps')
     else:
         # a stage that already ran (results/stage_<st>.json) and has no compute job left to wait for is not run again
-        if not deps and os.path.exists(f'{SCR}/tbcb_atomistic/results/stage_{st}.json'):
-            print(f'{st}: ran earlier and nothing new to wait for; not resubmitted')
+        rec = f'{SCR}/tbcb_atomistic/results/stage_{st}.json'
+        if not deps and os.path.exists(rec) and not json.load(open(rec)).get('failed'):
+            print(f'{st}: ran earlier without failures and nothing new to wait for; not resubmitted')
             continue
         cmd = hdr + ([f'--dependency={dep}'] if dep else []) + [f'{HOME}/tbcb_atomistic/scripts/pipeline_stage.sh', st]
         r = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)

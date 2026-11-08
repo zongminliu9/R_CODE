@@ -28,11 +28,15 @@ def make(prm):
                           implicitSolventSaltConc=0.15 * unit.molar)
     plat = mm.Platform.getPlatformByName(a.platform)
     return mm.Context(sysm, mm.VerletIntegrator(0.001), plat, {'Precision': 'mixed'} if a.platform in ('CUDA', 'OpenCL') else {})
-cc = make(os.path.join(a.mm, 'complex.prmtop')); cr = make(os.path.join(a.mm, 'receptor.prmtop')); cl = make(os.path.join(a.mm, 'ligand.prmtop'))
-def E(ctx, X):
-    ctx.setPositions(X)
-    return ctx.getState(getEnergy=True).getPotentialEnergy().value_in_unit(unit.kilocalorie_per_mole)
-res = {}
+# Sherlock GPUs refuse a second CUDA context in one process ("No compatible CUDA device", 2026-11-07), so each of the
+# three systems gets its own context in turn, which is released before the next one is made.
+SHIFTS = np.array([[i, j, k] for i in (-1, 0, 1) for j in (-1, 0, 1) for k in (-1, 0, 1)], float)
+def mic(d, box):
+    """triclinic minimum image of one vector (box rows a, b, c in OpenMM reduced form)"""
+    d = d - np.round(d[2] / box[2, 2]) * box[2]; d = d - np.round(d[1] / box[1, 1]) * box[1]; d = d - np.round(d[0] / box[0, 0]) * box[0]
+    cand = d[None, :] + SHIFTS @ box
+    return cand[np.argmin((cand ** 2).sum(1))]
+frames = {}
 for rdir in sorted(glob.glob(os.path.join(a.mdsys, 'r*'))):
     segs = sorted(glob.glob(os.path.join(rdir, 'seg_*.dcd')))
     if not segs:
@@ -40,14 +44,40 @@ for rdir in sorted(glob.glob(os.path.join(a.mdsys, 'r*'))):
     t = md.join([md.load_dcd(s, top=os.path.join(rdir, 'solute.pdb')) for s in segs], check_topology=False)
     t = t[int(a.start_ns * 1000 / a.dt_ps)::a.every]
     assert t.n_atoms == len(cpx.atoms), (t.n_atoms, len(cpx.atoms))
-    vals = []
-    for f in range(t.n_frames):
-        X = t.xyz[f]
-        vals.append(E(cc, X) - E(cr, X[ir]) - E(cl, X[il]))
-    vals = np.array(vals)
-    res[os.path.basename(rdir)] = dict(n_frames=int(t.n_frames), mean=float(vals.mean()), sd_frames=float(vals.std(ddof=1)),
-                                       sem_naive=float(vals.std(ddof=1) / np.sqrt(len(vals))))
-    print(os.path.basename(rdir), res[os.path.basename(rdir)], flush=True)
+    # same atoms in the same order, not just the same count (2026-11-07: topologies prepared before the 11-05 rebuilds)
+    tp = md.load_pdb(os.path.join(rdir, 'solute.pdb'), standard_names=False).topology
+    bad = [(i, (x.residue.name, x.name), (y.residue.name, y.name)) for i, (x, y) in enumerate(zip(tp.atoms, cpx.atoms))
+           if (x.residue.name.strip().upper(), x.name.strip().upper()) != (y.residue.name.strip().upper(), y.name.strip().upper())]
+    assert not bad, f'{len(bad)} atoms differ between solute.pdb and complex.prmtop, first {bad[:3]}'
+    X = t.xyz.astype(float).copy(); n_shift = 0
+    if t.unitcell_vectors is not None:
+        for f in range(t.n_frames):
+            d = X[f, il].mean(0) - X[f, ir].mean(0)
+            L = mic(d, t.unitcell_vectors[f]) - d
+            if np.linalg.norm(L) > 1e-6:
+                X[f, il] += L; n_shift += 1
+    frames[os.path.basename(rdir)] = (X, n_shift)
+def energies(prm, sel):
+    ctx = make(prm)
+    out = {}
+    for k, (X, _) in frames.items():
+        e = []
+        for f in range(len(X)):
+            ctx.setPositions(X[f][sel] if sel is not None else X[f])
+            e.append(ctx.getState(getEnergy=True).getPotentialEnergy().value_in_unit(unit.kilocalorie_per_mole))
+        out[k] = np.array(e)
+    del ctx
+    import gc; gc.collect()
+    return out
+Ec = energies(os.path.join(a.mm, 'complex.prmtop'), None)
+Er = energies(os.path.join(a.mm, 'receptor.prmtop'), ir)
+El = energies(os.path.join(a.mm, 'ligand.prmtop'), il)
+res = {}
+for k in frames:
+    vals = Ec[k] - Er[k] - El[k]
+    res[k] = dict(n_frames=int(len(vals)), mean=float(vals.mean()), sd_frames=float(vals.std(ddof=1)),
+                  sem_naive=float(vals.std(ddof=1) / np.sqrt(len(vals))), frames_ligand_reimaged=int(frames[k][1]))
+    print(k, res[k], flush=True)
 m = [v['mean'] for v in res.values()]
 out = dict(system=os.path.basename(a.mdsys.rstrip('/')), GB=dict(mean=float(np.mean(m)) if m else None,
            sd_replicas=float(np.std(m, ddof=1)) if len(m) > 1 else None, n_replicas=len(m)), replicas=res,
