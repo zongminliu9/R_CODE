@@ -1,0 +1,479 @@
+block,system,quantity,value,uncertainty,unit,method,provenance,gate,source
+folding,a1a_114SER  [ref a1a_114SER_unfolded],ddG_fold,4.04346551834429,0.19342766380180018,kcal/mol,"dual-topology FEP, HREX, MBAR; folded - pentapeptide",computed,check,fep_results.json
+folding,a1a_114SER  [ref a1a_114SER_unfolded],folded/unfolded population ratio change at 310 K,708.898405946191,,fold,exp(ddG/RT),derived,,fep_results.json
+folding,a8_114ILE  [ref a8_114ILE_unfolded],ddG_fold,-4.104706257145326,0.20558850992464212,kcal/mol,"dual-topology FEP, HREX, MBAR; folded - pentapeptide",computed,check,fep_results.json
+folding,a8_114ILE  [ref a8_114ILE_unfolded],folded/unfolded population ratio change at 310 K,0.00127715078848884,,fold,exp(ddG/RT),derived,,fep_results.json
+fep_leg,a1a_114SER_folded,dG_leg,-8.581108421126709,0.18397696726460536,kcal/mol,HREX/MBAR,computed,3/3 replicas pass,fep_results.json
+fep_leg,a1a_114SER_unfolded,dG_leg,-12.624573939470999,0.05972216205011817,kcal/mol,HREX/MBAR,computed,3/3 replicas pass,fep_results.json
+fep_leg,a8_114ILE_folded,dG_leg,8.135503373303562,0.10197175260058015,kcal/mol,HREX/MBAR,computed,3/3 replicas pass,fep_results.json
+fep_leg,a8_114ILE_unfolded,dG_leg,12.240209630448888,0.17851721789396321,kcal/mol,HREX/MBAR,computed,3/3 replicas pass,fep_results.json
+fep_leg,e_a1a_cplx_451PHE_folded,dG_leg,24.389233567738884,0.9092876658163307,kcal/mol,HREX/MBAR,computed,3/3 replicas pass,fep_results.json
+fep_leg,e_a8_cplx_449TYR_folded,dG_leg,-24.68731741048049,0.3524706692649898,kcal/mol,HREX/MBAR,computed,3/3 replicas pass,fep_results.json
+fep_leg,t_a1a_K188A_cplx_451PHE_folded,dG_leg,24.618427810027622,0.14690584148210173,kcal/mol,HREX/MBAR,computed,3/3 replicas pass,fep_results.json
+fep_leg,t_a1a_cplx_451PHE_folded,dG_leg,24.923433445522672,0.18610791299317703,kcal/mol,HREX/MBAR,computed,3/3 replicas pass,fep_results.json
+fep_leg,t_a1a_free_451PHE_folded,dG_leg,24.206634698511184,0.16554347480652057,kcal/mol,HREX/MBAR,computed,3/3 replicas pass,fep_results.json
+fep_leg,t_a8_K188A_cplx_449TYR_folded,dG_leg,-24.551650420500778,0.15067687953814593,kcal/mol,HREX/MBAR,computed,3/3 replicas pass,fep_results.json
+fep_leg,t_a8_cplx_449TYR_folded,dG_leg,-25.06035935764234,0.1443442184367327,kcal/mol,HREX/MBAR,computed,3/3 replicas pass,fep_results.json
+fep_leg,t_a8_free_449TYR_folded,dG_leg,-24.320599072822272,0.13445208244317527,kcal/mol,HREX/MBAR,computed,3/3 replicas pass,fep_results.json
+binding,TBCB_Y451F_Tuba1a_tail,"ddG_bind TBCB (Y451F, Tuba1a tail)",0.716798747011488,0.24907990149687523,kcal/mol,(t_a1a_cplx_451PHE_folded) - (t_a1a_free_451PHE_folded),computed,check,tail_rbfe.json
+binding,TBCB_Y451F_Tuba1a_tail_Kd_ratio,"Kd ratio_bind TBCB (Y451F, Tuba1a tail) = exp(ddG/kT)",3.2013460640507105,,kcal/mol,derived from ddG,derived,check,tail_rbfe.json
+binding,TBCB_F449Y_Tuba8_tail,"ddG_bind TBCB (F449Y, Tuba8 tail)",-0.7397602848200684,0.19726280913902045,kcal/mol,(t_a8_cplx_449TYR_folded) - (t_a8_free_449TYR_folded),computed,check,tail_rbfe.json
+binding,TBCB_F449Y_Tuba8_tail_Kd_ratio,"Kd ratio_bind TBCB (F449Y, Tuba8 tail) = exp(ddG/kT)",0.30093993875546954,,kcal/mol,derived from ddG,derived,check,tail_rbfe.json
+binding,TBCB-K188A_Y451F_Tuba1a_tail,"ddG_bind TBCB-K188A (Y451F, Tuba1a tail)",0.41179311151643816,0.22132773959127108,kcal/mol,(t_a1a_K188A_cplx_451PHE_folded) - (t_a1a_free_451PHE_folded),computed,check,tail_rbfe.json
+binding,TBCB-K188A_Y451F_Tuba1a_tail_Kd_ratio,"Kd ratio_bind TBCB-K188A (Y451F, Tuba1a tail) = exp(ddG/kT)",1.9512284317552384,,kcal/mol,derived from ddG,derived,check,tail_rbfe.json
+binding,TBCB-K188A_F449Y_Tuba8_tail,"ddG_bind TBCB-K188A (F449Y, Tuba8 tail)",-0.23105134767850544,0.20194277531186736,kcal/mol,(t_a8_K188A_cplx_449TYR_folded) - (t_a8_free_449TYR_folded),computed,pass,tail_rbfe.json
+binding,TBCB-K188A_F449Y_Tuba8_tail_Kd_ratio,"Kd ratio_bind TBCB-K188A (F449Y, Tuba8 tail) = exp(ddG/kT)",0.6872459388683018,,kcal/mol,derived from ddG,derived,pass,tail_rbfe.json
+binding,TBCE_Y451F_Tuba1a_tail,"ddG_bind TBCE (Y451F, Tuba1a tail)",0.18259886922770008,0.924234116042428,kcal/mol,(e_a1a_cplx_451PHE_folded) - (t_a1a_free_451PHE_folded),computed,check,tail_rbfe.json
+binding,TBCE_Y451F_Tuba1a_tail_Kd_ratio,"Kd ratio_bind TBCE (Y451F, Tuba1a tail) = exp(ddG/kT)",1.345022439260649,,kcal/mol,derived from ddG,derived,check,tail_rbfe.json
+binding,TBCE_F449Y_Tuba8_tail,"ddG_bind TBCE (F449Y, Tuba8 tail)",-0.3667183376582166,0.37724386696859136,kcal/mol,(e_a8_cplx_449TYR_folded) - (t_a8_free_449TYR_folded),computed,pass,tail_rbfe.json
+binding,TBCE_F449Y_Tuba8_tail_Kd_ratio,"Kd ratio_bind TBCE (F449Y, Tuba8 tail) = exp(ddG/kT)",0.5514027658304496,,kcal/mol,derived from ddG,derived,pass,tail_rbfe.json
+binding,coupling_K188_hydroxyl_Tuba1a_tail,"ddG_int = ddG(Y->F | K188A) - ddG(Y->F | WT), Tuba1a tail",-0.3050056354950499,0.33320679111067736,kcal/mol,difference of ddG,computed,,tail_rbfe.json
+binding,coupling_K188_hydroxyl_Tuba8_tail,"ddG_int = ddG(Y->F | K188A) - ddG(Y->F | WT), Tuba8 tail (from F->Y legs)",-0.508708937141563,0.28230037259996127,kcal/mol,difference of ddG,computed,,tail_rbfe.json
+binding,transfer_selectivity_Y451F_Tuba1a,"ddG_transfer(Y->F) = ddG_bind,TBCE - ddG_bind,TBCB, Tuba1a tail",-0.534199877783788,0.9572092240395624,kcal/mol,difference of ddG,computed,,tail_rbfe.json
+binding,transfer_selectivity_F449Y_Tuba8,"ddG_transfer(F->Y) = ddG_bind,TBCE - ddG_bind,TBCB, Tuba8 tail",0.3730419471618518,0.42570594432640224,kcal/mol,difference of ddG,computed,,tail_rbfe.json
+binding,e_a1a_cplx_big,dG0_bind,-10.079555131024899,,kcal/mol,US/HREX PMF + spherical standard state,computed,fail,pmf/e_a1a_cplx_big/pmf_results.json
+binding,e_a1a_cplx_big,Kd,7.835397248132715e-08,,M,from dG0,derived,fail,pmf/e_a1a_cplx_big/pmf_results.json
+binding,e_a1a_cplx_big,unbinding barrier (PMF),7.8262574709822275,,kcal/mol,PMF,computed,fail,pmf/e_a1a_cplx_big/pmf_results.json
+kinetics,e_a1a_cplx_big,koff_s,nan,,,1-D Smoluchowski on PMF with D(r),derived,fail,pmf/e_a1a_cplx_big/pmf_results.json
+kinetics,e_a1a_cplx_big,kon_M_s,nan,,,1-D Smoluchowski on PMF with D(r),derived,fail,pmf/e_a1a_cplx_big/pmf_results.json
+kinetics,e_a1a_cplx_big,residence_time_s,nan,,,1-D Smoluchowski on PMF with D(r),derived,fail,pmf/e_a1a_cplx_big/pmf_results.json
+binding,e_a8_cplx_big,dG0_bind,-7.916576057871298,,kcal/mol,US/HREX PMF + spherical standard state,computed,pass,pmf/e_a8_cplx_big/pmf_results.json
+binding,e_a8_cplx_big,Kd,2.623793418802128e-06,,M,from dG0,derived,pass,pmf/e_a8_cplx_big/pmf_results.json
+binding,e_a8_cplx_big,unbinding barrier (PMF),6.217054107666627,,kcal/mol,PMF,computed,pass,pmf/e_a8_cplx_big/pmf_results.json
+kinetics,e_a8_cplx_big,koff_s,nan,,,1-D Smoluchowski on PMF with D(r),derived,pass,pmf/e_a8_cplx_big/pmf_results.json
+kinetics,e_a8_cplx_big,kon_M_s,nan,,,1-D Smoluchowski on PMF with D(r),derived,pass,pmf/e_a8_cplx_big/pmf_results.json
+kinetics,e_a8_cplx_big,residence_time_s,nan,,,1-D Smoluchowski on PMF with D(r),derived,pass,pmf/e_a8_cplx_big/pmf_results.json
+binding,t_a1a_cplx_big,dG0_bind,-11.540267517513284,,kcal/mol,US/HREX PMF + spherical standard state,computed,fail,pmf/t_a1a_cplx_big/pmf_results.json
+binding,t_a1a_cplx_big,Kd,7.316108648038889e-09,,M,from dG0,derived,fail,pmf/t_a1a_cplx_big/pmf_results.json
+binding,t_a1a_cplx_big,unbinding barrier (PMF),9.708515061898977,,kcal/mol,PMF,computed,fail,pmf/t_a1a_cplx_big/pmf_results.json
+kinetics,t_a1a_cplx_big,koff_s,802.2718415772406,,,1-D Smoluchowski on PMF with D(r),derived,fail,pmf/t_a1a_cplx_big/pmf_results.json
+kinetics,t_a1a_cplx_big,kon_M_s,109658273294.27272,,,1-D Smoluchowski on PMF with D(r),derived,fail,pmf/t_a1a_cplx_big/pmf_results.json
+kinetics,t_a1a_cplx_big,residence_time_s,0.0012464602995837823,,,1-D Smoluchowski on PMF with D(r),derived,fail,pmf/t_a1a_cplx_big/pmf_results.json
+binding,t_a8_cplx_big,dG0_bind,-5.610562631629256,,kcal/mol,US/HREX PMF + spherical standard state,computed,fail,pmf/t_a8_cplx_big/pmf_results.json
+binding,t_a8_cplx_big,Kd,0.00011082439892075494,,M,from dG0,derived,fail,pmf/t_a8_cplx_big/pmf_results.json
+binding,t_a8_cplx_big,unbinding barrier (PMF),3.69450078435238,,kcal/mol,PMF,computed,fail,pmf/t_a8_cplx_big/pmf_results.json
+kinetics,t_a8_cplx_big,koff_s,9426565.63167399,,,1-D Smoluchowski on PMF with D(r),derived,fail,pmf/t_a8_cplx_big/pmf_results.json
+kinetics,t_a8_cplx_big,kon_M_s,85058576662.4772,,,1-D Smoluchowski on PMF with D(r),derived,fail,pmf/t_a8_cplx_big/pmf_results.json
+kinetics,t_a8_cplx_big,residence_time_s,1.0608317377433014e-07,,,1-D Smoluchowski on PMF with D(r),derived,fail,pmf/t_a8_cplx_big/pmf_results.json
+kinetics,e_a1a_cplx,tauRAMD residence time (relative),1.7146500000000002,"[1.15795, 2.23055]",ns (RAMD time),tauRAMD,computed,ok,ramd_results.json
+kinetics,e_a8_cplx,tauRAMD residence time (relative),1.2022,"[0.85095, 1.4511]",ns (RAMD time),tauRAMD,computed,ok,ramd_results.json
+kinetics,t_a1aYF_K188A_cplx,tauRAMD residence time (relative),1.7924000000000002,"[1.4851, 2.01765]",ns (RAMD time),tauRAMD,computed,ok,ramd_results.json
+kinetics,t_a1aYF_cplx,tauRAMD residence time (relative),2.3518,"[1.8643999999999998, 2.712155]",ns (RAMD time),tauRAMD,computed,ok,ramd_results.json
+kinetics,t_a1a_K188A_cplx,tauRAMD residence time (relative),1.927,"[1.6878412500000002, 2.7349]",ns (RAMD time),tauRAMD,computed,ok,ramd_results.json
+kinetics,t_a1a_cplx,tauRAMD residence time (relative),2.16695,"[1.8219162500000001, 2.68275]",ns (RAMD time),tauRAMD,computed,ok,ramd_results.json
+kinetics,t_a8FY_K188A_cplx,tauRAMD residence time (relative),2.3657500000000002,"[1.93375, 3.34685]",ns (RAMD time),tauRAMD,computed,ok,ramd_results.json
+kinetics,t_a8FY_cplx,tauRAMD residence time (relative),3.09175,"[2.5583, 4.12455]",ns (RAMD time),tauRAMD,computed,1 censored (lower bound),ramd_results.json
+kinetics,t_a8_K188A_cplx,tauRAMD residence time (relative),2.30645,"[1.8608, 2.873361249999998]",ns (RAMD time),tauRAMD,computed,ok,ramd_results.json
+kinetics,t_a8_cplx,tauRAMD residence time (relative),2.1407,"[1.94985, 2.72585]",ns (RAMD time),tauRAMD,computed,ok,ramd_results.json
+intermediates,a1a,p_loop_N (310 K),0.008255598057651314,0.010661959346670198,,REST2 + MBAR reweighting,computed,,rest2/a1a/rest2_results.json
+intermediates,a1a,p_loop_I (310 K),0.7871798071203469,0.16101457236598335,,REST2 + MBAR reweighting,computed,,rest2/a1a/rest2_results.json
+intermediates,a1a,p_loop_U (310 K),0.20456459482200184,0.162173466002225,,REST2 + MBAR reweighting,computed,,rest2/a1a/rest2_results.json
+intermediates,a1a,dG_loop_I-N,-2.8076120627843086,0.18635378875586586,kcal/mol,REST2 + MBAR,computed,,rest2/a1a/rest2_results.json
+intermediates,a1a,dG_loop_U-N,-1.977462237011461,0.6730349800752176,kcal/mol,REST2 + MBAR,computed,,rest2/a1a/rest2_results.json
+intermediates,a1a,p(phi43>0),0.7262484116046692,0.15425805162834488,,REST2 + MBAR,computed,,rest2/a1a/rest2_results.json
+intermediates,a1a_loop8,p_loop_N (310 K),0.033351438828219296,0.05810487826857778,,REST2 + MBAR reweighting,computed,,rest2/a1a_loop8/rest2_results.json
+intermediates,a1a_loop8,p_loop_I (310 K),0.961761736179525,0.05748371600984839,,REST2 + MBAR reweighting,computed,,rest2/a1a_loop8/rest2_results.json
+intermediates,a1a_loop8,p_loop_U (310 K),0.004886824992255805,0.004600508099858342,,REST2 + MBAR reweighting,computed,,rest2/a1a_loop8/rest2_results.json
+intermediates,a1a_loop8,dG_loop_I-N,-2.0708982055602565,3.151669924825913,kcal/mol,REST2 + MBAR,computed,,rest2/a1a_loop8/rest2_results.json
+intermediates,a1a_loop8,dG_loop_U-N,1.1831278124505966,1.563426301918482,kcal/mol,REST2 + MBAR,computed,,rest2/a1a_loop8/rest2_results.json
+intermediates,a1a_loop8,p(phi43>0),0.8993433209605823,0.10797704260043037,,REST2 + MBAR,computed,,rest2/a1a_loop8/rest2_results.json
+intermediates,a8,p_loop_N (310 K),0.019982048251319127,,,REST2 + MBAR reweighting,computed,,rest2/a8/rest2_results.json
+intermediates,a8,p_loop_I (310 K),0.9800179517130885,,,REST2 + MBAR reweighting,computed,,rest2/a8/rest2_results.json
+intermediates,a8,p_loop_U (310 K),3.559252104325482e-11,,,REST2 + MBAR reweighting,computed,,rest2/a8/rest2_results.json
+intermediates,a8,dG_loop_I-N,-2.398055506208268,,kcal/mol,REST2 + MBAR,computed,,rest2/a8/rest2_results.json
+intermediates,a8,dG_loop_U-N,12.4105857111902,,kcal/mol,REST2 + MBAR,computed,,rest2/a8/rest2_results.json
+intermediates,a8,p(phi43>0),0.47884534851076244,,,REST2 + MBAR,computed,,rest2/a8/rest2_results.json
+intermediates,a8_loop1A,p_loop_N (310 K),0.013479591968991848,0.017214374967820197,,REST2 + MBAR reweighting,computed,,rest2/a8_loop1A/rest2_results.json
+intermediates,a8_loop1A,p_loop_I (310 K),0.9684221801962726,0.016113653672565557,,REST2 + MBAR reweighting,computed,,rest2/a8_loop1A/rest2_results.json
+intermediates,a8_loop1A,p_loop_U (310 K),0.018098227834735636,0.014529868300197604,,REST2 + MBAR reweighting,computed,,rest2/a8_loop1A/rest2_results.json
+intermediates,a8_loop1A,dG_loop_I-N,-2.6332291181676597,8.845705142428873,kcal/mol,REST2 + MBAR,computed,,rest2/a8_loop1A/rest2_results.json
+intermediates,a8_loop1A,dG_loop_U-N,-0.18150632903057343,9.219883129386444,kcal/mol,REST2 + MBAR,computed,,rest2/a8_loop1A/rest2_results.json
+intermediates,a8_loop1A,p(phi43>0),0.5413926666088964,0.22589749235512352,,REST2 + MBAR,computed,,rest2/a8_loop1A/rest2_results.json
+intermediates,a1a,dG(phi43 left - right),1.517700322928287,,kcal/mol,US/HREX PMF,computed,,usphi43/a1a/usphi_results.json
+intermediates,a1a,phi43 barrier via 0,7.161439865355909,,kcal/mol,US/HREX PMF,computed,,usphi43/a1a/usphi_results.json
+intermediates,a1a,phi43 barrier via 180,2.92256658006696,,kcal/mol,US/HREX PMF,computed,,usphi43/a1a/usphi_results.json
+intermediates,a1a_G43I,dG(phi43 left - right),0.2905611550481303,,kcal/mol,US/HREX PMF,computed,,usphi43/a1a_G43I/usphi_results.json
+intermediates,a1a_G43I,phi43 barrier via 0,5.626901012553397,,kcal/mol,US/HREX PMF,computed,,usphi43/a1a_G43I/usphi_results.json
+intermediates,a1a_G43I,phi43 barrier via 180,12.958764441411251,,kcal/mol,US/HREX PMF,computed,,usphi43/a1a_G43I/usphi_results.json
+intermediates,a1a_loop8,dG(phi43 left - right),-4.502898070172942,,kcal/mol,US/HREX PMF,computed,,usphi43/a1a_loop8/usphi_results.json
+intermediates,a1a_loop8,phi43 barrier via 0,9.086475685548177,,kcal/mol,US/HREX PMF,computed,,usphi43/a1a_loop8/usphi_results.json
+intermediates,a1a_loop8,phi43 barrier via 180,17.50540401349452,,kcal/mol,US/HREX PMF,computed,,usphi43/a1a_loop8/usphi_results.json
+intermediates,a8,dG(phi43 left - right),1.6296469295276261,,kcal/mol,US/HREX PMF,computed,,usphi43/a8/usphi_results.json
+intermediates,a8,phi43 barrier via 0,6.735279717751188,,kcal/mol,US/HREX PMF,computed,,usphi43/a8/usphi_results.json
+intermediates,a8,phi43 barrier via 180,16.85168708577662,,kcal/mol,US/HREX PMF,computed,,usphi43/a8/usphi_results.json
+intermediates,a8_I43G,dG(phi43 left - right),-0.7617213501175526,,kcal/mol,US/HREX PMF,computed,,usphi43/a8_I43G/usphi_results.json
+intermediates,a8_I43G,phi43 barrier via 0,7.442686384143052,,kcal/mol,US/HREX PMF,computed,,usphi43/a8_I43G/usphi_results.json
+intermediates,a8_I43G,phi43 barrier via 180,2.3764517495915745,,kcal/mol,US/HREX PMF,computed,,usphi43/a8_I43G/usphi_results.json
+intermediates,a8_loop1A,dG(phi43 left - right),-0.7813335158131295,,kcal/mol,US/HREX PMF,computed,,usphi43/a8_loop1A/usphi_results.json
+intermediates,a8_loop1A,phi43 barrier via 0,8.08747591158219,,kcal/mol,US/HREX PMF,computed,,usphi43/a8_loop1A/usphi_results.json
+intermediates,a8_loop1A,phi43 barrier via 180,1.9515810638912676,,kcal/mol,US/HREX PMF,computed,,usphi43/a8_loop1A/usphi_results.json
+kinetics,a1a,MSM,,,,MSM,not_computed,CK test failed: not reported,msm/msm_results.json
+kinetics,a1b,MSM,,,,MSM,not_computed,CK test failed: not reported,msm/msm_results.json
+kinetics,a4a,MSM,,,,MSM,not_computed,CK test failed: not reported,msm/msm_results.json
+kinetics,a8,MSM,,,,MSM,not_computed,CK test failed: not reported,msm/msm_results.json
+intermediates,a1a_dom,"N/intermediate-domain separation PMF, W(max) - W(min)",229.898092221607,,kcal/mol,US/HREX PMF,computed,,pmfdom/a1a_dom/pmf_results.json
+intermediates,a8_dom,"N/intermediate-domain separation PMF, W(max) - W(min)",172.20484007280749,,kcal/mol,US/HREX PMF,computed,,pmfdom/a8_dom/pmf_results.json
+binding,c_tbcb_a1a_m0,MM/GBSA dG (score),-152.8572891756481,30.66661399779142,kcal/mol,MMPBSA.py GB,score,replica spread,mmpbsa/c_tbcb_a1a_m0.json
+binding,c_tbcb_a8_m0,MM/GBSA dG (score),-175.79181659127548,27.2840745586226,kcal/mol,MMPBSA.py GB,score,replica spread,mmpbsa/c_tbcb_a8_m0.json
+binding,c_tbce_a1a_m0,MM/GBSA dG (score),-76.34902227562614,19.80875748216003,kcal/mol,MMPBSA.py GB,score,replica spread,mmpbsa/c_tbce_a1a_m0.json
+binding,c_tbce_a8_m0,MM/GBSA dG (score),-81.53261563661817,5.832321480123904,kcal/mol,MMPBSA.py GB,score,replica spread,mmpbsa/c_tbce_a8_m0.json
+binding,h_9M1M_Tuba1a,MM/GBSA dG (score),-182.17267477940328,12.237681786553907,kcal/mol,MMPBSA.py GB,score,replica spread,mmpbsa/h_9M1M_Tuba1a.json
+binding,h_9M1M_Tuba1b,MM/GBSA dG (score),-152.61411646239657,6.594034478374906,kcal/mol,MMPBSA.py GB,score,replica spread,mmpbsa/h_9M1M_Tuba1b.json
+binding,h_9M1M_Tuba4a,MM/GBSA dG (score),-143.9164243687413,14.335754967058834,kcal/mol,MMPBSA.py GB,score,replica spread,mmpbsa/h_9M1M_Tuba4a.json
+binding,h_9M1M_Tuba8,MM/GBSA dG (score),-154.97379906220056,24.975147000820066,kcal/mol,MMPBSA.py GB,score,replica spread,mmpbsa/h_9M1M_Tuba8.json
+binding,x_9M1L_tbce_a1a,MM/GBSA dG (score),-59.5228518702278,25.365348951298085,kcal/mol,MMPBSA.py GB,score,replica spread,mmpbsa/x_9M1L_tbce_a1a.json
+binding,x_9M1L_tbce_a8,MM/GBSA dG (score),-49.74412600911661,16.072419153114666,kcal/mol,MMPBSA.py GB,score,replica spread,mmpbsa/x_9M1L_tbce_a8.json
+structures,a1a,init_PE_kcal,-63517.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a,init_Fmax_kcal_A,17861.37,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a,init_RMS_solute_kcal_A,223.142,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a,final_PE_kcal,-168996.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a,final_Fmax_kcal_A,8.11,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a,final_RMS_solute_kcal_A,0.36,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_G43I,init_PE_kcal,-71469.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_G43I,init_Fmax_kcal_A,17859.3,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_G43I,init_RMS_solute_kcal_A,217.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_G43I,final_PE_kcal,-169272.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_G43I,final_Fmax_kcal_A,5.08,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_G43I,final_RMS_solute_kcal_A,0.374,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_I114S,init_PE_kcal,-67174.8,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_I114S,init_Fmax_kcal_A,17861.58,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_I114S,init_RMS_solute_kcal_A,220.441,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_I114S,final_PE_kcal,-169485.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_I114S,final_Fmax_kcal_A,11.16,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_I114S,final_RMS_solute_kcal_A,0.429,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_K40A,init_PE_kcal,-72046.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_K40A,init_Fmax_kcal_A,17861.92,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_K40A,init_RMS_solute_kcal_A,223.547,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_K40A,final_PE_kcal,-169732.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_K40A,final_Fmax_kcal_A,5.51,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_K40A,final_RMS_solute_kcal_A,0.346,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_dom,init_PE_kcal,-151036.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_dom,init_Fmax_kcal_A,3653.44,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_dom,init_RMS_solute_kcal_A,4.28,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_dom,final_PE_kcal,-277929.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_dom,final_Fmax_kcal_A,10.27,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_dom,final_RMS_solute_kcal_A,0.411,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_loop8,init_PE_kcal,-76923.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_loop8,init_Fmax_kcal_A,17860.15,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_loop8,init_RMS_solute_kcal_A,224.083,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_loop8,final_PE_kcal,-169600.0,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_loop8,final_Fmax_kcal_A,7.58,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_loop8,final_RMS_solute_kcal_A,0.403,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_loop8_I114S,init_PE_kcal,-74017.6,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_loop8_I114S,init_Fmax_kcal_A,17861.28,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_loop8_I114S,init_RMS_solute_kcal_A,218.611,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_loop8_I114S,final_PE_kcal,-169494.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_loop8_I114S,final_Fmax_kcal_A,7.36,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1a_loop8_I114S,final_RMS_solute_kcal_A,0.38,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1b,init_PE_kcal,-61578.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1b,init_Fmax_kcal_A,19176.48,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1b,init_RMS_solute_kcal_A,223.346,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1b,final_PE_kcal,-170349.3,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1b,final_Fmax_kcal_A,5.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a1b,final_RMS_solute_kcal_A,0.334,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a4a,init_PE_kcal,-65453.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a4a,init_Fmax_kcal_A,17861.34,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a4a,init_RMS_solute_kcal_A,217.256,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a4a,final_PE_kcal,-168565.8,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a4a,final_Fmax_kcal_A,5.49,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a4a,final_RMS_solute_kcal_A,0.375,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8,init_PE_kcal,-56262.6,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8,init_Fmax_kcal_A,20295.18,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8,init_RMS_solute_kcal_A,435.059,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8,final_PE_kcal,-176628.6,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8,final_Fmax_kcal_A,6.0,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8,final_RMS_solute_kcal_A,0.29,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_A40K,init_PE_kcal,11025927.3,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_A40K,init_Fmax_kcal_A,159373103.63,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_A40K,init_RMS_solute_kcal_A,2736540.212,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_A40K,final_PE_kcal,-174417.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_A40K,final_Fmax_kcal_A,10.02,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_A40K,final_RMS_solute_kcal_A,0.37,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_I43G,init_PE_kcal,19427706.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_I43G,init_Fmax_kcal_A,314934008.35,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_I43G,init_RMS_solute_kcal_A,5409366.718,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_I43G,final_PE_kcal,-172369.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_I43G,final_Fmax_kcal_A,4.41,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_I43G,final_RMS_solute_kcal_A,0.38,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_S114I,init_PE_kcal,-61544.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_S114I,init_Fmax_kcal_A,48238.84,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_S114I,init_RMS_solute_kcal_A,786.017,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_S114I,final_PE_kcal,-167740.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_S114I,final_Fmax_kcal_A,5.78,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_S114I,final_RMS_solute_kcal_A,0.328,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_dom,init_PE_kcal,-156355.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_dom,init_Fmax_kcal_A,3830.07,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_dom,init_RMS_solute_kcal_A,4.379,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_dom,final_PE_kcal,-291171.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_dom,final_Fmax_kcal_A,10.18,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_dom,final_RMS_solute_kcal_A,0.356,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_loop1A,init_PE_kcal,-61717.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_loop1A,init_Fmax_kcal_A,17859.89,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_loop1A,init_RMS_solute_kcal_A,268.385,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_loop1A,final_PE_kcal,-172027.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_loop1A,final_Fmax_kcal_A,6.03,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_loop1A,final_RMS_solute_kcal_A,0.402,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_loop1A_S114I,init_PE_kcal,-70295.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_loop1A_S114I,init_Fmax_kcal_A,17859.8,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_loop1A_S114I,init_RMS_solute_kcal_A,268.178,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_loop1A_S114I,final_PE_kcal,-174363.0,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_loop1A_S114I,final_Fmax_kcal_A,5.89,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,a8_loop1A_S114I,final_RMS_solute_kcal_A,0.325,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a1a_m0,init_PE_kcal,-277005.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a1a_m0,init_Fmax_kcal_A,4018.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a1a_m0,init_RMS_solute_kcal_A,14.431,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a1a_m0,final_PE_kcal,-504606.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a1a_m0,final_Fmax_kcal_A,4.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a1a_m0,final_RMS_solute_kcal_A,0.29,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a1a_m0,vac_PE_kcal,-10201.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a1a_m0,vac_Fmax_kcal_A,456.73,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a1a_m0,vac_RMS_kcal_A,14.357,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a1a_m0,if_CA_rmsd_A,0.732,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a8_m0,init_PE_kcal,-262589.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a8_m0,init_Fmax_kcal_A,6833.41,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a8_m0,init_RMS_solute_kcal_A,18.36,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a8_m0,final_PE_kcal,-477209.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a8_m0,final_Fmax_kcal_A,24.15,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a8_m0,final_RMS_solute_kcal_A,0.518,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a8_m0,vac_PE_kcal,-10764.8,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a8_m0,vac_Fmax_kcal_A,941.56,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a8_m0,vac_RMS_kcal_A,18.355,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbcb_a8_m0,if_CA_rmsd_A,0.679,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a1a_m0,init_PE_kcal,-377336.3,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a1a_m0,init_Fmax_kcal_A,8910.79,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a1a_m0,init_RMS_solute_kcal_A,46.65,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a1a_m0,final_PE_kcal,-730243.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a1a_m0,final_Fmax_kcal_A,29.52,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a1a_m0,final_RMS_solute_kcal_A,0.531,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a1a_m0,vac_PE_kcal,-12827.0,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a1a_m0,vac_Fmax_kcal_A,5695.97,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a1a_m0,vac_RMS_kcal_A,65.508,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a1a_m0,if_CA_rmsd_A,0.61,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a8_m0,init_PE_kcal,-305541.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a8_m0,init_Fmax_kcal_A,166339.53,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a8_m0,init_RMS_solute_kcal_A,1899.704,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a8_m0,final_PE_kcal,-647523.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a8_m0,final_Fmax_kcal_A,17.38,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a8_m0,final_RMS_solute_kcal_A,0.503,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a8_m0,vac_PE_kcal,26265.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a8_m0,vac_Fmax_kcal_A,166354.64,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a8_m0,vac_RMS_kcal_A,1900.039,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,c_tbce_a8_m0,if_CA_rmsd_A,0.705,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx,init_PE_kcal,48062.8,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx,init_Fmax_kcal_A,792173.22,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx,init_RMS_solute_kcal_A,29805.903,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx,final_PE_kcal,-78486.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx,final_Fmax_kcal_A,6.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx,final_RMS_solute_kcal_A,0.487,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx,if_CA_rmsd_A,1.083,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx_big,init_PE_kcal,-52215.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx_big,init_Fmax_kcal_A,4033.56,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx_big,init_RMS_solute_kcal_A,4.877,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx_big,final_PE_kcal,-116442.0,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx_big,final_Fmax_kcal_A,5.58,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a1a_cplx_big,final_RMS_solute_kcal_A,0.525,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx,init_PE_kcal,-31600.0,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx,init_Fmax_kcal_A,10455.46,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx,init_RMS_solute_kcal_A,219.103,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx,final_PE_kcal,-90231.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx,final_Fmax_kcal_A,4.39,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx,final_RMS_solute_kcal_A,0.539,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx,if_CA_rmsd_A,0.815,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx_big,init_PE_kcal,-54610.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx_big,init_Fmax_kcal_A,4114.33,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx_big,init_RMS_solute_kcal_A,4.783,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx_big,final_PE_kcal,-143351.0,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx_big,final_Fmax_kcal_A,5.63,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,e_a8_cplx_big,final_RMS_solute_kcal_A,0.758,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1a,init_PE_kcal,-166597.6,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1a,init_Fmax_kcal_A,19184.24,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1a,init_RMS_solute_kcal_A,156.393,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1a,final_PE_kcal,-353045.8,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1a,final_Fmax_kcal_A,5.0,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1a,final_RMS_solute_kcal_A,0.327,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1a,vac_PE_kcal,-5501.3,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1a,vac_Fmax_kcal_A,17861.25,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1a,vac_RMS_kcal_A,219.162,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1a,if_CA_rmsd_A,0.657,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1b,init_PE_kcal,-159595.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1b,init_Fmax_kcal_A,17866.82,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1b,init_RMS_solute_kcal_A,155.961,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1b,final_PE_kcal,-353272.3,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1b,final_Fmax_kcal_A,6.69,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1b,final_RMS_solute_kcal_A,0.361,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1b,vac_PE_kcal,-5537.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1b,vac_Fmax_kcal_A,17861.54,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1b,vac_RMS_kcal_A,218.843,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba1b,if_CA_rmsd_A,0.692,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba4a,init_PE_kcal,-176094.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba4a,init_Fmax_kcal_A,17864.47,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba4a,init_RMS_solute_kcal_A,154.442,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba4a,final_PE_kcal,-351506.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba4a,final_Fmax_kcal_A,6.22,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba4a,final_RMS_solute_kcal_A,0.422,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba4a,vac_PE_kcal,-5474.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba4a,vac_Fmax_kcal_A,17861.95,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba4a,vac_RMS_kcal_A,217.781,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba4a,if_CA_rmsd_A,0.724,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba8,init_PE_kcal,-156272.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba8,init_Fmax_kcal_A,19067.19,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba8,init_RMS_solute_kcal_A,220.113,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba8,final_PE_kcal,-361374.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba8,final_Fmax_kcal_A,5.95,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba8,final_RMS_solute_kcal_A,0.302,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba8,vac_PE_kcal,-3000.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba8,vac_Fmax_kcal_A,17861.73,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba8,vac_RMS_kcal_A,268.363,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,h_9M1M_Tuba8,if_CA_rmsd_A,0.755,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_K188A_cplx,init_PE_kcal,-40675.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_K188A_cplx,init_Fmax_kcal_A,9538.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_K188A_cplx,init_RMS_solute_kcal_A,27.522,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_K188A_cplx,final_PE_kcal,-96714.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_K188A_cplx,final_Fmax_kcal_A,4.01,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_K188A_cplx,final_RMS_solute_kcal_A,0.487,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_K188A_cplx,if_CA_rmsd_A,0.667,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_cplx,init_PE_kcal,-44697.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_cplx,init_Fmax_kcal_A,3826.83,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_cplx,init_RMS_solute_kcal_A,25.13,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_cplx,final_PE_kcal,-96567.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_cplx,final_Fmax_kcal_A,4.79,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_cplx,final_RMS_solute_kcal_A,0.538,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1aYF_cplx,if_CA_rmsd_A,0.626,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_K188A_cplx,init_PE_kcal,-44351.8,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_K188A_cplx,init_Fmax_kcal_A,3883.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_K188A_cplx,init_RMS_solute_kcal_A,10.018,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_K188A_cplx,final_PE_kcal,-96490.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_K188A_cplx,final_Fmax_kcal_A,4.71,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_K188A_cplx,final_RMS_solute_kcal_A,0.461,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_K188A_cplx,if_CA_rmsd_A,0.589,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx,init_PE_kcal,-48205.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx,init_Fmax_kcal_A,14713.33,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx,init_RMS_solute_kcal_A,9.919,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx,final_PE_kcal,-96716.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx,final_Fmax_kcal_A,7.82,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx,final_RMS_solute_kcal_A,0.576,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx,if_CA_rmsd_A,0.601,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx_big,init_PE_kcal,-58974.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx_big,init_Fmax_kcal_A,3979.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx_big,init_RMS_solute_kcal_A,4.507,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx_big,final_PE_kcal,-144547.8,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx_big,final_Fmax_kcal_A,6.18,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_cplx_big,final_RMS_solute_kcal_A,0.566,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_free,init_PE_kcal,-8936.6,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_free,init_Fmax_kcal_A,3849.15,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_free,init_RMS_solute_kcal_A,9.691,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_free,final_PE_kcal,-30220.3,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_free,final_Fmax_kcal_A,5.49,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a1a_free,final_RMS_solute_kcal_A,1.098,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_K188A_cplx,init_PE_kcal,-37935.8,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_K188A_cplx,init_Fmax_kcal_A,6136.0,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_K188A_cplx,init_RMS_solute_kcal_A,24.327,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_K188A_cplx,final_PE_kcal,-105743.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_K188A_cplx,final_Fmax_kcal_A,5.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_K188A_cplx,final_RMS_solute_kcal_A,0.505,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_K188A_cplx,if_CA_rmsd_A,0.618,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_cplx,init_PE_kcal,-39001.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_cplx,init_Fmax_kcal_A,3854.33,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_cplx,init_RMS_solute_kcal_A,24.843,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_cplx,final_PE_kcal,-105767.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_cplx,final_Fmax_kcal_A,4.91,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_cplx,final_RMS_solute_kcal_A,0.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8FY_cplx,if_CA_rmsd_A,0.624,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_K188A_cplx,init_PE_kcal,-38355.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_K188A_cplx,init_Fmax_kcal_A,6487.19,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_K188A_cplx,init_RMS_solute_kcal_A,9.715,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_K188A_cplx,final_PE_kcal,-105631.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_K188A_cplx,final_Fmax_kcal_A,5.39,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_K188A_cplx,final_RMS_solute_kcal_A,0.553,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_K188A_cplx,if_CA_rmsd_A,0.76,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx,init_PE_kcal,-37284.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx,init_Fmax_kcal_A,14697.65,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx,init_RMS_solute_kcal_A,9.41,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx,final_PE_kcal,-105623.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx,final_Fmax_kcal_A,4.71,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx,final_RMS_solute_kcal_A,0.592,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx,if_CA_rmsd_A,0.545,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx_big,init_PE_kcal,-84552.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx_big,init_Fmax_kcal_A,8479.77,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx_big,init_RMS_solute_kcal_A,5.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx_big,final_PE_kcal,-175699.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx_big,final_Fmax_kcal_A,7.27,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_cplx_big,final_RMS_solute_kcal_A,0.563,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_free,init_PE_kcal,-7809.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_free,init_Fmax_kcal_A,4173.66,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_free,init_RMS_solute_kcal_A,12.783,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_free,final_PE_kcal,-39575.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_free,final_Fmax_kcal_A,3.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,t_a8_free,final_RMS_solute_kcal_A,0.83,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a1a_m1,vac_PE_kcal,-10688.8,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a1a_m1,vac_Fmax_kcal_A,1067.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a1a_m1,vac_RMS_kcal_A,18.104,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a1a_m2,vac_PE_kcal,-9953.6,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a1a_m2,vac_Fmax_kcal_A,685.52,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a1a_m2,vac_RMS_kcal_A,14.177,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a1a_m3,vac_PE_kcal,-10444.3,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a1a_m3,vac_Fmax_kcal_A,290.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a1a_m3,vac_RMS_kcal_A,11.516,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a1a_m4,vac_PE_kcal,-9113.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a1a_m4,vac_Fmax_kcal_A,3391.5,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a1a_m4,vac_RMS_kcal_A,47.718,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a8_m1,vac_PE_kcal,-11246.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a8_m1,vac_Fmax_kcal_A,283.05,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a8_m1,vac_RMS_kcal_A,10.371,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a8_m2,vac_PE_kcal,-6606.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a8_m2,vac_Fmax_kcal_A,2546.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a8_m2,vac_RMS_kcal_A,36.089,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a8_m3,vac_PE_kcal,-10863.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a8_m3,vac_Fmax_kcal_A,305.16,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a8_m3,vac_RMS_kcal_A,11.228,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a8_m4,vac_PE_kcal,-10411.8,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a8_m4,vac_Fmax_kcal_A,263.92,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbcb_a8_m4,vac_RMS_kcal_A,11.127,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a1a_m1,vac_PE_kcal,-12735.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a1a_m1,vac_Fmax_kcal_A,15210.15,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a1a_m1,vac_RMS_kcal_A,174.12,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a1a_m2,vac_PE_kcal,-14402.3,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a1a_m2,vac_Fmax_kcal_A,821.35,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a1a_m2,vac_RMS_kcal_A,15.53,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a1a_m3,vac_PE_kcal,-14306.3,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a1a_m3,vac_Fmax_kcal_A,919.13,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a1a_m3,vac_RMS_kcal_A,16.174,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a1a_m4,vac_PE_kcal,-12876.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a1a_m4,vac_Fmax_kcal_A,1931.07,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a1a_m4,vac_RMS_kcal_A,27.944,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a8_m1,vac_PE_kcal,-5266.0,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a8_m1,vac_Fmax_kcal_A,50983.58,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a8_m1,vac_RMS_kcal_A,582.314,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a8_m2,vac_PE_kcal,-13560.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a8_m2,vac_Fmax_kcal_A,467.03,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a8_m2,vac_RMS_kcal_A,12.054,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a8_m3,vac_PE_kcal,-7636.3,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a8_m3,vac_Fmax_kcal_A,724.59,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a8_m3,vac_RMS_kcal_A,21.071,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a8_m4,vac_PE_kcal,14886.4,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a8_m4,vac_Fmax_kcal_A,260238.84,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,v_tbce_a8_m4,vac_RMS_kcal_A,2973.395,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a1a,init_PE_kcal,256739020.1,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a1a,init_Fmax_kcal_A,5191919840.73,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a1a,init_RMS_solute_kcal_A,59683143.402,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a1a,final_PE_kcal,-586165.9,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a1a,final_Fmax_kcal_A,12.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a1a,final_RMS_solute_kcal_A,0.413,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a1a,vac_PE_kcal,256700997.3,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a1a,vac_Fmax_kcal_A,5183821892.04,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a1a,vac_RMS_kcal_A,59566444.932,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a1a,if_CA_rmsd_A,0.711,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a8,init_PE_kcal,374201504.2,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a8,init_Fmax_kcal_A,7642370600.28,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a8,init_RMS_solute_kcal_A,87854964.215,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a8,final_PE_kcal,-600094.0,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a8,final_Fmax_kcal_A,8.78,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a8,final_RMS_solute_kcal_A,0.441,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a8,vac_PE_kcal,373955317.7,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a8,vac_Fmax_kcal_A,7640129151.56,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a8,vac_RMS_kcal_A,87794396.066,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+structures,x_9M1L_tbce_a8,if_CA_rmsd_A,0.673,,,OpenMM ff14SB/Meagher GTP/IOD Mg,computed,,minimization_forces.json
+not_computed,TBCB:alpha full length,absolute dG_bind / Kd,,,,,not_computed,~5000 A^2 interface; no converged absolute method within reach; tail-site dG0 computed instead,
+not_computed,TBCB->TBCE transfer,"reaction path, barrier, rate",,,,,not_computed,no atomic structure of a TBCB:TBCE:alpha complex (EMD-2447 is 21 A); only end-state groove thermodynamics computed,
+not_computed,K40A / A40K,alchemical ddG_fold,,,,,not_computed,charge-changing transformation; finite-size PME artefact larger than the signal; studied by MD/REST2 populations instead,
+not_computed,G43I / I43G,alchemical ddG_fold,,,,,not_computed,glycine backbone parameters differ; studied by the phi43 umbrella PMF instead,

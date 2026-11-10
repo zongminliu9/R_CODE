@@ -63,7 +63,8 @@ case $STAGE in
     step a09 $PY scripts/a09_fep_analysis.py $RUNS/fep --out $RES/fep_results.json
     [ -e $RES/ramd ] || ln -s $RUNS/ramd $RES/ramd
     step a22 $PY scripts/a22_binding_analysis.py $RES
-    [ -f $SUM/minimization_forces.json ] && cp $SUM/minimization_forces.json $RES/
+    # only a newer summary copy replaces the table in results/ (2026-11-08: an 11-04 copy overwrote the rebuilt table)
+    [ -f $SUM/minimization_forces.json ] && [ $SUM/minimization_forces.json -nt $RES/minimization_forces.json ] && cp $SUM/minimization_forces.json $RES/
     step a21 $PY scripts/a21_compile.py $RES $RES/master
     step a24 $PY scripts/a24_report.py $RES $RES/report_zh.md ;;
 esac
