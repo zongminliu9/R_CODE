@@ -1,0 +1,13 @@
+r0 ['unit0', 'unit1', 'unit2', 'unit3', 'unit4', 'unit5'] {'unit0': None, 'unit1': None, 'unit2': None, 'unit3': None, 'unit4': None, 'unit5': None}
+r1 ['unit1', 'unit2', 'unit0', 'unit3', 'unit4', 'unit5'] {'unit1': 7.33, 'unit2': 10.64, 'unit0': None, 'unit3': None, 'unit4': None, 'unit5': None}
+r2 ['unit0', 'unit1', 'unit2', 'unit3', 'unit4', 'unit5'] {'unit0': None, 'unit1': None, 'unit2': None, 'unit3': None, 'unit4': None, 'unit5': None}
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)

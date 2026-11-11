@@ -1,0 +1,13 @@
+{"n_frames": 5002, "res43": "GLY", "n_native_pairs": 179, "alpha_fraction_L": 1.0, "mirror_image": false, "Q_at_reference": {"1.2": 0.9803064465522766, "1.5": 0.999911367893219, "1.8": 0.9999993443489075}, "means": {"Q_lam1.2": 0.5018235445022583, "Q_lam1.5": 0.7473319172859192, "Q_lam1.8": 0.8758943676948547, "rmsd_loop_A": 3.6904940605163574, "rmsd_core_ca_A": 1.8291680812835693, "p_phi43_pos": 0.575969612155138}, "first_ns": {"Q_lam1.2": 0.5755572319030762, "rmsd_loop_A": 3.9824185371398926}}
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)
+dcdplugin) detected standard 32-bit DCD file of native endianness
+dcdplugin) CHARMM format DCD file (also NAMD 2.1 and later)

@@ -1,0 +1,22 @@
+Warning on use of the timeseries module: If the inherent timescales of the system are long compared to those being analyzed, this statistical inefficiency may be an underestimate.  The estimate presumes the use of many statistically independent samples.  Tests should be performed to assess whether this condition is satisfied.   Be cautious in the interpretation of the data.
+
+****** PyMBAR will use 64-bit JAX! *******
+* JAX is currently set to 32-bit bitsize *
+* which is its default.                  *
+*                                        *
+* PyMBAR requires 64-bit mode and WILL   *
+* enable JAX's 64-bit mode when called.  *
+*                                        *
+* This MAY cause problems with other     *
+* Uses of JAX in the same code.          *
+******************************************
+
+
+******* JAX 64-bit mode is now on! *******
+*     JAX is now set to 64-bit mode!     *
+*   This MAY cause problems with other   *
+*      uses of JAX in the same code.     *
+******************************************
+
+An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
+{"p": {"N": 0.005780607212340596, "I": 0.9580571582914055, "U": 0.036162234496254}, "dG_kcal": {"I": -3.14817594977113, "U": -1.1295011800935533}, "p_phi43_left": 0.23122738213634048, "dG_phi43_left_vs_right_kcal": 0.740098550266911, "block_sd": {"p_N": 0.007904276527716723, "p_I": 0.01686022300710787, "p_U": 0.013272445135371628, "p_phi43_left": 0.1270977812363456, "dG_I": 6.565780992132001, "dG_U": 6.631281075781675}, "round_trips": 220, "ns_per_replica": 30.0}

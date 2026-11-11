@@ -1,0 +1,310 @@
+{
+ "groups": {
+  "unit0": [
+   100,
+   426,
+   67
+  ],
+  "unit1": [
+   170,
+   437,
+   83
+  ],
+  "unit2": [
+   1,
+   245,
+   70
+  ],
+  "unit3": [
+   15,
+   370,
+   66
+  ],
+  "unit4": [
+   271,
+   377,
+   57
+  ],
+  "unit5": [
+   5,
+   197,
+   94
+  ],
+  "loop32_45": [
+   32,
+   45,
+   14
+  ],
+  "seg110_120": [
+   110,
+   120,
+   11
+  ]
+ },
+ "replicas": {
+  "r0": {
+   "n_frames": 2000,
+   "ns": 20.0,
+   "unit0": {
+    "n_native_contacts": 1714,
+    "Q_final_1ns": 0.595355212688446,
+    "t_half_ns": null,
+    "helix_start": 0.6611940298507463,
+    "helix_end": 0.652686567164179,
+    "strand_start": 0.014925373134328358,
+    "strand_end": 0.016865671641791046
+   },
+   "unit1": {
+    "n_native_contacts": 1775,
+    "Q_final_1ns": 0.560992956161499,
+    "t_half_ns": null,
+    "helix_start": 0.3144578313253012,
+    "helix_end": 0.2563855421686747,
+    "strand_start": 0.23373493975903614,
+    "strand_end": 0.21036144578313254
+   },
+   "unit2": {
+    "n_native_contacts": 1826,
+    "Q_final_1ns": 0.6387959718704224,
+    "t_half_ns": null,
+    "helix_start": 0.2985714285714286,
+    "helix_end": 0.37514285714285717,
+    "strand_start": 0.11428571428571428,
+    "strand_end": 0.14414285714285716
+   },
+   "unit3": {
+    "n_native_contacts": 1294,
+    "Q_final_1ns": 0.5278774499893188,
+    "t_half_ns": null,
+    "helix_start": 0.4909090909090909,
+    "helix_end": 0.4574242424242424,
+    "strand_start": 0.07575757575757576,
+    "strand_end": 0.07515151515151515
+   },
+   "unit4": {
+    "n_native_contacts": 1327,
+    "Q_final_1ns": 0.6004871129989624,
+    "t_half_ns": null,
+    "helix_start": 0.37543859649122807,
+    "helix_end": 0.3375438596491228,
+    "strand_start": 0.28771929824561404,
+    "strand_end": 0.28017543859649124
+   },
+   "unit5": {
+    "n_native_contacts": 2494,
+    "Q_final_1ns": 0.6870872378349304,
+    "t_half_ns": null,
+    "helix_start": 0.5276595744680851,
+    "helix_end": 0.5097872340425532,
+    "strand_start": 0.2553191489361702,
+    "strand_end": 0.24457446808510638
+   },
+   "loop32_45": {
+    "n_native_contacts": 185,
+    "Q_final_1ns": 0.39831238985061646,
+    "t_half_ns": 0.5,
+    "helix_start": 0.0,
+    "helix_end": 0.15428571428571428,
+    "strand_start": 0.0,
+    "strand_end": 0.04285714285714286
+   },
+   "seg110_120": {
+    "n_native_contacts": 200,
+    "Q_final_1ns": 0.6945554614067078,
+    "t_half_ns": null,
+    "helix_start": 0.9181818181818182,
+    "helix_end": 0.8109090909090909,
+    "strand_start": 0.0,
+    "strand_end": 0.0
+   },
+   "gtp_protein_contacts_first_last": [
+    78,
+    71
+   ],
+   "unfolding_order_units": [
+    "unit0",
+    "unit1",
+    "unit2",
+    "unit3",
+    "unit4",
+    "unit5"
+   ]
+  },
+  "r1": {
+   "n_frames": 2000,
+   "ns": 20.0,
+   "unit0": {
+    "n_native_contacts": 1714,
+    "Q_final_1ns": 0.40815815329551697,
+    "t_half_ns": 2.78,
+    "helix_start": 0.6253731343283582,
+    "helix_end": 0.5865671641791045,
+    "strand_start": 0.013432835820895522,
+    "strand_end": 0.0
+   },
+   "unit1": {
+    "n_native_contacts": 1775,
+    "Q_final_1ns": 0.5344259142875671,
+    "t_half_ns": 4.52,
+    "helix_start": 0.3036144578313253,
+    "helix_end": 0.26759036144578313,
+    "strand_start": 0.20120481927710843,
+    "strand_end": 0.19879518072289157
+   },
+   "unit2": {
+    "n_native_contacts": 1826,
+    "Q_final_1ns": 0.5484975576400757,
+    "t_half_ns": null,
+    "helix_start": 0.2985714285714286,
+    "helix_end": 0.2662857142857143,
+    "strand_start": 0.13428571428571429,
+    "strand_end": 0.06914285714285714
+   },
+   "unit3": {
+    "n_native_contacts": 1294,
+    "Q_final_1ns": 0.5634779930114746,
+    "t_half_ns": null,
+    "helix_start": 0.4863636363636364,
+    "helix_end": 0.4493939393939394,
+    "strand_start": 0.07878787878787878,
+    "strand_end": 0.06
+   },
+   "unit4": {
+    "n_native_contacts": 1327,
+    "Q_final_1ns": 0.6193695068359375,
+    "t_half_ns": null,
+    "helix_start": 0.35789473684210527,
+    "helix_end": 0.327719298245614,
+    "strand_start": 0.2824561403508772,
+    "strand_end": 0.2771929824561403
+   },
+   "unit5": {
+    "n_native_contacts": 2494,
+    "Q_final_1ns": 0.5940812826156616,
+    "t_half_ns": null,
+    "helix_start": 0.5074468085106383,
+    "helix_end": 0.5268085106382979,
+    "strand_start": 0.24680851063829787,
+    "strand_end": 0.2323404255319149
+   },
+   "loop32_45": {
+    "n_native_contacts": 185,
+    "Q_final_1ns": 0.29869532585144043,
+    "t_half_ns": 0.5,
+    "helix_start": 0.0,
+    "helix_end": 0.002142857142857143,
+    "strand_start": 0.0,
+    "strand_end": 0.025714285714285714
+   },
+   "seg110_120": {
+    "n_native_contacts": 200,
+    "Q_final_1ns": 0.6058764457702637,
+    "t_half_ns": null,
+    "helix_start": 0.8272727272727273,
+    "helix_end": 0.9445454545454546,
+    "strand_start": 0.0,
+    "strand_end": 0.0
+   },
+   "gtp_protein_contacts_first_last": [
+    79,
+    84
+   ],
+   "unfolding_order_units": [
+    "unit0",
+    "unit1",
+    "unit2",
+    "unit3",
+    "unit4",
+    "unit5"
+   ]
+  },
+  "r2": {
+   "n_frames": 2000,
+   "ns": 20.0,
+   "unit0": {
+    "n_native_contacts": 1714,
+    "Q_final_1ns": 0.6203996539115906,
+    "t_half_ns": null,
+    "helix_start": 0.6447761194029851,
+    "helix_end": 0.6358208955223881,
+    "strand_start": 0.014925373134328358,
+    "strand_end": 0.0052238805970149255
+   },
+   "unit1": {
+    "n_native_contacts": 1775,
+    "Q_final_1ns": 0.5354850888252258,
+    "t_half_ns": null,
+    "helix_start": 0.29397590361445786,
+    "helix_end": 0.21518072289156626,
+    "strand_start": 0.23373493975903614,
+    "strand_end": 0.24506024096385542
+   },
+   "unit2": {
+    "n_native_contacts": 1826,
+    "Q_final_1ns": 0.6658273935317993,
+    "t_half_ns": null,
+    "helix_start": 0.31857142857142856,
+    "helix_end": 0.30114285714285716,
+    "strand_start": 0.11142857142857143,
+    "strand_end": 0.14642857142857144
+   },
+   "unit3": {
+    "n_native_contacts": 1294,
+    "Q_final_1ns": 0.5085949897766113,
+    "t_half_ns": null,
+    "helix_start": 0.47575757575757577,
+    "helix_end": 0.4412121212121212,
+    "strand_start": 0.07575757575757576,
+    "strand_end": 0.05651515151515152
+   },
+   "unit4": {
+    "n_native_contacts": 1327,
+    "Q_final_1ns": 0.6168608665466309,
+    "t_half_ns": null,
+    "helix_start": 0.37719298245614036,
+    "helix_end": 0.3426315789473684,
+    "strand_start": 0.2912280701754386,
+    "strand_end": 0.26228070175438595
+   },
+   "unit5": {
+    "n_native_contacts": 2494,
+    "Q_final_1ns": 0.7025880217552185,
+    "t_half_ns": null,
+    "helix_start": 0.5212765957446809,
+    "helix_end": 0.5179787234042553,
+    "strand_start": 0.2478723404255319,
+    "strand_end": 0.2581914893617021
+   },
+   "loop32_45": {
+    "n_native_contacts": 185,
+    "Q_final_1ns": 0.43137648701667786,
+    "t_half_ns": 0.5,
+    "helix_start": 0.10714285714285714,
+    "helix_end": 0.0,
+    "strand_start": 0.014285714285714285,
+    "strand_end": 0.07285714285714286
+   },
+   "seg110_120": {
+    "n_native_contacts": 200,
+    "Q_final_1ns": 0.670961856842041,
+    "t_half_ns": null,
+    "helix_start": 0.8090909090909091,
+    "helix_end": 0.8372727272727273,
+    "strand_start": 0.0,
+    "strand_end": 0.0
+   },
+   "gtp_protein_contacts_first_last": [
+    71,
+    90
+   ],
+   "unfolding_order_units": [
+    "unit0",
+    "unit1",
+    "unit2",
+    "unit3",
+    "unit4",
+    "unit5"
+   ]
+  }
+ }
+}
