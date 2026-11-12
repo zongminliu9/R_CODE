@@ -68,7 +68,7 @@ sw8_dd = sw8['mean_dG_kcal'] - s114['unfolded']['mean_dG_kcal']; sw8_sd = np.hyp
 close(sw1_dd, 4.50, 0.006, 'loop-swap I114S'); close(sw8_dd, -4.34, 0.006, 'loop-swap S114I')
 close(i114['ddG_fold_kcal'], 4.04, 0.006, 'I114S'); close(s114['ddG_fold_kcal'], -4.10, 0.006, 'S114I')
 rows = [('I114S in TUBA1A', i114['ddG_fold_kcal'], i114['sd_kcal'], BLUE, True, '3 + 3 replicas'),
-        ('S114I in TUBA8', s114['ddG_fold_kcal'], s114['sd_kcal'], ORANGE, True, '3 + 3 replicas'),
+        ('S114I in TUBA8', s114['ddG_fold_kcal'], s114['sd_kcal'], ORANGE, True, '3 + 3; folded legs: D-Gln39/D-Asp45*'),
         ('I114S in TUBA1A, TUBA8 loop', sw1_dd, sw1_sd, BLUE, True, 'folded 2/3 done'),
         ('S114I in TUBA8, TUBA1A loop', sw8_dd, sw8_sd, ORANGE, True, 'folded 3/3'),
         ('I110V in TUBA1A', ddm['a1a_110VAL  [ref a1a_110VAL_unfolded]']['ddG_fold_kcal'], ddm['a1a_110VAL  [ref a1a_110VAL_unfolded]']['sd_kcal'], BLUE, True, '2 + 2'),
@@ -85,6 +85,8 @@ ax.axvline(0, color=AXIS, lw=1, zorder=1)
 ax.set_yticks(y); ax.set_yticklabels([r[0] for r in rows]); ax.set_xlim(-6.2, 6.2); ax.set_ylim(-0.6, len(rows) - 0.3); ax.grid(axis='y', visible=False)
 ax.set_xlabel('ΔΔG$_{fold}$ (kcal/mol)   > 0: mutation destabilises the folded α')
 ax.set_title('Only the Ser/Ile switch at 114 costs folding stability (≈ 4 kcal/mol), in either loop background', loc='left')
+ax.text(0.0, -0.17, '* folded legs started before the chirality fix: Gln39 and Asp45 are D (29–34 Å from 114); the all-L runs (I114S in TUBA1A, S114I with the TUBA1A loop) agree',
+        transform=ax.transAxes, fontsize=9, color=INK2)
 ax.legend(handles=[Line2D([], [], marker='o', ls='', color=BLUE, ms=9, label='TUBA1A background'),
                    Line2D([], [], marker='o', ls='', color=ORANGE, ms=9, label='TUBA8 background'),
                    Line2D([], [], marker='o', ls='', color=GRAY, mfc='white', mew=2, ms=9, label='open = not converged')],
